@@ -1,0 +1,1964 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     90012,       1956]
+NotebookOptionsPosition[     84812,       1852]
+NotebookOutlinePosition[     85219,       1869]
+CellTagsIndexPosition[     85176,       1866]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Pivotal journal", "Title",
+ CellChangeTimes->{{3.9609443563519297`*^9, 
+  3.960944370151497*^9}},ExpressionUUID->"8c7592ee-f444-43c7-8d3c-\
+a884ed8b9700"],
+
+Cell[CellGroupData[{
+
+Cell["All journal count", "Section",
+ CellChangeTimes->{{3.960944598125806*^9, 3.960944628877068*^9}, {
+  3.960945575983151*^9, 
+  3.960945578230453*^9}},ExpressionUUID->"db1c1ac8-f519-40b2-8a17-\
+96c32b75c67e"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ISSNvspubgenTly", "=", 
+   RowBox[{
+   "Get", "[", \
+"\"\</Volumes/elecom/BANK/pubmed/202312/xml/element/journal/ISSNvspubgenTly.\
+wl\>\"", "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.960945082318824*^9, 3.960945128369935*^9}, 
+   3.960945293863441*^9},
+ CellLabel->"In[1]:=",ExpressionUUID->"bb45e25b-ecef-43ba-a3ee-f130b03f70ab"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ISSNvspubgenTly", "//", "Length"}]], "Input",
+ CellChangeTimes->{{3.960945304862053*^9, 3.960945305139605*^9}, {
+  3.9609454607811813`*^9, 3.960945464588925*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"4942f088-5c90-4adb-942c-7e4c73bc6129"],
+
+Cell[BoxData["15"], "Output",
+ CellChangeTimes->{{3.960945303185919*^9, 3.960945306069508*^9}, 
+   3.9609454654508877`*^9, 3.960946183296887*^9, 3.961006478791748*^9, 
+   3.96109651572158*^9},
+ CellLabel->"Out[2]=",ExpressionUUID->"57886d02-2b76-4f97-a7ee-6f632f0ff199"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Map", "[", 
+  RowBox[{"Length", ",", "ISSNvspubgenTly"}], "]"}]], "Input",
+ CellChangeTimes->{{3.960945177070455*^9, 3.960945209157318*^9}, {
+  3.960945468642087*^9, 3.960945481285747*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"f6fdcbb9-ad90-4352-8142-d6bf513157c8"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "1801", ",", "2180", ",", "2714", ",", "4040", ",", "5280", ",", "7422", ",",
+    "9875", ",", "11784", ",", "13748", ",", "15590", ",", "18277", ",", 
+   "20442", ",", "25957", ",", "31210", ",", "35253"}], "}"}]], "Output",
+ CellChangeTimes->{{3.9609451782818108`*^9, 3.960945209675695*^9}, 
+   3.9609454816470747`*^9, 3.960946183299294*^9, 3.96100647879408*^9, 
+   3.961096515724103*^9},
+ CellLabel->"Out[3]=",ExpressionUUID->"e9a05826-6546-4f52-986d-2e255311bc15"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"ISSNvspubgenTlyEf", "=", 
+    RowBox[{"Map", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Cases", "[", 
+        RowBox[{"#", ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", "_", "}"}], ",", "_"}], "}"}]}], "]"}], "&"}], ",", 
+      "ISSNvspubgenTly"}], "]"}]}], ")"}], "//", "Length"}]], "Input",
+ CellChangeTimes->{{3.9609453630274143`*^9, 3.9609454524873037`*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"8ae364bf-2c21-48c2-9a01-f95e40e4474b"],
+
+Cell[BoxData["15"], "Output",
+ CellChangeTimes->{{3.960945440363941*^9, 3.960945453192889*^9}, 
+   3.9609461833092012`*^9, 3.961006478803781*^9, 3.961096515733848*^9},
+ CellLabel->"Out[4]=",ExpressionUUID->"6f26645d-dcb2-4ee3-bbc4-1abd88b692e5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"totaljournalcount", "=", 
+  RowBox[{"Map", "[", 
+   RowBox[{"Length", ",", "ISSNvspubgenTlyEf"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.9609454918929*^9, 3.960945499152071*^9}, {
+  3.960949120144781*^9, 3.9609491253789377`*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"3013a7fe-5e5d-45e4-8f0a-df6d81ff285a"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "1800", ",", "2179", ",", "2713", ",", "4039", ",", "5279", ",", "7421", ",",
+    "9874", ",", "11783", ",", "13747", ",", "15589", ",", "18276", ",", 
+   "20441", ",", "25956", ",", "31209", ",", "35252"}], "}"}]], "Output",
+ CellChangeTimes->{3.960945499491211*^9, 3.9609461833111267`*^9, 
+  3.960949125917304*^9, 3.961006478805578*^9, 3.961096515735784*^9},
+ CellLabel->"Out[5]=",ExpressionUUID->"5aadfac2-69a9-4de7-a02b-9b03bf2ce7a1"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Pivotal journal", "Section",
+ CellChangeTimes->{{3.960944598125806*^9, 
+  3.960944635222097*^9}},ExpressionUUID->"86968e34-6a9c-4c1c-b8ff-\
+1574281c2bbf"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+  "Get", "[", \
+"\"\</Volumes/elecom/BANK/pubmed/202312/xml/element/journal/top1PcISSN.save\>\
+\"", "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"PMIDtoISSN", ".", "nb\:3088\:308a"}], " ", "*)"}]}]}], "Input",
+ CellChangeTimes->{{3.960944381582358*^9, 3.960944426464096*^9}, {
+  3.960945655065934*^9, 3.960945661046989*^9}, {3.961006402238173*^9, 
+  3.9610064261996326`*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"0ef40f94-4164-46cd-8753-064acbdeb32c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\:4e3b\:8981\:96d1\:8a8c\:6570\:7d2f\:7a4d", "Section",
+ CellChangeTimes->{{3.960944598125806*^9, 3.960944635222097*^9}, {
+   3.960945614485169*^9, 3.960945620806086*^9}, 
+   3.960950197851267*^9},ExpressionUUID->"5fcdbdd8-deeb-427e-8609-\
+9782c291a239"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"top1pcISSN", "=", 
+    RowBox[{"Map", "[", 
+     RowBox[{"Flatten", ",", 
+      RowBox[{"Map", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"#", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "&"}], ",", 
+        "top1percISSNTallyBygenSort", ",", 
+        RowBox[{"{", "2", "}"}]}], "]"}]}], "]"}]}], ")"}], "//", 
+  "Length"}]], "Input",
+ CellChangeTimes->{{3.96094638917831*^9, 3.960946469168984*^9}, {
+  3.960946515024906*^9, 3.960946525672409*^9}, {3.9609482058004427`*^9, 
+  3.960948275730916*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"c5dd6782-e6d1-4f7d-840e-baff532d9b20"],
+
+Cell[BoxData["15"], "Output",
+ CellChangeTimes->{{3.960946452459488*^9, 3.960946466348699*^9}, {
+   3.960946516090632*^9, 3.960946526134706*^9}, {3.960948211891618*^9, 
+   3.96094827669698*^9}, 3.9610064788175783`*^9, 3.961096527462104*^9},
+ CellLabel->"Out[7]=",ExpressionUUID->"a4847664-c8b0-4ea7-a367-ec065fc8a427"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"pivotaljournalcount", "=", 
+  RowBox[{"Map", "[", 
+   RowBox[{"Length", ",", "top1pcISSN"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.960946478829895*^9, 3.960946504437191*^9}, {
+  3.960949102356165*^9, 3.960949109433969*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"766a0375-a5af-471c-9337-d4a7f83d7049"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "5", ",", "11", ",", "19", ",", "16", ",", "14", ",", "18", ",", "20", ",", 
+   "17", ",", "12", ",", "13", ",", "19", ",", "28", ",", "83", ",", "136", ",",
+    "145"}], "}"}]], "Output",
+ CellChangeTimes->{{3.9609464921749363`*^9, 3.960946533986677*^9}, 
+   3.96094823562603*^9, 3.9609482798900843`*^9, 3.960949110869688*^9, 
+   3.961006478819206*^9, 3.961096527497933*^9},
+ CellLabel->"Out[8]=",ExpressionUUID->"95218dbe-2731-4007-83ac-7775b5ea8a00"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\:65b0\:898f\:51fa\:73fe\:4e3b\:8981\:96d1\:8a8c\:7d2f\:7a4d", "Section",
+ CellChangeTimes->{{3.960944598125806*^9, 3.960944635222097*^9}, {
+   3.960945614485169*^9, 3.960945620806086*^9}, 3.960949152093563*^9, 
+   3.960949629339706*^9, {3.96095020477022*^9, 
+   3.960950206990272*^9}},ExpressionUUID->"10e7e9c4-142a-4a21-b7b2-\
+a79a3164c06a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"top1pcISSNacm", "=", 
+    RowBox[{"Map", "[", 
+     RowBox[{"Flatten", ",", 
+      RowBox[{"FoldList", "[", 
+       RowBox[{"List", ",", "top1pcISSN"}], "]"}]}], "]"}]}], ")"}], "//", 
+  "Length"}]], "Input",
+ CellChangeTimes->{{3.960949355523687*^9, 3.960949437919917*^9}},
+ CellLabel->"In[9]:=",ExpressionUUID->"1566c974-8a39-4841-9408-0351bb5c7c58"],
+
+Cell[BoxData["15"], "Output",
+ CellChangeTimes->{{3.960949361447706*^9, 3.960949440450474*^9}, 
+   3.9610064788214483`*^9, 3.9610965315469522`*^9},
+ CellLabel->"Out[9]=",ExpressionUUID->"3c37970d-acd8-4e32-8ad5-4ff589490c6f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"top1pcISSNnewcomer", "=", 
+    RowBox[{"Prepend", "[", 
+     RowBox[{
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"Complement", "[", 
+         RowBox[{
+          RowBox[{"top1pcISSNacm", "[", 
+           RowBox[{"[", 
+            RowBox[{"n", "+", "1"}], "]"}], "]"}], ",", 
+          RowBox[{"top1pcISSNacm", "[", 
+           RowBox[{"[", "n", "]"}], "]"}]}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"n", ",", "1", ",", "14"}], "}"}]}], "]"}], ",", 
+      RowBox[{"top1pcISSN", "[", 
+       RowBox[{"[", "1", "]"}], "]"}]}], "]"}]}], ")"}], "//", 
+  "Length"}]], "Input",
+ CellChangeTimes->{{3.960949451633553*^9, 3.960949481870413*^9}, {
+  3.9609495210194073`*^9, 3.960949596499173*^9}, {3.96094964748588*^9, 
+  3.960949678356398*^9}, {3.960949770792877*^9, 3.960949776411251*^9}, {
+  3.960949807491033*^9, 3.960949818955226*^9}},
+ CellLabel->"In[10]:=",ExpressionUUID->"08b352c1-d2c0-40d6-bf35-b7da628d7799"],
+
+Cell[BoxData["15"], "Output",
+ CellChangeTimes->{{3.96094955217544*^9, 3.960949556807004*^9}, 
+   3.9609495985965*^9, {3.960949661780196*^9, 3.960949679146706*^9}, 
+   3.960949819742188*^9, 3.961006478823613*^9, 3.9610965315756407`*^9},
+ CellLabel->"Out[10]=",ExpressionUUID->"749e266c-354d-4b00-a14b-a591ca4aed70"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"top1pcISSNnewcomercount", "=", 
+  RowBox[{"Map", "[", 
+   RowBox[{"Length", ",", "top1pcISSNnewcomer"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.960949828284018*^9, 3.9609498431442413`*^9}},
+ CellLabel->"In[11]:=",ExpressionUUID->"d8346230-cf38-46c3-b832-b673b6d7cfb8"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "5", ",", "7", ",", "9", ",", "4", ",", "2", ",", "4", ",", "3", ",", "5", ",",
+    "0", ",", "2", ",", "1", ",", "3", ",", "54", ",", "56", ",", "35"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.960949825378154*^9, 3.9609498445521917`*^9}, 
+   3.961006478834153*^9, 3.961096531577978*^9},
+ CellLabel->"Out[11]=",ExpressionUUID->"17d66b29-a04a-4a2c-bfab-b3b04769c98b"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["plot", "Section",
+ CellChangeTimes->{{3.960944598125806*^9, 3.960944635222097*^9}, {
+   3.960945614485169*^9, 3.960945620806086*^9}, 3.960949152093563*^9, 
+   3.960949629339706*^9, {3.960949900759021*^9, 
+   3.960949903097425*^9}},ExpressionUUID->"1932846f-4d5c-4444-bac5-\
+699119e3a784"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Get", 
+  "[", "\"\</Volumes/elecom/BANK/pubmed/202312/exec_command/generations.wl\>\"\
+", "]"}]], "Input",
+ CellChangeTimes->{{3.959711081323925*^9, 3.9597111005220213`*^9}},
+ CellLabel->"In[12]:=",ExpressionUUID->"6944b78b-0ee9-4b08-be8e-32f51bff47b5"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "1950", ",", "1955", ",", "1960", ",", "1965", ",", "1970", ",", "1975", ",",
+    "1980", ",", "1985", ",", "1990", ",", "1995", ",", "2000", ",", "2005", ",",
+    "2010", ",", "2015", ",", "2020"}], "}"}]], "Output",
+ CellChangeTimes->{3.9609500920969048`*^9, 3.961006478839549*^9, 
+  3.961096540806871*^9},
+ CellLabel->"Out[12]=",ExpressionUUID->"b168aeb3-08d2-43eb-918c-fa43733476ec"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListPlot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"pivotaljournalcount", ",", "top1pcISSNnewcomercount"}], "}"}], ",", 
+   RowBox[{"Joined", "->", "True"}], ",", 
+   RowBox[{"PlotRange", "->", "Full"}], ",", 
+   RowBox[{"Frame", "->", "True"}], ",", 
+   RowBox[{"FrameTicks", "->", 
+    RowBox[{"{", 
+     RowBox[{"Automatic", ",", 
+      RowBox[{"{", 
+       RowBox[{"genticks", ",", "None"}], "}"}]}], "}"}]}], ",", 
+   RowBox[{"PlotLabels", "->", 
+    RowBox[{"{", 
+     RowBox[{"\"\<\:4e3b\:8981\:96d1\:8a8c\:6570\>\"", 
+      ",", "\"\<\:65b0\:898f\:51fa\:73fe\:4e3b\:8981\:96d1\:8a8c\:6570\>\""}],
+      "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.9609499075431957`*^9, 3.960949980183091*^9}, {
+  3.9609500172071753`*^9, 3.9609500392725697`*^9}, {3.9609501181749353`*^9, 
+  3.960950164173357*^9}},
+ CellLabel->"In[13]:=",ExpressionUUID->"8e8fc4ce-b71a-496f-845f-f631560b46d6"],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {{}, {}, 
+    TagBox[
+     {RGBColor[0.24, 0.6, 0.8], PointSize[0.012833333333333334`], 
+      AbsoluteThickness[2], 
+      LineBox[{{1., 5.}, {2., 11.}, {3., 19.}, {4., 16.}, {5., 14.}, {6., 
+       18.}, {7., 20.}, {8., 17.}, {9., 12.}, {10., 13.}, {11., 19.}, {12., 
+       28.}, {13., 83.}, {14., 136.}, {15., 145.}}]},
+     Annotation[#, "Charting`Private`Tag#1"]& ], 
+    TagBox[
+     {RGBColor[0.95, 0.627, 0.1425], PointSize[0.012833333333333334`], 
+      AbsoluteThickness[2], 
+      LineBox[{{1., 5.}, {2., 7.}, {3., 9.}, {4., 4.}, {5., 2.}, {6., 4.}, {
+       7., 3.}, {8., 5.}, {9., 0.}, {10., 2.}, {11., 1.}, {12., 3.}, {13., 
+       54.}, {14., 56.}, {15., 35.}}]},
+     Annotation[#, "Charting`Private`Tag#2"]& ]}, {{{{}, {GraphicsGroupBox[{
+         {GrayLevel[1], AbsoluteThickness[4], Opacity[
+           NCache[
+            Rational[2, 3], 0.6666666666666666]], CapForm["Butt"], JoinForm[
+          "Round"], 
+          BSplineCurveBox[{
+           Offset[{3, 0}, {15., 145.}], 
+            Offset[{2.999999999999965, -4.571154911962998*^-7}, {
+             15.583576388888888`, 145.}], 
+            Offset[{0, 0}, {15.869409745712273`, 144.99999928502584`}], 
+            Offset[{5., 1.1102230246251565`*^-15}, {15.869409745712273`, 
+             144.99999928502584`}], 
+            Offset[{10., 2.220446049250313*^-15}, {15.869409745712273`, 
+             144.99999928502584`}], 
+            Offset[{10., 2.220446049250313*^-15}, {15.869409745712273`, 
+             144.99999928502584`}]}]}, 
+         {RGBColor[
+          0.6666666666666666, 0.6666666666666666, 0.6666666666666666], 
+          AbsoluteThickness[1.25], 
+          BSplineCurveBox[{
+           Offset[{3, 0}, {15., 145.}], 
+            Offset[{2.999999999999965, -4.571154911962998*^-7}, {
+             15.583576388888888`, 145.}], 
+            Offset[{0, 0}, {15.869409745712273`, 144.99999928502584`}], 
+            Offset[{5., 1.1102230246251565`*^-15}, {15.869409745712273`, 
+             144.99999928502584`}], 
+            Offset[{10., 2.220446049250313*^-15}, {15.869409745712273`, 
+             144.99999928502584`}], 
+            Offset[{10., 2.220446049250313*^-15}, {15.869409745712273`, 
+             144.99999928502584`}]}]}, 
+         {EdgeForm[None], FaceForm[{GrayLevel[1], Opacity[
+           NCache[
+            Rational[2, 3], 0.6666666666666666]]}], 
+          PolygonBox[{
+           Offset[{65., 7.000000000000014}, {15.869409745712273`, 
+             144.99999928502584`}], 
+            Offset[{65., -6.999999999999986}, {15.869409745712273`, 
+             144.99999928502584`}], 
+            Offset[{10., -6.999999999999998}, {15.869409745712273`, 
+             144.99999928502584`}], 
+            Offset[{10., 7.000000000000002}, {15.869409745712273`, 
+             144.99999928502584`}]}]}, 
+         {RGBColor[
+          0.6666666666666666, 0.6666666666666666, 0.6666666666666666], 
+          AbsoluteThickness[1.25], EdgeForm[None]}, {}, InsetBox[
+          StyleBox[
+           RotationBox["\<\"\:4e3b\:8981\:96d1\:8a8c\:6570\"\>",
+            BoxRotation->0.],
+           StripOnInput->False,
+           LineOpacity->1,
+           FrontFaceOpacity->1,
+           BackFaceOpacity->1,
+           Opacity->1,
+           FontOpacity->1], 
+          Offset[{37.5, 8.326672684688674*^-15}, \
+{15.869409745712273, 144.99999928502584}], NCache[
+          ImageScaled[{Rational[1, 2], Rational[1, 2]}], 
+           ImageScaled[{0.5, 0.5}]]]}], GraphicsGroupBox[{
+         {GrayLevel[1], AbsoluteThickness[4], Opacity[
+           NCache[
+            Rational[2, 3], 0.6666666666666666]], CapForm["Butt"], JoinForm[
+          "Round"], 
+          BSplineCurveBox[{
+           Offset[{3, 0}, {15., 35.}], 
+            Offset[{2.9999999999999996`, 3.734417884449924*^-8}, {
+             15.583576388888888`, 35.}], 
+            Offset[{0, 0}, {15.869409745712273`, 35.000000058410016`}], 
+            Offset[{5., 1.1102230246251565`*^-15}, {15.869409745712273`, 
+             35.000000058410016`}], 
+            Offset[{10., 2.220446049250313*^-15}, {15.869409745712273`, 
+             35.000000058410016`}], 
+            Offset[{10., 2.220446049250313*^-15}, {15.869409745712273`, 
+             35.000000058410016`}]}]}, 
+         {RGBColor[
+          0.6666666666666666, 0.6666666666666666, 0.6666666666666666], 
+          AbsoluteThickness[1.25], 
+          BSplineCurveBox[{
+           Offset[{3, 0}, {15., 35.}], 
+            Offset[{2.9999999999999996`, 3.734417884449924*^-8}, {
+             15.583576388888888`, 35.}], 
+            Offset[{0, 0}, {15.869409745712273`, 35.000000058410016`}], 
+            Offset[{5., 1.1102230246251565`*^-15}, {15.869409745712273`, 
+             35.000000058410016`}], 
+            Offset[{10., 2.220446049250313*^-15}, {15.869409745712273`, 
+             35.000000058410016`}], 
+            Offset[{10., 2.220446049250313*^-15}, {15.869409745712273`, 
+             35.000000058410016`}]}]}, 
+         {EdgeForm[None], FaceForm[{GrayLevel[1], Opacity[
+           NCache[
+            Rational[2, 3], 0.6666666666666666]]}], 
+          PolygonBox[{
+           Offset[{105., 7.000000000000023}, {15.869409745712273`, 
+             35.000000058410016`}], 
+            Offset[{105., -6.999999999999977}, {15.869409745712273`, 
+             35.000000058410016`}], 
+            Offset[{10., -6.999999999999998}, {15.869409745712273`, 
+             35.000000058410016`}], 
+            Offset[{10., 7.000000000000002}, {15.869409745712273`, 
+             35.000000058410016`}]}]}, 
+         {RGBColor[
+          0.6666666666666666, 0.6666666666666666, 0.6666666666666666], 
+          AbsoluteThickness[1.25], EdgeForm[None]}, {}, InsetBox[
+          StyleBox[
+           
+           RotationBox["\<\"\:65b0\:898f\:51fa\:73fe\:4e3b\:8981\:96d1\:8a8c\
+\:6570\"\>",
+            BoxRotation->0.],
+           StripOnInput->False,
+           LineOpacity->1,
+           FrontFaceOpacity->1,
+           BackFaceOpacity->1,
+           Opacity->1,
+           FontOpacity->1], 
+          Offset[{57.5, 1.27675647831893*^-14}, \
+{15.869409745712273, 35.000000058410016}], NCache[
+          ImageScaled[{Rational[1, 2], Rational[1, 2]}], 
+           ImageScaled[{0.5, 0.5}]]]}]}}, {}}, {}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{0.7083333333333349, 0},
+  DisplayFunction->Identity,
+  Frame->{{True, True}, {True, True}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {{{1, 
+       FormBox[
+        RotationBox["\"1946-1950\"", BoxRotation -> 1.4959965017094252`], 
+        TraditionalForm]}, {2, 
+       FormBox[
+        RotationBox["\"1946-1955\"", BoxRotation -> 1.4959965017094252`], 
+        TraditionalForm]}, {3, 
+       FormBox[
+        RotationBox["\"1946-1960\"", BoxRotation -> 1.4959965017094252`], 
+        TraditionalForm]}, {4, 
+       FormBox[
+        RotationBox["\"1946-1965\"", BoxRotation -> 1.4959965017094252`], 
+        TraditionalForm]}, {5, 
+       FormBox[
+        RotationBox["\"1946-1970\"", BoxRotation -> 1.4959965017094252`], 
+        TraditionalForm]}, {6, 
+       FormBox[
+        RotationBox["\"1946-1975\"", BoxRotation -> 1.4959965017094252`], 
+        TraditionalForm]}, {7, 
+       FormBox[
+        RotationBox["\"1946-1980\"", BoxRotation -> 1.4959965017094252`], 
+        TraditionalForm]}, {8, 
+       FormBox[
+        RotationBox["\"1946-1985\"", BoxRotation -> 1.4959965017094252`], 
+        TraditionalForm]}, {9, 
+       FormBox[
+        RotationBox["\"1946-1990\"", BoxRotation -> 1.4959965017094252`], 
+        TraditionalForm]}, {10, 
+       FormBox[
+        RotationBox["\"1946-1995\"", BoxRotation -> 1.4959965017094252`], 
+        TraditionalForm]}, {11, 
+       FormBox[
+        RotationBox["\"1946-2000\"", BoxRotation -> 1.4959965017094252`], 
+        TraditionalForm]}, {12, 
+       FormBox[
+        RotationBox["\"1946-2005\"", BoxRotation -> 1.4959965017094252`], 
+        TraditionalForm]}, {13, 
+       FormBox[
+        RotationBox["\"1946-2010\"", BoxRotation -> 1.4959965017094252`], 
+        TraditionalForm]}, {14, 
+       FormBox[
+        RotationBox["\"1946-2015\"", BoxRotation -> 1.4959965017094252`], 
+        TraditionalForm]}, {15, 
+       FormBox[
+        RotationBox["\"1946-2020\"", BoxRotation -> 1.4959965017094252`], 
+        TraditionalForm]}}, None}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImagePadding->{{All, 123.40000059170276`}, {All, All}},
+  ImageSize->{Automatic, 312.07598917134203`},
+  Method->{
+   "AxisPadding" -> Scaled[0.02], "DefaultBoundaryStyle" -> Automatic, 
+    "DefaultGraphicsInteraction" -> {
+     "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+      "Effects" -> {
+       "Highlight" -> {"ratio" -> 2}, "HighlightPoint" -> {"ratio" -> 2}, 
+        "Droplines" -> {
+         "freeformCursorMode" -> True, 
+          "placement" -> {"x" -> "All", "y" -> "None"}}}}, "DefaultMeshStyle" -> 
+    AbsolutePointSize[6], "DefaultPlotStyle" -> {
+      Directive[
+       RGBColor[0.24, 0.6, 0.8], 
+       AbsoluteThickness[2]], 
+      Directive[
+       RGBColor[0.95, 0.627, 0.1425], 
+       AbsoluteThickness[2]], 
+      Directive[
+       RGBColor[0.455, 0.7, 0.21], 
+       AbsoluteThickness[2]], 
+      Directive[
+       RGBColor[0.922526, 0.385626, 0.209179], 
+       AbsoluteThickness[2]], 
+      Directive[
+       RGBColor[0.578, 0.51, 0.85], 
+       AbsoluteThickness[2]], 
+      Directive[
+       RGBColor[0.772079, 0.431554, 0.102387], 
+       AbsoluteThickness[2]], 
+      Directive[
+       RGBColor[0.4, 0.64, 1.], 
+       AbsoluteThickness[2]], 
+      Directive[
+       RGBColor[1., 0.75, 0.], 
+       AbsoluteThickness[2]], 
+      Directive[
+       RGBColor[0.8, 0.4, 0.76], 
+       AbsoluteThickness[2]], 
+      Directive[
+       RGBColor[0.637, 0.65, 0.], 
+       AbsoluteThickness[2]], 
+      Directive[
+       RGBColor[0.915, 0.3325, 0.2125], 
+       AbsoluteThickness[2]], 
+      Directive[
+       RGBColor[0.40082222609352647`, 0.5220066643438841, 0.85], 
+       AbsoluteThickness[2]], 
+      Directive[
+       RGBColor[0.9728288904374106, 0.621644452187053, 0.07336199581899142], 
+       AbsoluteThickness[2]], 
+      Directive[
+       RGBColor[0.736782672705901, 0.358, 0.5030266573755369], 
+       AbsoluteThickness[2]], 
+      Directive[
+       RGBColor[0.28026441037696703`, 0.715, 0.4292089322474965], 
+       AbsoluteThickness[2]]}, "DomainPadding" -> Scaled[0.02], 
+    "PointSizeFunction" -> "SmallPointSize", "RangePadding" -> Scaled[0.05], 
+    "OptimizePlotMarkers" -> True, "IncludeHighlighting" -> "CurrentSet", 
+    "HighlightStyle" -> Automatic, "OptimizePlotMarkers" -> True, 
+    "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{{0.7083333333333349, 15.}, {0, 145.}},
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.02], 
+     Scaled[0.08090169943749476]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{{3.960949955022532*^9, 3.960949981431303*^9}, 
+   3.9609500347558203`*^9, 3.960950125188105*^9, 3.960950165251956*^9, 
+   3.96100647931212*^9, 3.9610965413244762`*^9},
+ CellLabel->"Out[13]=",ExpressionUUID->"26784cd4-1878-4b38-93bd-b2b6f30c496f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Labeled", "[", 
+  RowBox[{
+   RowBox[{"ListPlot", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"top1pcISSNnewcomercount", "/", "pivotaljournalcount"}], "*", 
+      "100"}], ",", 
+     RowBox[{"Joined", "->", "True"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Frame", "->", "True"}], ",", 
+     RowBox[{"FrameTicks", "->", 
+      RowBox[{"{", 
+       RowBox[{"Automatic", ",", 
+        RowBox[{"{", 
+         RowBox[{"genticks", ",", "None"}], "}"}]}], "}"}]}]}], "]"}], 
+   ",", "\"\<\:65b0\:898f\:51fa\:73fe\:96d1\:8a8c\:306e\:4e3b\:8981\:96d1\
+\:8a8c\:306b\:5360\:3081\:308b\:5272\:5408\:ff08%\:ff09\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.9609502353293457`*^9, 3.9609502409640303`*^9}, {
+  3.960950276519534*^9, 3.960950412390431*^9}, {3.960950591746201*^9, 
+  3.9609505924620523`*^9}, {3.9609506561543694`*^9, 3.960950658496676*^9}},
+ CellLabel->"In[14]:=",ExpressionUUID->"42f9b14b-8f48-4b07-b8bc-0b495a529ce8"],
+
+Cell[BoxData[
+ TemplateBox[{
+   GraphicsBox[{{}, 
+     InterpretationBox[{
+       TagBox[{{}, {}, 
+         TagBox[{
+           RGBColor[0.24, 0.6, 0.8], 
+           PointSize[0.012833333333333334`], 
+           AbsoluteThickness[2], 
+           
+           LineBox[{{1., 100.}, {2., 63.63636363636363}, {3., 
+            47.36842105263158}, {4., 25.}, {5., 14.285714285714286`}, {6., 
+            22.22222222222222}, {7., 15.}, {8., 29.41176470588235}, {9., 
+            0.}, {10., 15.384615384615385`}, {11., 5.2631578947368425`}, {12.,
+             10.714285714285714`}, {13., 65.06024096385542}, {14., 
+            41.1764705882353}, {15., 24.137931034482758`}}]}, 
+          Annotation[#, "Charting`Private`Tag#1"]& ]}, {
+        "WolframDynamicHighlight", <|
+         "Label" -> {"XYLabel"}, "Ball" -> {"IndicatedBall"}|>}], 
+       StyleBox[
+        DynamicBox[
+         (Charting`HighlightActionBox["DynamicHighlight", {}, 
+          Slot["HighlightElements"], 
+          Slot["LayoutOptions"], 
+          Slot["Meta"], 
+          Charting`HighlightActionFunction["DynamicHighlight", {{{}, {}, 
+             Annotation[{
+               Hue[0.67, 0.6, 0.6], 
+               Directive[
+                PointSize[0.012833333333333334`], 
+                RGBColor[0.24, 0.6, 0.8], 
+                AbsoluteThickness[2]], 
+               
+               Line[{{1., 100.}, {2., 63.63636363636363}, {3., 
+                47.36842105263158}, {4., 25.}, {5., 14.285714285714286`}, {6.,
+                 22.22222222222222}, {7., 15.}, {8., 29.41176470588235}, {9., 
+                0.}, {10., 15.384615384615385`}, {11., 5.2631578947368425`}, {
+                12., 10.714285714285714`}, {13., 65.06024096385542}, {14., 
+                41.1764705882353}, {15., 24.137931034482758`}}]}, 
+              "Charting`Private`Tag#1"]}}, <|
+           "HighlightElements" -> <|
+             "Label" -> {"XYLabel"}, "Ball" -> {"IndicatedBall"}|>, 
+            "LayoutOptions" -> <|
+             "PanelPlotLayout" -> <||>, "PlotRange" -> {{0., 15.}, {0, 100.}},
+               "Frame" -> {{True, True}, {True, True}}, 
+              "AxesOrigin" -> {0., 0}, "ImageSize" -> {360, 360/GoldenRatio}, 
+              "Axes" -> {True, True}, "LabelStyle" -> {}, "AspectRatio" -> 
+              GoldenRatio^(-1), "DefaultStyle" -> {
+                Directive[
+                 PointSize[0.012833333333333334`], 
+                 RGBColor[0.24, 0.6, 0.8], 
+                 AbsoluteThickness[2]]}, 
+              "HighlightLabelingFunctions" -> <|
+               "CoordinatesToolOptions" -> ({
+                  (Identity[#]& )[
+                   Part[#, 1]], 
+                  (Identity[#]& )[
+                   Part[#, 2]]}& ), 
+                "ScalingFunctions" -> {{Identity, Identity}, {
+                  Identity, Identity}}|>, "Primitives" -> {}, "GCFlag" -> 
+              False|>, 
+            "Meta" -> <|
+             "DefaultHighlight" -> {"Dynamic", None}, "Index" -> {}, 
+              "Function" -> ListPlot, "GroupHighlight" -> False|>|>]]& )[<|
+          "HighlightElements" -> <|
+            "Label" -> {"XYLabel"}, "Ball" -> {"IndicatedBall"}|>, 
+           "LayoutOptions" -> <|
+            "PanelPlotLayout" -> <||>, "PlotRange" -> {{0., 15.}, {0, 100.}}, 
+             "Frame" -> {{True, True}, {True, True}}, "AxesOrigin" -> {0., 0},
+              "ImageSize" -> {360, 360/GoldenRatio}, "Axes" -> {True, True}, 
+             "LabelStyle" -> {}, "AspectRatio" -> GoldenRatio^(-1), 
+             "DefaultStyle" -> {
+               Directive[
+                PointSize[0.012833333333333334`], 
+                RGBColor[0.24, 0.6, 0.8], 
+                AbsoluteThickness[2]]}, 
+             "HighlightLabelingFunctions" -> <|"CoordinatesToolOptions" -> ({
+                 (Identity[#]& )[
+                  Part[#, 1]], 
+                 (Identity[#]& )[
+                  Part[#, 2]]}& ), 
+               "ScalingFunctions" -> {{Identity, Identity}, {
+                 Identity, Identity}}|>, "Primitives" -> {}, "GCFlag" -> 
+             False|>, 
+           "Meta" -> <|
+            "DefaultHighlight" -> {"Dynamic", None}, "Index" -> {}, 
+             "Function" -> ListPlot, "GroupHighlight" -> False|>|>], 
+         ImageSizeCache -> {{4.503599627370496*^15, -4.503599627370496*^15}, {
+          4.503599627370496*^15, -4.503599627370496*^15}}], Selectable -> 
+        False]}, 
+      Annotation[{{{}, {}, 
+         Annotation[{
+           Hue[0.67, 0.6, 0.6], 
+           Directive[
+            PointSize[0.012833333333333334`], 
+            RGBColor[0.24, 0.6, 0.8], 
+            AbsoluteThickness[2]], 
+           
+           Line[{{1., 100.}, {2., 63.63636363636363}, {3., 
+            47.36842105263158}, {4., 25.}, {5., 14.285714285714286`}, {6., 
+            22.22222222222222}, {7., 15.}, {8., 29.41176470588235}, {9., 
+            0.}, {10., 15.384615384615385`}, {11., 5.2631578947368425`}, {12.,
+             10.714285714285714`}, {13., 65.06024096385542}, {14., 
+            41.1764705882353}, {15., 24.137931034482758`}}]}, 
+          "Charting`Private`Tag#1"]}}, <|
+       "HighlightElements" -> <|
+         "Label" -> {"XYLabel"}, "Ball" -> {"IndicatedBall"}|>, 
+        "LayoutOptions" -> <|
+         "PanelPlotLayout" -> <||>, "PlotRange" -> {{0., 15.}, {0, 100.}}, 
+          "Frame" -> {{True, True}, {True, True}}, "AxesOrigin" -> {0., 0}, 
+          "ImageSize" -> {360, 360/GoldenRatio}, "Axes" -> {True, True}, 
+          "LabelStyle" -> {}, "AspectRatio" -> GoldenRatio^(-1), 
+          "DefaultStyle" -> {
+            Directive[
+             PointSize[0.012833333333333334`], 
+             RGBColor[0.24, 0.6, 0.8], 
+             AbsoluteThickness[2]]}, 
+          "HighlightLabelingFunctions" -> <|"CoordinatesToolOptions" -> ({
+              (Identity[#]& )[
+               Part[#, 1]], 
+              (Identity[#]& )[
+               Part[#, 2]]}& ), 
+            "ScalingFunctions" -> {{Identity, Identity}, {
+              Identity, Identity}}|>, "Primitives" -> {}, "GCFlag" -> False|>,
+         "Meta" -> <|
+         "DefaultHighlight" -> {"Dynamic", None}, "Index" -> {}, "Function" -> 
+          ListPlot, "GroupHighlight" -> False|>|>, 
+       "DynamicHighlight"]], {{}, {}}}, AspectRatio -> 
+    NCache[GoldenRatio^(-1), 0.6180339887498948], Axes -> {True, True}, 
+    AxesLabel -> {None, None}, AxesOrigin -> {0., 0}, DisplayFunction -> 
+    Identity, Frame -> {{True, True}, {True, True}}, 
+    FrameLabel -> {{None, None}, {None, None}}, 
+    FrameTicks -> {{Automatic, Automatic}, {{{1, 
+         FormBox[
+          RotationBox["\"1946-1950\"", BoxRotation -> 1.4959965017094252`], 
+          TraditionalForm]}, {2, 
+         FormBox[
+          RotationBox["\"1946-1955\"", BoxRotation -> 1.4959965017094252`], 
+          TraditionalForm]}, {3, 
+         FormBox[
+          RotationBox["\"1946-1960\"", BoxRotation -> 1.4959965017094252`], 
+          TraditionalForm]}, {4, 
+         FormBox[
+          RotationBox["\"1946-1965\"", BoxRotation -> 1.4959965017094252`], 
+          TraditionalForm]}, {5, 
+         FormBox[
+          RotationBox["\"1946-1970\"", BoxRotation -> 1.4959965017094252`], 
+          TraditionalForm]}, {6, 
+         FormBox[
+          RotationBox["\"1946-1975\"", BoxRotation -> 1.4959965017094252`], 
+          TraditionalForm]}, {7, 
+         FormBox[
+          RotationBox["\"1946-1980\"", BoxRotation -> 1.4959965017094252`], 
+          TraditionalForm]}, {8, 
+         FormBox[
+          RotationBox["\"1946-1985\"", BoxRotation -> 1.4959965017094252`], 
+          TraditionalForm]}, {9, 
+         FormBox[
+          RotationBox["\"1946-1990\"", BoxRotation -> 1.4959965017094252`], 
+          TraditionalForm]}, {10, 
+         FormBox[
+          RotationBox["\"1946-1995\"", BoxRotation -> 1.4959965017094252`], 
+          TraditionalForm]}, {11, 
+         FormBox[
+          RotationBox["\"1946-2000\"", BoxRotation -> 1.4959965017094252`], 
+          TraditionalForm]}, {12, 
+         FormBox[
+          RotationBox["\"1946-2005\"", BoxRotation -> 1.4959965017094252`], 
+          TraditionalForm]}, {13, 
+         FormBox[
+          RotationBox["\"1946-2010\"", BoxRotation -> 1.4959965017094252`], 
+          TraditionalForm]}, {14, 
+         FormBox[
+          RotationBox["\"1946-2015\"", BoxRotation -> 1.4959965017094252`], 
+          TraditionalForm]}, {15, 
+         FormBox[
+          RotationBox["\"1946-2020\"", BoxRotation -> 1.4959965017094252`], 
+          TraditionalForm]}}, None}}, GridLines -> {None, None}, 
+    GridLinesStyle -> Directive[
+      GrayLevel[0.5, 0.4]], 
+    Method -> {
+     "AxisPadding" -> Scaled[0.02], "DefaultBoundaryStyle" -> Automatic, 
+      "DefaultGraphicsInteraction" -> {
+       "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+        "Effects" -> {
+         "Highlight" -> {"ratio" -> 2}, "HighlightPoint" -> {"ratio" -> 2}, 
+          "Droplines" -> {
+           "freeformCursorMode" -> True, 
+            "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+      "DefaultMeshStyle" -> AbsolutePointSize[6], "DefaultPlotStyle" -> {
+        Directive[
+         RGBColor[0.24, 0.6, 0.8], 
+         AbsoluteThickness[2]], 
+        Directive[
+         RGBColor[0.95, 0.627, 0.1425], 
+         AbsoluteThickness[2]], 
+        Directive[
+         RGBColor[0.455, 0.7, 0.21], 
+         AbsoluteThickness[2]], 
+        Directive[
+         RGBColor[0.922526, 0.385626, 0.209179], 
+         AbsoluteThickness[2]], 
+        Directive[
+         RGBColor[0.578, 0.51, 0.85], 
+         AbsoluteThickness[2]], 
+        Directive[
+         RGBColor[0.772079, 0.431554, 0.102387], 
+         AbsoluteThickness[2]], 
+        Directive[
+         RGBColor[0.4, 0.64, 1.], 
+         AbsoluteThickness[2]], 
+        Directive[
+         RGBColor[1., 0.75, 0.], 
+         AbsoluteThickness[2]], 
+        Directive[
+         RGBColor[0.8, 0.4, 0.76], 
+         AbsoluteThickness[2]], 
+        Directive[
+         RGBColor[0.637, 0.65, 0.], 
+         AbsoluteThickness[2]], 
+        Directive[
+         RGBColor[0.915, 0.3325, 0.2125], 
+         AbsoluteThickness[2]], 
+        Directive[
+         RGBColor[0.40082222609352647`, 0.5220066643438841, 0.85], 
+         AbsoluteThickness[2]], 
+        Directive[
+         RGBColor[0.9728288904374106, 0.621644452187053, 0.07336199581899142], 
+         AbsoluteThickness[2]], 
+        Directive[
+         RGBColor[0.736782672705901, 0.358, 0.5030266573755369], 
+         AbsoluteThickness[2]], 
+        Directive[
+         RGBColor[0.28026441037696703`, 0.715, 0.4292089322474965], 
+         AbsoluteThickness[2]]}, "DomainPadding" -> Scaled[0.02], 
+      "PointSizeFunction" -> "SmallPointSize", "RangePadding" -> Scaled[0.05],
+       "OptimizePlotMarkers" -> True, "IncludeHighlighting" -> "CurrentSet", 
+      "HighlightStyle" -> Automatic, "OptimizePlotMarkers" -> True, 
+      "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+          (Identity[#]& )[
+           Part[#, 1]], 
+          (Identity[#]& )[
+           Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+          (Identity[#]& )[
+           Part[#, 1]], 
+          (Identity[#]& )[
+           Part[#, 2]]}& )}}, PlotRange -> {{0., 15.}, {0, 100.}}, 
+    PlotRangeClipping -> True, PlotRangePadding -> {{
+       Scaled[0.02], 
+       Scaled[0.02]}, {
+       Scaled[0.02], 
+       Scaled[0.05]}}, Ticks -> {Automatic, Automatic}], 
+   "\"\:65b0\:898f\:51fa\:73fe\:96d1\:8a8c\:306e\:4e3b\:8981\:96d1\:8a8c\:306b\
+\:5360\:3081\:308b\:5272\:5408\:ff08%\:ff09\""},
+  "Labeled",
+  DisplayFunction->(GridBox[{{
+      TagBox[
+       ItemBox[
+        PaneBox[
+         TagBox[#, "SkipImageSizeLevel"], Alignment -> {Center, Baseline}, 
+         BaselinePosition -> Baseline], DefaultBaseStyle -> "Labeled"], 
+       "SkipImageSizeLevel"]}, {
+      ItemBox[#2, DefaultBaseStyle -> "LabeledLabel"]}}, 
+    GridBoxAlignment -> {"Columns" -> {{Center}}, "Rows" -> {{Center}}}, 
+    AutoDelete -> False, 
+    GridBoxItemSize -> {"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+    BaselinePosition -> {1, 1}]& ),
+  InterpretationFunction->(RowBox[{"Labeled", "[", 
+     RowBox[{#, ",", #2, ",", 
+       RowBox[{"{", "}"}]}], "]"}]& )]], "Output",
+ CellChangeTimes->{{3.960950286742009*^9, 3.960950298682083*^9}, 
+   3.960950334851108*^9, {3.9609504058566437`*^9, 3.960950413053554*^9}, 
+   3.960950593798862*^9, 3.96095066099585*^9, 3.961006479342367*^9, 
+   3.96109654136897*^9},
+ CellLabel->"Out[14]=",ExpressionUUID->"ff809cad-5e6e-4335-a994-70ee7b5f23b2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Labeled", "[", 
+  RowBox[{
+   RowBox[{"ListPlot", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"pivotaljournalcount", "/", "totaljournalcount"}], "*", "100"}],
+      ",", 
+     RowBox[{"Joined", "->", "True"}], ",", 
+     RowBox[{"Frame", "->", "True"}], ",", 
+     RowBox[{"FrameTicks", "->", 
+      RowBox[{"{", 
+       RowBox[{"Automatic", ",", 
+        RowBox[{"{", 
+         RowBox[{"genticks", ",", "None"}], "}"}]}], "}"}]}]}], "]"}], 
+   ",", "\"\<\:4e3b\:8981\:96d1\:8a8c\:306e\:5168\:96d1\:8a8c\:306b\:5360\
+\:3081\:308b\:5272\:5408\:ff08%\:ff09\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.9609504547879744`*^9, 3.960950482357658*^9}, {
+  3.960950514268476*^9, 3.960950633879442*^9}, {3.960950680939693*^9, 
+  3.960950693819121*^9}},
+ CellLabel->"In[15]:=",ExpressionUUID->"407aedcd-2387-43e1-a32b-f7b2fbdcddb9"],
+
+Cell[BoxData[
+ TemplateBox[{
+   GraphicsBox[{{}, 
+     InterpretationBox[{
+       TagBox[{{}, {}, 
+         TagBox[{
+           RGBColor[0.24, 0.6, 0.8], 
+           PointSize[0.012833333333333334`], 
+           AbsoluteThickness[2], 
+           
+           LineBox[{{1., 0.2777777777777778}, {2., 0.5048187241854062}, {3., 
+            0.7003317360855142}, {4., 0.39613765783609806`}, {5., 
+            0.2652017427543095}, {6., 0.24255491173696267`}, {7., 
+            0.20255215718047398`}, {8., 0.14427565136213188`}, {9., 
+            0.08729177275041827}, {10., 0.08339213548014626}, {11., 
+            0.1039614795360035}, {12., 0.13697959982388336`}, {13., 
+            0.3197719217136693}, {14., 0.4357717325130571}, {15., 
+            0.4113241801883581}}]}, 
+          Annotation[#, "Charting`Private`Tag#1"]& ]}, {
+        "WolframDynamicHighlight", <|
+         "Label" -> {"XYLabel"}, "Ball" -> {"IndicatedBall"}|>}], 
+       StyleBox[
+        DynamicBox[
+         (Charting`HighlightActionBox["DynamicHighlight", {}, 
+          Slot["HighlightElements"], 
+          Slot["LayoutOptions"], 
+          Slot["Meta"], 
+          Charting`HighlightActionFunction["DynamicHighlight", {{{}, {}, 
+             Annotation[{
+               Hue[0.67, 0.6, 0.6], 
+               Directive[
+                PointSize[0.012833333333333334`], 
+                RGBColor[0.24, 0.6, 0.8], 
+                AbsoluteThickness[2]], 
+               
+               Line[{{1., 0.2777777777777778}, {2., 0.5048187241854062}, {3., 
+                0.7003317360855142}, {4., 0.39613765783609806`}, {5., 
+                0.2652017427543095}, {6., 0.24255491173696267`}, {7., 
+                0.20255215718047398`}, {8., 0.14427565136213188`}, {9., 
+                0.08729177275041827}, {10., 0.08339213548014626}, {11., 
+                0.1039614795360035}, {12., 0.13697959982388336`}, {13., 
+                0.3197719217136693}, {14., 0.4357717325130571}, {15., 
+                0.4113241801883581}}]}, "Charting`Private`Tag#1"]}}, <|
+           "HighlightElements" -> <|
+             "Label" -> {"XYLabel"}, "Ball" -> {"IndicatedBall"}|>, 
+            "LayoutOptions" -> <|
+             "PanelPlotLayout" -> <||>, 
+              "PlotRange" -> {{0., 15.}, {0, 0.7003317360855142}}, 
+              "Frame" -> {{True, True}, {True, True}}, 
+              "AxesOrigin" -> {0., 0}, "ImageSize" -> {360, 360/GoldenRatio}, 
+              "Axes" -> {True, True}, "LabelStyle" -> {}, "AspectRatio" -> 
+              GoldenRatio^(-1), "DefaultStyle" -> {
+                Directive[
+                 PointSize[0.012833333333333334`], 
+                 RGBColor[0.24, 0.6, 0.8], 
+                 AbsoluteThickness[2]]}, 
+              "HighlightLabelingFunctions" -> <|
+               "CoordinatesToolOptions" -> ({
+                  (Identity[#]& )[
+                   Part[#, 1]], 
+                  (Identity[#]& )[
+                   Part[#, 2]]}& ), 
+                "ScalingFunctions" -> {{Identity, Identity}, {
+                  Identity, Identity}}|>, "Primitives" -> {}, "GCFlag" -> 
+              False|>, 
+            "Meta" -> <|
+             "DefaultHighlight" -> {"Dynamic", None}, "Index" -> {}, 
+              "Function" -> ListPlot, "GroupHighlight" -> False|>|>]]& )[<|
+          "HighlightElements" -> <|
+            "Label" -> {"XYLabel"}, "Ball" -> {"IndicatedBall"}|>, 
+           "LayoutOptions" -> <|
+            "PanelPlotLayout" -> <||>, 
+             "PlotRange" -> {{0., 15.}, {0, 0.7003317360855142}}, 
+             "Frame" -> {{True, True}, {True, True}}, "AxesOrigin" -> {0., 0},
+              "ImageSize" -> {360, 360/GoldenRatio}, "Axes" -> {True, True}, 
+             "LabelStyle" -> {}, "AspectRatio" -> GoldenRatio^(-1), 
+             "DefaultStyle" -> {
+               Directive[
+                PointSize[0.012833333333333334`], 
+                RGBColor[0.24, 0.6, 0.8], 
+                AbsoluteThickness[2]]}, 
+             "HighlightLabelingFunctions" -> <|"CoordinatesToolOptions" -> ({
+                 (Identity[#]& )[
+                  Part[#, 1]], 
+                 (Identity[#]& )[
+                  Part[#, 2]]}& ), 
+               "ScalingFunctions" -> {{Identity, Identity}, {
+                 Identity, Identity}}|>, "Primitives" -> {}, "GCFlag" -> 
+             False|>, 
+           "Meta" -> <|
+            "DefaultHighlight" -> {"Dynamic", None}, "Index" -> {}, 
+             "Function" -> ListPlot, "GroupHighlight" -> False|>|>], 
+         ImageSizeCache -> {{4.503599627370496*^15, -4.503599627370496*^15}, {
+          4.503599627370496*^15, -4.503599627370496*^15}}], Selectable -> 
+        False]}, 
+      Annotation[{{{}, {}, 
+         Annotation[{
+           Hue[0.67, 0.6, 0.6], 
+           Directive[
+            PointSize[0.012833333333333334`], 
+            RGBColor[0.24, 0.6, 0.8], 
+            AbsoluteThickness[2]], 
+           
+           Line[{{1., 0.2777777777777778}, {2., 0.5048187241854062}, {3., 
+            0.7003317360855142}, {4., 0.39613765783609806`}, {5., 
+            0.2652017427543095}, {6., 0.24255491173696267`}, {7., 
+            0.20255215718047398`}, {8., 0.14427565136213188`}, {9., 
+            0.08729177275041827}, {10., 0.08339213548014626}, {11., 
+            0.1039614795360035}, {12., 0.13697959982388336`}, {13., 
+            0.3197719217136693}, {14., 0.4357717325130571}, {15., 
+            0.4113241801883581}}]}, "Charting`Private`Tag#1"]}}, <|
+       "HighlightElements" -> <|
+         "Label" -> {"XYLabel"}, "Ball" -> {"IndicatedBall"}|>, 
+        "LayoutOptions" -> <|
+         "PanelPlotLayout" -> <||>, 
+          "PlotRange" -> {{0., 15.}, {0, 0.7003317360855142}}, 
+          "Frame" -> {{True, True}, {True, True}}, "AxesOrigin" -> {0., 0}, 
+          "ImageSize" -> {360, 360/GoldenRatio}, "Axes" -> {True, True}, 
+          "LabelStyle" -> {}, "AspectRatio" -> GoldenRatio^(-1), 
+          "DefaultStyle" -> {
+            Directive[
+             PointSize[0.012833333333333334`], 
+             RGBColor[0.24, 0.6, 0.8], 
+             AbsoluteThickness[2]]}, 
+          "HighlightLabelingFunctions" -> <|"CoordinatesToolOptions" -> ({
+              (Identity[#]& )[
+               Part[#, 1]], 
+              (Identity[#]& )[
+               Part[#, 2]]}& ), 
+            "ScalingFunctions" -> {{Identity, Identity}, {
+              Identity, Identity}}|>, "Primitives" -> {}, "GCFlag" -> False|>,
+         "Meta" -> <|
+         "DefaultHighlight" -> {"Dynamic", None}, "Index" -> {}, "Function" -> 
+          ListPlot, "GroupHighlight" -> False|>|>, 
+       "DynamicHighlight"]], {{}, {}}}, AspectRatio -> 
+    NCache[GoldenRatio^(-1), 0.6180339887498948], Axes -> {True, True}, 
+    AxesLabel -> {None, None}, AxesOrigin -> {0., 0}, DisplayFunction -> 
+    Identity, Frame -> {{True, True}, {True, True}}, 
+    FrameLabel -> {{None, None}, {None, None}}, 
+    FrameTicks -> {{Automatic, Automatic}, {{{1, 
+         FormBox[
+          RotationBox["\"1946-1950\"", BoxRotation -> 1.4959965017094252`], 
+          TraditionalForm]}, {2, 
+         FormBox[
+          RotationBox["\"1946-1955\"", BoxRotation -> 1.4959965017094252`], 
+          TraditionalForm]}, {3, 
+         FormBox[
+          RotationBox["\"1946-1960\"", BoxRotation -> 1.4959965017094252`], 
+          TraditionalForm]}, {4, 
+         FormBox[
+          RotationBox["\"1946-1965\"", BoxRotation -> 1.4959965017094252`], 
+          TraditionalForm]}, {5, 
+         FormBox[
+          RotationBox["\"1946-1970\"", BoxRotation -> 1.4959965017094252`], 
+          TraditionalForm]}, {6, 
+         FormBox[
+          RotationBox["\"1946-1975\"", BoxRotation -> 1.4959965017094252`], 
+          TraditionalForm]}, {7, 
+         FormBox[
+          RotationBox["\"1946-1980\"", BoxRotation -> 1.4959965017094252`], 
+          TraditionalForm]}, {8, 
+         FormBox[
+          RotationBox["\"1946-1985\"", BoxRotation -> 1.4959965017094252`], 
+          TraditionalForm]}, {9, 
+         FormBox[
+          RotationBox["\"1946-1990\"", BoxRotation -> 1.4959965017094252`], 
+          TraditionalForm]}, {10, 
+         FormBox[
+          RotationBox["\"1946-1995\"", BoxRotation -> 1.4959965017094252`], 
+          TraditionalForm]}, {11, 
+         FormBox[
+          RotationBox["\"1946-2000\"", BoxRotation -> 1.4959965017094252`], 
+          TraditionalForm]}, {12, 
+         FormBox[
+          RotationBox["\"1946-2005\"", BoxRotation -> 1.4959965017094252`], 
+          TraditionalForm]}, {13, 
+         FormBox[
+          RotationBox["\"1946-2010\"", BoxRotation -> 1.4959965017094252`], 
+          TraditionalForm]}, {14, 
+         FormBox[
+          RotationBox["\"1946-2015\"", BoxRotation -> 1.4959965017094252`], 
+          TraditionalForm]}, {15, 
+         FormBox[
+          RotationBox["\"1946-2020\"", BoxRotation -> 1.4959965017094252`], 
+          TraditionalForm]}}, None}}, GridLines -> {None, None}, 
+    GridLinesStyle -> Directive[
+      GrayLevel[0.5, 0.4]], 
+    Method -> {
+     "AxisPadding" -> Scaled[0.02], "DefaultBoundaryStyle" -> Automatic, 
+      "DefaultGraphicsInteraction" -> {
+       "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+        "Effects" -> {
+         "Highlight" -> {"ratio" -> 2}, "HighlightPoint" -> {"ratio" -> 2}, 
+          "Droplines" -> {
+           "freeformCursorMode" -> True, 
+            "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+      "DefaultMeshStyle" -> AbsolutePointSize[6], "DefaultPlotStyle" -> {
+        Directive[
+         RGBColor[0.24, 0.6, 0.8], 
+         AbsoluteThickness[2]], 
+        Directive[
+         RGBColor[0.95, 0.627, 0.1425], 
+         AbsoluteThickness[2]], 
+        Directive[
+         RGBColor[0.455, 0.7, 0.21], 
+         AbsoluteThickness[2]], 
+        Directive[
+         RGBColor[0.922526, 0.385626, 0.209179], 
+         AbsoluteThickness[2]], 
+        Directive[
+         RGBColor[0.578, 0.51, 0.85], 
+         AbsoluteThickness[2]], 
+        Directive[
+         RGBColor[0.772079, 0.431554, 0.102387], 
+         AbsoluteThickness[2]], 
+        Directive[
+         RGBColor[0.4, 0.64, 1.], 
+         AbsoluteThickness[2]], 
+        Directive[
+         RGBColor[1., 0.75, 0.], 
+         AbsoluteThickness[2]], 
+        Directive[
+         RGBColor[0.8, 0.4, 0.76], 
+         AbsoluteThickness[2]], 
+        Directive[
+         RGBColor[0.637, 0.65, 0.], 
+         AbsoluteThickness[2]], 
+        Directive[
+         RGBColor[0.915, 0.3325, 0.2125], 
+         AbsoluteThickness[2]], 
+        Directive[
+         RGBColor[0.40082222609352647`, 0.5220066643438841, 0.85], 
+         AbsoluteThickness[2]], 
+        Directive[
+         RGBColor[0.9728288904374106, 0.621644452187053, 0.07336199581899142], 
+         AbsoluteThickness[2]], 
+        Directive[
+         RGBColor[0.736782672705901, 0.358, 0.5030266573755369], 
+         AbsoluteThickness[2]], 
+        Directive[
+         RGBColor[0.28026441037696703`, 0.715, 0.4292089322474965], 
+         AbsoluteThickness[2]]}, "DomainPadding" -> Scaled[0.02], 
+      "PointSizeFunction" -> "SmallPointSize", "RangePadding" -> Scaled[0.05],
+       "OptimizePlotMarkers" -> True, "IncludeHighlighting" -> "CurrentSet", 
+      "HighlightStyle" -> Automatic, "OptimizePlotMarkers" -> True, 
+      "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+          (Identity[#]& )[
+           Part[#, 1]], 
+          (Identity[#]& )[
+           Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+          (Identity[#]& )[
+           Part[#, 1]], 
+          (Identity[#]& )[
+           Part[#, 2]]}& )}}, 
+    PlotRange -> {{0., 15.}, {0, 0.7003317360855142}}, PlotRangeClipping -> 
+    True, PlotRangePadding -> {{
+       Scaled[0.02], 
+       Scaled[0.02]}, {
+       Scaled[0.02], 
+       Scaled[0.05]}}, Ticks -> {Automatic, Automatic}], 
+   "\"\:4e3b\:8981\:96d1\:8a8c\:306e\:5168\:96d1\:8a8c\:306b\:5360\:3081\:308b\
+\:5272\:5408\:ff08%\:ff09\""},
+  "Labeled",
+  DisplayFunction->(GridBox[{{
+      TagBox[
+       ItemBox[
+        PaneBox[
+         TagBox[#, "SkipImageSizeLevel"], Alignment -> {Center, Baseline}, 
+         BaselinePosition -> Baseline], DefaultBaseStyle -> "Labeled"], 
+       "SkipImageSizeLevel"]}, {
+      ItemBox[#2, DefaultBaseStyle -> "LabeledLabel"]}}, 
+    GridBoxAlignment -> {"Columns" -> {{Center}}, "Rows" -> {{Center}}}, 
+    AutoDelete -> False, 
+    GridBoxItemSize -> {"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+    BaselinePosition -> {1, 1}]& ),
+  InterpretationFunction->(RowBox[{"Labeled", "[", 
+     RowBox[{#, ",", #2, ",", 
+       RowBox[{"{", "}"}]}], "]"}]& )]], "Output",
+ CellChangeTimes->{{3.96095046778156*^9, 3.960950483263651*^9}, {
+   3.960950517915564*^9, 3.960950531215111*^9}, {3.9609505750957336`*^9, 
+   3.9609506010953074`*^9}, 3.960950694748781*^9, 3.961006479366753*^9, 
+   3.96109654139389*^9},
+ CellLabel->"Out[15]=",ExpressionUUID->"86d0ca65-f900-4ef7-bffd-101e8b511b1e"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\:4e3b\:8981\:96d1\:8a8c\:30bf\:30a4\:30c8\:30eb", "Section",
+ CellChangeTimes->{{3.960944598125806*^9, 3.960944635222097*^9}, {
+   3.960945614485169*^9, 3.960945620806086*^9}, 3.960949152093563*^9, 
+   3.960949629339706*^9, {3.96095020477022*^9, 3.960950206990272*^9}, {
+   3.960950784698119*^9, 
+   3.960950792047723*^9}},ExpressionUUID->"14b6b74e-1492-44bc-b3d3-\
+bac486132ec8"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"top1pcISSN", "[", 
+  RowBox[{"[", "1", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.960950822203133*^9, 3.960950822633636*^9}},
+ CellLabel->"In[16]:=",ExpressionUUID->"75b2a5f2-9bcd-4316-a66f-2b69b5e45c80"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"0021-9738\"\>", ",", "\<\"0264-6021\"\>", 
+   ",", "\<\"0016-6731\"\>", ",", "\<\"0036-8075\"\>", 
+   ",", "\<\"0002-9572\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{{3.9609508190315113`*^9, 3.9609508237103987`*^9}, 
+   3.961006479372813*^9},
+ CellLabel->"Out[16]=",ExpressionUUID->"38085854-9df0-430e-9b4e-d8619af245ff"]
+}, Open  ]],
+
+Cell["\<\
+ISSN vs. journal title
+ISSNvsTitle.save\
+\>", "Text",
+ CellChangeTimes->{{3.960950850624967*^9, 3.960950861491064*^9}, {
+  3.961042945226194*^9, 3.961042955214128*^9}, {3.9610430591939917`*^9, 
+  3.961043079771865*^9}, {3.9610435933750143`*^9, 3.9610436012316103`*^9}, {
+  3.961043643831729*^9, 3.961043644683381*^9}, {3.961045247380155*^9, 
+  3.961045260031241*^9}},ExpressionUUID->"9db173b9-e6ed-4df0-a8ef-\
+2ef1a6b901af"],
+
+Cell["\:30c7\:30fc\:30bf", "Text",
+ CellChangeTimes->{{3.960950850624967*^9, 3.960950861491064*^9}, {
+  3.961096560892867*^9, 
+  3.961096565642659*^9}},ExpressionUUID->"6951be46-7800-45ce-8367-\
+f63f6aab767b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Get", 
+  "[", "\"\</Volumes/elecom/BANK/pubmed/202312/xml/element/journal-title/\
+ISSNvsTitle.save\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.96109656846867*^9, 3.961096595009974*^9}},
+ CellLabel->"In[16]:=",ExpressionUUID->"02977ced-b361-4e3b-bab2-120cf08658c7"],
+
+Cell[BoxData[
+ TemplateBox[<|"shortenedBoxes" -> TagBox[
+     RowBox[{"\[LeftAssociation]", 
+       RowBox[{
+         RowBox[{"\"0001-0197\"", "\[Rule]", "\"AARN news letter\""}], ",", 
+         RowBox[{
+          "\"0001-026X\"", "\[Rule]", 
+           "\"AAUP bulletin : quarterly publication of the American \
+Association of University Professors\""}], ",", 
+         RowBox[{
+          "\"0001-0340\"", "\[Rule]", 
+           "\"AB bookman's weekly : for the specialist book world\""}], ",", 
+         RowBox[{
+          "\"0001-0626\"", "\[Rule]", 
+           "\"The American College of Cardiology Extended Learning : \
+ACCEL\""}], ",", 
+         TemplateBox[{"36935"}, "OutputSizeLimit`Skeleton"], ",", 
+         RowBox[{"\"8756-8519\"", "\[Rule]", "\"Hospital ethics\""}], ",", 
+         RowBox[{
+          "\"8756-8926\"", "\[Rule]", 
+           "\"New York Law School human rights annual\""}], ",", 
+         RowBox[{
+          "\"8756-971X\"", "\[Rule]", 
+           "\"Journal of the American Mosquito Control Association\""}], ",", 
+         
+         RowBox[{
+          "\"8756-9787\"", "\[Rule]", "\"Magnetic resonance annual\""}]}], 
+       "\[RightAssociation]"}], Short[#, 8]& ], "line" -> 16, "sessionID" -> 
+   32605543123994432352, "byteCount" -> 7325392, "size" -> 8, "stored" -> 
+   False, "expr" -> Missing["NotStored"], "wrap" -> OutputSizeLimit`Defer, 
+   "version" -> 1|>,
+  "OutputSizeLimitTemplate"]], "Output",
+ CellChangeTimes->{3.961096598351029*^9},
+ CellLabel->"Out[16]=",ExpressionUUID->"817de887-b50a-46ac-b63c-9a15b3e14392"]
+}, Open  ]],
+
+Cell["\:30d7\:30ed\:30b0\:30e9\:30e0", "Text",
+ CellChangeTimes->{{3.960950850624967*^9, 
+  3.960950861491064*^9}},ExpressionUUID->"31ccca76-af3d-478c-8218-\
+fc355c804011"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Map", "[", 
+  RowBox[{"ISSNvsTitle", ",", "top1pcISSN", ",", 
+   RowBox[{"{", 
+    RowBox[{"-", "1"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.961096626280694*^9, 3.9610966514619703`*^9}},
+ CellLabel->"In[18]:=",ExpressionUUID->"4506fb96-25a3-4a16-9bf0-cd282ed0b7ef"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\<\"The Journal of clinical investigation\"\>", 
+     ",", "\<\"The Biochemical journal\"\>", ",", "\<\"Genetics\"\>", 
+     ",", "\<\"Science (New York, N.Y.)\"\>", 
+     ",", "\<\"American journal of public health and the nation's \
+health\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"The Biochemical journal\"\>", 
+     ",", "\<\"The Journal of clinical investigation\"\>", 
+     ",", "\<\"Science (New York, N.Y.)\"\>", 
+     ",", "\<\"The Journal of physiology\"\>", ",", "\<\"Genetics\"\>", 
+     ",", "\<\"Biochemische Zeitschrift\"\>", 
+     ",", "\<\"Journal of bacteriology\"\>", 
+     ",", "\<\"The Journal of biological chemistry\"\>", 
+     ",", "\<\"Deutsche medizinische Wochenschrift (1946)\"\>", 
+     ",", "\<\"British journal of pharmacology and chemotherapy\"\>", 
+     ",", "\<\"Nature\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"The Biochemical journal\"\>", 
+     ",", "\<\"The Journal of physiology\"\>", 
+     ",", "\<\"The Journal of clinical investigation\"\>", 
+     ",", "\<\"The Journal of experimental medicine\"\>", 
+     ",", "\<\"The Journal of biological chemistry\"\>", 
+     ",", "\<\"Science (New York, N.Y.)\"\>", 
+     ",", "\<\"The Anatomical record\"\>", 
+     ",", "\<\"The Journal of biophysical and biochemical cytology\"\>", 
+     ",", "\<\"Journal of cellular and comparative physiology\"\>", 
+     ",", "\<\"The journal of histochemistry and cytochemistry : official \
+journal of the Histochemistry Society\"\>", 
+     ",", "\<\"British journal of pharmacology and chemotherapy\"\>", 
+     ",", "\<\"Archives of biochemistry\"\>", 
+     ",", "\<\"The Journal of general physiology\"\>", 
+     ",", "\<\"Lancet (London, England)\"\>", ",", "\<\"Genetics\"\>", 
+     ",", "\<\"Hoppe-Seyler's Zeitschrift fur physiologische Chemie\"\>", 
+     ",", "\<\"Journal of bacteriology\"\>", 
+     ",", "\<\"Deutsche medizinische Wochenschrift (1946)\"\>", 
+     ",", "\<\"Nature\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"The Biochemical journal\"\>", 
+     ",", "\<\"The Journal of biophysical and biochemical cytology\"\>", 
+     ",", "\<\"The Journal of biological chemistry\"\>", 
+     ",", "\<\"The Journal of physiology\"\>", 
+     ",", "\<\"The Journal of experimental medicine\"\>", 
+     ",", "\<\"The Journal of cell biology\"\>", 
+     ",", "\<\"Journal of bacteriology\"\>", 
+     ",", "\<\"The Journal of clinical investigation\"\>", 
+     ",", "\<\"Nature\"\>", 
+     ",", "\<\"Hoppe-Seyler's Zeitschrift fur physiologische Chemie\"\>", 
+     ",", "\<\"Archives of biochemistry\"\>", ",", "\<\"Genetics\"\>", 
+     ",", "\<\"Deutsche medizinische Wochenschrift (1946)\"\>", 
+     ",", "\<\"British journal of experimental pathology\"\>", 
+     ",", "\<\"International archives of allergy and applied immunology\"\>", 
+     ",", "\<\"Journal of molecular biology\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"The Biochemical journal\"\>", 
+     ",", "\<\"The Journal of biophysical and biochemical cytology\"\>", 
+     ",", "\<\"The Journal of experimental medicine\"\>", 
+     ",", "\<\"The Journal of cell biology\"\>", 
+     ",", "\<\"The Journal of biological chemistry\"\>", 
+     ",", "\<\"The Journal of physiology\"\>", ",", "\<\"Nature\"\>", 
+     ",", "\<\"Annals of the New York Academy of Sciences\"\>", 
+     ",", "\<\"The Journal of clinical investigation\"\>", 
+     ",", "\<\"Science (New York, N.Y.)\"\>", 
+     ",", "\<\"Journal of bacteriology\"\>", 
+     ",", "\<\"Experimental cell research\"\>", 
+     ",", "\<\"Journal of molecular biology\"\>", 
+     ",", "\<\"International archives of allergy and applied \
+immunology\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"The Journal of biological chemistry\"\>", 
+     ",", "\<\"The Journal of cell biology\"\>", 
+     ",", "\<\"The Biochemical journal\"\>", 
+     ",", "\<\"The Journal of biophysical and biochemical cytology\"\>", 
+     ",", "\<\"Nature\"\>", 
+     ",", "\<\"The Journal of experimental medicine\"\>", 
+     ",", "\<\"Journal of immunology (Baltimore, Md. : 1950)\"\>", 
+     ",", "\<\"The Journal of clinical investigation\"\>", 
+     ",", "\<\"Plant physiology\"\>", ",", "\<\"Virology\"\>", 
+     ",", "\<\"The Journal of physiology\"\>", 
+     ",", "\<\"Journal of molecular biology\"\>", 
+     ",", "\<\"Experimental cell research\"\>", 
+     ",", "\<\"Journal of bacteriology\"\>", 
+     ",", "\<\"Science (New York, N.Y.)\"\>", ",", "\<\"Immunochemistry\"\>", 
+     ",", "\<\"International archives of allergy and applied immunology\"\>", 
+     ",", "\<\"Annals of the New York Academy of Sciences\"\>"}], "}"}], ",", 
+   
+   RowBox[{"{", 
+    RowBox[{"\<\"The Journal of biological chemistry\"\>", 
+     ",", "\<\"The Journal of cell biology\"\>", 
+     ",", "\<\"The Journal of experimental medicine\"\>", 
+     ",", "\<\"The Biochemical journal\"\>", 
+     ",", "\<\"The Journal of biophysical and biochemical cytology\"\>", 
+     ",", "\<\"Experimental cell research\"\>", 
+     ",", "\<\"European journal of biochemistry\"\>", 
+     ",", "\<\"Journal of molecular biology\"\>", 
+     ",", "\<\"Bacteriological reviews\"\>", ",", "\<\"Virology\"\>", 
+     ",", "\<\"Journal of ultrastructure research\"\>", 
+     ",", "\<\"Plant physiology\"\>", 
+     ",", "\<\"The Journal of physiology\"\>", 
+     ",", "\<\"Science (New York, N.Y.)\"\>", 
+     ",", "\<\"Journal of bacteriology\"\>", 
+     ",", "\<\"The journal of histochemistry and cytochemistry : official \
+journal of the Histochemistry Society\"\>", 
+     ",", "\<\"International archives of allergy and applied immunology\"\>", 
+     ",", "\<\"Immunochemistry\"\>", 
+     ",", "\<\"Annals of the New York Academy of Sciences\"\>", 
+     ",", "\<\"Nature\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"The Journal of biological chemistry\"\>", 
+     ",", "\<\"Proceedings of the National Academy of Sciences of the United \
+States of America\"\>", ",", "\<\"Journal of molecular biology\"\>", 
+     ",", "\<\"Biochemistry\"\>", 
+     ",", "\<\"Journal of ultrastructure research\"\>", 
+     ",", "\<\"The journal of histochemistry and cytochemistry : official \
+journal of the Histochemistry Society\"\>", ",", "\<\"Plant physiology\"\>", 
+     ",", "\<\"Nucleic acids research\"\>", ",", "\<\"Immunochemistry\"\>", 
+     ",", "\<\"European journal of biochemistry\"\>", 
+     ",", "\<\"Annals of the New York Academy of Sciences\"\>", 
+     ",", "\<\"The Biochemical journal\"\>", 
+     ",", "\<\"Analytical biochemistry\"\>", 
+     ",", "\<\"Methods in enzymology\"\>", 
+     ",", "\<\"The Journal of biophysical and biochemical cytology\"\>", 
+     ",", "\<\"The Journal of cell biology\"\>", ",", "\<\"Nature\"\>"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"The Journal of biological chemistry\"\>", 
+     ",", "\<\"Proceedings of the National Academy of Sciences of the United \
+States of America\"\>", ",", "\<\"Analytical biochemistry\"\>", 
+     ",", "\<\"Journal of molecular biology\"\>", 
+     ",", "\<\"Annals of the New York Academy of Sciences\"\>", 
+     ",", "\<\"The Biochemical journal\"\>", 
+     ",", "\<\"The Journal of biophysical and biochemical cytology\"\>", 
+     ",", "\<\"Biochemistry\"\>", ",", "\<\"Nucleic acids research\"\>", 
+     ",", "\<\"The Journal of cell biology\"\>", 
+     ",", "\<\"Methods in enzymology\"\>", ",", "\<\"Nature\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"The Journal of biological chemistry\"\>", 
+     ",", "\<\"Analytical biochemistry\"\>", 
+     ",", "\<\"Proceedings of the National Academy of Sciences of the United \
+States of America\"\>", ",", "\<\"Nucleic acids research\"\>", 
+     ",", "\<\"Journal of molecular biology\"\>", 
+     ",", "\<\"The Journal of biophysical and biochemical cytology\"\>", 
+     ",", "\<\"Pflugers Archiv : European journal of physiology\"\>", 
+     ",", "\<\"Science (New York, N.Y.)\"\>", ",", "\<\"Gene\"\>", 
+     ",", "\<\"The Journal of cell biology\"\>", ",", "\<\"Biochemistry\"\>", 
+     ",", "\<\"Methods in enzymology\"\>", ",", "\<\"Nature\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Journal of molecular biology\"\>", 
+     ",", "\<\"Proceedings of the National Academy of Sciences of the United \
+States of America\"\>", ",", "\<\"The Journal of biological chemistry\"\>", 
+     ",", "\<\"Nucleic acids research\"\>", 
+     ",", "\<\"Analytical biochemistry\"\>", 
+     ",", "\<\"Journal of bacteriology\"\>", 
+     ",", "\<\"European journal of biochemistry\"\>", 
+     ",", "\<\"Annals of the New York Academy of Sciences\"\>", 
+     ",", "\<\"The Biochemical journal\"\>", 
+     ",", "\<\"The Journal of biophysical and biochemical cytology\"\>", 
+     ",", "\<\"Virology\"\>", ",", "\<\"Molecular and cellular biology\"\>", 
+     ",", "\<\"Science (New York, N.Y.)\"\>", 
+     ",", "\<\"Pflugers Archiv : European journal of physiology\"\>", 
+     ",", "\<\"The Journal of cell biology\"\>", ",", "\<\"Gene\"\>", 
+     ",", "\<\"Biochemistry\"\>", ",", "\<\"Methods in enzymology\"\>", 
+     ",", "\<\"Nature\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Proceedings of the National Academy of Sciences of the \
+United States of America\"\>", ",", "\<\"Nucleic acids research\"\>", 
+     ",", "\<\"Journal of molecular biology\"\>", 
+     ",", "\<\"Analytical biochemistry\"\>", 
+     ",", "\<\"The Journal of biological chemistry\"\>", ",", "\<\"Gene\"\>", 
+     ",", "\<\"Methods in enzymology\"\>", 
+     ",", "\<\"The journal of histochemistry and cytochemistry : official \
+journal of the Histochemistry Society\"\>", 
+     ",", "\<\"Journal of bacteriology\"\>", 
+     ",", "\<\"Science (New York, N.Y.)\"\>", ",", "\<\"Nature\"\>", 
+     ",", "\<\"Acta crystallographica. Section A, Foundations of \
+crystallography\"\>", ",", "\<\"Journal of ultrastructure research\"\>", 
+     ",", "\<\"Scandinavian journal of clinical and laboratory investigation. \
+Supplementum\"\>", ",", "\<\"The Journal of physiology\"\>", 
+     ",", "\<\"Immunochemistry\"\>", ",", "\<\"Plant physiology\"\>", 
+     ",", "\<\"European journal of biochemistry\"\>", ",", "\<\"Genetics\"\>",
+      ",", "\<\"Molecular biology and evolution\"\>", 
+     ",", "\<\"The Biochemical journal\"\>", 
+     ",", "\<\"Annals of the New York Academy of Sciences\"\>", 
+     ",", "\<\"The Journal of biophysical and biochemical cytology\"\>", 
+     ",", "\<\"Virology\"\>", ",", "\<\"Molecular and cellular biology\"\>", 
+     ",", "\<\"Pflugers Archiv : European journal of physiology\"\>", 
+     ",", "\<\"The Journal of cell biology\"\>", 
+     ",", "\<\"Biochemistry\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Proceedings of the National Academy of Sciences of the \
+United States of America\"\>", ",", "\<\"Nature\"\>", 
+     ",", "\<\"Journal of molecular biology\"\>", 
+     ",", "\<\"Nucleic acids research\"\>", 
+     ",", "\<\"Analytical biochemistry\"\>", ",", "\<\"Gene\"\>", 
+     ",", "\<\"The Journal of biological chemistry\"\>", 
+     ",", "\<\"Science (New York, N.Y.)\"\>", ",", "\<\"Cell\"\>", 
+     ",", "\<\"Methods in enzymology\"\>", 
+     ",", "\<\"Bioinformatics (Oxford, England)\"\>", 
+     ",", "\<\"Acta crystallographica. Section D, Biological \
+crystallography\"\>", ",", "\<\"CA: a cancer journal for clinicians\"\>", 
+     ",", "\<\"Nucleic acids research\"\>", ",", "\<\"Nature\"\>", 
+     ",", "\<\"Computer applications in the biosciences : CABIOS\"\>", 
+     ",", "\<\"The New England journal of medicine\"\>", 
+     ",", "\<\"Journal of molecular graphics\"\>", ",", "\<\"JAMA\"\>", 
+     ",", "\<\"The EMBO journal\"\>", 
+     ",", "\<\"The journal of histochemistry and cytochemistry : official \
+journal of the Histochemistry Society\"\>", 
+     ",", "\<\"Arthritis and rheumatism\"\>", 
+     ",", "\<\"European journal of biochemistry\"\>", 
+     ",", "\<\"The Biochemical journal\"\>", 
+     ",", "\<\"Lancet (London, England)\"\>", 
+     ",", "\<\"Journal of bacteriology\"\>", 
+     ",", "\<\"Molecular and cellular biology\"\>", ",", "\<\"Genetics\"\>", 
+     ",", "\<\"Molecular biology and evolution\"\>", 
+     ",", "\<\"The Journal of cell biology\"\>", ",", "\<\"Biochemistry\"\>", 
+     ",", "\<\"Acta crystallographica. Section A, Foundations of \
+crystallography\"\>", ",", "\<\"Microbiological reviews\"\>", 
+     ",", "\<\"Biostatistics (Oxford, England)\"\>", 
+     ",", "\<\"Journal of the National Cancer Institute\"\>", 
+     ",", "\<\"Genome research\"\>", ",", "\<\"JAMA\"\>", 
+     ",", "\<\"Yeast (Chichester, England)\"\>", 
+     ",", "\<\"Journal of chronic diseases\"\>", 
+     ",", "\<\"Acta psychiatrica Scandinavica\"\>", 
+     ",", "\<\"Archives of biochemistry and biophysics\"\>", 
+     ",", "\<\"Journal of molecular and applied genetics\"\>", 
+     ",", "\<\"Genome biology\"\>", 
+     ",", "\<\"Annual review of biochemistry\"\>", 
+     ",", "\<\"Biochemical and biophysical research communications\"\>", 
+     ",", "\<\"Systematic biology\"\>", 
+     ",", "\<\"Journal of clinical microbiology\"\>", ",", "\<\"Genomics\"\>",
+      ",", "\<\"Development (Cambridge, England)\"\>", 
+     ",", "\<\"Biochemical pharmacology\"\>", ",", "\<\"Diabetologia\"\>", 
+     ",", "\<\"Electrophoresis\"\>", 
+     ",", "\<\"Journal of neurology, neurosurgery, and psychiatry\"\>", 
+     ",", "\<\"Journal of personality and social psychology\"\>", 
+     ",", "\<\"Archives of general psychiatry\"\>", 
+     ",", "\<\"Journal of molecular evolution\"\>", 
+     ",", "\<\"Pharmacological reviews\"\>", ",", "\<\"Biopolymers\"\>", 
+     ",", "\<\"Clinical chemistry\"\>", ",", "\<\"Biometrics\"\>", 
+     ",", "\<\"Methods in molecular biology (Clifton, N.J.)\"\>", 
+     ",", "\<\"Journal of ultrastructure research\"\>", 
+     ",", "\<\"Journal of biomolecular NMR\"\>", 
+     ",", "\<\"Evolution; international journal of organic evolution\"\>", 
+     ",", "\<\"Neuropsychologia\"\>", 
+     ",", "\<\"Scandinavian journal of clinical and laboratory investigation. \
+Supplementum\"\>", ",", "\<\"Immunochemistry\"\>", ",", "\<\"Neurology\"\>", 
+     ",", "\<\"Briefings in bioinformatics\"\>", 
+     ",", "\<\"The Plant journal : for cell and molecular biology\"\>", 
+     ",", "\<\"Plant physiology\"\>", ",", "\<\"Medical care\"\>", 
+     ",", "\<\"The Journal of physiology\"\>", 
+     ",", "\<\"Acta crystallographica. Section D, Biological \
+crystallography\"\>", ",", "\<\"Journal of immunological methods\"\>", 
+     ",", "\<\"Annals of the New York Academy of Sciences\"\>", 
+     ",", "\<\"The Journal of biophysical and biochemical cytology\"\>", 
+     ",", "\<\"Nature genetics\"\>", ",", "\<\"Virology\"\>", 
+     ",", "\<\"Journal of psychiatric research\"\>", 
+     ",", "\<\"Methods (San Diego, Calif.)\"\>", 
+     ",", "\<\"Methods in enzymology\"\>", 
+     ",", "\<\"Pflugers Archiv : European journal of physiology\"\>"}], "}"}],
+    ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Nature\"\>", 
+     ",", "\<\"Proceedings of the National Academy of Sciences of the United \
+States of America\"\>", ",", "\<\"Cell\"\>", 
+     ",", "\<\"Journal of molecular biology\"\>", 
+     ",", "\<\"Nucleic acids research\"\>", ",", "\<\"Nature\"\>", 
+     ",", "\<\"Science (New York, N.Y.)\"\>", 
+     ",", "\<\"Analytical biochemistry\"\>", ",", "\<\"Genome research\"\>", 
+     ",", "\<\"The Journal of biological chemistry\"\>", 
+     ",", "\<\"The New England journal of medicine\"\>", 
+     ",", "\<\"Bioinformatics (Oxford, England)\"\>", 
+     ",", "\<\"Acta crystallographica. Section D, Biological \
+crystallography\"\>", ",", "\<\"Genome biology\"\>", 
+     ",", "\<\"Bioinformatics (Oxford, England)\"\>", 
+     ",", "\<\"Nucleic acids research\"\>", 
+     ",", "\<\"CA: a cancer journal for clinicians\"\>", 
+     ",", "\<\"Nature methods\"\>", ",", "\<\"Genetics\"\>", 
+     ",", "\<\"CA: a cancer journal for clinicians\"\>", ",", "\<\"Gene\"\>", 
+     ",", "\<\"Methods in enzymology\"\>", 
+     ",", "\<\"Acta crystallographica. Section D, Biological \
+crystallography\"\>", ",", "\<\"Science (New York, N.Y.)\"\>", 
+     ",", "\<\"JAMA\"\>", ",", "\<\"Cell\"\>", ",", "\<\"Nature genetics\"\>",
+      ",", "\<\"Molecular biology and evolution\"\>", 
+     ",", "\<\"Psychological bulletin\"\>", 
+     ",", "\<\"Biochemical pharmacology\"\>", 
+     ",", "\<\"Acta neuropathologica\"\>", ",", "\<\"NeuroImage\"\>", 
+     ",", "\<\"Journal of bacteriology\"\>", 
+     ",", "\<\"The New England journal of medicine\"\>", 
+     ",", "\<\"Archives of general psychiatry\"\>", 
+     ",", "\<\"Journal of the National Cancer Institute\"\>", 
+     ",", "\<\"Journal of personality and social psychology\"\>", 
+     ",", "\<\"Arthritis and rheumatism\"\>", 
+     ",", "\<\"Journal of computational chemistry\"\>", 
+     ",", "\<\"Journal of molecular graphics\"\>", 
+     ",", "\<\"Medical care\"\>", ",", "\<\"BMJ (Clinical research ed.)\"\>", 
+     ",", "\<\"Biometrics\"\>", ",", "\<\"Controlled clinical trials\"\>", 
+     ",", "\<\"Nature protocols\"\>", ",", "\<\"Lancet (London, England)\"\>",
+      ",", "\<\"Molecular biology and evolution\"\>", 
+     ",", "\<\"Acta crystallographica. Section A, Foundations of \
+crystallography\"\>", ",", "\<\"British journal of cancer\"\>", 
+     ",", "\<\"Genomics\"\>", ",", "\<\"Magnetic resonance in medicine\"\>", 
+     ",", "\<\"Nature reviews. Neuroscience\"\>", 
+     ",", "\<\"European journal of cancer (Oxford, England : 1990)\"\>", 
+     ",", "\<\"Analytical chemistry\"\>", 
+     ",", "\<\"Annual review of biochemistry\"\>", 
+     ",", "\<\"Developmental dynamics : an official publication of the \
+American Association of Anatomists\"\>", ",", "\<\"Genome research\"\>", 
+     ",", "\<\"Applied and environmental microbiology\"\>", 
+     ",", "\<\"Journal of health and social behavior\"\>", 
+     ",", "\<\"Annual review of neuroscience\"\>", 
+     ",", "\<\"Journal of autism and developmental disorders\"\>", 
+     ",", "\<\"Health policy (Amsterdam, Netherlands)\"\>", 
+     ",", "\<\"Radiology\"\>", ",", "\<\"Nature reviews. Genetics\"\>", 
+     ",", "\<\"Journal of clinical microbiology\"\>", 
+     ",", "\<\"Pharmacological reviews\"\>", 
+     ",", "\<\"Trends in genetics : TIG\"\>", 
+     ",", "\<\"Yeast (Chichester, England)\"\>", 
+     ",", "\<\"Evolutionary bioinformatics online\"\>", 
+     ",", "\<\"Journal of ultrastructure research\"\>", 
+     ",", "\<\"Nature biotechnology\"\>", 
+     ",", "\<\"Schizophrenia bulletin\"\>", 
+     ",", "\<\"Psychiatry research\"\>", ",", "\<\"BMC genomics\"\>", 
+     ",", "\<\"Physical review. B, Condensed matter\"\>", 
+     ",", "\<\"Immunochemistry\"\>", 
+     ",", "\<\"Computer applications in the biosciences : CABIOS\"\>", 
+     ",", "\<\"British journal of addiction\"\>", ",", "\<\"Nephron\"\>", 
+     ",", "\<\"Journal of general internal medicine\"\>", 
+     ",", "\<\"American journal of kidney diseases : the official journal of \
+the National Kidney Foundation\"\>", 
+     ",", "\<\"Scandinavian journal of clinical and laboratory investigation. \
+Supplementum\"\>", ",", "\<\"Archives of biochemistry and biophysics\"\>", 
+     ",", "\<\"The journal of histochemistry and cytochemistry : official \
+journal of the Histochemistry Society\"\>", 
+     ",", "\<\"Critical care medicine\"\>", 
+     ",", "\<\"BMC evolutionary biology\"\>", ",", "\<\"Diabetes care\"\>", 
+     ",", "\<\"Hypertension (Dallas, Tex. : 1979)\"\>", 
+     ",", "\<\"Computers and biomedical research, an international \
+journal\"\>", ",", "\<\"JAMA\"\>", 
+     ",", "\<\"The Journal of clinical psychiatry\"\>", 
+     ",", "\<\"The journal of physical chemistry. B\"\>", 
+     ",", "\<\"Electrophoresis\"\>", 
+     ",", "\<\"Annals of internal medicine\"\>", 
+     ",", "\<\"Development (Cambridge, England)\"\>", 
+     ",", "\<\"European journal of biochemistry\"\>", 
+     ",", "\<\"Spatial vision\"\>", 
+     ",", "\<\"World Health Organization technical report series\"\>", 
+     ",", "\<\"The Biochemical journal\"\>", ",", "\<\"Biopolymers\"\>", 
+     ",", "\<\"Plant physiology\"\>", ",", "\<\"Circulation\"\>", 
+     ",", "\<\"The EMBO journal\"\>", 
+     ",", "\<\"The Journal of biophysical and biochemical cytology\"\>", 
+     ",", "\<\"Annals of the New York Academy of Sciences\"\>", 
+     ",", "\<\"Briefings in bioinformatics\"\>", 
+     ",", "\<\"Journal of molecular evolution\"\>", 
+     ",", "\<\"Statistics in medicine\"\>", 
+     ",", "\<\"Molecular and cellular biology\"\>", 
+     ",", "\<\"The Journal of physiology\"\>", ",", "\<\"Virology\"\>", 
+     ",", "\<\"International journal of cancer\"\>", 
+     ",", "\<\"Biostatistics (Oxford, England)\"\>", 
+     ",", "\<\"Journal of neurology, neurosurgery, and psychiatry\"\>", 
+     ",", "\<\"Acta psychiatrica Scandinavica\"\>", 
+     ",", "\<\"Systematic biology\"\>", 
+     ",", "\<\"Statistical applications in genetics and molecular \
+biology\"\>", ",", "\<\"Clinical chemistry\"\>", 
+     ",", "\<\"Journal of biomolecular NMR\"\>", 
+     ",", "\<\"Evolution; international journal of organic evolution\"\>", 
+     ",", "\<\"Journal of applied crystallography\"\>", 
+     ",", "\<\"Methods in molecular biology (Clifton, N.J.)\"\>", 
+     ",", "\<\"Neurology\"\>", ",", "\<\"Diabetologia\"\>", 
+     ",", "\<\"The Plant journal : for cell and molecular biology\"\>", 
+     ",", "\<\"Journal of immunological methods\"\>", 
+     ",", "\<\"Journal of chronic diseases\"\>", 
+     ",", "\<\"BMJ (Clinical research ed.)\"\>", 
+     ",", "\<\"The Journal of cell biology\"\>", 
+     ",", "\<\"Neuropsychologia\"\>", ",", "\<\"Biochemistry\"\>", 
+     ",", "\<\"Pflugers Archiv : European journal of physiology\"\>", 
+     ",", "\<\"American journal of human genetics\"\>", 
+     ",", "\<\"Methods in enzymology\"\>", 
+     ",", "\<\"Journal of psychiatric research\"\>", 
+     ",", "\<\"Methods (San Diego, Calif.)\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Bioinformatics (Oxford, England)\"\>", 
+     ",", "\<\"CA: a cancer journal for clinicians\"\>", 
+     ",", "\<\"Nature\"\>", 
+     ",", "\<\"Proceedings of the National Academy of Sciences of the United \
+States of America\"\>", ",", "\<\"Nucleic acids research\"\>", 
+     ",", "\<\"The New England journal of medicine\"\>", ",", "\<\"Cell\"\>", 
+     ",", "\<\"Genome biology\"\>", ",", "\<\"Nucleic acids research\"\>", 
+     ",", "\<\"Journal of molecular biology\"\>", ",", "\<\"Nature\"\>", 
+     ",", "\<\"Nature methods\"\>", 
+     ",", "\<\"Bioinformatics (Oxford, England)\"\>", 
+     ",", "\<\"Acta crystallographica. Section D, Biological \
+crystallography\"\>", ",", "\<\"Science (New York, N.Y.)\"\>", 
+     ",", "\<\"Genome research\"\>", ",", "\<\"Analytical biochemistry\"\>", 
+     ",", "\<\"The Journal of biological chemistry\"\>", 
+     ",", "\<\"NeuroImage\"\>", ",", "\<\"Science (New York, N.Y.)\"\>", 
+     ",", "\<\"Nature biotechnology\"\>", ",", "\<\"Genetics\"\>", 
+     ",", "\<\"Lancet (London, England)\"\>", 
+     ",", "\<\"Molecular biology and evolution\"\>", 
+     ",", "\<\"Acta crystallographica. Section D, Biological \
+crystallography\"\>", ",", "\<\"Cell\"\>", ",", "\<\"BMC bioinformatics\"\>", 
+     ",", "\<\"JAMA\"\>", ",", "\<\"CA: a cancer journal for clinicians\"\>", 
+     ",", "\<\"JAMA\"\>", ",", "\<\"Biometrics\"\>", 
+     ",", "\<\"Molecular biology and evolution\"\>", 
+     ",", "\<\"BMJ (Clinical research ed.)\"\>", 
+     ",", "\<\"Nature protocols\"\>", ",", "\<\"Acta neuropathologica\"\>", 
+     ",", "\<\"Circulation\"\>", 
+     ",", "\<\"The New England journal of medicine\"\>", 
+     ",", "\<\"Applied and environmental microbiology\"\>", 
+     ",", "\<\"Systematic biology\"\>", ",", "\<\"Psychological bulletin\"\>",
+      ",", "\<\"Journal of the National Cancer Institute\"\>", 
+     ",", "\<\"Archives of general psychiatry\"\>", 
+     ",", "\<\"Annals of internal medicine\"\>", 
+     ",", "\<\"Journal of personality and social psychology\"\>", 
+     ",", "\<\"Medical care\"\>", 
+     ",", "\<\"International journal of cancer\"\>", 
+     ",", "\<\"Lancet (London, England)\"\>", 
+     ",", "\<\"Controlled clinical trials\"\>", 
+     ",", "\<\"Journal of computational chemistry\"\>", 
+     ",", "\<\"Nature genetics\"\>", 
+     ",", "\<\"Acta crystallographica. Section A, Foundations of \
+crystallography\"\>", 
+     ",", "\<\"Acta crystallographica. Section C, Structural chemistry\"\>", 
+     ",", "\<\"Developmental dynamics : an official publication of the \
+American Association of Anatomists\"\>", ",", "\<\"Sleep\"\>", 
+     ",", "\<\"Virology\"\>", ",", "\<\"Systematic reviews\"\>", 
+     ",", "\<\"Molecular cell\"\>", 
+     ",", "\<\"International journal for quality in health care : journal of \
+the International Society for Quality in Health Care\"\>", 
+     ",", "\<\"The EMBO journal\"\>", 
+     ",", "\<\"Hypertension (Dallas, Tex. : 1979)\"\>", 
+     ",", "\<\"American journal of kidney diseases : the official journal of \
+the National Kidney Foundation\"\>", 
+     ",", "\<\"Magnetic resonance in medicine\"\>", ",", "\<\"Radiology\"\>", 
+     ",", "\<\"Archives of biochemistry and biophysics\"\>", 
+     ",", "\<\"Trends in genetics : TIG\"\>", 
+     ",", "\<\"Development (Cambridge, England)\"\>", 
+     ",", "\<\"Plant physiology\"\>", ",", "\<\"BMC evolutionary biology\"\>",
+      ",", "\<\"Diabetes care\"\>", ",", "\<\"Human brain mapping\"\>", 
+     ",", "\<\"Nature reviews. Cancer\"\>", 
+     ",", "\<\"The Journal of clinical investigation\"\>", 
+     ",", "\<\"Critical care medicine\"\>", 
+     ",", "\<\"Journal of the American Geriatrics Society\"\>", 
+     ",", "\<\"Journal of computational chemistry\"\>", 
+     ",", "\<\"British journal of addiction\"\>", 
+     ",", "\<\"The journal of physical chemistry. B\"\>", 
+     ",", "\<\"Biopolymers\"\>", 
+     ",", "\<\"The European respiratory journal\"\>", 
+     ",", "\<\"Clinical chemistry\"\>", ",", "\<\"Nature cell biology\"\>", 
+     ",", "\<\"Medicine and science in sports and exercise\"\>", 
+     ",", "\<\"Nature reviews. Genetics\"\>", 
+     ",", "\<\"The Journal of physiology\"\>", 
+     ",", "\<\"Annals of internal medicine\"\>", 
+     ",", "\<\"Schizophrenia bulletin\"\>", 
+     ",", "\<\"Health policy (Amsterdam, Netherlands)\"\>", 
+     ",", "\<\"Computers and biomedical research, an international \
+journal\"\>", 
+     ",", "\<\"The journals of gerontology. Series A, Biological sciences and \
+medical sciences\"\>", ",", "\<\"Journal of neuroscience methods\"\>", 
+     ",", "\<\"Nature genetics\"\>", 
+     ",", "\<\"Genetics in medicine : official journal of the American \
+College of Medical Genetics\"\>", ",", "\<\"Science signaling\"\>", 
+     ",", "\<\"Qualitative health research\"\>", 
+     ",", "\<\"Molecular ecology\"\>", 
+     ",", "\<\"Molecular systems biology\"\>", 
+     ",", "\<\"Physical review. B, Condensed matter\"\>", 
+     ",", "\<\"Cytotherapy\"\>", ",", "\<\"Cancer discovery\"\>", 
+     ",", "\<\"Journal of molecular evolution\"\>", 
+     ",", "\<\"Journal of health and social behavior\"\>", 
+     ",", "\<\"BMC genomics\"\>", 
+     ",", "\<\"Biostatistics (Oxford, England)\"\>", 
+     ",", "\<\"Systematic biology\"\>", 
+     ",", "\<\"World Health Organization technical report series\"\>", 
+     ",", "\<\"Methods in molecular biology (Clifton, N.J.)\"\>", 
+     ",", "\<\"Spatial vision\"\>", ",", "\<\"Arthritis and rheumatism\"\>", 
+     ",", "\<\"The Journal of clinical psychiatry\"\>", 
+     ",", "\<\"Psychiatry research\"\>", 
+     ",", "\<\"Statistical applications in genetics and molecular \
+biology\"\>", ",", "\<\"Applied and environmental microbiology\"\>", 
+     ",", "\<\"Annals of surgery\"\>", ",", "\<\"Biochemistry\"\>", 
+     ",", "\<\"Journal of biomolecular NMR\"\>", 
+     ",", "\<\"Journal of neurology, neurosurgery, and psychiatry\"\>", 
+     ",", "\<\"Physical review letters\"\>", 
+     ",", "\<\"The Journal of cell biology\"\>", 
+     ",", "\<\"Pflugers Archiv : European journal of physiology\"\>", 
+     ",", "\<\"Journal of computational biology : a journal of computational \
+molecular cell biology\"\>", ",", "\<\"Clinical chemistry\"\>", 
+     ",", "\<\"Behavior research methods\"\>", 
+     ",", "\<\"Evolution; international journal of organic evolution\"\>", 
+     ",", "\<\"Methods in enzymology\"\>", ",", "\<\"Gene\"\>", 
+     ",", "\<\"Neurology\"\>", 
+     ",", "\<\"Journal of general internal medicine\"\>", 
+     ",", "\<\"European journal of cancer (Oxford, England : 1990)\"\>", 
+     ",", "\<\"Statistics in medicine\"\>", 
+     ",", "\<\"Journal of biomedical informatics\"\>", 
+     ",", "\<\"Genome research\"\>", 
+     ",", "\<\"The Plant journal : for cell and molecular biology\"\>", 
+     ",", "\<\"Diabetologia\"\>", 
+     ",", "\<\"Journal of immunological methods\"\>", 
+     ",", "\<\"Acta psychiatrica Scandinavica\"\>", 
+     ",", "\<\"Journal of applied crystallography\"\>", 
+     ",", "\<\"Neuropsychologia\"\>", 
+     ",", "\<\"Journal of molecular graphics\"\>", 
+     ",", "\<\"PLoS medicine\"\>", ",", "\<\"Journal of chronic diseases\"\>",
+      ",", "\<\"American journal of human genetics\"\>", 
+     ",", "\<\"Methods in enzymology\"\>", 
+     ",", "\<\"BMJ (Clinical research ed.)\"\>", 
+     ",", "\<\"Journal of psychiatric research\"\>", 
+     ",", "\<\"Methods (San Diego, Calif.)\"\>"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.961096618817483*^9, 3.961096651815885*^9},
+ CellLabel->"Out[18]=",ExpressionUUID->"f006a293-6bbc-4444-8c8b-d58d0d60692f"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 911},
+WindowMargins->{{598, Automatic}, {Automatic, 0}},
+FrontEndVersion->"14.2 for Mac OS X ARM (64-bit) \
+(2025\:5e743\:670816\:65e5)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"95285819-899b-482e-ba90-af2a12bc792a"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[576, 22, 160, 3, 96, "Title",ExpressionUUID->"8c7592ee-f444-43c7-8d3c-a884ed8b9700"],
+Cell[CellGroupData[{
+Cell[761, 29, 211, 4, 66, "Section",ExpressionUUID->"db1c1ac8-f519-40b2-8a17-96c32b75c67e"],
+Cell[975, 35, 370, 9, 62, "Input",ExpressionUUID->"bb45e25b-ecef-43ba-a3ee-f130b03f70ab"],
+Cell[CellGroupData[{
+Cell[1370, 48, 264, 4, 42, "Input",ExpressionUUID->"4942f088-5c90-4adb-942c-7e4c73bc6129"],
+Cell[1637, 54, 270, 4, 33, "Output",ExpressionUUID->"57886d02-2b76-4f97-a7ee-6f632f0ff199"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1944, 63, 291, 5, 42, "Input",ExpressionUUID->"f6fdcbb9-ad90-4352-8142-d6bf513157c8"],
+Cell[2238, 70, 510, 9, 53, "Output",ExpressionUUID->"e9a05826-6546-4f52-986d-2e255311bc15"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2785, 84, 526, 14, 42, "Input",ExpressionUUID->"8ae364bf-2c21-48c2-9a01-f95e40e4474b"],
+Cell[3314, 100, 245, 3, 33, "Output",ExpressionUUID->"6f26645d-dcb2-4ee3-bbc4-1abd88b692e5"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3596, 108, 333, 6, 42, "Input",ExpressionUUID->"3013a7fe-5e5d-45e4-8f0a-df6d81ff285a"],
+Cell[3932, 116, 480, 8, 53, "Output",ExpressionUUID->"5aadfac2-69a9-4de7-a02b-9b03bf2ce7a1"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4461, 130, 160, 3, 66, "Section",ExpressionUUID->"86968e34-6a9c-4c1c-b8ff-1574281c2bbf"],
+Cell[4624, 135, 525, 12, 64, "Input",ExpressionUUID->"0ef40f94-4164-46cd-8753-064acbdeb32c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5186, 152, 260, 4, 66, "Section",ExpressionUUID->"5fcdbdd8-deeb-427e-8609-9782c291a239"],
+Cell[CellGroupData[{
+Cell[5471, 160, 646, 17, 42, "Input",ExpressionUUID->"c5dd6782-e6d1-4f7d-840e-baff532d9b20"],
+Cell[6120, 179, 318, 4, 33, "Output",ExpressionUUID->"a4847664-c8b0-4ea7-a367-ec065fc8a427"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6475, 188, 328, 6, 42, "Input",ExpressionUUID->"766a0375-a5af-471c-9337-d4a7f83d7049"],
+Cell[6806, 196, 495, 9, 33, "Output",ExpressionUUID->"95218dbe-2731-4007-83ac-7775b5ea8a00"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7350, 211, 349, 5, 66, "Section",ExpressionUUID->"10e7e9c4-142a-4a21-b7b2-a79a3164c06a"],
+Cell[CellGroupData[{
+Cell[7724, 220, 404, 10, 42, "Input",ExpressionUUID->"1566c974-8a39-4841-9408-0351bb5c7c58"],
+Cell[8131, 232, 225, 3, 33, "Output",ExpressionUUID->"3c37970d-acd8-4e32-8ad5-4ff589490c6f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8393, 240, 992, 24, 98, "Input",ExpressionUUID->"08b352c1-d2c0-40d6-bf35-b7da628d7799"],
+Cell[9388, 266, 315, 4, 33, "Output",ExpressionUUID->"749e266c-354d-4b00-a14b-a591ca4aed70"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9740, 275, 294, 5, 42, "Input",ExpressionUUID->"d8346230-cf38-46c3-b832-b673b6d7cfb8"],
+Cell[10037, 282, 411, 8, 33, "Output",ExpressionUUID->"17d66b29-a04a-4a2c-bfab-b3b04769c98b"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10497, 296, 294, 5, 66, "Section",ExpressionUUID->"1932846f-4d5c-4444-bac5-699119e3a784"],
+Cell[CellGroupData[{
+Cell[10816, 305, 277, 5, 42, "Input",ExpressionUUID->"6944b78b-0ee9-4b08-be8e-32f51bff47b5"],
+Cell[11096, 312, 429, 8, 33, "Output",ExpressionUUID->"b168aeb3-08d2-43eb-918c-fa43733476ec"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11562, 325, 919, 21, 117, "Input",ExpressionUUID->"8e8fc4ce-b71a-496f-845f-f631560b46d6"],
+Cell[12484, 348, 11510, 267, 329, "Output",ExpressionUUID->"26784cd4-1878-4b38-93bd-b2b6f30c496f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24031, 620, 954, 21, 104, "Input",ExpressionUUID->"42f9b14b-8f48-4b07-b8bc-0b495a529ce8"],
+Cell[24988, 643, 12479, 274, 298, "Output",ExpressionUUID->"ff809cad-5e6e-4335-a994-70ee7b5f23b2"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[37504, 922, 851, 20, 104, "Input",ExpressionUUID->"407aedcd-2387-43e1-a32b-f7b2fbdcddb9"],
+Cell[38358, 944, 12848, 282, 300, "Output",ExpressionUUID->"86d0ca65-f900-4ef7-bffd-101e8b511b1e"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[51255, 1232, 387, 6, 66, "Section",ExpressionUUID->"14b6b74e-1492-44bc-b3d3-bac486132ec8"],
+Cell[CellGroupData[{
+Cell[51667, 1242, 231, 4, 29, "Input",ExpressionUUID->"75b2a5f2-9bcd-4316-a66f-2b69b5e45c80"],
+Cell[51901, 1248, 366, 7, 33, "Output",ExpressionUUID->"38085854-9df0-430e-9b4e-d8619af245ff"]
+}, Open  ]],
+Cell[52282, 1258, 434, 9, 55, "Text",ExpressionUUID->"9db173b9-e6ed-4df0-a8ef-2ef1a6b901af"],
+Cell[52719, 1269, 209, 4, 33, "Text",ExpressionUUID->"6951be46-7800-45ce-8367-f63f6aab767b"],
+Cell[CellGroupData[{
+Cell[52953, 1277, 289, 5, 42, "Input",ExpressionUUID->"02977ced-b361-4e3b-bab2-120cf08658c7"],
+Cell[53245, 1284, 1560, 33, 156, "Output",ExpressionUUID->"817de887-b50a-46ac-b63c-9a15b3e14392"]
+}, Open  ]],
+Cell[54820, 1320, 172, 3, 33, "Text",ExpressionUUID->"31ccca76-af3d-478c-8218-fc355c804011"],
+Cell[CellGroupData[{
+Cell[55017, 1327, 299, 6, 42, "Input",ExpressionUUID->"4506fb96-25a3-4a16-9bf0-cd282ed0b7ef"],
+Cell[55319, 1335, 29453, 512, 5282, "Output",ExpressionUUID->"f006a293-6bbc-4444-8c8b-d58d0d60692f"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
