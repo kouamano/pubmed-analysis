@@ -1,0 +1,1369 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     55718,       1361]
+NotebookOptionsPosition[     48381,       1223]
+NotebookOutlinePosition[     48788,       1240]
+CellTagsIndexPosition[     48745,       1237]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["PMID to MeSH", "Title",
+ CellChangeTimes->{{3.9611024780476923`*^9, 
+  3.961102489687276*^9}},ExpressionUUID->"ecd4aebe-d40a-443f-b537-\
+5872638ee744"],
+
+Cell[CellGroupData[{
+
+Cell["Data", "Section",
+ CellChangeTimes->{{3.930206523344901*^9, 3.930206543255122*^9}, {
+  3.9302071672380342`*^9, 3.930207169587823*^9}, {3.9611025268516912`*^9, 
+  3.961102558502493*^9}},ExpressionUUID->"e9c4534d-c8fc-46f5-9822-\
+399806a3e7a4"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"dir", 
+  "=", "\"\</Volumes/elecom/BANK/pubmed/202312/xml/element/mesh/\>\""}]], \
+"Input",
+ CellChangeTimes->{{3.9611025610091953`*^9, 3.961102597248151*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"dc171f20-1730-441b-b28e-566d1afa6514"],
+
+Cell[BoxData["\<\"/Volumes/elecom/BANK/pubmed/202312/xml/element/mesh/\"\>"], \
+"Output",
+ CellChangeTimes->{3.9611025985659447`*^9, 3.961104870961555*^9, 
+  3.961205801704402*^9, 3.961206499545136*^9, 3.9612091745596123`*^9, 
+  3.961215468402646*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"bd7478a0-e0f7-404c-883e-fc998fefd8e1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"file", "=", 
+    RowBox[{"FileNames", "[", 
+     RowBox[{"dir", "<>", "\"\<*blk\>\""}], "]"}]}], ")"}], "//", 
+  "Length"}]], "Input",
+ CellChangeTimes->{{3.9611026008818197`*^9, 3.961102654142756*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"7e522734-a2bf-4cea-8eb3-854762bc92a9"],
+
+Cell[BoxData["1219"], "Output",
+ CellChangeTimes->{{3.961102621802537*^9, 3.961102655066002*^9}, 
+   3.961104871111944*^9, 3.961205801830525*^9, 3.961206499584177*^9, 
+   3.9612091748041067`*^9, 3.961215468581642*^9},
+ CellLabel->"Out[2]=",ExpressionUUID->"828b767e-1b50-45fe-b8cf-0d550a83db37"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\:51e6\:7406\:306e\:691c\:8a0e", "Section",
+ CellChangeTimes->{{3.930206523344901*^9, 3.930206543255122*^9}, {
+  3.9302071672380342`*^9, 3.930207169587823*^9}, {3.9611025268516912`*^9, 
+  3.9611025309766693`*^9}, {3.9611039606941957`*^9, 
+  3.961103973379683*^9}},ExpressionUUID->"d05a13af-1648-40ed-b2f1-\
+19a478beaf23"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"in", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{
+     RowBox[{"file", "[", 
+      RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<String\>\""}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.961102679525638*^9, 3.961102712540662*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"b82c34e0-d4f6-4436-b6e3-e7a021ca18ac"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"step1", "=", 
+   RowBox[{"Drop", "[", 
+    RowBox[{
+     RowBox[{"StringSplit", "[", 
+      RowBox[{"in", ",", "\"\<<PubmedArticle>\>\""}], "]"}], ",", "1"}], 
+    "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.961102753610436*^9, 3.961102854709979*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"85dde4f3-460e-4148-885e-1c3c1623ce93"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"step2", "=", 
+    RowBox[{"Map", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"StringSplit", "[", 
+        RowBox[{"#", ",", "\"\<\\n--\\n\>\""}], "]"}], "&"}], ",", "step1"}], 
+     "]"}]}], ")"}], "//", "Length"}]], "Input",
+ CellChangeTimes->{{3.961103277611031*^9, 3.961103283951421*^9}, {
+  3.961103317688949*^9, 3.9611033920593843`*^9}, {3.961103604176138*^9, 
+  3.961103650445825*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"a71bd1e7-7524-405b-9647-5118af0e435d"],
+
+Cell[BoxData["30000"], "Output",
+ CellChangeTimes->{{3.9611033557689943`*^9, 3.961103393534383*^9}, {
+   3.961103630317774*^9, 3.961103651481121*^9}, 3.961104871519973*^9, 
+   3.961205811358736*^9, 3.961206508115985*^9, 3.9612091787845297`*^9, 
+   3.96121548001832*^9},
+ CellLabel->"Out[5]=",ExpressionUUID->"7fe4e5ac-1e2b-4ce6-87cf-444f507b9e73"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"step2", "[", 
+  RowBox[{"[", "1", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.961103662792115*^9, 3.961103663227281*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"3f2a7221-9112-483b-87a1-2f7eedfe7b85"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"\\n[[[Bl8]]],[[[Ty16]]],[[[Lv3]]],[[[Pa7]]]\"\>", 
+   ",", "\<\"[[[Bl9]]],[[[Ty3]]],[[[Lv3]]],[[[Pa7]]]<MedlineCitation \
+Status=\\\"MEDLINE\\\" \
+Owner=\\\"NLM\\\">\\n[[[Bl10]]],[[[Ty16]]],[[[Lv4]]],[[[Pa9]]]\"\>", 
+   ",", "\<\"[[[Bl11]]],[[[Ty3]]],[[[Lv4]]],[[[Pa9]]]<PMID Version=\\\"1\\\">\
+\\n[[[Bl12]]],[[[Ty16]]],[[[Lv5]]],[[[Pa11]]]1\"\>", 
+   ",", "\<\"[[[Bl303]]],[[[Ty3]]],[[[Lv4]]],[[[Pa9]]]<MeshHeadingList>\\n[[[\
+Bl304]]],[[[Ty16]]],[[[Lv5]]],[[[Pa303]]]\"\>", 
+   ",", "\<\"[[[Bl305]]],[[[Ty3]]],[[[Lv5]]],[[[Pa303]]]<MeshHeading>\\n[[[\
+Bl306]]],[[[Ty16]]],[[[Lv6]]],[[[Pa305]]]\"\>", 
+   ",", "\<\"[[[Bl307]]],[[[Ty3]]],[[[Lv6]]],[[[Pa305]]]<DescriptorName UI=\\\
+\"D000445\\\" \
+MajorTopicYN=\\\"N\\\">\\n[[[Bl308]]],[[[Ty16]]],[[[Lv7]]],[[[Pa307]]]\
+Aldehyde Oxidoreductases\"\>", 
+   ",", "\<\"[[[Bl311]]],[[[Ty3]]],[[[Lv6]]],[[[Pa305]]]<QualifierName \
+UI=\\\"Q000378\\\" \
+MajorTopicYN=\\\"N\\\">\\n[[[Bl312]]],[[[Ty16]]],[[[Lv7]]],[[[Pa311]]]\
+metabolism\"\>", 
+   ",", "\<\"[[[Bl317]]],[[[Ty3]]],[[[Lv5]]],[[[Pa303]]]<MeshHeading>\\n[[[\
+Bl318]]],[[[Ty16]]],[[[Lv6]]],[[[Pa317]]]\"\>", 
+   ",", "\<\"[[[Bl319]]],[[[Ty3]]],[[[Lv6]]],[[[Pa317]]]<DescriptorName UI=\\\
+\"D000818\\\" \
+MajorTopicYN=\\\"N\\\">\\n[[[Bl320]]],[[[Ty16]]],[[[Lv7]]],[[[Pa319]]]Animals\
+\"\>", ",", \
+"\<\"[[[Bl325]]],[[[Ty3]]],[[[Lv5]]],[[[Pa303]]]<MeshHeading>\\n[[[Bl326]]],[[\
+[Ty16]]],[[[Lv6]]],[[[Pa325]]]\"\>", 
+   ",", "\<\"[[[Bl327]]],[[[Ty3]]],[[[Lv6]]],[[[Pa325]]]<DescriptorName UI=\\\
+\"D001826\\\" \
+MajorTopicYN=\\\"N\\\">\\n[[[Bl328]]],[[[Ty16]]],[[[Lv7]]],[[[Pa327]]]Body \
+Fluids\"\>", 
+   ",", "\<\"[[[Bl331]]],[[[Ty3]]],[[[Lv6]]],[[[Pa325]]]<QualifierName \
+UI=\\\"Q000032\\\" \
+MajorTopicYN=\\\"Y\\\">\\n[[[Bl332]]],[[[Ty16]]],[[[Lv7]]],[[[Pa331]]]\
+analysis\"\>", 
+   ",", "\<\"[[[Bl337]]],[[[Ty3]]],[[[Lv5]]],[[[Pa303]]]<MeshHeading>\\n[[[\
+Bl338]]],[[[Ty16]]],[[[Lv6]]],[[[Pa337]]]\"\>", 
+   ",", "\<\"[[[Bl339]]],[[[Ty3]]],[[[Lv6]]],[[[Pa337]]]<DescriptorName UI=\\\
+\"D002245\\\" \
+MajorTopicYN=\\\"N\\\">\\n[[[Bl340]]],[[[Ty16]]],[[[Lv7]]],[[[Pa339]]]Carbon \
+Dioxide\"\>", 
+   ",", "\<\"[[[Bl343]]],[[[Ty3]]],[[[Lv6]]],[[[Pa337]]]<QualifierName \
+UI=\\\"Q000097\\\" \
+MajorTopicYN=\\\"N\\\">\\n[[[Bl344]]],[[[Ty16]]],[[[Lv7]]],[[[Pa343]]]blood\"\
+\>", ",", \
+"\<\"[[[Bl349]]],[[[Ty3]]],[[[Lv5]]],[[[Pa303]]]<MeshHeading>\\n[[[Bl350]]],[[\
+[Ty16]]],[[[Lv6]]],[[[Pa349]]]\"\>", 
+   ",", "\<\"[[[Bl351]]],[[[Ty3]]],[[[Lv6]]],[[[Pa349]]]<DescriptorName UI=\\\
+\"D005561\\\" \
+MajorTopicYN=\\\"N\\\">\\n[[[Bl352]]],[[[Ty16]]],[[[Lv7]]],[[[Pa351]]]\
+Formates\"\>", 
+   ",", "\<\"[[[Bl355]]],[[[Ty3]]],[[[Lv6]]],[[[Pa349]]]<QualifierName \
+UI=\\\"Q000097\\\" \
+MajorTopicYN=\\\"N\\\">\\n[[[Bl356]]],[[[Ty16]]],[[[Lv7]]],[[[Pa355]]]blood\"\
+\>", ",", "\<\"[[[Bl359]]],[[[Ty3]]],[[[Lv6]]],[[[Pa349]]]<QualifierName \
+UI=\\\"Q000506\\\" \
+MajorTopicYN=\\\"Y\\\">\\n[[[Bl360]]],[[[Ty16]]],[[[Lv7]]],[[[Pa359]]]\
+poisoning\"\>", 
+   ",", "\<\"[[[Bl365]]],[[[Ty3]]],[[[Lv5]]],[[[Pa303]]]<MeshHeading>\\n[[[\
+Bl366]]],[[[Ty16]]],[[[Lv6]]],[[[Pa365]]]\"\>", 
+   ",", "\<\"[[[Bl367]]],[[[Ty3]]],[[[Lv6]]],[[[Pa365]]]<DescriptorName UI=\\\
+\"D000882\\\" \
+MajorTopicYN=\\\"N\\\">\\n[[[Bl368]]],[[[Ty16]]],[[[Lv7]]],[[[Pa367]]]\
+Haplorhini\"\>", 
+   ",", "\<\"[[[Bl373]]],[[[Ty3]]],[[[Lv5]]],[[[Pa303]]]<MeshHeading>\\n[[[\
+Bl374]]],[[[Ty16]]],[[[Lv6]]],[[[Pa373]]]\"\>", 
+   ",", "\<\"[[[Bl375]]],[[[Ty3]]],[[[Lv6]]],[[[Pa373]]]<DescriptorName UI=\\\
+\"D006801\\\" \
+MajorTopicYN=\\\"N\\\">\\n[[[Bl376]]],[[[Ty16]]],[[[Lv7]]],[[[Pa375]]]Humans\"\
+\>", ",", \
+"\<\"[[[Bl381]]],[[[Ty3]]],[[[Lv5]]],[[[Pa303]]]<MeshHeading>\\n[[[Bl382]]],[[\
+[Ty16]]],[[[Lv6]]],[[[Pa381]]]\"\>", 
+   ",", "\<\"[[[Bl383]]],[[[Ty3]]],[[[Lv6]]],[[[Pa381]]]<DescriptorName UI=\\\
+\"D006863\\\" \
+MajorTopicYN=\\\"N\\\">\\n[[[Bl384]]],[[[Ty16]]],[[[Lv7]]],[[[Pa383]]]\
+Hydrogen-Ion Concentration\"\>", 
+   ",", "\<\"[[[Bl389]]],[[[Ty3]]],[[[Lv5]]],[[[Pa303]]]<MeshHeading>\\n[[[\
+Bl390]]],[[[Ty16]]],[[[Lv6]]],[[[Pa389]]]\"\>", 
+   ",", "\<\"[[[Bl391]]],[[[Ty3]]],[[[Lv6]]],[[[Pa389]]]<DescriptorName UI=\\\
+\"D007700\\\" \
+MajorTopicYN=\\\"N\\\">\\n[[[Bl392]]],[[[Ty16]]],[[[Lv7]]],[[[Pa391]]]\
+Kinetics\"\>", 
+   ",", "\<\"[[[Bl397]]],[[[Ty3]]],[[[Lv5]]],[[[Pa303]]]<MeshHeading>\\n[[[\
+Bl398]]],[[[Ty16]]],[[[Lv6]]],[[[Pa397]]]\"\>", 
+   ",", "\<\"[[[Bl399]]],[[[Ty3]]],[[[Lv6]]],[[[Pa397]]]<DescriptorName UI=\\\
+\"D000432\\\" \
+MajorTopicYN=\\\"N\\\">\\n[[[Bl400]]],[[[Ty16]]],[[[Lv7]]],[[[Pa399]]]\
+Methanol\"\>", 
+   ",", "\<\"[[[Bl403]]],[[[Ty3]]],[[[Lv6]]],[[[Pa397]]]<QualifierName \
+UI=\\\"Q000097\\\" \
+MajorTopicYN=\\\"N\\\">\\n[[[Bl404]]],[[[Ty16]]],[[[Lv7]]],[[[Pa403]]]blood\"\
+\>", ",", \
+"\<\"[[[Bl409]]],[[[Ty3]]],[[[Lv5]]],[[[Pa303]]]<MeshHeading>\\n[[[Bl410]]],[[\
+[Ty16]]],[[[Lv6]]],[[[Pa409]]]\"\>", 
+   ",", "\<\"[[[Bl411]]],[[[Ty3]]],[[[Lv6]]],[[[Pa409]]]<DescriptorName UI=\\\
+\"D008722\\\" \
+MajorTopicYN=\\\"N\\\">\\n[[[Bl412]]],[[[Ty16]]],[[[Lv7]]],[[[Pa411]]]Methods\
+\"\>", ",", \
+"\<\"[[[Bl417]]],[[[Ty3]]],[[[Lv5]]],[[[Pa303]]]<MeshHeading>\\n[[[Bl418]]],[[\
+[Ty16]]],[[[Lv6]]],[[[Pa417]]]\"\>", 
+   ",", "\<\"[[[Bl419]]],[[[Ty3]]],[[[Lv6]]],[[[Pa417]]]<DescriptorName UI=\\\
+\"D011549\\\" \
+MajorTopicYN=\\\"N\\\">\\n[[[Bl420]]],[[[Ty16]]],[[[Lv7]]],[[[Pa419]]]\
+Pseudomonas\"\>", 
+   ",", "\<\"[[[Bl423]]],[[[Ty3]]],[[[Lv6]]],[[[Pa417]]]<QualifierName \
+UI=\\\"Q000201\\\" \
+MajorTopicYN=\\\"N\\\">\\n[[[Bl424]]],[[[Ty16]]],[[[Lv7]]],[[[Pa423]]]\
+enzymology\"\>", ",", "\<\"[[[Bl523]]],[[[Ty3]]],[[[Lv2]]],[[[Pa5]]]\"\>"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.961103663926202*^9, 3.961104871522369*^9, 
+  3.961205813402313*^9, 3.961206510031136*^9, 3.9612091787872667`*^9, 
+  3.9612154800243673`*^9},
+ CellLabel->"Out[6]=",ExpressionUUID->"d3098fa9-431c-4272-b475-5f23a2607191"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"step3", "=", 
+    RowBox[{"Map", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"StringDelete", "[", 
+        RowBox[{"#", ",", 
+         RowBox[{
+         "RegularExpression", "[", "\"\<\\[\\[\\[.*\\]\\]\\]\>\"", "]"}]}], 
+        "]"}], "&"}], ",", "step2"}], "]"}]}], ")"}], "//", 
+  "Length"}]], "Input",
+ CellChangeTimes->{{3.96110368544742*^9, 3.961103808849429*^9}, {
+  3.961103853221169*^9, 3.961103931018036*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"3f00e522-0370-4a7b-aad6-57eaa20b5d9d"],
+
+Cell[BoxData["30000"], "Output",
+ CellChangeTimes->{3.961103932718357*^9, 3.961104872466179*^9, 
+  3.961205819057159*^9, 3.961206516305938*^9, 3.961209179747653*^9, 
+  3.96121548098463*^9},
+ CellLabel->"Out[7]=",ExpressionUUID->"66336c5b-427b-4c58-9886-3c744ed41e1f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"step3", "[", 
+   RowBox[{"[", "1", "]"}], "]"}], "[", 
+  RowBox[{"[", "3", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.961103472205635*^9, 3.9611034836943197`*^9}, {
+  3.961103537725349*^9, 3.9611035526321077`*^9}, {3.9611036731903048`*^9, 
+  3.961103681693046*^9}, {3.961103938760178*^9, 3.96110394240217*^9}, {
+  3.961104250627574*^9, 3.9611042556792717`*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"cb79ac57-a784-46c9-96eb-1e81420603e9"],
+
+Cell[BoxData["\<\"<PMID Version=\\\"1\\\">\\n1\"\>"], "Output",
+ CellChangeTimes->{
+  3.96110394345168*^9, {3.9611042520076838`*^9, 3.961104256015438*^9}, 
+   3.961104872477247*^9, 3.9612058206503887`*^9, 3.961206518047534*^9, 
+   3.961209179762168*^9, 3.9612154809963818`*^9},
+ CellLabel->"Out[8]=",ExpressionUUID->"1d32dc21-47f2-4b7d-9308-e79b9f8f8a18"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"step4", "=", 
+    RowBox[{"Map", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"StringSplit", "[", 
+        RowBox[{"#", ",", "\"\<\\n\>\""}], "]"}], "&"}], ",", "step3", ",", 
+      RowBox[{"{", "2", "}"}]}], "]"}]}], ")"}], "//", "Length"}]], "Input",
+ CellChangeTimes->{{3.961104286901054*^9, 3.961104354155313*^9}},
+ CellLabel->"In[9]:=",ExpressionUUID->"e185887b-968a-4e12-8eeb-b740c117e040"],
+
+Cell[BoxData["30000"], "Output",
+ CellChangeTimes->{{3.9611043435745*^9, 3.961104355129607*^9}, 
+   3.961104872961895*^9, 3.961205823774625*^9, 3.961206520558084*^9, 
+   3.961209180252357*^9, 3.9612154814957113`*^9},
+ CellLabel->"Out[9]=",ExpressionUUID->"0e203893-ec89-4d08-bbd7-fb879696059e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"step4", "[", 
+   RowBox[{"[", "1", "]"}], "]"}], "//", "TableForm"}]], "Input",
+ CellChangeTimes->{{3.961104360096418*^9, 3.9611043998606777`*^9}, {
+  3.961205988783168*^9, 3.9612059923663197`*^9}},
+ CellLabel->"In[10]:=",ExpressionUUID->"6c256290-1935-44c6-8e3b-ed781b4678d8"],
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {"\<\"\"\>", "\<\"\"\>"},
+    {"\<\"<MedlineCitation Status=\\\"MEDLINE\\\" Owner=\\\"NLM\\\">\"\>", \
+"\<\"\"\>"},
+    {"\<\"<PMID Version=\\\"1\\\">\"\>", "\<\"1\"\>"},
+    {"\<\"<MeshHeadingList>\"\>", "\<\"\"\>"},
+    {"\<\"<MeshHeading>\"\>", "\<\"\"\>"},
+    {"\<\"<DescriptorName UI=\\\"D000445\\\" MajorTopicYN=\\\"N\\\">\"\>", \
+"\<\"Aldehyde Oxidoreductases\"\>"},
+    {"\<\"<QualifierName UI=\\\"Q000378\\\" MajorTopicYN=\\\"N\\\">\"\>", "\<\
+\"metabolism\"\>"},
+    {"\<\"<MeshHeading>\"\>", "\<\"\"\>"},
+    {"\<\"<DescriptorName UI=\\\"D000818\\\" MajorTopicYN=\\\"N\\\">\"\>", \
+"\<\"Animals\"\>"},
+    {"\<\"<MeshHeading>\"\>", "\<\"\"\>"},
+    {"\<\"<DescriptorName UI=\\\"D001826\\\" MajorTopicYN=\\\"N\\\">\"\>", \
+"\<\"Body Fluids\"\>"},
+    {"\<\"<QualifierName UI=\\\"Q000032\\\" MajorTopicYN=\\\"Y\\\">\"\>", "\<\
+\"analysis\"\>"},
+    {"\<\"<MeshHeading>\"\>", "\<\"\"\>"},
+    {"\<\"<DescriptorName UI=\\\"D002245\\\" MajorTopicYN=\\\"N\\\">\"\>", \
+"\<\"Carbon Dioxide\"\>"},
+    {"\<\"<QualifierName UI=\\\"Q000097\\\" MajorTopicYN=\\\"N\\\">\"\>", "\<\
+\"blood\"\>"},
+    {"\<\"<MeshHeading>\"\>", "\<\"\"\>"},
+    {"\<\"<DescriptorName UI=\\\"D005561\\\" MajorTopicYN=\\\"N\\\">\"\>", \
+"\<\"Formates\"\>"},
+    {"\<\"<QualifierName UI=\\\"Q000097\\\" MajorTopicYN=\\\"N\\\">\"\>", "\<\
+\"blood\"\>"},
+    {"\<\"<QualifierName UI=\\\"Q000506\\\" MajorTopicYN=\\\"Y\\\">\"\>", "\<\
+\"poisoning\"\>"},
+    {"\<\"<MeshHeading>\"\>", "\<\"\"\>"},
+    {"\<\"<DescriptorName UI=\\\"D000882\\\" MajorTopicYN=\\\"N\\\">\"\>", \
+"\<\"Haplorhini\"\>"},
+    {"\<\"<MeshHeading>\"\>", "\<\"\"\>"},
+    {"\<\"<DescriptorName UI=\\\"D006801\\\" MajorTopicYN=\\\"N\\\">\"\>", \
+"\<\"Humans\"\>"},
+    {"\<\"<MeshHeading>\"\>", "\<\"\"\>"},
+    {"\<\"<DescriptorName UI=\\\"D006863\\\" MajorTopicYN=\\\"N\\\">\"\>", \
+"\<\"Hydrogen-Ion Concentration\"\>"},
+    {"\<\"<MeshHeading>\"\>", "\<\"\"\>"},
+    {"\<\"<DescriptorName UI=\\\"D007700\\\" MajorTopicYN=\\\"N\\\">\"\>", \
+"\<\"Kinetics\"\>"},
+    {"\<\"<MeshHeading>\"\>", "\<\"\"\>"},
+    {"\<\"<DescriptorName UI=\\\"D000432\\\" MajorTopicYN=\\\"N\\\">\"\>", \
+"\<\"Methanol\"\>"},
+    {"\<\"<QualifierName UI=\\\"Q000097\\\" MajorTopicYN=\\\"N\\\">\"\>", "\<\
+\"blood\"\>"},
+    {"\<\"<MeshHeading>\"\>", "\<\"\"\>"},
+    {"\<\"<DescriptorName UI=\\\"D008722\\\" MajorTopicYN=\\\"N\\\">\"\>", \
+"\<\"Methods\"\>"},
+    {"\<\"<MeshHeading>\"\>", "\<\"\"\>"},
+    {"\<\"<DescriptorName UI=\\\"D011549\\\" MajorTopicYN=\\\"N\\\">\"\>", \
+"\<\"Pseudomonas\"\>"},
+    {"\<\"<QualifierName UI=\\\"Q000201\\\" MajorTopicYN=\\\"N\\\">\"\>", "\<\
+\"enzymology\"\>"},
+    {"\<\"\"\>", "\<\"\"\>"}
+   },
+   GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}}],
+  TableForm[{{}, {"<MedlineCitation Status=\"MEDLINE\" Owner=\"NLM\">"}, {
+    "<PMID Version=\"1\">", "1"}, {"<MeshHeadingList>"}, {"<MeshHeading>"}, {
+    "<DescriptorName UI=\"D000445\" MajorTopicYN=\"N\">", 
+     "Aldehyde Oxidoreductases"}, {
+    "<QualifierName UI=\"Q000378\" MajorTopicYN=\"N\">", "metabolism"}, {
+    "<MeshHeading>"}, {
+    "<DescriptorName UI=\"D000818\" MajorTopicYN=\"N\">", "Animals"}, {
+    "<MeshHeading>"}, {
+    "<DescriptorName UI=\"D001826\" MajorTopicYN=\"N\">", "Body Fluids"}, {
+    "<QualifierName UI=\"Q000032\" MajorTopicYN=\"Y\">", "analysis"}, {
+    "<MeshHeading>"}, {
+    "<DescriptorName UI=\"D002245\" MajorTopicYN=\"N\">", "Carbon Dioxide"}, {
+    "<QualifierName UI=\"Q000097\" MajorTopicYN=\"N\">", "blood"}, {
+    "<MeshHeading>"}, {
+    "<DescriptorName UI=\"D005561\" MajorTopicYN=\"N\">", "Formates"}, {
+    "<QualifierName UI=\"Q000097\" MajorTopicYN=\"N\">", "blood"}, {
+    "<QualifierName UI=\"Q000506\" MajorTopicYN=\"Y\">", "poisoning"}, {
+    "<MeshHeading>"}, {
+    "<DescriptorName UI=\"D000882\" MajorTopicYN=\"N\">", "Haplorhini"}, {
+    "<MeshHeading>"}, {
+    "<DescriptorName UI=\"D006801\" MajorTopicYN=\"N\">", "Humans"}, {
+    "<MeshHeading>"}, {
+    "<DescriptorName UI=\"D006863\" MajorTopicYN=\"N\">", 
+     "Hydrogen-Ion Concentration"}, {"<MeshHeading>"}, {
+    "<DescriptorName UI=\"D007700\" MajorTopicYN=\"N\">", "Kinetics"}, {
+    "<MeshHeading>"}, {
+    "<DescriptorName UI=\"D000432\" MajorTopicYN=\"N\">", "Methanol"}, {
+    "<QualifierName UI=\"Q000097\" MajorTopicYN=\"N\">", "blood"}, {
+    "<MeshHeading>"}, {
+    "<DescriptorName UI=\"D008722\" MajorTopicYN=\"N\">", "Methods"}, {
+    "<MeshHeading>"}, {
+    "<DescriptorName UI=\"D011549\" MajorTopicYN=\"N\">", "Pseudomonas"}, {
+    "<QualifierName UI=\"Q000201\" MajorTopicYN=\"N\">", 
+     "enzymology"}, {}}]]], "Output",
+ CellChangeTimes->{{3.961104361339508*^9, 3.961104402536912*^9}, 
+   3.961104872964303*^9, 3.961205825741856*^9, 3.961205993233222*^9, 
+   3.9612065221980267`*^9, 3.9612091802638607`*^9, 3.96121548150879*^9},
+ CellLabel->
+  "Out[10]//TableForm=",ExpressionUUID->"07065bff-549e-409f-8be3-\
+a2fc237a54db"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"step4", "[", 
+   RowBox[{"[", "1", "]"}], "]"}], "[", 
+  RowBox[{"[", "6", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.9612058360665083`*^9, 3.9612058605017643`*^9}},
+ CellLabel->"In[11]:=",ExpressionUUID->"672b6a26-0c7f-491c-bdaa-f7854a6897e3"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"<DescriptorName UI=\\\"D000445\\\" \
+MajorTopicYN=\\\"N\\\">\"\>", ",", "\<\"Aldehyde Oxidoreductases\"\>"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.961205837066173*^9, 3.961205860924852*^9}, 
+   3.961206526014988*^9, 3.9612091802664223`*^9, 3.961215481511544*^9},
+ CellLabel->"Out[11]=",ExpressionUUID->"7bd1d910-cd35-4114-a7a1-b4bf38e228a3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Cases", "[", 
+  RowBox[{
+   RowBox[{"step4", "[", 
+    RowBox[{"[", "1", "]"}], "]"}], ",", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"x_", ",", "y_"}], "}"}], "/;", 
+    RowBox[{
+     RowBox[{"StringMatchQ", "[", 
+      RowBox[{"x", ",", "\"\<<PMID *\>\""}], "]"}], "||", 
+     RowBox[{"StringMatchQ", "[", 
+      RowBox[{"x", ",", "\"\<<DescriptorName *\>\""}], "]"}]}]}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.961104477548627*^9, 3.961104575006678*^9}},
+ CellLabel->"In[12]:=",ExpressionUUID->"0b607e92-7ca2-4a70-b8c0-ceb5d442d6ce"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\<\"<PMID Version=\\\"1\\\">\"\>", ",", "\<\"1\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D000445\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Aldehyde Oxidoreductases\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D000818\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Animals\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D001826\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Body Fluids\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D002245\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Carbon Dioxide\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D005561\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Formates\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D000882\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Haplorhini\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D006801\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Humans\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D006863\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Hydrogen-Ion Concentration\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D007700\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Kinetics\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D000432\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Methanol\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D008722\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Methods\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D011549\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Pseudomonas\"\>"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.961104523522952*^9, 3.9611045275334883`*^9}, {
+   3.9611045709583607`*^9, 3.96110457540261*^9}, 3.9611048729719543`*^9, 
+   3.961206530087213*^9, 3.9612091802682343`*^9, 3.9612154815135*^9},
+ CellLabel->"Out[12]=",ExpressionUUID->"130974fa-2675-46df-ba8f-d42610434588"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"step5", "=", 
+    RowBox[{"Map", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Cases", "[", 
+        RowBox[{"#", ",", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"x_", ",", "y_"}], "}"}], "/;", 
+          RowBox[{
+           RowBox[{"StringMatchQ", "[", 
+            RowBox[{"x", ",", "\"\<<PMID *\>\""}], "]"}], "||", 
+           RowBox[{"StringMatchQ", "[", 
+            RowBox[{"x", ",", "\"\<<DescriptorName *\>\""}], "]"}]}]}]}], 
+        "]"}], "&"}], ",", "step4"}], "]"}]}], ")"}], "//", 
+  "Length"}]], "Input",
+ CellChangeTimes->{{3.961104635907935*^9, 3.9611046955336027`*^9}, {
+  3.961104728294537*^9, 3.961104771312677*^9}},
+ CellLabel->"In[13]:=",ExpressionUUID->"c0634b09-e87d-45d6-991d-3bb9305f4399"],
+
+Cell[BoxData["30000"], "Output",
+ CellChangeTimes->{3.961104696508235*^9, 3.961104772369824*^9, 
+  3.961104814333243*^9, 3.961104873205545*^9, 3.9612065365083017`*^9, 
+  3.961209180512822*^9, 3.961215481751697*^9},
+ CellLabel->"Out[13]=",ExpressionUUID->"8400ad3e-a10d-495c-b46a-e1bad12a2282"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"step5", "[", 
+  RowBox[{"[", "1", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.96110470395933*^9, 3.961104704242923*^9}},
+ CellLabel->"In[14]:=",ExpressionUUID->"f0d2d57a-fa41-4a74-bd0b-aee1a14c9823"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\<\"<PMID Version=\\\"1\\\">\"\>", ",", "\<\"1\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D000445\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Aldehyde Oxidoreductases\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D000818\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Animals\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D001826\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Body Fluids\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D002245\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Carbon Dioxide\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D005561\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Formates\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D000882\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Haplorhini\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D006801\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Humans\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D006863\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Hydrogen-Ion Concentration\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D007700\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Kinetics\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D000432\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Methanol\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D008722\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Methods\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D011549\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Pseudomonas\"\>"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.961104705090818*^9, {3.9611047753157043`*^9, 3.961104815817815*^9}, 
+   3.9611048732078857`*^9, 3.9612065404018173`*^9, 3.961209180515428*^9, 
+   3.96121548175454*^9},
+ CellLabel->"Out[14]=",ExpressionUUID->"9a286c3c-d9f8-44fe-82b8-bb03c5c9f762"]
+}, Open  ]],
+
+Cell["< selection >", "Text",
+ CellChangeTimes->{{3.9611050960041113`*^9, 
+  3.9611051080800953`*^9}},ExpressionUUID->"9db2566b-b7d8-469d-a5fb-\
+910e57744571"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"step6", "=", 
+    RowBox[{"Cases", "[", 
+     RowBox[{"step5", ",", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"x_", ",", "y_"}], "}"}], ",", "__"}], "}"}], "/;", 
+       RowBox[{"StringMatchQ", "[", 
+        RowBox[{"x", ",", "\"\<<PMID *\>\""}], "]"}]}]}], "]"}]}], ")"}], "//",
+   "Length"}]], "Input",
+ CellChangeTimes->{{3.961104886275175*^9, 3.961104889437351*^9}, {
+  3.961104937498444*^9, 3.9611050901238327`*^9}},
+ CellLabel->"In[15]:=",ExpressionUUID->"7e7c26b9-f34d-416c-b739-3d4c3edb468c"],
+
+Cell[BoxData["30000"], "Output",
+ CellChangeTimes->{{3.961105023531451*^9, 3.961105092161871*^9}, 
+   3.961206544483754*^9, 3.961209180528116*^9, 3.9612154817654543`*^9},
+ CellLabel->"Out[15]=",ExpressionUUID->"a1750510-847b-4e8f-bb7b-0e4adde53601"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"step6", "[", 
+  RowBox[{"[", "1", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.96120660848378*^9, 3.9612066087517033`*^9}},
+ CellLabel->"In[16]:=",ExpressionUUID->"a0d85e47-975d-479b-b22d-268aaf2bd51e"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\<\"<PMID Version=\\\"1\\\">\"\>", ",", "\<\"1\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D000445\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Aldehyde Oxidoreductases\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D000818\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Animals\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D001826\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Body Fluids\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D002245\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Carbon Dioxide\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D005561\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Formates\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D000882\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Haplorhini\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D006801\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Humans\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D006863\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Hydrogen-Ion Concentration\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D007700\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Kinetics\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D000432\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Methanol\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D008722\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Methods\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D011549\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Pseudomonas\"\>"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.961206609793633*^9, 3.9612091805303783`*^9, 
+  3.961215481767702*^9},
+ CellLabel->"Out[16]=",ExpressionUUID->"b3fd303e-dc92-42bc-9c04-004ba0a091d4"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Join", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"step6", "[", 
+      RowBox[{"[", "1", "]"}], "]"}], "[", 
+     RowBox[{"[", "1", "]"}], "]"}], "}"}], ",", 
+   RowBox[{"Cases", "[", 
+    RowBox[{
+     RowBox[{"step6", "[", 
+      RowBox[{"[", "1", "]"}], "]"}], ",", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"x_", ",", "y_"}], "}"}], "/;", 
+      RowBox[{"StringMatchQ", "[", 
+       RowBox[{"x", ",", "\"\<<DescriptorName *\>\""}], "]"}]}]}], "]"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.961206628121606*^9, 3.961206744851837*^9}, {
+  3.961206780355887*^9, 3.961206902513454*^9}, {3.9612069420246*^9, 
+  3.961206948295285*^9}},
+ CellLabel->"In[17]:=",ExpressionUUID->"81b9551e-1a02-4d17-a85c-8af93e776168"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\<\"<PMID Version=\\\"1\\\">\"\>", ",", "\<\"1\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D000445\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Aldehyde Oxidoreductases\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D000818\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Animals\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D001826\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Body Fluids\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D002245\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Carbon Dioxide\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D005561\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Formates\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D000882\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Haplorhini\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D006801\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Humans\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D006863\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Hydrogen-Ion Concentration\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D007700\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Kinetics\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D000432\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Methanol\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D008722\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Methods\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D011549\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Pseudomonas\"\>"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.9612067468316393`*^9, {3.961206783896233*^9, 3.9612068254440536`*^9}, {
+   3.961206855584703*^9, 3.961206867034617*^9}, 3.961206902889893*^9, 
+   3.9612069487135468`*^9, 3.9612091805331707`*^9, 3.961215481777698*^9},
+ CellLabel->"Out[17]=",ExpressionUUID->"b7e697ae-7b85-4e7a-ae53-a2fd88bcf0de"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"step7", "=", 
+    RowBox[{"Map", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Join", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"#", "[", 
+           RowBox[{"[", "1", "]"}], "]"}], "}"}], ",", 
+         RowBox[{"Cases", "[", 
+          RowBox[{"#", ",", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"x_", ",", "y_"}], "}"}], "/;", 
+            RowBox[{"StringMatchQ", "[", 
+             RowBox[{"x", ",", "\"\<<DescriptorName *\>\""}], "]"}]}]}], 
+          "]"}]}], "]"}], "&"}], ",", "step6"}], "]"}]}], ")"}], "//", 
+  "Length"}]], "Input",
+ CellChangeTimes->{{3.961207143893466*^9, 3.96120714720487*^9}, {
+  3.96120719322425*^9, 3.9612072338651457`*^9}},
+ CellLabel->"In[18]:=",ExpressionUUID->"0ea11a71-6df8-4912-b209-41ccb12dbd40"],
+
+Cell[BoxData["30000"], "Output",
+ CellChangeTimes->{3.961207234757272*^9, 3.961209180645055*^9, 
+  3.961215481883236*^9},
+ CellLabel->"Out[18]=",ExpressionUUID->"69f4497d-fe86-4fcb-9375-e755f1eb8f35"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"step7", "[", 
+  RowBox[{"[", "1", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.961207240809085*^9, 3.9612072411380167`*^9}},
+ CellLabel->"In[19]:=",ExpressionUUID->"d0470f5c-4c04-4e9a-9cf7-fcc3ade8769f"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\<\"<PMID Version=\\\"1\\\">\"\>", ",", "\<\"1\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D000445\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Aldehyde Oxidoreductases\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D000818\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Animals\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D001826\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Body Fluids\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D002245\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Carbon Dioxide\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D005561\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Formates\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D000882\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Haplorhini\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D006801\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Humans\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D006863\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Hydrogen-Ion Concentration\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D007700\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Kinetics\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D000432\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Methanol\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D008722\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Methods\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"<DescriptorName UI=\\\"D011549\\\" MajorTopicYN=\\\"N\\\">\"\
+\>", ",", "\<\"Pseudomonas\"\>"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.961207241932276*^9, 3.961209180648522*^9, 
+  3.961215481885676*^9},
+ CellLabel->"Out[19]=",ExpressionUUID->"4b54e9d5-fea3-4280-9c2b-763476b57503"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"step8", "=", 
+    RowBox[{"Map", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"#", "[", 
+        RowBox[{"[", "2", "]"}], "]"}], "&"}], ",", "step7", ",", 
+      RowBox[{"{", "2", "}"}]}], "]"}]}], ")"}], "//", "Length"}]], "Input",
+ CellChangeTimes->{{3.961105131869677*^9, 3.961105142726856*^9}, {
+  3.9611051735241833`*^9, 3.961105205847228*^9}, {3.961207247142433*^9, 
+  3.961207252062661*^9}},
+ CellLabel->"In[20]:=",ExpressionUUID->"e197ae42-e1bb-44be-9978-bd24d6d28f3f"],
+
+Cell[BoxData["30000"], "Output",
+ CellChangeTimes->{{3.9611051896802473`*^9, 3.961105206565414*^9}, 
+   3.961206554267906*^9, 3.961207252769495*^9, 3.961209180715437*^9, 
+   3.961215481948661*^9},
+ CellLabel->"Out[20]=",ExpressionUUID->"377c67e4-0db1-4766-8574-744b299a67f7"]
+}, Open  ]],
+
+Cell["< rule >", "Text",
+ CellChangeTimes->{{3.9611052242280083`*^9, 
+  3.961105241860416*^9}},ExpressionUUID->"939ba5f3-8582-4e93-ac20-\
+ec980945788d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"step9", "=", 
+    RowBox[{"Map", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"#", "[", 
+         RowBox[{"[", "1", "]"}], "]"}], "->", 
+        RowBox[{"#", "[", 
+         RowBox[{"[", 
+          RowBox[{"2", ";;", 
+           RowBox[{"-", "1"}]}], "]"}], "]"}]}], "&"}], ",", "step8"}], 
+     "]"}]}], ")"}], "//", "Length"}]], "Input",
+ CellChangeTimes->{{3.961107874999393*^9, 3.961108011691605*^9}, {
+  3.961207268819355*^9, 3.961207274622971*^9}},
+ CellLabel->"In[21]:=",ExpressionUUID->"5e8284f1-8e53-4187-9a72-c6349764a188"],
+
+Cell[BoxData["30000"], "Output",
+ CellChangeTimes->{3.961107979660801*^9, 3.961108012659066*^9, 
+  3.961207275215221*^9, 3.961209180734166*^9, 3.96121548196591*^9},
+ CellLabel->"Out[21]=",ExpressionUUID->"101c8e1c-1f7b-4ad9-b3ce-d6a63b8ecfa2"]
+}, Open  ]],
+
+Cell["\<\
+< rule agrigate >
+Join:Map:step\
+\>", "Text",
+ CellChangeTimes->{{3.9611052242280083`*^9, 3.961105241860416*^9}, {
+  3.961108029752533*^9, 
+  3.9611080960370827`*^9}},ExpressionUUID->"52187d3d-8efb-4d25-bc23-\
+9f3ad9de30dc"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Join", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"2", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", "7", "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.961108098079999*^9, 3.961108122423616*^9}},
+ CellLabel->"In[22]:=",ExpressionUUID->"59bb04b1-332c-4c23-93d2-f3003b6cf5f7"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"2", ",", "3", ",", "7"}], "}"}]], "Output",
+ CellChangeTimes->{{3.961108115030486*^9, 3.96110812344665*^9}, 
+   3.961209180736886*^9, 3.9612154819680023`*^9},
+ CellLabel->"Out[22]=",ExpressionUUID->"e12188ad-edc8-465b-a8e2-1dd8f034effb"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Apply", "[", 
+  RowBox[{"Join", ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"2", ",", "3"}], "}"}], ",", 
+     RowBox[{"{", "7", "}"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.9611081444116573`*^9, 3.961108155543322*^9}},
+ CellLabel->"In[23]:=",ExpressionUUID->"a8ba0e63-39e9-4eac-a4ca-1a1e5b4be570"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"2", ",", "3", ",", "7"}], "}"}]], "Output",
+ CellChangeTimes->{3.961108156579458*^9, 3.961209180742745*^9, 
+  3.9612154819774113`*^9},
+ CellLabel->"Out[23]=",ExpressionUUID->"dd2671a8-d759-4ba4-abc2-be3f1297c522"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["program", "Section",
+ CellChangeTimes->{{3.930206523344901*^9, 3.930206543255122*^9}, {
+  3.9302071672380342`*^9, 3.930207169587823*^9}, {3.9611025268516912`*^9, 
+  3.9611025309766693`*^9}, {3.9611039606941957`*^9, 3.961103973379683*^9}, {
+  3.961108180036066*^9, 
+  3.961108183560569*^9}},ExpressionUUID->"6080639c-ad03-4b40-9428-\
+9f21f5dcb3d8"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"pmidtomesh", "[", "file_", "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "in", ",", "step1", ",", "step2", ",", "step3", ",", "step4", ",", 
+      "step5", ",", "step6", ",", "step7", ",", "step8", ",", "step9"}], 
+     "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"in", "=", 
+      RowBox[{"Import", "[", 
+       RowBox[{"file", ",", "\"\<String\>\""}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"step1", "=", 
+      RowBox[{"Drop", "[", 
+       RowBox[{
+        RowBox[{"StringSplit", "[", 
+         RowBox[{"in", ",", "\"\<<PubmedArticle>\>\""}], "]"}], ",", "1"}], 
+       "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"step2", "=", 
+      RowBox[{"Map", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"StringSplit", "[", 
+          RowBox[{"#", ",", "\"\<\\n--\\n\>\""}], "]"}], "&"}], ",", 
+        "step1"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"step3", "=", 
+      RowBox[{"Map", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"StringDelete", "[", 
+          RowBox[{"#", ",", 
+           RowBox[{
+           "RegularExpression", "[", "\"\<\\[\\[\\[.*\\]\\]\\]\>\"", "]"}]}], 
+          "]"}], "&"}], ",", "step2"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"step4", "=", 
+      RowBox[{"Map", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"StringSplit", "[", 
+          RowBox[{"#", ",", "\"\<\\n\>\""}], "]"}], "&"}], ",", "step3", ",", 
+        
+        RowBox[{"{", "2", "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"step5", "=", 
+      RowBox[{"Map", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Cases", "[", 
+          RowBox[{"#", ",", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"x_", ",", "y_"}], "}"}], "/;", 
+            RowBox[{
+             RowBox[{"StringMatchQ", "[", 
+              RowBox[{"x", ",", "\"\<<PMID *\>\""}], "]"}], "||", 
+             RowBox[{"StringMatchQ", "[", 
+              RowBox[{"x", ",", "\"\<<DescriptorName *\>\""}], "]"}]}]}]}], 
+          "]"}], "&"}], ",", "step4"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"step6", "=", 
+      RowBox[{"Cases", "[", 
+       RowBox[{"step5", ",", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"x_", ",", "y_"}], "}"}], ",", "__"}], "}"}], "/;", 
+         RowBox[{"StringMatchQ", "[", 
+          RowBox[{"x", ",", "\"\<<PMID *\>\""}], "]"}]}]}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"step7", "=", 
+      RowBox[{"Map", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Join", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"#", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "}"}], ",", 
+           RowBox[{"Cases", "[", 
+            RowBox[{"#", ",", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"x_", ",", "y_"}], "}"}], "/;", 
+              RowBox[{"StringMatchQ", "[", 
+               RowBox[{"x", ",", "\"\<<DescriptorName *\>\""}], "]"}]}]}], 
+            "]"}]}], "]"}], "&"}], ",", "step6"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"step8", "=", 
+      RowBox[{"Map", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"#", "[", 
+          RowBox[{"[", "2", "]"}], "]"}], "&"}], ",", "step7", ",", 
+        RowBox[{"{", "2", "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"step9", "=", 
+      RowBox[{"Map", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"#", "[", 
+           RowBox[{"[", "1", "]"}], "]"}], "->", 
+          RowBox[{"#", "[", 
+           RowBox[{"[", 
+            RowBox[{"2", ";;", 
+             RowBox[{"-", "1"}]}], "]"}], "]"}]}], "&"}], ",", "step8"}], 
+       "]"}]}]}]}], "\[IndentingNewLine]", "]"}]}]], "Input",
+ CellChangeTimes->{{3.961108199134637*^9, 3.961108266047439*^9}, {
+   3.961108309647584*^9, 3.961108476486014*^9}, 3.961207291242558*^9, {
+   3.961207323196368*^9, 3.9612073582818747`*^9}, {3.961209058808737*^9, 
+   3.961209060424574*^9}},
+ CellLabel->"In[24]:=",ExpressionUUID->"ef7b3615-0ab0-4731-9bf2-42d4d0978b19"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\:5b9f\:884c", "Section",
+ CellChangeTimes->{{3.930206523344901*^9, 3.930206543255122*^9}, {
+  3.9302071672380342`*^9, 3.930207169587823*^9}, {3.9611025268516912`*^9, 
+  3.9611025309766693`*^9}, {3.9611039606941957`*^9, 3.961103973379683*^9}, {
+  3.961108180036066*^9, 3.961108183560569*^9}, {3.9611084876883497`*^9, 
+  3.961108492124424*^9}},ExpressionUUID->"fb2d2b61-9398-4fc1-b925-\
+77e77de8688e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"mapfiles", "=", 
+    RowBox[{"ParallelMap", "[", 
+     RowBox[{"pmidtomesh", ",", "file"}], "]"}]}], ")"}], "//", 
+  "Length"}]], "Input",
+ CellChangeTimes->{{3.961108505843175*^9, 3.961108551437703*^9}},
+ CellLabel->"In[25]:=",ExpressionUUID->"cbefff03-e7d5-4be4-803f-ecd74fb61834"],
+
+Cell[BoxData["1219"], "Output",
+ CellChangeTimes->{3.9611085458093643`*^9, 3.961110101199877*^9, 
+  3.961208910614709*^9, 3.96121075327707*^9, 3.9612170468015413`*^9},
+ CellLabel->"Out[25]=",ExpressionUUID->"d90b7b86-fc02-4f5c-a5d3-d3aab924eed9"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"PMIDtoMeSHDrule", "=", 
+    RowBox[{"Apply", "[", 
+     RowBox[{"Join", ",", "mapfiles"}], "]"}]}], ")"}], "//", 
+  "Length"}]], "Input",
+ CellChangeTimes->{{3.961110110022015*^9, 3.961110200006819*^9}, {
+  3.9612151850489693`*^9, 3.9612152353382177`*^9}},
+ CellLabel->"In[26]:=",ExpressionUUID->"e96d0c3d-d4bb-481c-9f4a-167489f220a5"],
+
+Cell[BoxData["31266215"], "Output",
+ CellChangeTimes->{3.9611101274731817`*^9, 3.961110161091304*^9, 
+  3.9611102111186037`*^9, 3.961210843082913*^9, 3.961215246451715*^9, 
+  3.961290910363659*^9},
+ CellLabel->"Out[26]=",ExpressionUUID->"3def312b-a229-4e61-a3b9-c66e55f0bf9a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"PMIDtoMeSHDrule", "[", 
+  RowBox[{"[", "1", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.9612152566430063`*^9, 3.961215275387734*^9}},
+ CellLabel->"In[27]:=",ExpressionUUID->"b3c0331c-cf15-4307-84cd-2c8c330c461e"],
+
+Cell[BoxData[
+ RowBox[{"\<\"1\"\>", "\[Rule]", 
+  RowBox[{"{", 
+   RowBox[{"\<\"Aldehyde Oxidoreductases\"\>", ",", "\<\"Animals\"\>", 
+    ",", "\<\"Body Fluids\"\>", ",", "\<\"Carbon Dioxide\"\>", 
+    ",", "\<\"Formates\"\>", ",", "\<\"Haplorhini\"\>", ",", "\<\"Humans\"\>",
+     ",", "\<\"Hydrogen-Ion Concentration\"\>", ",", "\<\"Kinetics\"\>", 
+    ",", "\<\"Methanol\"\>", ",", "\<\"Methods\"\>", 
+    ",", "\<\"Pseudomonas\"\>"}], "}"}]}]], "Output",
+ CellChangeTimes->{{3.961215258007721*^9, 3.9612152761628723`*^9}, 
+   3.961290912934198*^9},
+ CellLabel->"Out[27]=",ExpressionUUID->"cf362a27-8fe1-4e82-aea2-9ef13d4a4e27"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"PMIDtoMeSHDruleSel", "=", 
+   RowBox[{"Cases", "[", 
+    RowBox[{"PMIDtoMeSHDrule", ",", 
+     RowBox[{
+      RowBox[{"Rule", "[", 
+       RowBox[{"x_", ",", "y_"}], "]"}], "/;", 
+      RowBox[{"y", "!=", 
+       RowBox[{"{", "}"}]}]}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.9612137368116817`*^9, 3.9612137508200502`*^9}, {
+  3.961215242987071*^9, 3.961215243945999*^9}, {3.96121528878937*^9, 
+  3.961215354485054*^9}},
+ CellLabel->"In[28]:=",ExpressionUUID->"8ff97687-8e26-44ae-84d3-13baa9db3ea2"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"PMIDtoMeSHDruleSel", "[", 
+  RowBox[{"[", 
+   RowBox[{"-", "1"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.961215323495715*^9, 3.961215323839065*^9}, {
+  3.9612153667571497`*^9, 3.96121536844986*^9}},
+ CellLabel->"In[29]:=",ExpressionUUID->"193ec79e-f713-4f57-bbda-1f44b26151da"],
+
+Cell[BoxData[
+ RowBox[{"\<\"38060304\"\>", "\[Rule]", 
+  RowBox[{"{", 
+   RowBox[{"\<\"Humans\"\>", ",", "\<\"Mice\"\>", ",", "\<\"Animals\"\>", 
+    ",", "\<\"Gene Regulatory Networks\"\>", 
+    ",", "\<\"Coronary Artery Disease\"\>", ",", "\<\"Atherosclerosis\"\>", 
+    ",", "\<\"Genomics\"\>", ",", "\<\"Genome-Wide Association Study\"\>"}], 
+   "}"}]}]], "Output",
+ CellChangeTimes->{
+  3.961215324629673*^9, {3.961215363266933*^9, 3.961215369325612*^9}, 
+   3.961290960099964*^9},
+ CellLabel->"Out[29]=",ExpressionUUID->"f12db539-afe3-4ca9-bac5-a79f57bbb3a4"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"PMIDtoMeSHDruleASC", "=", 
+   RowBox[{"Association", "[", "PMIDtoMeSHDruleSel", "]"}]}], ";"}]], "Input",\
+
+ CellChangeTimes->{{3.96121540190145*^9, 3.9612154377063417`*^9}},
+ CellLabel->"In[30]:=",ExpressionUUID->"b1d2dab7-b196-4d1e-8f4d-9b774ac3ccd4"],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"Save", "[", 
+   RowBox[{"\"\</Volumes/elecom/BANK/pubmed/202312/xml/element/mesh/\
+PMIDtoMeSHDruleASC.save\>\"", ",", "PMIDtoMeSHDruleASC"}], "]"}], 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.961110240733924*^9, 3.961110288212544*^9}, {
+  3.961111496989629*^9, 3.9611115007085257`*^9}, {3.961212499459306*^9, 
+  3.961212502412115*^9}, {3.961213206111353*^9, 3.9612132094975567`*^9}, {
+  3.961213796107584*^9, 3.961213809322939*^9}, {3.961290984088634*^9, 
+  3.9612909861504097`*^9}, {3.96129139622324*^9, 
+  3.9612913995634108`*^9}},ExpressionUUID->"d48283ff-9c13-46ff-896c-\
+ce7357968c32"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 911},
+WindowMargins->{{Automatic, 584}, {Automatic, 0}},
+FrontEndVersion->"14.2 for Mac OS X ARM (64-bit) \
+(2025\:5e743\:670816\:65e5)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"2b6cb049-d084-4f2a-87c2-e62effbabd03"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[576, 22, 157, 3, 96, "Title",ExpressionUUID->"ecd4aebe-d40a-443f-b537-5872638ee744"],
+Cell[CellGroupData[{
+Cell[758, 29, 248, 4, 66, "Section",ExpressionUUID->"e9c4534d-c8fc-46f5-9822-399806a3e7a4"],
+Cell[CellGroupData[{
+Cell[1031, 37, 261, 5, 29, "Input",ExpressionUUID->"dc171f20-1730-441b-b28e-566d1afa6514"],
+Cell[1295, 44, 329, 5, 33, "Output",ExpressionUUID->"bd7478a0-e0f7-404c-883e-fc998fefd8e1"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1661, 54, 332, 8, 42, "Input",ExpressionUUID->"7e522734-a2bf-4cea-8eb3-854762bc92a9"],
+Cell[1996, 64, 295, 4, 33, "Output",ExpressionUUID->"828b767e-1b50-45fe-b8cf-0d550a83db37"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2340, 74, 327, 5, 66, "Section",ExpressionUUID->"d05a13af-1648-40ed-b2f1-19a478beaf23"],
+Cell[2670, 81, 348, 9, 42, "Input",ExpressionUUID->"b82c34e0-d4f6-4436-b6e3-e7a021ca18ac"],
+Cell[3021, 92, 368, 9, 42, "Input",ExpressionUUID->"85dde4f3-460e-4148-885e-1c3c1623ce93"],
+Cell[CellGroupData[{
+Cell[3414, 105, 527, 13, 42, "Input",ExpressionUUID->"a71bd1e7-7524-405b-9647-5118af0e435d"],
+Cell[3944, 120, 347, 5, 33, "Output",ExpressionUUID->"7fe4e5ac-1e2b-4ce6-87cf-444f507b9e73"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4328, 130, 225, 4, 29, "Input",ExpressionUUID->"3f2a7221-9112-483b-87a1-2f7eedfe7b85"],
+Cell[4556, 136, 5849, 113, 1851, "Output",ExpressionUUID->"d3098fa9-431c-4272-b475-5f23a2607191"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10442, 254, 555, 15, 42, "Input",ExpressionUUID->"3f00e522-0370-4a7b-aad6-57eaa20b5d9d"],
+Cell[11000, 271, 267, 4, 33, "Output",ExpressionUUID->"66336c5b-427b-4c58-9886-3c744ed41e1f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11304, 280, 477, 9, 29, "Input",ExpressionUUID->"cb79ac57-a784-46c9-96eb-1e81420603e9"],
+Cell[11784, 291, 355, 5, 53, "Output",ExpressionUUID->"1d32dc21-47f2-4b7d-9308-e79b9f8f8a18"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12176, 301, 453, 11, 42, "Input",ExpressionUUID->"e185887b-968a-4e12-8eeb-b740c117e040"],
+Cell[12632, 314, 294, 4, 33, "Output",ExpressionUUID->"0e203893-ec89-4d08-bbd7-fb879696059e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12963, 323, 312, 6, 42, "Input",ExpressionUUID->"6c256290-1935-44c6-8e3b-ed781b4678d8"],
+Cell[13278, 331, 5182, 106, 649, "Output",ExpressionUUID->"07065bff-549e-409f-8be3-a2fc237a54db"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18497, 442, 282, 6, 29, "Input",ExpressionUUID->"672b6a26-0c7f-491c-bdaa-f7854a6897e3"],
+Cell[18782, 450, 391, 7, 33, "Output",ExpressionUUID->"7bd1d910-cd35-4114-a7a1-b4bf38e228a3"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19210, 462, 567, 15, 77, "Input",ExpressionUUID->"0b607e92-7ca2-4a70-b8c0-ceb5d442d6ce"],
+Cell[19780, 479, 2179, 44, 278, "Output",ExpressionUUID->"130974fa-2675-46df-ba8f-d42610434588"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21996, 528, 792, 21, 133, "Input",ExpressionUUID->"c0634b09-e87d-45d6-991d-3bb9305f4399"],
+Cell[22791, 551, 293, 4, 33, "Output",ExpressionUUID->"8400ad3e-a10d-495c-b46a-e1bad12a2282"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23121, 560, 225, 4, 29, "Input",ExpressionUUID->"f0d2d57a-fa41-4a74-bd0b-aee1a14c9823"],
+Cell[23349, 566, 2158, 45, 278, "Output",ExpressionUUID->"9a286c3c-d9f8-44fe-82b8-bb03c5c9f762"]
+}, Open  ]],
+Cell[25522, 614, 159, 3, 33, "Text",ExpressionUUID->"9db2566b-b7d8-469d-a5fb-910e57744571"],
+Cell[CellGroupData[{
+Cell[25706, 621, 605, 16, 42, "Input",ExpressionUUID->"7e7c26b9-f34d-416c-b739-3d4c3edb468c"],
+Cell[26314, 639, 249, 3, 33, "Output",ExpressionUUID->"a1750510-847b-4e8f-bb7b-0e4adde53601"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[26600, 647, 227, 4, 29, "Input",ExpressionUUID->"a0d85e47-975d-479b-b22d-268aaf2bd51e"],
+Cell[26830, 653, 2057, 43, 278, "Output",ExpressionUUID->"b3fd303e-dc92-42bc-9c04-004ba0a091d4"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28924, 701, 765, 21, 42, "Input",ExpressionUUID->"81b9551e-1a02-4d17-a85c-8af93e776168"],
+Cell[29692, 724, 2207, 45, 278, "Output",ExpressionUUID->"b7e697ae-7b85-4e7a-ae53-a2fd88bcf0de"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31936, 774, 840, 23, 77, "Input",ExpressionUUID->"0ea11a71-6df8-4912-b209-41ccb12dbd40"],
+Cell[32779, 799, 200, 3, 33, "Output",ExpressionUUID->"69f4497d-fe86-4fcb-9375-e755f1eb8f35"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[33016, 807, 228, 4, 29, "Input",ExpressionUUID->"d0470f5c-4c04-4e9a-9cf7-fcc3ade8769f"],
+Cell[33247, 813, 2055, 43, 278, "Output",ExpressionUUID->"4b54e9d5-fea3-4280-9c2b-763476b57503"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[35339, 861, 534, 13, 42, "Input",ExpressionUUID->"e197ae42-e1bb-44be-9978-bd24d6d28f3f"],
+Cell[35876, 876, 275, 4, 33, "Output",ExpressionUUID->"377c67e4-0db1-4766-8574-744b299a67f7"]
+}, Open  ]],
+Cell[36166, 883, 152, 3, 33, "Text",ExpressionUUID->"939ba5f3-8582-4e93-ac20-ec980945788d"],
+Cell[CellGroupData[{
+Cell[36343, 890, 606, 17, 42, "Input",ExpressionUUID->"5e8284f1-8e53-4187-9a72-c6349764a188"],
+Cell[36952, 909, 243, 3, 33, "Output",ExpressionUUID->"101c8e1c-1f7b-4ad9-b3ce-d6a63b8ecfa2"]
+}, Open  ]],
+Cell[37210, 915, 234, 7, 55, "Text",ExpressionUUID->"52187d3d-8efb-4d25-bc23-9f3ad9de30dc"],
+Cell[CellGroupData[{
+Cell[37469, 926, 298, 7, 42, "Input",ExpressionUUID->"59bb04b1-332c-4c23-93d2-f3003b6cf5f7"],
+Cell[37770, 935, 277, 5, 33, "Output",ExpressionUUID->"e12188ad-edc8-465b-a8e2-1dd8f034effb"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[38084, 945, 359, 9, 42, "Input",ExpressionUUID->"a8ba0e63-39e9-4eac-a4ca-1a1e5b4be570"],
+Cell[38446, 956, 253, 5, 33, "Output",ExpressionUUID->"dd2671a8-d759-4ba4-abc2-be3f1297c522"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[38748, 967, 353, 6, 66, "Section",ExpressionUUID->"6080639c-ad03-4b40-9428-9f21f5dcb3d8"],
+Cell[39104, 975, 4185, 112, 551, "Input",ExpressionUUID->"ef7b3615-0ab0-4731-9bf2-42d4d0978b19"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[43326, 1092, 406, 6, 66, "Section",ExpressionUUID->"fb2d2b61-9398-4fc1-b925-77e77de8688e"],
+Cell[CellGroupData[{
+Cell[43757, 1102, 335, 8, 42, "Input",ExpressionUUID->"cbefff03-e7d5-4be4-803f-ecd74fb61834"],
+Cell[44095, 1112, 246, 3, 33, "Output",ExpressionUUID->"d90b7b86-fc02-4f5c-a5d3-d3aab924eed9"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[44378, 1120, 387, 9, 42, "Input",ExpressionUUID->"e96d0c3d-d4bb-481c-9f4a-167489f220a5"],
+Cell[44768, 1131, 276, 4, 33, "Output",ExpressionUUID->"3def312b-a229-4e61-a3b9-c66e55f0bf9a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[45081, 1140, 238, 4, 29, "Input",ExpressionUUID->"b3c0331c-cf15-4307-84cd-2c8c330c461e"],
+Cell[45322, 1146, 633, 11, 53, "Output",ExpressionUUID->"cf362a27-8fe1-4e82-aea2-9ef13d4a4e27"]
+}, Open  ]],
+Cell[45970, 1160, 545, 13, 42, "Input",ExpressionUUID->"8ff97687-8e26-44ae-84d3-13baa9db3ea2"],
+Cell[CellGroupData[{
+Cell[46540, 1177, 308, 6, 29, "Input",ExpressionUUID->"193ec79e-f713-4f57-bbda-1f44b26151da"],
+Cell[46851, 1185, 565, 11, 53, "Output",ExpressionUUID->"f12db539-afe3-4ca9-bac5-a79f57bbb3a4"]
+}, Open  ]],
+Cell[47431, 1199, 288, 6, 42, "Input",ExpressionUUID->"b1d2dab7-b196-4d1e-8f4d-9b774ac3ccd4"],
+Cell[47722, 1207, 631, 12, 49, "Input",ExpressionUUID->"d48283ff-9c13-46ff-896c-ce7357968c32"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
