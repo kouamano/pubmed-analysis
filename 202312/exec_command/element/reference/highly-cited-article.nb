@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[    226449,       4334]
-NotebookOptionsPosition[    219462,       4210]
-NotebookOutlinePosition[    219869,       4227]
-CellTagsIndexPosition[    219826,       4224]
+NotebookDataLength[     97156,       2231]
+NotebookOptionsPosition[     89665,       2100]
+NotebookOutlinePosition[     90072,       2117]
+CellTagsIndexPosition[     90029,       2114]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -50,7 +50,8 @@ Cell[BoxData[
     "11279956", ",", "13673661", ",", "16645203", ",", "20421796", ",", 
     "25376280", ",", "31440632"}], "}"}]}]], "Input",
  CellChangeTimes->{{3.9597312229416943`*^9, 3.959731232217162*^9}},
- CellLabel->"In[1]:=",ExpressionUUID->"f13a9059-ab8d-4d43-b655-a51051b17b40"],
+ CellLabel->
+  "In[253]:=",ExpressionUUID->"f13a9059-ab8d-4d43-b655-a51051b17b40"],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -60,8 +61,9 @@ Cell[BoxData[
    "11279956", ",", "13673661", ",", "16645203", ",", "20421796", ",", 
    "25376280", ",", "31440632"}], "}"}]], "Output",
  CellChangeTimes->{3.959731233372945*^9, 3.960923049976603*^9, 
-  3.9609267998424377`*^9, 3.960929183462376*^9},
- CellLabel->"Out[1]=",ExpressionUUID->"6150a0be-2cde-4b07-96b8-65cb6a0016bf"]
+  3.9609267998424377`*^9, 3.960929183462376*^9, 3.9617883619918737`*^9},
+ CellLabel->
+  "Out[253]=",ExpressionUUID->"7f2659e9-d081-488e-bdef-978de11ea0ce"]
 }, Open  ]]
 }, Open  ]],
 
@@ -89,7 +91,8 @@ Cell[BoxData[
      RowBox[{"n", ",", "1950", ",", "2020", ",", "5"}], "}"}]}], 
    "]"}]}]], "Input",
  CellChangeTimes->{{3.959731766409134*^9, 3.959731867736624*^9}},
- CellLabel->"In[2]:=",ExpressionUUID->"e37a57e2-269a-439e-8f04-f08ad985ea53"],
+ CellLabel->
+  "In[254]:=",ExpressionUUID->"e37a57e2-269a-439e-8f04-f08ad985ea53"],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -124,8 +127,10 @@ Cell[BoxData[
    ",", "\<\"/Volumes/elecom/BANK/pubmed/202312/xml/element/reference/1946-\
 2020_topCitingCitedArt1Perc.save\"\>"}], "}"}]], "Output",
  CellChangeTimes->{{3.9597318481519823`*^9, 3.959731868797936*^9}, 
-   3.960923064431522*^9, 3.9609267999830627`*^9, 3.960929187307811*^9},
- CellLabel->"Out[2]=",ExpressionUUID->"5d8936d3-5916-4fea-b692-6b276985d2c6"]
+   3.960923064431522*^9, 3.9609267999830627`*^9, 3.960929187307811*^9, 
+   3.961788362007463*^9},
+ CellLabel->
+  "Out[254]=",ExpressionUUID->"4562dd0b-5a64-46f8-8f88-ebd1f891a767"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -133,7 +138,8 @@ Cell[BoxData[
   RowBox[{"Map", "[", 
    RowBox[{"Get", ",", "mainartfiles"}], "]"}], ";"}]], "Input",
  CellChangeTimes->{{3.959731895130191*^9, 3.959731908130908*^9}},
- CellLabel->"In[3]:=",ExpressionUUID->"44cbc6fb-a1b9-4471-b956-bc1de33bab2d"],
+ CellLabel->
+  "In[255]:=",ExpressionUUID->"44cbc6fb-a1b9-4471-b956-bc1de33bab2d"],
 
 Cell[CellGroupData[{
 
@@ -142,38 +148,50 @@ Cell["\:4e3b\:8981\:8ad6\:6587", "Subsection",
    3.960931663449635*^9},ExpressionUUID->"21a4d85a-b2f0-41e3-a9ac-\
 c41788f455d8"],
 
-Cell["\:4e3b\:8981\:8ad6\:6587\:3068\:88ab\:5f15\:7528\:6570", "Text",
- CellChangeTimes->{{3.959740042477908*^9, 
-  3.9597400641145153`*^9}},ExpressionUUID->"b3135bd1-db09-47bd-af54-\
+Cell["\:4e3b\:8981\:8ad6\:6587PMID\:3068\:88ab\:5f15\:7528\:6570", "Text",
+ CellChangeTimes->{{3.959740042477908*^9, 3.9597400641145153`*^9}, {
+  3.961788650269516*^9, 
+  3.9617886509424467`*^9}},ExpressionUUID->"b3135bd1-db09-47bd-af54-\
 a9492c90ee7b"],
+
+Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{
-  RowBox[{"top1PcCitedArtList", "=", 
-   RowBox[{"Table", "[", 
-    RowBox[{
-     RowBox[{"Reverse", "[", 
-      RowBox[{"SortBy", "[", 
-       RowBox[{
+  RowBox[{"(", 
+   RowBox[{"top1PcCitedArtList", "=", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Reverse", "[", 
+       RowBox[{"SortBy", "[", 
         RowBox[{
-         RowBox[{"Flatten", "[", 
-          RowBox[{"Map", "[", 
-           RowBox[{
+         RowBox[{
+          RowBox[{"Flatten", "[", 
+           RowBox[{"Map", "[", 
             RowBox[{
-             RowBox[{"#", "[", 
-              RowBox[{"[", "2", "]"}], "]"}], "&"}], ",", 
-            RowBox[{"topCitingCitedArt1Perc", "[", 
-             RowBox[{"n", ",", "\"\<citing rule\>\""}], "]"}], ",", 
-            RowBox[{"{", "2", "}"}]}], "]"}], "]"}], "//", "Tally"}], ",", 
-        RowBox[{
-         RowBox[{"#", "[", 
-          RowBox[{"[", "2", "]"}], "]"}], "&"}]}], "]"}], "]"}], ",", 
-     RowBox[{"{", 
-      RowBox[{"n", ",", "1950", ",", "2020", ",", "5"}], "}"}]}], "]"}]}], 
-  ";"}]], "Input",
+             RowBox[{
+              RowBox[{"#", "[", 
+               RowBox[{"[", "2", "]"}], "]"}], "&"}], ",", 
+             RowBox[{"topCitingCitedArt1Perc", "[", 
+              RowBox[{"n", ",", "\"\<citing rule\>\""}], "]"}], ",", 
+             RowBox[{"{", "2", "}"}]}], "]"}], "]"}], "//", "Tally"}], ",", 
+         RowBox[{
+          RowBox[{"#", "[", 
+           RowBox[{"[", "2", "]"}], "]"}], "&"}]}], "]"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"n", ",", "1950", ",", "2020", ",", "5"}], "}"}]}], "]"}]}], 
+   ")"}], "//", "Length"}]], "Input",
  CellChangeTimes->{{3.95973200645758*^9, 3.959732045942276*^9}, 
-   3.959732098143379*^9, {3.959732165585435*^9, 3.95973216660215*^9}},
- CellLabel->"In[4]:=",ExpressionUUID->"402b8b86-b634-4254-97e2-580d6aa2fc43"],
+   3.959732098143379*^9, {3.959732165585435*^9, 3.95973216660215*^9}, {
+   3.961788631623839*^9, 3.961788638673567*^9}},
+ CellLabel->
+  "In[279]:=",ExpressionUUID->"402b8b86-b634-4254-97e2-580d6aa2fc43"],
+
+Cell[BoxData["15"], "Output",
+ CellChangeTimes->{3.9617886413329763`*^9},
+ CellLabel->
+  "Out[279]=",ExpressionUUID->"3b1b29b3-2d80-4ac2-9b70-90f226e13d60"]
+}, Open  ]],
 
 Cell[TextData[StyleBox["\:4e3b\:8981\:8ad6\:6587\:6570",
  FontWeight->"Bold"]], "Text",
@@ -193,7 +211,8 @@ Cell[BoxData[
    3.931754924529249*^9}, {3.949200325027946*^9, 3.949200392098322*^9}, {
    3.95973212383989*^9, 3.9597321412834873`*^9}, 3.959732241374208*^9, {
    3.960923112448841*^9, 3.960923113090247*^9}},
- CellLabel->"In[5]:=",ExpressionUUID->"bbebf064-787d-4c9d-8670-34eef54dbc5f"],
+ CellLabel->
+  "In[257]:=",ExpressionUUID->"bbebf064-787d-4c9d-8670-34eef54dbc5f"],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -203,8 +222,9 @@ Cell[BoxData[
    ",", "336"}], "}"}]], "Output",
  CellChangeTimes->{{3.959732087425418*^9, 3.959732112547492*^9}, 
    3.959732244104672*^9, 3.9609230811791267`*^9, 3.960923114266914*^9, 
-   3.960926803173264*^9, 3.960929190573793*^9},
- CellLabel->"Out[5]=",ExpressionUUID->"41fe9c42-488a-402d-ae99-dd1759c869f9"]
+   3.960926803173264*^9, 3.960929190573793*^9, 3.961788365333782*^9},
+ CellLabel->
+  "Out[257]=",ExpressionUUID->"8e1631f4-8125-4f17-965f-f9a57ed95715"]
 }, Open  ]],
 
 Cell[TextData[StyleBox["\:5168\:8ad6\:6587\:6570\:306b\:304a\:3051\:308b\:4e3b\
@@ -226,7 +246,8 @@ Cell[BoxData[
    "N"}]}]], "Input",
  CellChangeTimes->{{3.959740340206142*^9, 3.959740365755982*^9}, {
   3.960932332270657*^9, 3.960932374861142*^9}},
- CellLabel->"In[45]:=",ExpressionUUID->"fb11ccf5-d30c-4805-a4fb-4a9fb93df8e4"],
+ CellLabel->
+  "In[258]:=",ExpressionUUID->"fb11ccf5-d30c-4805-a4fb-4a9fb93df8e4"],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -241,8 +262,9 @@ Cell[BoxData[
    "0.0010686808076885985`"}], "}"}]], "Output",
  CellChangeTimes->{{3.959740346775962*^9, 3.959740366682145*^9}, 
    3.96092314559164*^9, 3.9609268031752777`*^9, 3.960929190575601*^9, 
-   3.960932369356453*^9},
- CellLabel->"Out[45]=",ExpressionUUID->"d3d2eb1e-6073-499a-a5e1-0919a895110f"]
+   3.960932369356453*^9, 3.961788365338163*^9},
+ CellLabel->
+  "Out[258]=",ExpressionUUID->"ee20acd4-2891-4280-be52-4ef95a4bd9c6"]
 }, Open  ]]
 }, Open  ]],
 
@@ -270,7 +292,8 @@ Cell[BoxData[
  CellChangeTimes->{{3.959732356190737*^9, 3.9597323618273973`*^9}, {
    3.95973242355715*^9, 3.959732475591127*^9}, {3.959732694551978*^9, 
    3.959732841674909*^9}, 3.9597394695354433`*^9},
- CellLabel->"In[7]:=",ExpressionUUID->"4ed62660-c6ba-48bd-a2e1-39c01088aded"],
+ CellLabel->
+  "In[259]:=",ExpressionUUID->"4ed62660-c6ba-48bd-a2e1-39c01088aded"],
 
 Cell["\:65b0\:898f\:51fa\:73fe\:4e3b\:8981\:8ad6\:6587ID", "Text",
  CellChangeTimes->{{3.959740042477908*^9, 3.9597400641145153`*^9}, {
@@ -312,7 +335,8 @@ Cell[BoxData[
   3.959732841674909*^9}, {3.959739081558563*^9, 3.95973919272031*^9}, {
   3.9597392495605707`*^9, 3.95973927680363*^9}, {3.959739327010028*^9, 
   3.9597394422205687`*^9}, {3.959739485348771*^9, 3.959739488375059*^9}},
- CellLabel->"In[8]:=",ExpressionUUID->"ee6aa304-6ce8-4059-87d1-e9bac3e0e495"],
+ CellLabel->
+  "In[260]:=",ExpressionUUID->"ee6aa304-6ce8-4059-87d1-e9bac3e0e495"],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -580,8 +604,9 @@ Cell[BoxData[
    3.959739155224037*^9, 3.959739193740237*^9}, {3.959739251102396*^9, 
    3.959739277301484*^9}, {3.9597393627397423`*^9, 3.959739412998596*^9}, 
    3.959739491314481*^9, 3.9609231638429127`*^9, 3.960926803190571*^9, 
-   3.960929190590262*^9},
- CellLabel->"Out[8]=",ExpressionUUID->"a0ff4af8-2348-47ff-bb4c-4e2f5b33469b"]
+   3.960929190590262*^9, 3.961788365341537*^9},
+ CellLabel->
+  "Out[260]=",ExpressionUUID->"f24654bf-1d87-475e-967f-5fa7766edab6"]
 }, Open  ]],
 
 Cell[TextData[StyleBox["\:65b0\:898f\:51fa\:73fe\:4e3b\:8981\:8ad6\:6587\:6570\
@@ -601,7 +626,8 @@ Cell[BoxData[
    RowBox[{"Length", ",", "newcomerCitedArt"}], "]"}]}]], "Input",
  CellChangeTimes->{{3.959739500690011*^9, 3.959739507407815*^9}, {
   3.959740499428331*^9, 3.959740503666709*^9}},
- CellLabel->"In[9]:=",ExpressionUUID->"dc3376b5-48ce-4100-827b-5b05904fdf4c"],
+ CellLabel->
+  "In[261]:=",ExpressionUUID->"dc3376b5-48ce-4100-827b-5b05904fdf4c"],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -610,8 +636,10 @@ Cell[BoxData[
    "10", ",", "2", ",", "5", ",", "6", ",", "27", ",", "123", ",", "158", ",",
     "104"}], "}"}]], "Output",
  CellChangeTimes->{3.959739507765812*^9, 3.9597405046352673`*^9, 
-  3.9609231715918293`*^9, 3.960926803194222*^9, 3.960929190596887*^9},
- CellLabel->"Out[9]=",ExpressionUUID->"3250803e-1b8e-4906-ab1f-719b1f5e9930"]
+  3.9609231715918293`*^9, 3.960926803194222*^9, 3.960929190596887*^9, 
+  3.961788365351686*^9},
+ CellLabel->
+  "Out[261]=",ExpressionUUID->"722442fd-3998-4bb3-9ef3-64d346e4985a"]
 }, Open  ]],
 
 Cell[TextData[StyleBox["\:4e3b\:8981\:8ad6\:6587\:6570\:306b\:304a\:3051\:308b\
@@ -635,7 +663,8 @@ Cell[BoxData[
     "100"}], "//", "N"}]}]], "Input",
  CellChangeTimes->{{3.959740510145586*^9, 3.959740527398683*^9}, {
   3.960932581676835*^9, 3.9609325887257223`*^9}},
- CellLabel->"In[49]:=",ExpressionUUID->"0a0b780d-ccac-434d-94a1-85717e5eba9e"],
+ CellLabel->
+  "In[262]:=",ExpressionUUID->"0a0b780d-ccac-434d-94a1-85717e5eba9e"],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -647,8 +676,10 @@ Cell[BoxData[
    "40.90909090909091`", ",", "64.0625`", ",", "50.15873015873016`", ",", 
    "30.952380952380953`"}], "}"}]], "Output",
  CellChangeTimes->{3.9597405278472633`*^9, 3.960923176190061*^9, 
-  3.960926803200116*^9, 3.960929190604005*^9, 3.960932590849394*^9},
- CellLabel->"Out[49]=",ExpressionUUID->"9ccce2a6-7efa-4f06-8495-fd1981024c5c"]
+  3.960926803200116*^9, 3.960929190604005*^9, 3.960932590849394*^9, 
+  3.961788365353973*^9},
+ CellLabel->
+  "Out[262]=",ExpressionUUID->"b4384b7e-ab7c-4281-8abb-0432e46c7671"]
 }, Open  ]]
 }, Open  ]],
 
@@ -667,7 +698,8 @@ Cell[BoxData[
   "[", "\"\</Volumes/elecom/BANK/pubmed/202312/exec_command/generations.wl\>\"\
 ", "]"}]], "Input",
  CellChangeTimes->{{3.959711081323925*^9, 3.9597111005220213`*^9}},
- CellLabel->"In[39]:=",ExpressionUUID->"26ba4fc5-0a71-4fb4-8d9b-d39af1a9c68f"],
+ CellLabel->
+  "In[263]:=",ExpressionUUID->"26ba4fc5-0a71-4fb4-8d9b-d39af1a9c68f"],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -675,8 +707,9 @@ Cell[BoxData[
   "1950", ",", "1955", ",", "1960", ",", "1965", ",", "1970", ",", "1975", ",",
     "1980", ",", "1985", ",", "1990", ",", "1995", ",", "2000", ",", "2005", ",",
     "2010", ",", "2015", ",", "2020"}], "}"}]], "Output",
- CellChangeTimes->{3.960932092797286*^9},
- CellLabel->"Out[39]=",ExpressionUUID->"23a356fd-31b9-4762-bb35-8d4cfbc38180"]
+ CellChangeTimes->{3.960932092797286*^9, 3.96178836535889*^9},
+ CellLabel->
+  "Out[263]=",ExpressionUUID->"a2ffe8ef-534f-42f5-84a7-283686eeca79"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -702,7 +735,8 @@ Cell[BoxData[
  CellChangeTimes->{{3.9609319660573063`*^9, 3.960931994062323*^9}, {
   3.96093213983737*^9, 3.9609321547013187`*^9}, {3.960932194763978*^9, 
   3.9609322709493227`*^9}},
- CellLabel->"In[44]:=",ExpressionUUID->"146c5387-a6a6-40eb-9bd0-5d98af45d44e"],
+ CellLabel->
+  "In[264]:=",ExpressionUUID->"146c5387-a6a6-40eb-9bd0-5d98af45d44e"],
 
 Cell[BoxData[
  GraphicsBox[{{}, {{}, {}, 
@@ -970,8 +1004,9 @@ Cell[BoxData[
   Ticks->{Automatic, Automatic}]], "Output",
  CellChangeTimes->{{3.960931967552864*^9, 3.960931994935155*^9}, {
    3.960932143496356*^9, 3.960932155137516*^9}, {3.960932196926333*^9, 
-   3.960932210864251*^9}, 3.960932272243246*^9},
- CellLabel->"Out[44]=",ExpressionUUID->"f95bd31c-1571-41bd-8fcb-f18dc83ccbff"]
+   3.960932210864251*^9}, 3.960932272243246*^9, 3.961788365386904*^9},
+ CellLabel->
+  "Out[264]=",ExpressionUUID->"c0bbb6fb-7892-4762-8804-4447e51ed156"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -995,7 +1030,8 @@ Cell[BoxData[
    3.960932603183427*^9, 3.9609326644141827`*^9}, {3.96093857008152*^9, 
    3.960938613282709*^9}, {3.960938890247897*^9, 3.9609389273576107`*^9}, 
    3.960939021235899*^9},
- CellLabel->"In[59]:=",ExpressionUUID->"df356942-c1e5-465d-9548-949546ac9300"],
+ CellLabel->
+  "In[265]:=",ExpressionUUID->"df356942-c1e5-465d-9548-949546ac9300"],
 
 Cell[BoxData[
  TemplateBox[{
@@ -1269,8 +1305,9 @@ Cell[BoxData[
        RowBox[{"{", "}"}]}], "]"}]& )]], "Output",
  CellChangeTimes->{{3.960932657549564*^9, 3.9609326652848387`*^9}, {
    3.96093859843991*^9, 3.960938614654724*^9}, {3.960938917779593*^9, 
-   3.9609389285451393`*^9}, 3.96093902237667*^9},
- CellLabel->"Out[59]=",ExpressionUUID->"87df8890-89f5-43fb-ab24-90fd228d909c"]
+   3.9609389285451393`*^9}, 3.96093902237667*^9, 3.9617883654010553`*^9},
+ CellLabel->
+  "Out[265]=",ExpressionUUID->"01414cf1-363f-49dc-9cc9-1edd980e8fc2"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1293,7 +1330,8 @@ Cell[BoxData[
    3.9609323948268023`*^9, 3.960932414393626*^9}, {3.96093247982343*^9, 
    3.9609325338132267`*^9}, 3.96093864256562*^9, {3.9609389357854137`*^9, 
    3.9609389558414288`*^9}},
- CellLabel->"In[58]:=",ExpressionUUID->"98590867-b3bc-481c-9094-33e29c24e446"],
+ CellLabel->
+  "In[266]:=",ExpressionUUID->"98590867-b3bc-481c-9094-33e29c24e446"],
 
 Cell[BoxData[
  TemplateBox[{
@@ -1576,8 +1614,9 @@ Cell[BoxData[
        RowBox[{"{", "}"}]}], "]"}]& )]], "Output",
  CellChangeTimes->{{3.960932395754404*^9, 3.960932415243428*^9}, 
    3.9609325372461967`*^9, 3.960938643881179*^9, {3.9609389503223753`*^9, 
-   3.9609389568473577`*^9}},
- CellLabel->"Out[58]=",ExpressionUUID->"b5f44628-0eae-415f-af16-46f5adfc7469"]
+   3.9609389568473577`*^9}, 3.9617883654177933`*^9},
+ CellLabel->
+  "Out[266]=",ExpressionUUID->"a56d0ae6-9679-41b9-a4f8-f3e88b2b9054"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
@@ -1589,6 +1628,12 @@ Cell["\:4e3b\:8981\:8ad6\:6587\:30bf\:30a4\:30c8\:30eb", "Section",
   3.959740587651339*^9, 
   3.959740590806313*^9}},ExpressionUUID->"71264b11-80d5-4ae9-9591-\
 6d9aea8dae4a"],
+
+Cell["PMID\:304b\:3089\:8ad6\:6587\:30bf\:30a4\:30c8\:30eb\:3092\:5f15\:304f",\
+ "Text",
+ CellChangeTimes->{{3.961788741594915*^9, 
+  3.961788760322905*^9}},ExpressionUUID->"072f0246-71dd-40ee-ac20-\
+04d5df100862"],
 
 Cell["\:30d7\:30ed\:30b0\:30e9\:30e0", "Text",
  CellFrame->{{0, 0}, {0, 0.5}},
@@ -1606,7 +1651,8 @@ pubmed24n0080.xml.blk\>\"", ",", "\"\<String\>\""}], "]"}]}], ";"}]], "Input",\
 
  CellChangeTimes->{{3.96092340036195*^9, 3.960923449659741*^9}, {
   3.960928338646076*^9, 3.960928342348805*^9}},
- CellLabel->"In[11]:=",ExpressionUUID->"cc178136-e398-4de1-bb54-e633f838a0e0"],
+ CellLabel->
+  "In[267]:=",ExpressionUUID->"cc178136-e398-4de1-bb54-e633f838a0e0"],
 
 Cell[BoxData[
  RowBox[{
@@ -1618,7 +1664,8 @@ Cell[BoxData[
     "]"}]}], ";"}]], "Input",
  CellChangeTimes->{{3.960923460353279*^9, 3.960923518255169*^9}, 
    3.960923548440258*^9},
- CellLabel->"In[12]:=",ExpressionUUID->"247611b4-571c-4beb-a5c0-d4c0a143d469"],
+ CellLabel->
+  "In[268]:=",ExpressionUUID->"247611b4-571c-4beb-a5c0-d4c0a143d469"],
 
 Cell[BoxData[
  RowBox[{
@@ -1633,7 +1680,8 @@ Cell[BoxData[
      RowBox[{"{", "2", "}"}]}], "]"}]}], ";"}]], "Input",
  CellChangeTimes->{{3.9609253358351192`*^9, 3.960925338790269*^9}, {
   3.960925375127777*^9, 3.96092541059625*^9}},
- CellLabel->"In[13]:=",ExpressionUUID->"95601c5d-ac1d-47f7-aa8b-19f22283399e"],
+ CellLabel->
+  "In[269]:=",ExpressionUUID->"95601c5d-ac1d-47f7-aa8b-19f22283399e"],
 
 Cell[BoxData[
  RowBox[{
@@ -1650,7 +1698,8 @@ Cell[BoxData[
      RowBox[{"{", "3", "}"}]}], "]"}]}], ";"}]], "Input",
  CellChangeTimes->{{3.960925605106922*^9, 3.9609256067253227`*^9}, {
   3.960925647072179*^9, 3.9609256546627483`*^9}},
- CellLabel->"In[14]:=",ExpressionUUID->"8cf63542-2908-4dd0-a8ff-b2baafd643b4"],
+ CellLabel->
+  "In[270]:=",ExpressionUUID->"8cf63542-2908-4dd0-a8ff-b2baafd643b4"],
 
 Cell[BoxData[
  RowBox[{
@@ -1668,7 +1717,8 @@ Cell[BoxData[
    "]"}]}]], "Input",
  CellChangeTimes->{{3.960926012336483*^9, 3.96092607890703*^9}, 
    3.96092909463865*^9},
- CellLabel->"In[15]:=",ExpressionUUID->"a5a174e4-1933-4464-9bc8-1365441f5829"],
+ CellLabel->
+  "In[271]:=",ExpressionUUID->"a5a174e4-1933-4464-9bc8-1365441f5829"],
 
 Cell[CellGroupData[{
 
@@ -1683,14 +1733,17 @@ Cell[BoxData[
    3.960926414021803*^9, 3.9609264311495943`*^9}, {3.9609283583011637`*^9, 
    3.960928359462779*^9}, {3.960928503315515*^9, 3.960928509691028*^9}, {
    3.960928589445694*^9, 3.960928594349552*^9}, 3.9609290881446133`*^9},
- CellLabel->"In[16]:=",ExpressionUUID->"22851e36-2fb1-479c-b2d6-0870446bd6d3"],
+ CellLabel->
+  "In[272]:=",ExpressionUUID->"22851e36-2fb1-479c-b2d6-0870446bd6d3"],
 
 Cell[BoxData["30000"], "Output",
  CellChangeTimes->{{3.960926118013686*^9, 3.960926142307053*^9}, 
    3.960926434408442*^9, 3.960926804090498*^9, {3.9609283549513397`*^9, 
    3.960928360733453*^9}, 3.96092851145475*^9, 3.960928608177924*^9, 
-   3.9609288408550987`*^9, 3.9609290987161427`*^9, 3.9609291913835173`*^9},
- CellLabel->"Out[16]=",ExpressionUUID->"afb052f6-4cbc-475a-9515-e9b312436183"]
+   3.9609288408550987`*^9, 3.9609290987161427`*^9, 3.9609291913835173`*^9, 
+   3.961788366915947*^9},
+ CellLabel->
+  "Out[272]=",ExpressionUUID->"fecd5547-96d9-48f8-8ef3-8a7cdfd1bf7f"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1712,7 +1765,8 @@ Cell[BoxData[
  CellChangeTimes->{{3.960928523082272*^9, 3.96092853404694*^9}, {
   3.96092864987667*^9, 3.960928693375738*^9}, {3.960928882091567*^9, 
   3.960928907484688*^9}},
- CellLabel->"In[17]:=",ExpressionUUID->"2a783ead-2ea2-44d5-85bf-1f4db67f5dd5"],
+ CellLabel->
+  "In[273]:=",ExpressionUUID->"2a783ead-2ea2-44d5-85bf-1f4db67f5dd5"],
 
 Cell[BoxData[
  TemplateBox[<|"shortenedBoxes" -> TagBox[
@@ -1762,14 +1816,16 @@ peroxisomal disease syndrome of Zellweger].\""}], "}"}]}], "}"}], ",",
                RowBox[{
                 "\"<ArticleTitle>\"", ",", 
                  "\"RNA catalysis and the origin of life.\""}], "}"}]}], 
-           "}"}]}], "}"}], Short[#, 8]& ], "line" -> 17, "sessionID" -> 
-   32604446749005764066, "byteCount" -> 12421504, "size" -> 8, "stored" -> 
+           "}"}]}], "}"}], Short[#, 8]& ], "line" -> 273, "sessionID" -> 
+   32610043055420536163, "byteCount" -> 12421504, "size" -> 8, "stored" -> 
    False, "expr" -> Missing["NotStored"], "wrap" -> OutputSizeLimit`Defer, 
    "version" -> 1|>,
   "OutputSizeLimitTemplate"]], "Output",
  CellChangeTimes->{{3.960928679254488*^9, 3.960928709374277*^9}, 
-   3.960928908034773*^9, 3.9609291016021223`*^9, 3.960929191509289*^9},
- CellLabel->"Out[17]=",ExpressionUUID->"cfa4a83d-716a-48d3-8d03-700075b4ee7e"]
+   3.960928908034773*^9, 3.9609291016021223`*^9, 3.960929191509289*^9, 
+   3.961788367055953*^9},
+ CellLabel->
+  "Out[273]=",ExpressionUUID->"c5435503-177b-48e0-8bac-24655558e27a"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1787,7 +1843,8 @@ Cell[BoxData[
  CellChangeTimes->{{3.960926498185421*^9, 3.960926704627142*^9}, {
    3.960926738408104*^9, 3.960926765197679*^9}, {3.9609268319230757`*^9, 
    3.9609268363420973`*^9}, 3.960928701913352*^9},
- CellLabel->"In[18]:=",ExpressionUUID->"c1d9279f-c954-4686-b40d-55cd0604a1e5"],
+ CellLabel->
+  "In[274]:=",ExpressionUUID->"c1d9279f-c954-4686-b40d-55cd0604a1e5"],
 
 Cell[BoxData[
  TemplateBox[<|"shortenedBoxes" -> TagBox[
@@ -1817,14 +1874,16 @@ prevention.\""}], ",",
          RowBox[{
           "\"2423941\"", "\[Rule]", 
            "\"RNA catalysis and the origin of life.\""}]}], "}"}], 
-     Short[#, 8]& ], "line" -> 18, "sessionID" -> 32604446749005764066, 
+     Short[#, 8]& ], "line" -> 274, "sessionID" -> 32610043055420536163, 
    "byteCount" -> 6421504, "size" -> 8, "stored" -> False, "expr" -> 
    Missing["NotStored"], "wrap" -> OutputSizeLimit`Defer, "version" -> 1|>,
   "OutputSizeLimitTemplate"]], "Output",
  CellChangeTimes->{{3.960926755255972*^9, 3.9609267621286783`*^9}, 
    3.9609268041617002`*^9, 3.960926838216922*^9, 3.9609287023512793`*^9, 
-   3.9609289110394506`*^9, 3.9609291040228977`*^9, 3.960929191584338*^9},
- CellLabel->"Out[18]=",ExpressionUUID->"2e47bdac-aee5-4cab-b940-96a30861cfd4"]
+   3.9609289110394506`*^9, 3.9609291040228977`*^9, 3.960929191584338*^9, 
+   3.961788367126258*^9},
+ CellLabel->
+  "Out[274]=",ExpressionUUID->"46a1e0f9-4e9a-4f83-a575-bb076eee166a"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -1898,7 +1957,8 @@ Cell[BoxData[
  CellChangeTimes->{{3.9609271190825367`*^9, 3.960927304197393*^9}, {
   3.960928972364132*^9, 3.960929051353959*^9}, {3.9609291136655083`*^9, 
   3.960929150570312*^9}},
- CellLabel->"In[19]:=",ExpressionUUID->"1d3cc300-4da4-44cc-8e4f-2c3da0f4022e"],
+ CellLabel->
+  "In[275]:=",ExpressionUUID->"1d3cc300-4da4-44cc-8e4f-2c3da0f4022e"],
 
 Cell["\:30d7\:30ed\:30b0\:30e9\:30e0\:9069\:5fdc", "Text",
  CellFrame->{{0, 0}, {0, 0.5}},
@@ -1918,58 +1978,40 @@ Cell[BoxData[
      "[", "\"\</Volumes/elecom/BANK/pubmed/202312/xml/element/title/*blk\>\"",
       "]"}]}], ")"}], "//", "Length"}]], "Input",
  CellChangeTimes->{{3.9609274097543373`*^9, 3.960927467780216*^9}},
- CellLabel->"In[20]:=",ExpressionUUID->"686be26d-a6ef-43e0-939d-ad784edf9c3a"],
+ CellLabel->
+  "In[276]:=",ExpressionUUID->"686be26d-a6ef-43e0-939d-ad784edf9c3a"],
 
 Cell[BoxData["1219"], "Output",
  CellChangeTimes->{{3.9609274412112913`*^9, 3.960927468588996*^9}, 
-   3.960929191609705*^9},
- CellLabel->"Out[20]=",ExpressionUUID->"22353897-854e-4171-a0b4-128419039533"]
+   3.960929191609705*^9, 3.96178836719234*^9},
+ CellLabel->
+  "Out[276]=",ExpressionUUID->"d110e2b0-c042-4ebb-b4d5-8f592538adb6"]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"AbsoluteTiming", "[", 
-  RowBox[{
-   RowBox[{"(", 
-    RowBox[{"pmidToTitle", "=", 
-     RowBox[{"Association", "[", 
-      RowBox[{"Flatten", "[", 
-       RowBox[{"ParallelMap", "[", 
-        RowBox[{"blkToTitleRule", ",", "blks"}], "]"}], "]"}], "]"}]}], ")"}],
-    ";"}], "]"}]], "Input",
+ RowBox[{"(*", 
+  RowBox[{"AbsoluteTiming", "[", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"pmidToTitle", "=", 
+      RowBox[{"Association", "[", 
+       RowBox[{"Flatten", "[", 
+        RowBox[{"ParallelMap", "[", 
+         RowBox[{"blkToTitleRule", ",", "blks"}], "]"}], "]"}], "]"}]}], 
+     ")"}], ";"}], "]"}], "*)"}]], "Input",
  CellChangeTimes->{{3.960927626511689*^9, 3.9609277129691343`*^9}, 
-   3.960929612636732*^9, {3.9609299663845367`*^9, 
-   3.9609299691756983`*^9}},ExpressionUUID->"78267f86-e560-480f-a7cb-\
+   3.960929612636732*^9, {3.9609299663845367`*^9, 3.9609299691756983`*^9}, {
+   3.961788686802483*^9, 
+   3.961788692117237*^9}},ExpressionUUID->"78267f86-e560-480f-a7cb-\
 fca4bc2f698a"],
 
-Cell[BoxData[
- TemplateBox[<|"shortenedBoxes" -> TagBox[
-     RowBox[{"{", 
-       RowBox[{"346.102258`", ",", 
-         RowBox[{"\[LeftAssociation]", 
-           RowBox[{
-             
-             RowBox[{"\"1\"", "\[Rule]", 
-               "\"Formate assay in body fluids: application in methanol \
-poisoning.\""}], ",", 
-             
-             RowBox[{"\"2\"", "\[Rule]", 
-               "\"Delineation of the intimate details of the backbone \
-conformation of pyridine nucleotide coenzymes in aqueous solution.\""}], ",", 
-             
-             TemplateBox[{"36520303"}, "OutputSizeLimit`Skeleton"], ",", 
-             
-             RowBox[{"\"38096619\"", "\[Rule]", 
-               "\"Risk prediction models for postoperative delirium in \
-elderly patients with fragility hip fracture: A systematic review and \
-critical appraisal.\""}]}], "\[RightAssociation]"}]}], "}"}], Short[#, 8]& ], 
-   "line" -> 23, "sessionID" -> 32604446749005764066, "byteCount" -> 
-   9308542576, "size" -> 8, "stored" -> False, "expr" -> Missing["NotStored"],
-    "wrap" -> OutputSizeLimit`Defer, "version" -> 1|>,
-  "OutputSizeLimitTemplate"]], "Output",
- CellChangeTimes->{3.960928048552231*^9, 3.960929602441415*^9},
- CellLabel->"Out[23]=",ExpressionUUID->"a907bbf5-4a34-4940-9eac-113fb00bb56d"]
+Cell[BoxData["$Aborted"], "Output",
+ CellChangeTimes->{3.960928048552231*^9, 3.960929602441415*^9, 
+  3.961788449140139*^9},
+ CellLabel->
+  "Out[277]=",ExpressionUUID->"870feba9-4aca-494f-8086-37d11de8ecd7"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -1992,2207 +2034,41 @@ Cell["\:9ad8\:88ab\:5f15\:7528\:8ad6\:6587\:30bf\:30a4\:30c8\:30eb", "Text",
   3.96093006533392*^9}},ExpressionUUID->"0e814e85-045a-4970-8ce6-\
 b12439e8bc0b"],
 
-Cell[CellGroupData[{
+Cell["\:30eb\:30fc\:30eb\:3092\:8aad\:307f\:8fbc\:3080", "Text",
+ CellChangeTimes->{{3.960926856532445*^9, 3.9609268667371187`*^9}, {
+  3.960930047288208*^9, 3.96093006533392*^9}, {3.961788776557955*^9, 
+  3.961788786364401*^9}},ExpressionUUID->"3b6b5105-d0cf-400e-bc95-\
+0f4dad600849"],
 
 Cell[BoxData[
- RowBox[{"top1pctitle", "=", 
-  RowBox[{"Map", "[", 
-   RowBox[{
+ RowBox[{
+  RowBox[{"Get", "[", 
+   RowBox[{"\"\</Volumes/elecom/BANK/pubmed/202312/xml/element/title/\>\"", 
+    "<>", "\"\<pmidToTitle.save\>\""}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.961788702352591*^9, 3.961788719900179*^9}},
+ CellLabel->
+  "In[280]:=",ExpressionUUID->"fe4ef26b-0c1b-4f73-b861-a1486a165809"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"top1pctitle", "=", 
+   RowBox[{"Map", "[", 
     RowBox[{
-     RowBox[{"pmidToTitle", "[", 
-      RowBox[{"#", "[", 
-       RowBox[{"[", "1", "]"}], "]"}], "]"}], "&"}], ",", 
-    "top1PcCitedArtList", ",", 
-    RowBox[{"{", "2", "}"}]}], "]"}]}]], "Input",
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"pmidToTitle", "[", 
+         RowBox[{"#", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "]"}], ",", 
+        RowBox[{"#", "[", 
+         RowBox[{"[", "2", "]"}], "]"}]}], "}"}], "&"}], ",", 
+     "top1PcCitedArtList", ",", 
+     RowBox[{"{", "2", "}"}]}], "]"}]}], ";"}]], "Input",
  CellChangeTimes->{{3.960930106929798*^9, 3.960930220076454*^9}, {
-  3.960930270251017*^9, 3.960930276443968*^9}},
- CellLabel->"In[35]:=",ExpressionUUID->"b2fc754b-72bd-4fd3-8a4b-2b1c5e27f640"],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{
-   RowBox[{"{", 
-    RowBox[{"\<\"Qualitative analysis of proteins: a partition \
-chromatographic method using paper.\"\>", 
-     ",", "\<\"Mutations of Bacteria from Virus Sensitivity to Virus \
-Resistance.\"\>", 
-     ",", "\<\"The biochemistry of bacterial toxins: The lecithinase activity \
-of Cl. welchii toxins.\"\>", 
-     ",", "\<\"CLINICAL STUDIES OF THE BLOOD VOLUME. IV. ADAPTATION OF THE \
-METHOD TO THE PHOTOELECTRIC MICROCOLORIMETER.\"\>", 
-     ",", "\<\"CLINICAL STUDIES OF THE BLOOD VOLUME. I. CLINICAL APPLICATION \
-OF A METHOD EMPLOYING THE AZO DYE \\\"EVANS BLUE\\\" AND THE \
-SPECTROPHOTOMETER.\"\>", 
-     ",", "\<\"A steam distillation apparatus suitable for micro-Kjeldahl \
-analysis.\"\>", 
-     ",", "\<\"THE RENAL CLEARANCES OF SUBSTITUTED HIPPURIC ACID DERIVATIVES \
-AND OTHER AROMATIC ACIDS IN DOG AND MAN.\"\>", 
-     ",", "\<\"Bacteriophage-Resistant Mutants in Escherichia Coli.\"\>", 
-     ",", "\<\"Pulmonary Calcification in Negative Reactors to \
-Tuberculin.\"\>", 
-     ",", "\<\"The Biological Actions and Therapeutic Applications of the \
-B-Chloroethyl Amines and Sulfides.\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"\<\"Qualitative analysis of proteins: a partition \
-chromatographic method using paper.\"\>", 
-     ",", "\<\"Filter-paper partition chromatography of sugars: 1. General \
-description and application to the qualitative analysis of sugars in apple \
-juice, egg white and foetal blood of sheep. with a note by R. G. \
-Westall.\"\>", 
-     ",", "\<\"A steam distillation apparatus suitable for micro-Kjeldahl \
-analysis.\"\>", ",", "\<\"The free amino groups of insulin.\"\>", 
-     ",", "\<\"A colorimetric method for the determination of glucosamine and \
-chondrosamine.\"\>", 
-     ",", "\<\"Separation of the phosphoric esters on the filter paper \
-chromatogram.\"\>", 
-     ",", "\<\"THE RENAL CLEARANCES OF SUBSTITUTED HIPPURIC ACID DERIVATIVES \
-AND OTHER AROMATIC ACIDS IN DOG AND MAN.\"\>", 
-     ",", "\<\"A study of the behaviour of some sixty amino-acids and other \
-ninhydrin-reacting substances on phenol-;collidine' filter-paper \
-chromatograms, with notes as to the occurrence of some of them in biological \
-fluids.\"\>", ",", "\<\"The estimation of phosphorus.\"\>", 
-     ",", "\<\"Mutations of Bacteria from Virus Sensitivity to Virus \
-Resistance.\"\>", 
-     ",", "\<\"An improved method for the colorimetric determination of \
-phosphate.\"\>", 
-     ",", "\<\"The pharmacological actions of polymethylene \
-bistrimethyl-ammonium salts.\"\>", 
-     ",", "\<\"CLINICAL STUDIES OF THE BLOOD VOLUME. I. CLINICAL APPLICATION \
-OF A METHOD EMPLOYING THE AZO DYE \\\"EVANS BLUE\\\" AND THE \
-SPECTROPHOTOMETER.\"\>", 
-     ",", "\<\"[Proceedings of electrophoretic determination of blood \
-proteins on filter paper].\"\>", 
-     ",", "\<\"Studies on cholinesterase: 3. Specific tests for true \
-cholinesterase and pseudo-cholinesterase.\"\>", 
-     ",", "\<\"THE NITROUS OXIDE METHOD FOR THE QUANTITATIVE DETERMINATION OF \
-CEREBRAL BLOOD FLOW IN MAN: THEORY, PROCEDURE AND NORMAL VALUES.\"\>", 
-     ",", "\<\"The total nitrogen content of egg albumin and other \
-proteins.\"\>", 
-     ",", "\<\"The effect of sodium ions on the electrical activity of giant \
-axon of the squid.\"\>", 
-     ",", "\<\"The identification of lower peptides in complex mixtures.\"\>",
-      ",", "\<\"THE ESTIMATION OF HEPATIC BLOOD FLOW IN MAN.\"\>", 
-     ",", "\<\"CLINICAL STUDIES OF THE BLOOD VOLUME. IV. ADAPTATION OF THE \
-METHOD TO THE PHOTOELECTRIC MICROCOLORIMETER.\"\>", 
-     ",", "\<\"Paper Chromatography Using Capillary Ascent.\"\>", 
-     ",", "\<\"Bacteriophage-Resistant Mutants in Escherichia Coli.\"\>", 
-     ",", "\<\"Protein measurement with the Folin phenol reagent.\"\>", 
-     ",", "\<\"The estimation of adrenaline and allied substances in blood.\"\
-\>", ",", "\<\"Purification and properties of cytochrome c.\"\>", 
-     ",", "\<\"Simultaneous Adaptation: A New Technique for the Study of \
-Metabolic Pathways.\"\>", 
-     ",", "\<\"Sickle cell anemia a molecular disease.\"\>", 
-     ",", "\<\"[Electrophoresis of proteins on filter paper].\"\>", 
-     ",", "\<\"The biochemistry of bacterial toxins: The lecithinase activity \
-of Cl. welchii toxins.\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"\<\"Protein measurement with the Folin phenol reagent.\"\>", 
-     ",", "\<\"A study of fixation for electron microscopy.\"\>", 
-     ",", "\<\"Filter-paper partition chromatography of sugars: 1. General \
-description and application to the qualitative analysis of sugars in apple \
-juice, egg white and foetal blood of sheep. with a note by R. G. \
-Westall.\"\>", 
-     ",", "\<\"Qualitative analysis of proteins: a partition chromatographic \
-method using paper.\"\>", 
-     ",", "\<\"A steam distillation apparatus suitable for micro-Kjeldahl \
-analysis.\"\>", 
-     ",", "\<\"Separation of the phosphoric esters on the filter paper \
-chromatogram.\"\>", ",", "\<\"The estimation of phosphorus.\"\>", 
-     ",", "\<\"An improved method for the colorimetric determination of \
-phosphate.\"\>", 
-     ",", "\<\"A colorimetric method for the determination of glucosamine and \
-chondrosamine.\"\>", ",", "\<\"The free amino groups of insulin.\"\>", 
-     ",", "\<\"A small particulate component of the cytoplasm.\"\>", 
-     ",", "\<\"THE RENAL CLEARANCES OF SUBSTITUTED HIPPURIC ACID DERIVATIVES \
-AND OTHER AROMATIC ACIDS IN DOG AND MAN.\"\>", 
-     ",", "\<\"An analysis of the end-plate potential recorded with an \
-intracellular electrode.\"\>", 
-     ",", "\<\"Methods of paper chromatography of steroids applicable to the \
-study of steroids in mammalian blood and tissues.\"\>", 
-     ",", "\<\"Chromatography of amino acids on sulfonated polystyrene \
-resins.\"\>", 
-     ",", "\<\"[Proceedings of electrophoretic determination of blood \
-proteins on filter paper].\"\>", 
-     ",", "\<\"The effect of sodium ions on the electrical activity of giant \
-axon of the squid.\"\>", 
-     ",", "\<\"A study of the behaviour of some sixty amino-acids and other \
-ninhydrin-reacting substances on phenol-;collidine' filter-paper \
-chromatograms, with notes as to the occurrence of some of them in biological \
-fluids.\"\>", ",", "\<\"A study in microtomy for electron microscopy.\"\>", 
-     ",", "\<\"Liver microsomes; an integrated morphological and biochemical \
-study.\"\>", 
-     ",", "\<\"The total nitrogen content of egg albumin and other \
-proteins.\"\>", 
-     ",", "\<\"Mutants of Escherichia coli requiring methionine or vitamin \
-B12.\"\>", 
-     ",", "\<\"[Quantitative determination of blood proteins by paper \
-electrophoresis].\"\>", 
-     ",", "\<\"Plaque formation and isolation of pure lines with \
-poliomyelitis viruses.\"\>", 
-     ",", "\<\"Mutations of Bacteria from Virus Sensitivity to Virus \
-Resistance.\"\>", 
-     ",", "\<\"Localization of antigen in tissue cells; improvements in a \
-method for the detection of antigen by means of fluorescent antibody.\"\>", 
-     ",", "\<\"THE NITROUS OXIDE METHOD FOR THE QUANTITATIVE DETERMINATION OF \
-CEREBRAL BLOOD FLOW IN MAN: THEORY, PROCEDURE AND NORMAL VALUES.\"\>", 
-     ",", "\<\"Microelectrophoresis of protein on filter-paper.\"\>", 
-     ",", "\<\"Sickle cell anemia a molecular disease.\"\>", 
-     ",", "\<\"Electrophoresis of proteins on filter paper.\"\>", 
-     ",", "\<\"Potassium accumulation in muscle and associated changes.\"\>", 
-     ",", "\<\"The estimation of adrenaline and allied substances in blood.\"\
-\>", ",", "\<\"Chromatographic studies of nucleic acids; a technique for the \
-identification and estimation of purine and pyrimidine bases, nucleosides and \
-related substances.\"\>", 
-     ",", "\<\"The adsorption of proteins on erythrocytes treated with tannic \
-acid and subsequent hemagglutination by antiprotein sera.\"\>", 
-     ",", "\<\"CLINICAL STUDIES OF THE BLOOD VOLUME. I. CLINICAL APPLICATION \
-OF A METHOD EMPLOYING THE AZO DYE \\\"EVANS BLUE\\\" AND THE \
-SPECTROPHOTOMETER.\"\>", ",", "\<\"Nerve endings in mammalian muscle.\"\>", 
-     ",", "\<\"The nucleic acids of plant tissues; the extraction and \
-estimation of desoxypentose nucleic acid and pentose nucleic acid.\"\>", 
-     ",", "\<\"The pharmacological actions of polymethylene \
-bistrimethyl-ammonium salts.\"\>", 
-     ",", "\<\"THE ESTIMATION OF HEPATIC BLOOD FLOW IN MAN.\"\>", 
-     ",", "\<\"The recording of potentials from motoneurones with an \
-intracellular electrode.\"\>", 
-     ",", "\<\"The determination of hydroxyproline.\"\>", 
-     ",", "\<\"An electron microscope study of the mitochondrial structure.\"\
-\>", ",", "\<\"A quantitative description of membrane current and its \
-application to conduction and excitation in nerve.\"\>", 
-     ",", "\<\"The properdin system and immunity. I. Demonstration and \
-isolation of a new serum protein, properdin, and its role in immune \
-phenomena.\"\>", ",", "\<\"The fine structure of mitochondria.\"\>", 
-     ",", "\<\"The normal membrane potential of frog sartorius fibers.\"\>"}],
-     "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"\<\"Protein measurement with the Folin phenol reagent.\"\>", 
-     ",", "\<\"A study of fixation for electron microscopy.\"\>", 
-     ",", "\<\"Improvements in epoxy resin embedding methods.\"\>", 
-     ",", "\<\"Filter-paper partition chromatography of sugars: 1. General \
-description and application to the qualitative analysis of sugars in apple \
-juice, egg white and foetal blood of sheep. with a note by R. G. \
-Westall.\"\>", 
-     ",", "\<\"Separation of the phosphoric esters on the filter paper \
-chromatogram.\"\>", 
-     ",", "\<\"A steam distillation apparatus suitable for micro-Kjeldahl \
-analysis.\"\>", ",", "\<\"The estimation of phosphorus.\"\>", 
-     ",", "\<\"Qualitative analysis of proteins: a partition chromatographic \
-method using paper.\"\>", 
-     ",", "\<\"A study of the conditions and mechanism of the diphenylamine \
-reaction for the colorimetric estimation of deoxyribonucleic acid.\"\>", 
-     ",", "\<\"An improved method for the colorimetric determination of \
-phosphate.\"\>", 
-     ",", "\<\"Staining of tissue sections for electron microscopy with heavy \
-metals.\"\>", 
-     ",", "\<\"Localization of antigen in tissue cells; improvements in a \
-method for the detection of antigen by means of fluorescent antibody.\"\>", 
-     ",", "\<\"Genetic regulatory mechanisms in the synthesis of \
-proteins.\"\>", ",", "\<\"[A micro-method of immuno-electrophoresis].\"\>", 
-     ",", "\<\"A colorimetric method for the determination of glucosamine and \
-chondrosamine.\"\>", 
-     ",", "\<\"Zone electrophoresis in starch gels:  group variations in the \
-serum proteins of normal human adults.\"\>", 
-     ",", "\<\"Plaque formation and isolation of pure lines with \
-poliomyelitis viruses.\"\>", 
-     ",", "\<\"The effect of sodium ions on the electrical activity of giant \
-axon of the squid.\"\>", 
-     ",", "\<\"Effects of varying the vehicle for OsO4 in tissue \
-fixation.\"\>", 
-     ",", "\<\"A relation between non-esterified fatty acids in plasma and \
-the metabolism of glucose.\"\>", 
-     ",", "\<\"The adsorption of proteins on erythrocytes treated with tannic \
-acid and subsequent hemagglutination by antiprotein sera.\"\>", 
-     ",", "\<\"Detection of sugars on paper chromatograms.\"\>", 
-     ",", "\<\"A simple method for the isolation and purification of total \
-lipides from animal tissues.\"\>", 
-     ",", "\<\"An analysis of the end-plate potential recorded with an \
-intracellular electrode.\"\>", 
-     ",", "\<\"Mutants of Escherichia coli requiring methionine or vitamin \
-B12.\"\>", 
-     ",", "\<\"Simple methods for \\\"staining with lead\\\" at high pH in \
-electron microscopy.\"\>", ",", "\<\"The free amino groups of insulin.\"\>", 
-     ",", "\<\"A small particulate component of the cytoplasm.\"\>", 
-     ",", "\<\"Methods of paper chromatography of steroids applicable to the \
-study of steroids in mammalian blood and tissues.\"\>", 
-     ",", "\<\"Liver microsomes; an integrated morphological and biochemical \
-study.\"\>", 
-     ",", "\<\"A quantitative description of membrane current and its \
-application to conduction and excitation in nerve.\"\>", 
-     ",", "\<\"Staining of tissue sections for electron microscopy with heavy \
-metals. II. Application of solutions containing lead and barium.\"\>", 
-     ",", "\<\"Tissue fractionation studies.  6.  Intracellular distribution \
-patterns of enzymes in rat-liver tissue.\"\>", 
-     ",", "\<\"THE RENAL CLEARANCES OF SUBSTITUTED HIPPURIC ACID DERIVATIVES \
-AND OTHER AROMATIC ACIDS IN DOG AND MAN.\"\>", 
-     ",", "\<\"The use of lead citrate at high pH as an electron-opaque stain \
-in electron microscopy.\"\>", 
-     ",", "\<\"Chromatography of amino acids on sulfonated polystyrene \
-resins.\"\>", ",", "\<\"Notes on sugar determination.\"\>", 
-     ",", "\<\"A press for disrupting bacteria and other \
-micro-organisms.\"\>", 
-     ",", "\<\"Cytochemistry and electron microscopy. The preservation of \
-cellular ultrastructure and enzymatic activity by aldehyde fixation.\"\>", 
-     ",", "\<\"Potassium accumulation in muscle and associated changes.\"\>", 
-     ",", "\<\"Replica plating and indirect selection of bacterial mutants.\"\
-\>", ",", "\<\"[Proceedings of electrophoretic determination of blood \
-proteins on filter paper].\"\>", 
-     ",", "\<\"The determination of hydroxyproline.\"\>", 
-     ",", "\<\"The fine structure of neurons.\"\>", 
-     ",", "\<\"A revision of the Schoenheimer-Sperry method for cholesterol \
-determination.\"\>", 
-     ",", "\<\"Mutations of Bacteria from Virus Sensitivity to Virus \
-Resistance.\"\>", 
-     ",", "\<\"The nucleic acids of plant tissues; the extraction and \
-estimation of desoxypentose nucleic acid and pentose nucleic acid.\"\>", 
-     ",", "\<\"A study of the behaviour of some sixty amino-acids and other \
-ninhydrin-reacting substances on phenol-;collidine' filter-paper \
-chromatograms, with notes as to the occurrence of some of them in biological \
-fluids.\"\>", 
-     ",", "\<\"The total nitrogen content of egg albumin and other \
-proteins.\"\>", 
-     ",", "\<\"[Quantitative determination of blood proteins by paper \
-electrophoresis].\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"\<\"Protein measurement with the Folin phenol reagent.\"\>", 
-     ",", "\<\"Improvements in epoxy resin embedding methods.\"\>", 
-     ",", "\<\"The use of lead citrate at high pH as an electron-opaque stain \
-in electron microscopy.\"\>", 
-     ",", "\<\"A study of fixation for electron microscopy.\"\>", 
-     ",", "\<\"A simple method for the isolation and purification of total \
-lipides from animal tissues.\"\>", 
-     ",", "\<\"A study of the conditions and mechanism of the diphenylamine \
-reaction for the colorimetric estimation of deoxyribonucleic acid.\"\>", 
-     ",", "\<\"Cytochemistry and electron microscopy. The preservation of \
-cellular ultrastructure and enzymatic activity by aldehyde fixation.\"\>", 
-     ",", "\<\"Staining of tissue sections for electron microscopy with heavy \
-metals.\"\>", ",", "\<\"[A micro-method of immuno-electrophoresis].\"\>", 
-     ",", "\<\"Genetic regulatory mechanisms in the synthesis of \
-proteins.\"\>", 
-     ",", "\<\"Simple methods for \\\"staining with lead\\\" at high pH in \
-electron microscopy.\"\>", 
-     ",", "\<\"Detection of sugars on paper chromatograms.\"\>", 
-     ",", "\<\"Plaque formation and isolation of pure lines with \
-poliomyelitis viruses.\"\>", 
-     ",", "\<\"Chromosome preparations of leukocytes cultured from human \
-peripheral blood.\"\>", 
-     ",", "\<\"Filter-paper partition chromatography of sugars: 1. General \
-description and application to the qualitative analysis of sugars in apple \
-juice, egg white and foetal blood of sheep. with a note by R. G. \
-Westall.\"\>", 
-     ",", "\<\"Zone electrophoresis in starch gels:  group variations in the \
-serum proteins of normal human adults.\"\>", 
-     ",", "\<\"Mutants of Escherichia coli requiring methionine or vitamin \
-B12.\"\>", ",", "\<\"Amino acid metabolism in mammalian cell cultures.\"\>", 
-     ",", "\<\"A relation between non-esterified fatty acids in plasma and \
-the metabolism of glucose.\"\>", 
-     ",", "\<\"A quantitative description of membrane current and its \
-application to conduction and excitation in nerve.\"\>", 
-     ",", "\<\"Separation of the phosphoric esters on the filter paper \
-chromatogram.\"\>", ",", "\<\"The estimation of phosphorus.\"\>", 
-     ",", "\<\"Effects of varying the vehicle for OsO4 in tissue \
-fixation.\"\>", 
-     ",", "\<\"Tissue fractionation studies.  6.  Intracellular distribution \
-patterns of enzymes in rat-liver tissue.\"\>", 
-     ",", "\<\"Localization of antigen in tissue cells; improvements in a \
-method for the detection of antigen by means of fluorescent antibody.\"\>", 
-     ",", "\<\"A method for determining the sedimentation behavior of \
-enzymes: application to protein mixtures.\"\>", 
-     ",", "\<\"A steam distillation apparatus suitable for micro-Kjeldahl \
-analysis.\"\>", ",", "\<\"Junctional complexes in various epithelia.\"\>", 
-     ",", "\<\"A SIMPLIFIED LEAD CITRATE STAIN FOR USE IN ELECTRON \
-MICROSCOPY.\"\>", 
-     ",", "\<\"An improved method for the colorimetric determination of \
-phosphate.\"\>", 
-     ",", "\<\"The adsorption of proteins on erythrocytes treated with tannic \
-acid and subsequent hemagglutination by antiprotein sera.\"\>", 
-     ",", "\<\"Phosphorus assay in column chromatography.\"\>", 
-     ",", "\<\"The effect of sodium ions on the electrical activity of giant \
-axon of the squid.\"\>", 
-     ",", "\<\"A modified procedure for lead staining of thin sections.\"\>", 
-     ",", "\<\"DISC ELECTROPHORESIS. II. METHOD AND APPLICATION TO HUMAN \
-SERUM PROTEINS.\"\>", 
-     ",", "\<\"A colorimetric method for the determination of glucosamine and \
-chondrosamine.\"\>", 
-     ",", "\<\"Electron microscope study of DNA-containing plasms. II. \
-Vegetative and mature phage DNA as compared with normal bacterial nucleoids \
-in different physiological states.\"\>", 
-     ",", "\<\"Qualitative analysis of proteins: a partition chromatographic \
-method using paper.\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"\<\"Protein measurement with the Folin phenol reagent.\"\>", 
-     ",", "\<\"The use of lead citrate at high pH as an electron-opaque stain \
-in electron microscopy.\"\>", 
-     ",", "\<\"Improvements in epoxy resin embedding methods.\"\>", 
-     ",", "\<\"A simple method for the isolation and purification of total \
-lipides from animal tissues.\"\>", 
-     ",", "\<\"A study of the conditions and mechanism of the diphenylamine \
-reaction for the colorimetric estimation of deoxyribonucleic acid.\"\>", 
-     ",", "\<\"Cytochemistry and electron microscopy. The preservation of \
-cellular ultrastructure and enzymatic activity by aldehyde fixation.\"\>", 
-     ",", "\<\"DISC ELECTROPHORESIS. II. METHOD AND APPLICATION TO HUMAN \
-SERUM PROTEINS.\"\>", 
-     ",", "\<\"A study of fixation for electron microscopy.\"\>", 
-     ",", "\<\"[A micro-method of immuno-electrophoresis].\"\>", 
-     ",", "\<\"Staining of tissue sections for electron microscopy with heavy \
-metals.\"\>", 
-     ",", "\<\"The reliability of molecular weight determinations by dodecyl \
-sulfate-polyacrylamide gel electrophoresis.\"\>", 
-     ",", "\<\"Immunochemical quantitation of antigens by single radial \
-immunodiffusion.\"\>", 
-     ",", "\<\"A SIMPLIFIED LEAD CITRATE STAIN FOR USE IN ELECTRON \
-MICROSCOPY.\"\>", 
-     ",", "\<\"Amino acid metabolism in mammalian cell cultures.\"\>", 
-     ",", "\<\"Mutants of Escherichia coli requiring methionine or vitamin \
-B12.\"\>", 
-     ",", "\<\"Plaque formation and isolation of pure lines with \
-poliomyelitis viruses.\"\>", 
-     ",", "\<\"Chromosome preparations of leukocytes cultured from human \
-peripheral blood.\"\>", 
-     ",", "\<\"Genetic regulatory mechanisms in the synthesis of \
-proteins.\"\>", 
-     ",", "\<\"A method for determining the sedimentation behavior of \
-enzymes: application to protein mixtures.\"\>", 
-     ",", "\<\"A quantitative description of membrane current and its \
-application to conduction and excitation in nerve.\"\>", 
-     ",", "\<\"Phosphorus assay in column chromatography.\"\>", 
-     ",", "\<\"Detection of sugars on paper chromatograms.\"\>", 
-     ",", "\<\"Simple methods for \\\"staining with lead\\\" at high pH in \
-electron microscopy.\"\>", 
-     ",", "\<\"Transduction of linked genetic characters of the host by \
-bacteriophage P1.\"\>", 
-     ",", "\<\"COPPER ENZYMES IN ISOLATED CHLOROPLASTS. POLYPHENOLOXIDASE IN \
-BETA VULGARIS.\"\>", 
-     ",", "\<\"A relation between non-esterified fatty acids in plasma and \
-the metabolism of glucose.\"\>", 
-     ",", "\<\"The thiobarbituric acid assay of sialic acids.\"\>", 
-     ",", "\<\"Tissue fractionation studies.  6.  Intracellular distribution \
-patterns of enzymes in rat-liver tissue.\"\>", 
-     ",", "\<\"Application of a microtechnique to viral serological \
-investigations.\"\>", 
-     ",", "\<\"Acetylornithinase of Escherichia coli:  partial purification \
-and some properties.\"\>", 
-     ",", "\<\"Junctional complexes in various epithelia.\"\>", 
-     ",", "\<\"Zone electrophoresis in starch gels:  group variations in the \
-serum proteins of normal human adults.\"\>", 
-     ",", "\<\"Separation of the phosphoric esters on the filter paper \
-chromatogram.\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"\<\"Protein measurement with the Folin phenol reagent.\"\>", 
-     ",", "\<\"The use of lead citrate at high pH as an electron-opaque stain \
-in electron microscopy.\"\>", 
-     ",", "\<\"Improvements in epoxy resin embedding methods.\"\>", 
-     ",", "\<\"Cleavage of structural proteins during the assembly of the \
-head of bacteriophage T4.\"\>", 
-     ",", "\<\"The reliability of molecular weight determinations by dodecyl \
-sulfate-polyacrylamide gel electrophoresis.\"\>", 
-     ",", "\<\"A simple method for the isolation and purification of total \
-lipides from animal tissues.\"\>", 
-     ",", "\<\"A study of the conditions and mechanism of the diphenylamine \
-reaction for the colorimetric estimation of deoxyribonucleic acid.\"\>", 
-     ",", "\<\"DISC ELECTROPHORESIS. II. METHOD AND APPLICATION TO HUMAN \
-SERUM PROTEINS.\"\>", 
-     ",", "\<\"Immunochemical quantitation of antigens by single radial \
-immunodiffusion.\"\>", 
-     ",", "\<\"Cytochemistry and electron microscopy. The preservation of \
-cellular ultrastructure and enzymatic activity by aldehyde fixation.\"\>", 
-     ",", "\<\"[A micro-method of immuno-electrophoresis].\"\>", 
-     ",", "\<\"Staining of tissue sections for electron microscopy with heavy \
-metals.\"\>", ",", "\<\"A study of fixation for electron microscopy.\"\>", 
-     ",", "\<\"A SIMPLIFIED LEAD CITRATE STAIN FOR USE IN ELECTRON \
-MICROSCOPY.\"\>", ",", "\<\"Phosphorus assay in column chromatography.\"\>", 
-     ",", "\<\"The early stages of absorption of injected horseradish \
-peroxidase in the proximal tubules of mouse kidney: ultrastructural \
-cytochemistry by a new technique.\"\>", 
-     ",", "\<\"Mutants of Escherichia coli requiring methionine or vitamin \
-B12.\"\>", ",", "\<\"Amino acid metabolism in mammalian cell cultures.\"\>", 
-     ",", "\<\"A quantitative description of membrane current and its \
-application to conduction and excitation in nerve.\"\>", 
-     ",", "\<\"COPPER ENZYMES IN ISOLATED CHLOROPLASTS. POLYPHENOLOXIDASE IN \
-BETA VULGARIS.\"\>", 
-     ",", "\<\"A method for determining the sedimentation behavior of \
-enzymes: application to protein mixtures.\"\>", 
-     ",", "\<\"A low-viscosity epoxy resin embedding medium for electron \
-microscopy.\"\>", 
-     ",", "\<\"Plaque formation and isolation of pure lines with \
-poliomyelitis viruses.\"\>", 
-     ",", "\<\"A rapid method of total lipid extraction and \
-purification.\"\>", 
-     ",", "\<\"Transduction of linked genetic characters of the host by \
-bacteriophage P1.\"\>", 
-     ",", "\<\"Acetylornithinase of Escherichia coli:  partial purification \
-and some properties.\"\>", 
-     ",", "\<\"Recalibrated linkage map of Escherichia coli K-12.\"\>", 
-     ",", "\<\"Detection of specific sequences among DNA fragments separated \
-by gel electrophoresis.\"\>", 
-     ",", "\<\"A film detection method for tritium-labelled proteins and \
-nucleic acids in polyacrylamide gels.\"\>", 
-     ",", "\<\"THE PREPARATION OF I-131-LABELLED HUMAN GROWTH HORMONE OF HIGH \
-SPECIFIC RADIOACTIVITY.\"\>", 
-     ",", "\<\"The thiobarbituric acid assay of sialic acids.\"\>", 
-     ",", "\<\"Chromosome preparations of leukocytes cultured from human \
-peripheral blood.\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"\<\"Protein measurement with the Folin phenol reagent.\"\>", 
-     ",", "\<\"Cleavage of structural proteins during the assembly of the \
-head of bacteriophage T4.\"\>", 
-     ",", "\<\"Detection of specific sequences among DNA fragments separated \
-by gel electrophoresis.\"\>", 
-     ",", "\<\"The use of lead citrate at high pH as an electron-opaque stain \
-in electron microscopy.\"\>", 
-     ",", "\<\"The reliability of molecular weight determinations by dodecyl \
-sulfate-polyacrylamide gel electrophoresis.\"\>", 
-     ",", "\<\"Improvements in epoxy resin embedding methods.\"\>", 
-     ",", "\<\"Sequencing end-labeled DNA with base-specific chemical \
-cleavages.\"\>", 
-     ",", "\<\"A simple method for the isolation and purification of total \
-lipides from animal tissues.\"\>", 
-     ",", "\<\"A rapid and sensitive method for the quantitation of microgram \
-quantities of protein utilizing the principle of protein-dye binding.\"\>", 
-     ",", "\<\"Labeling deoxyribonucleic acid to high specific activity in \
-vitro by nick translation with DNA polymerase I.\"\>", 
-     ",", "\<\"A study of the conditions and mechanism of the diphenylamine \
-reaction for the colorimetric estimation of deoxyribonucleic acid.\"\>", 
-     ",", "\<\"DISC ELECTROPHORESIS. II. METHOD AND APPLICATION TO HUMAN \
-SERUM PROTEINS.\"\>", 
-     ",", "\<\"A film detection method for tritium-labelled proteins and \
-nucleic acids in polyacrylamide gels.\"\>", 
-     ",", "\<\"Immunochemical quantitation of antigens by single radial \
-immunodiffusion.\"\>", ",", "\<\"A new method for sequencing DNA.\"\>", 
-     ",", "\<\"High resolution two-dimensional electrophoresis of proteins.\"\
-\>", ",", "\<\"DNA sequencing with chain-terminating inhibitors.\"\>", 
-     ",", "\<\"Electrophoretic transfer of proteins from polyacrylamide gels \
-to nitrocellulose sheets: procedure and some applications.\"\>", 
-     ",", "\<\"A rapid alkaline extraction procedure for screening \
-recombinant plasmid DNA.\"\>", 
-     ",", "\<\"COPPER ENZYMES IN ISOLATED CHLOROPLASTS. POLYPHENOLOXIDASE IN \
-BETA VULGARIS.\"\>", 
-     ",", "\<\"The early stages of absorption of injected horseradish \
-peroxidase in the proximal tubules of mouse kidney: ultrastructural \
-cytochemistry by a new technique.\"\>", 
-     ",", "\<\"Phosphorus assay in column chromatography.\"\>", 
-     ",", "\<\"A rapid method of total lipid extraction and \
-purification.\"\>", 
-     ",", "\<\"A low-viscosity epoxy resin embedding medium for electron \
-microscopy.\"\>", 
-     ",", "\<\"Electrophoretic analysis of the major polypeptides of the \
-human erythrocyte membrane.\"\>", 
-     ",", "\<\"Hybridization of denatured RNA and small DNA fragments \
-transferred to nitrocellulose.\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"\<\"Protein measurement with the Folin phenol reagent.\"\>", 
-     ",", "\<\"Cleavage of structural proteins during the assembly of the \
-head of bacteriophage T4.\"\>", 
-     ",", "\<\"Detection of specific sequences among DNA fragments separated \
-by gel electrophoresis.\"\>", 
-     ",", "\<\"DNA sequencing with chain-terminating inhibitors.\"\>", 
-     ",", "\<\"A rapid and sensitive method for the quantitation of microgram \
-quantities of protein utilizing the principle of protein-dye binding.\"\>", 
-     ",", "\<\"Sequencing end-labeled DNA with base-specific chemical \
-cleavages.\"\>", 
-     ",", "\<\"Electrophoretic transfer of proteins from polyacrylamide gels \
-to nitrocellulose sheets: procedure and some applications.\"\>", 
-     ",", "\<\"Labeling deoxyribonucleic acid to high specific activity in \
-vitro by nick translation with DNA polymerase I.\"\>", 
-     ",", "\<\"The use of lead citrate at high pH as an electron-opaque stain \
-in electron microscopy.\"\>", 
-     ",", "\<\"A simple method for the isolation and purification of total \
-lipides from animal tissues.\"\>", 
-     ",", "\<\"A rapid alkaline extraction procedure for screening \
-recombinant plasmid DNA.\"\>", 
-     ",", "\<\"The reliability of molecular weight determinations by dodecyl \
-sulfate-polyacrylamide gel electrophoresis.\"\>", 
-     ",", "\<\"Isolation of biologically active ribonucleic acid from sources \
-enriched in ribonuclease.\"\>", 
-     ",", "\<\"Improvements in epoxy resin embedding methods.\"\>", 
-     ",", "\<\"High resolution two-dimensional electrophoresis of proteins.\"\
-\>", ",", "\<\"A technique for radiolabeling DNA restriction endonuclease \
-fragments to high specific activity.\"\>", 
-     ",", "\<\"Hybridization of denatured RNA and small DNA fragments \
-transferred to nitrocellulose.\"\>", 
-     ",", "\<\"A study of the conditions and mechanism of the diphenylamine \
-reaction for the colorimetric estimation of deoxyribonucleic acid.\"\>", 
-     ",", "\<\"DISC ELECTROPHORESIS. II. METHOD AND APPLICATION TO HUMAN \
-SERUM PROTEINS.\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"\<\"Protein measurement with the Folin phenol reagent.\"\>", 
-     ",", "\<\"Cleavage of structural proteins during the assembly of the \
-head of bacteriophage T4.\"\>", 
-     ",", "\<\"DNA sequencing with chain-terminating inhibitors.\"\>", 
-     ",", "\<\"A rapid and sensitive method for the quantitation of microgram \
-quantities of protein utilizing the principle of protein-dye binding.\"\>", 
-     ",", "\<\"Detection of specific sequences among DNA fragments separated \
-by gel electrophoresis.\"\>", 
-     ",", "\<\"Electrophoretic transfer of proteins from polyacrylamide gels \
-to nitrocellulose sheets: procedure and some applications.\"\>", 
-     ",", "\<\"Sequencing end-labeled DNA with base-specific chemical \
-cleavages.\"\>", 
-     ",", "\<\"A technique for radiolabeling DNA restriction endonuclease \
-fragments to high specific activity.\"\>", 
-     ",", "\<\"Isolation of biologically active ribonucleic acid from sources \
-enriched in ribonuclease.\"\>", 
-     ",", "\<\"Labeling deoxyribonucleic acid to high specific activity in \
-vitro by nick translation with DNA polymerase I.\"\>", 
-     ",", "\<\"The use of lead citrate at high pH as an electron-opaque stain \
-in electron microscopy.\"\>", 
-     ",", "\<\"A rapid alkaline extraction procedure for screening \
-recombinant plasmid DNA.\"\>", 
-     ",", "\<\"Improved M13 phage cloning vectors and host strains: \
-nucleotide sequences of the M13mp18 and pUC19 vectors.\"\>", 
-     ",", "\<\"Single-step method of RNA isolation by acid guanidinium \
-thiocyanate-phenol-chloroform extraction.\"\>", 
-     ",", "\<\"A simple method for the isolation and purification of total \
-lipides from animal tissues.\"\>", 
-     ",", "\<\"A comprehensive set of sequence analysis programs for the VAX.\
-\"\>", ",", "\<\"The reliability of molecular weight determinations by \
-dodecyl sulfate-polyacrylamide gel electrophoresis.\"\>", 
-     ",", "\<\"High resolution two-dimensional electrophoresis of proteins.\"\
-\>", ",", "\<\"Primer-directed enzymatic amplification of DNA with a \
-thermostable DNA polymerase.\"\>", 
-     ",", "\<\"Hybridization of denatured RNA and small DNA fragments \
-transferred to nitrocellulose.\"\>", 
-     ",", "\<\"Improved patch-clamp techniques for high-resolution current \
-recording from cells and cell-free membrane patches.\"\>", 
-     ",", "\<\"Improvements in epoxy resin embedding methods.\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"\<\"Protein measurement with the Folin phenol reagent.\"\>", 
-     ",", "\<\"Cleavage of structural proteins during the assembly of the \
-head of bacteriophage T4.\"\>", 
-     ",", "\<\"DNA sequencing with chain-terminating inhibitors.\"\>", 
-     ",", "\<\"A rapid and sensitive method for the quantitation of microgram \
-quantities of protein utilizing the principle of protein-dye binding.\"\>", 
-     ",", "\<\"Detection of specific sequences among DNA fragments separated \
-by gel electrophoresis.\"\>", 
-     ",", "\<\"Electrophoretic transfer of proteins from polyacrylamide gels \
-to nitrocellulose sheets: procedure and some applications.\"\>", 
-     ",", "\<\"Single-step method of RNA isolation by acid guanidinium \
-thiocyanate-phenol-chloroform extraction.\"\>", 
-     ",", "\<\"A technique for radiolabeling DNA restriction endonuclease \
-fragments to high specific activity.\"\>", 
-     ",", "\<\"Sequencing end-labeled DNA with base-specific chemical \
-cleavages.\"\>", 
-     ",", "\<\"Isolation of biologically active ribonucleic acid from sources \
-enriched in ribonuclease.\"\>", 
-     ",", "\<\"Improved M13 phage cloning vectors and host strains: \
-nucleotide sequences of the M13mp18 and pUC19 vectors.\"\>", 
-     ",", "\<\"A comprehensive set of sequence analysis programs for the VAX.\
-\"\>", ",", "\<\"A rapid alkaline extraction procedure for screening \
-recombinant plasmid DNA.\"\>", 
-     ",", "\<\"Labeling deoxyribonucleic acid to high specific activity in \
-vitro by nick translation with DNA polymerase I.\"\>", 
-     ",", "\<\"The use of lead citrate at high pH as an electron-opaque stain \
-in electron microscopy.\"\>", 
-     ",", "\<\"A simple method for the isolation and purification of total \
-lipides from animal tissues.\"\>", 
-     ",", "\<\"Improved patch-clamp techniques for high-resolution current \
-recording from cells and cell-free membrane patches.\"\>", 
-     ",", "\<\"Primer-directed enzymatic amplification of DNA with a \
-thermostable DNA polymerase.\"\>", 
-     ",", "\<\"Basic local alignment search tool.\"\>", 
-     ",", "\<\"High resolution two-dimensional electrophoresis of proteins.\"\
-\>", ",", "\<\"The reliability of molecular weight determinations by dodecyl \
-sulfate-polyacrylamide gel electrophoresis.\"\>", 
-     ",", "\<\"A simple method for displaying the hydropathic character of a \
-protein.\"\>", 
-     ",", "\<\"Recombinant genomes which express chloramphenicol \
-acetyltransferase in mammalian cells.\"\>", 
-     ",", "\<\"Hybridization of denatured RNA and small DNA fragments \
-transferred to nitrocellulose.\"\>", 
-     ",", "\<\"A rapid method of total lipid extraction and \
-purification.\"\>", 
-     ",", "\<\"A new technique for the assay of infectivity of human \
-adenovirus 5 DNA.\"\>", 
-     ",", "\<\"Improvements in epoxy resin embedding methods.\"\>", 
-     ",", "\<\"A study of the conditions and mechanism of the diphenylamine \
-reaction for the colorimetric estimation of deoxyribonucleic acid.\"\>", 
-     ",", "\<\"DISC ELECTROPHORESIS. II. METHOD AND APPLICATION TO HUMAN \
-SERUM PROTEINS.\"\>", 
-     ",", "\<\"A film detection method for tritium-labelled proteins and \
-nucleic acids in polyacrylamide gels.\"\>", 
-     ",", "\<\"Accurate transcription initiation by RNA polymerase II in a \
-soluble extract from isolated mammalian nuclei.\"\>", 
-     ",", "\<\"A new method for sequencing DNA.\"\>", 
-     ",", "\<\"Transformation of intact yeast cells treated with alkali \
-cations.\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"\<\"Protein measurement with the Folin phenol reagent.\"\>", 
-     ",", "\<\"Cleavage of structural proteins during the assembly of the \
-head of bacteriophage T4.\"\>", 
-     ",", "\<\"DNA sequencing with chain-terminating inhibitors.\"\>", 
-     ",", "\<\"A rapid and sensitive method for the quantitation of microgram \
-quantities of protein utilizing the principle of protein-dye binding.\"\>", 
-     ",", "\<\"Detection of specific sequences among DNA fragments separated \
-by gel electrophoresis.\"\>", 
-     ",", "\<\"Electrophoretic transfer of proteins from polyacrylamide gels \
-to nitrocellulose sheets: procedure and some applications.\"\>", 
-     ",", "\<\"Single-step method of RNA isolation by acid guanidinium \
-thiocyanate-phenol-chloroform extraction.\"\>", 
-     ",", "\<\"A technique for radiolabeling DNA restriction endonuclease \
-fragments to high specific activity.\"\>", 
-     ",", "\<\"Sequencing end-labeled DNA with base-specific chemical \
-cleavages.\"\>", ",", "\<\"Basic local alignment search tool.\"\>", 
-     ",", "\<\"Improved M13 phage cloning vectors and host strains: \
-nucleotide sequences of the M13mp18 and pUC19 vectors.\"\>", 
-     ",", "\<\"Isolation of biologically active ribonucleic acid from sources \
-enriched in ribonuclease.\"\>", 
-     ",", "\<\"A comprehensive set of sequence analysis programs for the VAX.\
-\"\>", ",", "\<\"Gapped BLAST and PSI-BLAST: a new generation of protein \
-database search programs.\"\>", 
-     ",", "\<\"A rapid alkaline extraction procedure for screening \
-recombinant plasmid DNA.\"\>", 
-     ",", "\<\"The use of lead citrate at high pH as an electron-opaque stain \
-in electron microscopy.\"\>", 
-     ",", "\<\"Labeling deoxyribonucleic acid to high specific activity in \
-vitro by nick translation with DNA polymerase I.\"\>", 
-     ",", "\<\"A simple method for the isolation and purification of total \
-lipides from animal tissues.\"\>", 
-     ",", "\<\"Improved patch-clamp techniques for high-resolution current \
-recording from cells and cell-free membrane patches.\"\>", 
-     ",", "\<\"CLUSTAL W: improving the sensitivity of progressive multiple \
-sequence alignment through sequence weighting, position-specific gap \
-penalties and weight matrix choice.\"\>", 
-     ",", "\<\"A simple method for displaying the hydropathic character of a \
-protein.\"\>", 
-     ",", "\<\"Primer-directed enzymatic amplification of DNA with a \
-thermostable DNA polymerase.\"\>", 
-     ",", "\<\"High resolution two-dimensional electrophoresis of proteins.\"\
-\>", ",", "\<\"A rapid method of total lipid extraction and \
-purification.\"\>", 
-     ",", "\<\"The reliability of molecular weight determinations by dodecyl \
-sulfate-polyacrylamide gel electrophoresis.\"\>", 
-     ",", "\<\"Recombinant genomes which express chloramphenicol \
-acetyltransferase in mammalian cells.\"\>", 
-     ",", "\<\"A new technique for the assay of infectivity of human \
-adenovirus 5 DNA.\"\>", 
-     ",", "\<\"Accurate transcription initiation by RNA polymerase II in a \
-soluble extract from isolated mammalian nuclei.\"\>", 
-     ",", "\<\"Hybridization of denatured RNA and small DNA fragments \
-transferred to nitrocellulose.\"\>", 
-     ",", "\<\"A new generation of Ca2+ indicators with greatly improved \
-fluorescence properties.\"\>", 
-     ",", "\<\"Improvements in epoxy resin embedding methods.\"\>", 
-     ",", "\<\"Transformation of intact yeast cells treated with alkali \
-cations.\"\>", 
-     ",", "\<\"DISC ELECTROPHORESIS. II. METHOD AND APPLICATION TO HUMAN \
-SERUM PROTEINS.\"\>", 
-     ",", "\<\"A study of the conditions and mechanism of the diphenylamine \
-reaction for the colorimetric estimation of deoxyribonucleic acid.\"\>", 
-     ",", "\<\"The neighbor-joining method: a new method for reconstructing \
-phylogenetic trees.\"\>", 
-     ",", "\<\"Studies on transformation of Escherichia coli with plasmids.\"\
-\>", ",", "\<\"A system of shuttle vectors and yeast host strains designed \
-for efficient manipulation of DNA in Saccharomyces cerevisiae.\"\>", 
-     ",", "\<\"A film detection method for tritium-labelled proteins and \
-nucleic acids in polyacrylamide gels.\"\>", 
-     ",", "\<\"The pUC plasmids, an M13mp7-derived system for insertion \
-mutagenesis and sequencing with synthetic universal primers.\"\>", 
-     ",", "\<\"A new method for sequencing DNA.\"\>", 
-     ",", "\<\"Improved tools for biological sequence comparison.\"\>", 
-     ",", "\<\"Genomic sequencing.\"\>", 
-     ",", "\<\"Purification of biologically active globin messenger RNA by \
-chromatography on oligothymidylic acid-cellulose.\"\>", 
-     ",", "\<\"Construction and characterization of new cloning vehicles. II. \
-A multipurpose cloning system.\"\>", 
-     ",", "\<\"Efficient in vitro synthesis of biologically active RNA and \
-RNA hybridization probes from plasmids containing a bacteriophage SP6 \
-promoter.\"\>", 
-     ",", "\<\"\\\"A technique for radiolabeling DNA restriction endonuclease \
-fragments to high specific activity\\\". Addendum.\"\>", 
-     ",", "\<\"New M13 vectors for cloning.\"\>", 
-     ",", "\<\"COPPER ENZYMES IN ISOLATED CHLOROPLASTS. POLYPHENOLOXIDASE IN \
-BETA VULGARIS.\"\>", 
-     ",", "\<\"Immunochemical quantitation of antigens by single radial \
-immunodiffusion.\"\>", 
-     ",", "\<\"Selective extraction of polyoma DNA from infected mouse cell \
-cultures.\"\>", ",", "\<\"Phosphorus assay in column chromatography.\"\>", 
-     ",", "\<\"A quantitative description of membrane current and its \
-application to conduction and excitation in nerve.\"\>", 
-     ",", "\<\"Isolation of mononuclear cells and granulocytes from human \
-blood. Isolation of monuclear cells by one centrifugation, and of \
-granulocytes by combining centrifugation and sedimentation at 1 g.\"\>", 
-     ",", "\<\"Rapid and efficient site-specific mutagenesis without \
-phenotypic selection.\"\>", 
-     ",", "\<\"Use of avidin-biotin-peroxidase complex (ABC) in \
-immunoperoxidase techniques: a comparison between ABC and unlabeled antibody \
-(PAP) procedures.\"\>", 
-     ",", "\<\"Rapid and efficient site-specific mutagenesis without \
-phenotypic selection.\"\>", 
-     ",", "\<\"Continuous cultures of fused cells secreting antibody of \
-predefined specificity.\"\>", 
-     ",", "\<\"Screening lambdagt recombinant clones by hybridization to \
-single plaques in situ.\"\>", 
-     ",", "\<\"\\\"Western blotting\\\": electrophoretic transfer of proteins \
-from sodium dodecyl sulfate--polyacrylamide gels to unmodified nitrocellulose \
-and radiographic detection with antibody and radioiodinated protein A.\"\>", 
-     ",", "\<\"A low-viscosity epoxy resin embedding medium for electron \
-microscopy.\"\>", 
-     ",", "\<\"Measurement of protein using bicinchoninic acid.\"\>", 
-     ",", "\<\"The early stages of absorption of injected horseradish \
-peroxidase in the proximal tubules of mouse kidney: ultrastructural \
-cytochemistry by a new technique.\"\>", 
-     ",", "\<\"Unidirectional digestion with exonuclease III creates targeted \
-breakpoints for DNA sequencing.\"\>", 
-     ",", "\<\"Use of T7 RNA polymerase to direct expression of cloned genes.\
-\"\>", ",", "\<\"Improved methods for building protein models in electron \
-density maps and the location of errors in these models.\"\>", 
-     ",", "\<\"Construction and characterization of amplifiable multicopy DNA \
-cloning vehicles derived from the P15A cryptic miniplasmid.\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"\<\"Protein measurement with the Folin phenol reagent.\"\>", 
-     ",", "\<\"Cleavage of structural proteins during the assembly of the \
-head of bacteriophage T4.\"\>", 
-     ",", "\<\"A rapid and sensitive method for the quantitation of microgram \
-quantities of protein utilizing the principle of protein-dye binding.\"\>", 
-     ",", "\<\"DNA sequencing with chain-terminating inhibitors.\"\>", 
-     ",", "\<\"Electrophoretic transfer of proteins from polyacrylamide gels \
-to nitrocellulose sheets: procedure and some applications.\"\>", 
-     ",", "\<\"A short history of SHELX.\"\>", 
-     ",", "\<\"Detection of specific sequences among DNA fragments separated \
-by gel electrophoresis.\"\>", 
-     ",", "\<\"Gapped BLAST and PSI-BLAST: a new generation of protein \
-database search programs.\"\>", 
-     ",", "\<\"Single-step method of RNA isolation by acid guanidinium \
-thiocyanate-phenol-chloroform extraction.\"\>", 
-     ",", "\<\"Basic local alignment search tool.\"\>", 
-     ",", "\<\"CLUSTAL W: improving the sensitivity of progressive multiple \
-sequence alignment through sequence weighting, position-specific gap \
-penalties and weight matrix choice.\"\>", 
-     ",", "\<\"A technique for radiolabeling DNA restriction endonuclease \
-fragments to high specific activity.\"\>", 
-     ",", "\<\"Sequencing end-labeled DNA with base-specific chemical \
-cleavages.\"\>", 
-     ",", "\<\"Improved M13 phage cloning vectors and host strains: \
-nucleotide sequences of the M13mp18 and pUC19 vectors.\"\>", 
-     ",", "\<\"Isolation of biologically active ribonucleic acid from sources \
-enriched in ribonuclease.\"\>", 
-     ",", "\<\"A simple method for the isolation and purification of total \
-lipides from animal tissues.\"\>", 
-     ",", "\<\"A comprehensive set of sequence analysis programs for the VAX.\
-\"\>", ",", "\<\"A rapid alkaline extraction procedure for screening \
-recombinant plasmid DNA.\"\>", 
-     ",", "\<\"Improved patch-clamp techniques for high-resolution current \
-recording from cells and cell-free membrane patches.\"\>", 
-     ",", "\<\"The use of lead citrate at high pH as an electron-opaque stain \
-in electron microscopy.\"\>", 
-     ",", "\<\"Processing of X-ray diffraction data collected in oscillation \
-mode.\"\>", 
-     ",", "\<\"The neighbor-joining method: a new method for reconstructing \
-phylogenetic trees.\"\>", 
-     ",", "\<\"Analysis of relative gene expression data using real-time \
-quantitative PCR and the 2(-Delta Delta C(T)) Method.\"\>", 
-     ",", "\<\"Labeling deoxyribonucleic acid to high specific activity in \
-vitro by nick translation with DNA polymerase I.\"\>", 
-     ",", "\<\"\\\"Mini-mental state\\\". A practical method for grading the \
-cognitive state of patients for the clinician.\"\>", 
-     ",", "\<\"The CLUSTAL_X windows interface: flexible strategies for \
-multiple sequence alignment aided by quality analysis tools.\"\>", 
-     ",", "\<\"A simple method for displaying the hydropathic character of a \
-protein.\"\>", 
-     ",", "\<\"Crystallography &amp; NMR system: A new software suite for \
-macromolecular structure determination.\"\>", 
-     ",", "\<\"A rapid method of total lipid extraction and \
-purification.\"\>", 
-     ",", "\<\"The CCP4 suite: programs for protein crystallography.\"\>", 
-     ",", "\<\"Primer-directed enzymatic amplification of DNA with a \
-thermostable DNA polymerase.\"\>", 
-     ",", "\<\"High resolution two-dimensional electrophoresis of proteins.\"\
-\>", ",", "\<\"A new generation of Ca2+ indicators with greatly improved \
-fluorescence properties.\"\>", 
-     ",", "\<\"Accurate transcription initiation by RNA polymerase II in a \
-soluble extract from isolated mammalian nuclei.\"\>", 
-     ",", "\<\"The reliability of molecular weight determinations by dodecyl \
-sulfate-polyacrylamide gel electrophoresis.\"\>", 
-     ",", "\<\"Improved methods for building protein models in electron \
-density maps and the location of errors in these models.\"\>", 
-     ",", "\<\"A system of shuttle vectors and yeast host strains designed \
-for efficient manipulation of DNA in Saccharomyces cerevisiae.\"\>", 
-     ",", "\<\"A new technique for the assay of infectivity of human \
-adenovirus 5 DNA.\"\>", 
-     ",", "\<\"Coot: model-building tools for molecular graphics.\"\>", 
-     ",", "\<\"Recombinant genomes which express chloramphenicol \
-acetyltransferase in mammalian cells.\"\>", 
-     ",", "\<\"Studies on transformation of Escherichia coli with plasmids.\"\
-\>", ",", "\<\"Gene ontology: tool for the unification of biology. The Gene \
-Ontology Consortium.\"\>", 
-     ",", "\<\"Hybridization of denatured RNA and small DNA fragments \
-transferred to nitrocellulose.\"\>", 
-     ",", "\<\"Transformation of intact yeast cells treated with alkali \
-cations.\"\>", 
-     ",", "\<\"Initial sequencing and analysis of the human genome.\"\>", 
-     ",", "\<\"Statistical methods for assessing agreement between two \
-methods of clinical measurement.\"\>", 
-     ",", "\<\"Improved tools for biological sequence comparison.\"\>", 
-     ",", "\<\"Improvements in epoxy resin embedding methods.\"\>", 
-     ",", "\<\"DISC ELECTROPHORESIS. II. METHOD AND APPLICATION TO HUMAN \
-SERUM PROTEINS.\"\>", 
-     ",", "\<\"Refinement of macromolecular structures by the \
-maximum-likelihood method.\"\>", ",", "\<\"The Protein Data Bank.\"\>", 
-     ",", "\<\"A study of the conditions and mechanism of the diphenylamine \
-reaction for the colorimetric estimation of deoxyribonucleic acid.\"\>", 
-     ",", "\<\"Cluster analysis and display of genome-wide expression \
-patterns.\"\>", ",", "\<\"Genomic sequencing.\"\>", 
-     ",", "\<\"The pUC plasmids, an M13mp7-derived system for insertion \
-mutagenesis and sequencing with synthetic universal primers.\"\>", 
-     ",", "\<\"A new method for sequencing DNA.\"\>", 
-     ",", "\<\"A film detection method for tritium-labelled proteins and \
-nucleic acids in polyacrylamide gels.\"\>", 
-     ",", "\<\"Rapid colorimetric assay for cellular growth and survival: \
-application to proliferation and cytotoxicity assays.\"\>", 
-     ",", "\<\"The American Rheumatism Association 1987 revised criteria for \
-the classification of rheumatoid arthritis.\"\>", 
-     ",", "\<\"Structure validation in chemical crystallography.\"\>", 
-     ",", "\<\"A quantitative description of membrane current and its \
-application to conduction and excitation in nerve.\"\>", 
-     ",", "\<\"The MOS 36-item short-form health survey (SF-36). I. \
-Conceptual framework and item selection.\"\>", 
-     ",", "\<\"Construction and characterization of new cloning vehicles. II. \
-A multipurpose cloning system.\"\>", 
-     ",", "\<\"COPPER ENZYMES IN ISOLATED CHLOROPLASTS. POLYPHENOLOXIDASE IN \
-BETA VULGARIS.\"\>", 
-     ",", "\<\"Measurement of protein using bicinchoninic acid.\"\>", 
-     ",", "\<\"The hallmarks of cancer.\"\>", 
-     ",", "\<\"Purification of biologically active globin messenger RNA by \
-chromatography on oligothymidylic acid-cellulose.\"\>", 
-     ",", "\<\"Efficient in vitro synthesis of biologically active RNA and \
-RNA hybridization probes from plasmids containing a bacteriophage SP6 \
-promoter.\"\>", 
-     ",", "\<\"Floral dip: a simplified method for Agrobacterium-mediated \
-transformation of Arabidopsis thaliana.\"\>", 
-     ",", "\<\"MEGA4: Molecular Evolutionary Genetics Analysis (MEGA) \
-software version 4.0.\"\>", 
-     ",", "\<\"\\\"A technique for radiolabeling DNA restriction endonuclease \
-fragments to high specific activity\\\". Addendum.\"\>", 
-     ",", "\<\"New M13 vectors for cloning.\"\>", 
-     ",", "\<\"Selective extraction of polyoma DNA from infected mouse cell \
-cultures.\"\>", 
-     ",", "\<\"MEGA3: Integrated software for Molecular Evolutionary Genetics \
-Analysis and sequence alignment.\"\>", 
-     ",", "\<\"Clinical diagnosis of Alzheimer's disease: report of the \
-NINCDS-ADRDA Work Group under the auspices of Department of Health and Human \
-Services Task Force on Alzheimer's Disease.\"\>", 
-     ",", "\<\"Immunochemical quantitation of antigens by single radial \
-immunodiffusion.\"\>", 
-     ",", "\<\"Phosphorus assay in column chromatography.\"\>", 
-     ",", "\<\"Continuous cultures of fused cells secreting antibody of \
-predefined specificity.\"\>", 
-     ",", "\<\"Significance analysis of microarrays applied to the ionizing \
-radiation response.\"\>", 
-     ",", "\<\"Use of avidin-biotin-peroxidase complex (ABC) in \
-immunoperoxidase techniques: a comparison between ABC and unlabeled antibody \
-(PAP) procedures.\"\>", 
-     ",", "\<\"Tricine-sodium dodecyl sulfate-polyacrylamide gel \
-electrophoresis for the separation of proteins in the range from 1 to 100 \
-kDa.\"\>", 
-     ",", "\<\"Isolation of mononuclear cells and granulocytes from human \
-blood. Isolation of monuclear cells by one centrifugation, and of \
-granulocytes by combining centrifugation and sedimentation at 1 g.\"\>", 
-     ",", "\<\"GUS fusions: beta-glucuronidase as a sensitive and versatile \
-gene fusion marker in higher plants.\"\>", 
-     ",", "\<\"The assessment and analysis of handedness: the Edinburgh \
-inventory.\"\>", 
-     ",", "\<\"Rapid and efficient site-specific mutagenesis without \
-phenotypic selection.\"\>", 
-     ",", "\<\"Executive Summary of The Third Report of The National \
-Cholesterol Education Program (NCEP) Expert Panel on Detection, Evaluation, \
-And Treatment of High Blood Cholesterol In Adults (Adult Treatment Panel \
-III).\"\>", 
-     ",", "\<\"CONFIDENCE LIMITS ON PHYLOGENIES: AN APPROACH USING THE \
-BOOTSTRAP.\"\>", 
-     ",", "\<\"NMRPipe: a multidimensional spectral processing system based \
-on UNIX pipes.\"\>", 
-     ",", "\<\"Rapid and efficient site-specific mutagenesis without \
-phenotypic selection.\"\>", 
-     ",", "\<\"\\\"Western blotting\\\": electrophoretic transfer of proteins \
-from sodium dodecyl sulfate--polyacrylamide gels to unmodified nitrocellulose \
-and radiographic detection with antibody and radioiodinated protein A.\"\>", 
-     ",", "\<\"The genetics of Caenorhabditis elegans.\"\>", 
-     ",", "\<\"A low-viscosity epoxy resin embedding medium for electron \
-microscopy.\"\>", 
-     ",", "\<\"MicroRNAs: genomics, biogenesis, mechanism, and function.\"\>",
-      ",", "\<\"Primer3 on the WWW for general users and for biologist \
-programmers.\"\>", 
-     ",", "\<\"Screening lambdagt recombinant clones by hybridization to \
-single plaques in situ.\"\>", 
-     ",", "\<\"Use of T7 RNA polymerase to direct expression of cloned genes.\
-\"\>", ",", "\<\"Haploview: analysis and visualization of LD and haplotype \
-maps.\"\>", 
-     ",", "\<\"A new mathematical model for relative quantification in \
-real-time RT-PCR.\"\>", 
-     ",", "\<\"Construction and characterization of amplifiable multicopy DNA \
-cloning vehicles derived from the P15A cryptic miniplasmid.\"\>", 
-     ",", "\<\"One-step inactivation of chromosomal genes in Escherichia coli \
-K-12 using PCR products.\"\>", ",", "\<\"Cancer statistics, 2008.\"\>", 
-     ",", "\<\"A simple salting out procedure for extracting DNA from human \
-nucleated cells.\"\>", ",", "\<\"VMD: visual molecular dynamics.\"\>", 
-     ",", "\<\"The 1982 revised criteria for the classification of systemic \
-lupus erythematosus.\"\>", 
-     ",", "\<\"Analysis of the genome sequence of the flowering plant \
-Arabidopsis thaliana.\"\>", 
-     ",", "\<\"Acetylornithinase of Escherichia coli:  partial purification \
-and some properties.\"\>", 
-     ",", "\<\"The measurement of observer agreement for categorical \
-data.\"\>", 
-     ",", "\<\"The early stages of absorption of injected horseradish \
-peroxidase in the proximal tubules of mouse kidney: ultrastructural \
-cytochemistry by a new technique.\"\>", 
-     ",", "\<\"Unidirectional digestion with exonuclease III creates targeted \
-breakpoints for DNA sequencing.\"\>", 
-     ",", "\<\"Site-directed mutagenesis by overlap extension using the \
-polymerase chain reaction.\"\>", 
-     ",", "\<\"A complementation analysis of the restriction and modification \
-of DNA in Escherichia coli.\"\>", 
-     ",", "\<\"Estimation of the concentration of low-density lipoprotein \
-cholesterol in plasma, without use of the preparative ultracentrifuge.\"\>", 
-     ",", "\<\"The effect of intensive treatment of diabetes on the \
-development and progression of long-term complications in insulin-dependent \
-diabetes mellitus.\"\>", 
-     ",", "\<\"MODELTEST: testing the model of DNA substitution.\"\>", 
-     ",", "\<\"Single-step purification of polypeptides expressed in \
-Escherichia coli as fusions with glutathione S-transferase.\"\>", 
-     ",", "\<\"Dendritic cells and the control of immunity.\"\>", 
-     ",", "\<\"Dictionary of protein secondary structure: pattern recognition \
-of hydrogen-bonded and geometrical features.\"\>", 
-     ",", "\<\"Nitric oxide: physiology, pathophysiology, and pharmacology.\"\
-\>", ",", "\<\"Solvent content of protein crystals.\"\>", 
-     ",", "\<\"A simple method for estimating evolutionary rates of base \
-substitutions through comparative studies of nucleotide sequences.\"\>", 
-     ",", "\<\"Enzymatic amplification of beta-globin genomic sequences and \
-restriction site analysis for diagnosis of sickle cell anemia.\"\>", 
-     ",", "\<\"Electrophoretic analysis of the major polypeptides of the \
-human erythrocyte membrane.\"\>", 
-     ",", "\<\"An inventory for measuring depression.\"\>", 
-     ",", "\<\"TreeView: an application to display phylogenetic trees on \
-personal computers.\"\>", ",", "\<\"The sequence of the human genome.\"\>", 
-     ",", "\<\"THE PREPARATION OF I-131-LABELLED HUMAN GROWTH HORMONE OF HIGH \
-SPECIFIC RADIOACTIVITY.\"\>", 
-     ",", "\<\"The moderator-mediator variable distinction in social \
-psychological research: conceptual, strategic, and statistical \
-considerations.\"\>", 
-     ",", "\<\"Mfold web server for nucleic acid folding and hybridization \
-prediction.\"\>", ",", "\<\"A rating scale for depression.\"\>", 
-     ",", "\<\"Peptide mapping by limited proteolysis in sodium dodecyl \
-sulfate and analysis by gel electrophoresis.\"\>", 
-     ",", "\<\"SWISS-MODEL and the Swiss-PdbViewer: an environment for \
-comparative protein modeling.\"\>", 
-     ",", "\<\"Atherosclerosis--an inflammatory disease.\"\>", 
-     ",", "\<\"Global cancer statistics, 2002.\"\>", 
-     ",", "\<\"Potent and specific genetic interference by double-stranded \
-RNA in Caenorhabditis elegans.\"\>", 
-     ",", "\<\"The Seventh Report of the Joint National Committee on \
-Prevention, Detection, Evaluation, and Treatment of High Blood Pressure: the \
-JNC 7 report.\"\>", 
-     ",", "\<\"The complete genome sequence of Escherichia coli K-12.\"\>", 
-     ",", "\<\"Efficient transfer of large DNA fragments from agarose gels to \
-diazobenzyloxymethyl-paper and rapid hybridization by using dextran \
-sulfate.\"\>", 
-     ",", "\<\"Homeostasis model assessment: insulin resistance and beta-cell \
-function from fasting plasma glucose and insulin concentrations in man.\"\>", 
-     ",", "\<\"Genome-wide association study of 14,000 cases of seven common \
-diseases and 3,000 shared controls.\"\>", 
-     ",", "\<\"Relationship between the inhibition constant (K1) and the \
-concentration of inhibitor which causes 50 per cent inhibition (I50) of an \
-enzymatic reaction.\"\>", 
-     ",", "\<\"Targeted gene expression as a means of altering cell fates and \
-generating dominant phenotypes.\"\>", 
-     ",", "\<\"Intensive blood-glucose control with sulphonylureas or insulin \
-compared with conventional treatment and risk of complications in patients \
-with type 2 diabetes (UKPDS 33). UK Prospective Diabetes Study (UKPDS) Group.\
-\"\>", ",", "\<\"Use of bacteriophage T7 RNA polymerase to direct selective \
-high-level expression of cloned genes.\"\>", 
-     ",", "\<\"MAPMAKER: an interactive computer package for constructing \
-primary genetic linkage maps of experimental and natural populations.\"\>", 
-     ",", "\<\"MrBayes 3: Bayesian phylogenetic inference under mixed models.\
-\"\>", ",", "\<\"High-efficiency transformation of mammalian cells by plasmid \
-DNA.\"\>", 
-     ",", "\<\"Interpreting chromosomal DNA restriction patterns produced by \
-pulsed-field gel electrophoresis: criteria for bacterial strain typing.\"\>", 
-     ",", "\<\"Preparation of iodine-131 labelled human growth hormone of \
-high specific activity.\"\>", 
-     ",", "\<\"A simple, fast, and accurate algorithm to estimate large \
-phylogenies by maximum likelihood.\"\>", 
-     ",", "\<\"One-step gene disruption in yeast.\"\>", 
-     ",", "\<\"The 3'-terminal sequence of Escherichia coli 16S ribosomal \
-RNA: complementarity to nonsense triplets and ribosome binding sites.\"\>", 
-     ",", "\<\"A membrane-filter technique for the detection of complementary \
-DNA.\"\>", 
-     ",", "\<\"Organization and expression of eucaryotic split genes coding \
-for proteins.\"\>", 
-     ",", "\<\"Integrins: versatility, modulation, and signaling in cell \
-adhesion.\"\>", 
-     ",", "\<\"Quantitative film detection of 3H and 14C in polyacrylamide \
-gels by fluorography.\"\>", 
-     ",", "\<\"MRBAYES: Bayesian inference of phylogenetic trees.\"\>", 
-     ",", "\<\"A rapid boiling method for the preparation of bacterial \
-plasmids.\"\>", 
-     ",", "\<\"A simple and very efficient method for generating cDNA \
-libraries.\"\>", 
-     ",", "\<\"Bioconductor: open software development for computational \
-biology and bioinformatics.\"\>", 
-     ",", "\<\"Transformation of mammalian cells to antibiotic resistance \
-with a bacterial gene under control of the SV40 early region promoter.\"\>", 
-     ",", "\<\"Tissue sulfhydryl groups.\"\>", 
-     ",", "\<\"The hospital anxiety and depression scale.\"\>", 
-     ",", "\<\"A new method of classifying prognostic comorbidity in \
-longitudinal studies: development and validation.\"\>", 
-     ",", "\<\"Sequence and organization of the human mitochondrial genome.\"\
-\>", ",", "\<\"Duplexes of 21-nucleotide RNAs mediate RNA interference in \
-cultured mammalian cells.\"\>", 
-     ",", "\<\"Sizing and mapping of early adenovirus mRNAs by gel \
-electrophoresis of S1 endonuclease-digested hybrids.\"\>", 
-     ",", "\<\"MOLMOL: a program for display and analysis of macromolecular \
-structures.\"\>", 
-     ",", "\<\"Colony hybridization: a method for the isolation of cloned \
-DNAs that contain a specific gene.\"\>", 
-     ",", "\<\"WAF1, a potential mediator of p53 tumor suppression.\"\>", 
-     ",", "\<\"MUSCLE: multiple sequence alignment with high accuracy and \
-high throughput.\"\>", 
-     ",", "\<\"PAML: a program package for phylogenetic analysis by maximum \
-likelihood.\"\>", 
-     ",", "\<\"Initial sequencing and comparative analysis of the mouse \
-genome.\"\>", ",", "\<\"Functional rafts in cell membranes.\"\>", 
-     ",", "\<\"Additional modules for versatile and economical PCR-based gene \
-deletion and modification in Saccharomyces cerevisiae.\"\>", 
-     ",", "\<\"Prevalence of overweight and obesity in the United States, \
-1999-2004.\"\>", 
-     ",", "\<\"Base-calling of automated sequencer traces using phred. I. \
-Accuracy assessment.\"\>", ",", "\<\"Cancer statistics, 2007.\"\>", 
-     ",", "\<\"New guidelines to evaluate the response to treatment in solid \
-tumors. European Organization for Research and Treatment of Cancer, National \
-Cancer Institute of the United States, National Cancer Institute of Canada.\"\
-\>", ",", "\<\"Cloning in single-stranded bacteriophage as an aid to rapid \
-DNA sequencing.\"\>", 
-     ",", "\<\"The role of protein kinase C in cell surface signal \
-transduction and tumour promotion.\"\>", 
-     ",", "\<\"A simplification of the protein assay method of Lowry et al. \
-which is more generally applicable.\"\>", 
-     ",", "\<\"A new pair of M13 vectors for selecting either DNA strand of \
-double-digest restriction fragments.\"\>", 
-     ",", "\<\"A haplotype map of the human genome.\"\>", 
-     ",", "\<\"Identification of programmed cell death in situ via specific \
-labeling of nuclear DNA fragmentation.\"\>", 
-     ",", "\<\"Exploration, normalization, and summaries of high density \
-oligonucleotide array probe level data.\"\>", 
-     ",", "\<\"Translating the histone code.\"\>", 
-     ",", "\<\"A new method for predicting signal sequence cleavage \
-sites.\"\>", 
-     ",", "\<\"The obligatory role of endothelial cells in the relaxation of \
-arterial smooth muscle by acetylcholine.\"\>", 
-     ",", "\<\"Comparative protein modelling by satisfaction of spatial \
-restraints.\"\>", 
-     ",", "\<\"Distantly related sequences in the alpha- and beta-subunits of \
-ATP synthase, myosin, kinases and other ATP-requiring enzymes and a common \
-nucleotide binding fold.\"\>", ",", "\<\"Bacterial evolution.\"\>", 
-     ",", "\<\"Deciphering the biology of Mycobacterium tuberculosis from the \
-complete genome sequence.\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"\<\"Cleavage of structural proteins during the assembly of the \
-head of bacteriophage T4.\"\>", 
-     ",", "\<\"Protein measurement with the Folin phenol reagent.\"\>", 
-     ",", "\<\"A rapid and sensitive method for the quantitation of microgram \
-quantities of protein utilizing the principle of protein-dye binding.\"\>", 
-     ",", "\<\"A short history of SHELX.\"\>", 
-     ",", "\<\"DNA sequencing with chain-terminating inhibitors.\"\>", 
-     ",", "\<\"Analysis of relative gene expression data using real-time \
-quantitative PCR and the 2(-Delta Delta C(T)) Method.\"\>", 
-     ",", "\<\"Gapped BLAST and PSI-BLAST: a new generation of protein \
-database search programs.\"\>", 
-     ",", "\<\"Basic local alignment search tool.\"\>", 
-     ",", "\<\"CLUSTAL W: improving the sensitivity of progressive multiple \
-sequence alignment through sequence weighting, position-specific gap \
-penalties and weight matrix choice.\"\>", 
-     ",", "\<\"Electrophoretic transfer of proteins from polyacrylamide gels \
-to nitrocellulose sheets: procedure and some applications.\"\>", 
-     ",", "\<\"Single-step method of RNA isolation by acid guanidinium \
-thiocyanate-phenol-chloroform extraction.\"\>", 
-     ",", "\<\"Detection of specific sequences among DNA fragments separated \
-by gel electrophoresis.\"\>", 
-     ",", "\<\"\\\"Mini-mental state\\\". A practical method for grading the \
-cognitive state of patients for the clinician.\"\>", 
-     ",", "\<\"Processing of X-ray diffraction data collected in oscillation \
-mode.\"\>", ",", "\<\"Coot: model-building tools for molecular graphics.\"\>",
-      ",", "\<\"The neighbor-joining method: a new method for reconstructing \
-phylogenetic trees.\"\>", 
-     ",", "\<\"MEGA5: molecular evolutionary genetics analysis using maximum \
-likelihood, evolutionary distance, and maximum parsimony methods.\"\>", 
-     ",", "\<\"Gene ontology: tool for the unification of biology. The Gene \
-Ontology Consortium.\"\>", 
-     ",", "\<\"A simple method for the isolation and purification of total \
-lipides from animal tissues.\"\>", ",", "\<\"Global cancer statistics.\"\>", ",",
-      "\<\"The CLUSTAL_X windows interface: flexible strategies for multiple \
-sequence alignment aided by quality analysis tools.\"\>", 
-     ",", "\<\"MEGA4: Molecular Evolutionary Genetics Analysis (MEGA) \
-software version 4.0.\"\>", 
-     ",", "\<\"A technique for radiolabeling DNA restriction endonuclease \
-fragments to high specific activity.\"\>", 
-     ",", "\<\"MicroRNAs: genomics, biogenesis, mechanism, and function.\"\>",
-      ",", "\<\"Structure validation in chemical crystallography.\"\>", 
-     ",", "\<\"The CCP4 suite: programs for protein crystallography.\"\>", 
-     ",", "\<\"Sequencing end-labeled DNA with base-specific chemical \
-cleavages.\"\>", 
-     ",", "\<\"A rapid method of total lipid extraction and \
-purification.\"\>", 
-     ",", "\<\"Improved M13 phage cloning vectors and host strains: \
-nucleotide sequences of the M13mp18 and pUC19 vectors.\"\>", 
-     ",", "\<\"Hallmarks of cancer: the next generation.\"\>", 
-     ",", "\<\"Crystallography &amp; NMR system: A new software suite for \
-macromolecular structure determination.\"\>", 
-     ",", "\<\"A new mathematical model for relative quantification in \
-real-time RT-PCR.\"\>", 
-     ",", "\<\"Statistical methods for assessing agreement between two \
-methods of clinical measurement.\"\>", 
-     ",", "\<\"MUSCLE: multiple sequence alignment with high accuracy and \
-high throughput.\"\>", ",", "\<\"Clustal W and Clustal X version 2.0.\"\>", 
-     ",", "\<\"Systematic and integrative analysis of large gene lists using \
-DAVID bioinformatics resources.\"\>", 
-     ",", "\<\"PLINK: a tool set for whole-genome association and \
-population-based linkage analyses.\"\>", 
-     ",", "\<\"Improved patch-clamp techniques for high-resolution current \
-recording from cells and cell-free membrane patches.\"\>", 
-     ",", "\<\"Isolation of biologically active ribonucleic acid from sources \
-enriched in ribonuclease.\"\>", 
-     ",", "\<\"The assessment and analysis of handedness: the Edinburgh \
-inventory.\"\>", 
-     ",", "\<\"The use of lead citrate at high pH as an electron-opaque stain \
-in electron microscopy.\"\>", 
-     ",", "\<\"Meta-analysis in clinical trials.\"\>", 
-     ",", "\<\"A rapid alkaline extraction procedure for screening \
-recombinant plasmid DNA.\"\>", 
-     ",", "\<\"Refinement of macromolecular structures by the \
-maximum-likelihood method.\"\>", ",", "\<\"The Protein Data Bank.\"\>", 
-     ",", "\<\"A comprehensive set of sequence analysis programs for the VAX.\
-\"\>", ",", "\<\"A simple method for displaying the hydropathic character of \
-a protein.\"\>", ",", "\<\"The hallmarks of cancer.\"\>", 
-     ",", "\<\"The measurement of observer agreement for categorical \
-data.\"\>", 
-     ",", "\<\"Bias in meta-analysis detected by a simple, graphical \
-test.\"\>", 
-     ",", "\<\"The MOS 36-item short-form health survey (SF-36). I. \
-Conceptual framework and item selection.\"\>", 
-     ",", "\<\"Measuring inconsistency in meta-analyses.\"\>", 
-     ",", "\<\"A new method of classifying prognostic comorbidity in \
-longitudinal studies: development and validation.\"\>", 
-     ",", "\<\"Rapid colorimetric assay for cellular growth and survival: \
-application to proliferation and cytotoxicity assays.\"\>", 
-     ",", "\<\"Initial sequencing and analysis of the human genome.\"\>", 
-     ",", "\<\"VMD: visual molecular dynamics.\"\>", 
-     ",", "\<\"Gene set enrichment analysis: a knowledge-based approach for \
-interpreting genome-wide expression profiles.\"\>", 
-     ",", "\<\"Global cancer statistics, 2002.\"\>", 
-     ",", "\<\"Labeling deoxyribonucleic acid to high specific activity in \
-vitro by nick translation with DNA polymerase I.\"\>", 
-     ",", "\<\"Floral dip: a simplified method for Agrobacterium-mediated \
-transformation of Arabidopsis thaliana.\"\>", 
-     ",", "\<\"Induction of pluripotent stem cells from mouse embryonic and \
-adult fibroblast cultures by defined factors.\"\>", 
-     ",", "\<\"Homeostasis model assessment: insulin resistance and beta-cell \
-function from fasting plasma glucose and insulin concentrations in man.\"\>", 
-     ",", "\<\"The Sequence Alignment/Map format and SAMtools.\"\>", 
-     ",", "\<\"Clinical diagnosis of Alzheimer's disease: report of the \
-NINCDS-ADRDA Work Group under the auspices of Department of Health and Human \
-Services Task Force on Alzheimer's Disease.\"\>", 
-     ",", "\<\"A new generation of Ca2+ indicators with greatly improved \
-fluorescence properties.\"\>", 
-     ",", "\<\"UCSF Chimera--a visualization system for exploratory research \
-and analysis.\"\>", 
-     ",", "\<\"Primer3 on the WWW for general users and for biologist \
-programmers.\"\>", 
-     ",", "\<\"Executive Summary of The Third Report of The National \
-Cholesterol Education Program (NCEP) Expert Panel on Detection, Evaluation, \
-And Treatment of High Blood Cholesterol In Adults (Adult Treatment Panel \
-III).\"\>", 
-     ",", "\<\"Haploview: analysis and visualization of LD and haplotype \
-maps.\"\>", ",", "\<\"Cancer statistics, 2010.\"\>", 
-     ",", "\<\"Cluster analysis and display of genome-wide expression \
-patterns.\"\>", 
-     ",", "\<\"Fast and accurate short read alignment with Burrows-Wheeler \
-transform.\"\>", ",", "\<\"Phaser crystallographic software.\"\>", 
-     ",", "\<\"Ultrafast and memory-efficient alignment of short DNA \
-sequences to the human genome.\"\>", 
-     ",", "\<\"MrBayes 3: Bayesian phylogenetic inference under mixed models.\
-\"\>", ",", "\<\"The American Rheumatism Association 1987 revised criteria \
-for the classification of rheumatoid arthritis.\"\>", 
-     ",", "\<\"Bioconductor: open software development for computational \
-biology and bioinformatics.\"\>", 
-     ",", "\<\"Primer-directed enzymatic amplification of DNA with a \
-thermostable DNA polymerase.\"\>", 
-     ",", "\<\"CONFIDENCE LIMITS ON PHYLOGENIES: AN APPROACH USING THE \
-BOOTSTRAP.\"\>", 
-     ",", "\<\"High resolution two-dimensional electrophoresis of proteins.\"\
-\>", ",", "\<\"Inference of population structure using multilocus genotype \
-data.\"\>", 
-     ",", "\<\"Significance analysis of microarrays applied to the ionizing \
-radiation response.\"\>", 
-     ",", "\<\"NMRPipe: a multidimensional spectral processing system based \
-on UNIX pipes.\"\>", 
-     ",", "\<\"MicroRNAs: target recognition and regulatory functions.\"\>", 
-     ",", "\<\"Accurate transcription initiation by RNA polymerase II in a \
-soluble extract from isolated mammalian nuclei.\"\>", 
-     ",", "\<\"One-step inactivation of chromosomal genes in Escherichia coli \
-K-12 using PCR products.\"\>", 
-     ",", "\<\"A system of shuttle vectors and yeast host strains designed \
-for efficient manipulation of DNA in Saccharomyces cerevisiae.\"\>", 
-     ",", "\<\"The moderator-mediator variable distinction in social \
-psychological research: conceptual, strategic, and statistical \
-considerations.\"\>", 
-     ",", "\<\"Estimation of the concentration of low-density lipoprotein \
-cholesterol in plasma, without use of the preparative ultracentrifuge.\"\>", 
-     ",", "\<\"Linear models and empirical bayes methods for assessing \
-differential expression in microarray experiments.\"\>", 
-     ",", "\<\"New guidelines to evaluate the response to treatment in solid \
-tumors. European Organization for Research and Treatment of Cancer, National \
-Cancer Institute of the United States, National Cancer Institute of Canada.\"\
-\>", ",", "\<\"Induction of pluripotent stem cells from adult human \
-fibroblasts by defined factors.\"\>", 
-     ",", "\<\"Improved methods for building protein models in electron \
-density maps and the location of errors in these models.\"\>", 
-     ",", "\<\"A simple, fast, and accurate algorithm to estimate large \
-phylogenies by maximum likelihood.\"\>", 
-     ",", "\<\"The hospital anxiety and depression scale.\"\>", 
-     ",", "\<\"The genetics of Caenorhabditis elegans.\"\>", 
-     ",", "\<\"PHENIX: a comprehensive Python-based system for macromolecular \
-structure solution.\"\>", ",", "\<\"Cancer statistics, 2012.\"\>", 
-     ",", "\<\"Accurate normalization of real-time quantitative RT-PCR data \
-by geometric averaging of multiple internal control genes.\"\>", 
-     ",", "\<\"Studies on transformation of Escherichia coli with plasmids.\"\
-\>", ",", "\<\"The Seventh Report of the Joint National Committee on \
-Prevention, Detection, Evaluation, and Treatment of High Blood Pressure: the \
-JNC 7 report.\"\>", 
-     ",", "\<\"Multilineage potential of adult human mesenchymal stem \
-cells.\"\>", ",", "\<\"A rating scale for depression.\"\>", 
-     ",", "\<\"An inventory for measuring depression.\"\>", 
-     ",", "\<\"Cancer statistics, 2009.\"\>", 
-     ",", "\<\"Exploration, normalization, and summaries of high density \
-oligonucleotide array probe level data.\"\>", 
-     ",", "\<\"Estimates of worldwide burden of cancer in 2008: GLOBOCAN \
-2008.\"\>", ",", "\<\"Cancer statistics, 2008.\"\>", 
-     ",", "\<\"The reliability of molecular weight determinations by dodecyl \
-sulfate-polyacrylamide gel electrophoresis.\"\>", 
-     ",", "\<\"Conserved seed pairing, often flanked by adenosines, indicates \
-that thousands of human genes are microRNA targets.\"\>", 
-     ",", "\<\"A new technique for the assay of infectivity of human \
-adenovirus 5 DNA.\"\>", 
-     ",", "\<\"The effect of intensive treatment of diabetes on the \
-development and progression of long-term complications in insulin-dependent \
-diabetes mellitus.\"\>", ",", "\<\"Cancer statistics, 2013.\"\>", 
-     ",", "\<\"Mfold web server for nucleic acid folding and hybridization \
-prediction.\"\>", 
-     ",", "\<\"A quantitative description of membrane current and its \
-application to conduction and excitation in nerve.\"\>", 
-     ",", "\<\"Genome-wide association study of 14,000 cases of seven common \
-diseases and 3,000 shared controls.\"\>", 
-     ",", "\<\"Recombinant genomes which express chloramphenicol \
-acetyltransferase in mammalian cells.\"\>", 
-     ",", "\<\"Transformation of intact yeast cells treated with alkali \
-cations.\"\>", ",", "\<\"Features and development of Coot.\"\>", 
-     ",", "\<\"A simple salting out procedure for extracting DNA from human \
-nucleated cells.\"\>", 
-     ",", "\<\"Measurement of protein using bicinchoninic acid.\"\>", 
-     ",", "\<\"MRBAYES: Bayesian inference of phylogenetic trees.\"\>", 
-     ",", "\<\"Improved tools for biological sequence comparison.\"\>", 
-     ",", "\<\"Radiotherapy plus concomitant and adjuvant temozolomide for \
-glioblastoma.\"\>", 
-     ",", "\<\"Mapping and quantifying mammalian transcriptomes by RNA-Seq.\"\
-\>", ",", "\<\"Atherosclerosis--an inflammatory disease.\"\>", 
-     ",", "\<\"Quantifying heterogeneity in a meta-analysis.\"\>", 
-     ",", "\<\"Hybridization of denatured RNA and small DNA fragments \
-transferred to nitrocellulose.\"\>", 
-     ",", "\<\"Intensive blood-glucose control with sulphonylureas or insulin \
-compared with conventional treatment and risk of complications in patients \
-with type 2 diabetes (UKPDS 33). UK Prospective Diabetes Study (UKPDS) Group.\
-\"\>", ",", "\<\"A simple method for estimating evolutionary rates of base \
-substitutions through comparative studies of nucleotide sequences.\"\>", 
-     ",", "\<\"Comparative protein modelling by satisfaction of spatial \
-restraints.\"\>", ",", "\<\"Molecular portraits of human breast tumours.\"\>",
-      ",", "\<\"MODELTEST: testing the model of DNA substitution.\"\>", 
-     ",", "\<\"KEGG: kyoto encyclopedia of genes and genomes.\"\>", 
-     ",", "\<\"MEGA3: Integrated software for Molecular Evolutionary Genetics \
-Analysis and sequence alignment.\"\>", 
-     ",", "\<\"DISC ELECTROPHORESIS. II. METHOD AND APPLICATION TO HUMAN \
-SERUM PROTEINS.\"\>", 
-     ",", "\<\"Reduction in the incidence of type 2 diabetes with lifestyle \
-intervention or metformin.\"\>", 
-     ",", "\<\"Improvements in epoxy resin embedding methods.\"\>", 
-     ",", "\<\"tRNAscan-SE: a program for improved detection of transfer RNA \
-genes in genomic sequence.\"\>", 
-     ",", "\<\"DAVID: Database for Annotation, Visualization, and Integrated \
-Discovery.\"\>", 
-     ",", "\<\"GUS fusions: beta-glucuronidase as a sensitive and versatile \
-gene fusion marker in higher plants.\"\>", 
-     ",", "\<\"Solvent content of protein crystals.\"\>", 
-     ",", "\<\"Third Report of the National Cholesterol Education Program \
-(NCEP) Expert Panel on Detection, Evaluation, and Treatment of High Blood \
-Cholesterol in Adults (Adult Treatment Panel III) final report.\"\>", 
-     ",", "\<\"Cytoscape: a software environment for integrated models of \
-biomolecular interaction networks.\"\>", 
-     ",", "\<\"Potent and specific genetic interference by double-stranded \
-RNA in Caenorhabditis elegans.\"\>", 
-     ",", "\<\"COPPER ENZYMES IN ISOLATED CHLOROPLASTS. POLYPHENOLOXIDASE IN \
-BETA VULGARIS.\"\>", 
-     ",", "\<\"Dictionary of protein secondary structure: pattern recognition \
-of hydrogen-bonded and geometrical features.\"\>", 
-     ",", "\<\"Genomic sequencing.\"\>", 
-     ",", "\<\"A study of the conditions and mechanism of the diphenylamine \
-reaction for the colorimetric estimation of deoxyribonucleic acid.\"\>", 
-     ",", "\<\"Obesity: preventing and managing the global epidemic. Report \
-of a WHO consultation.\"\>", 
-     ",", "\<\"Analyzing real-time PCR data by the comparative C(T) method.\"\
-\>", ",", "\<\"Dendritic cells and the control of immunity.\"\>", 
-     ",", "\<\"A new method for sequencing DNA.\"\>", 
-     ",", "\<\"Statistical significance for genomewide studies.\"\>", 
-     ",", "\<\"The pUC plasmids, an M13mp7-derived system for insertion \
-mutagenesis and sequencing with synthetic universal primers.\"\>", 
-     ",", "\<\"Embryonic stem cell lines derived from human blastocysts.\"\>",
-      ",", "\<\"A map of human genome variation from population-scale \
-sequencing.\"\>", 
-     ",", "\<\"Statistical aspects of the analysis of data from retrospective \
-studies of disease.\"\>", 
-     ",", "\<\"Principal components analysis corrects for stratification in \
-genome-wide association studies.\"\>", 
-     ",", "\<\"Induced pluripotent stem cell lines derived from human somatic \
-cells.\"\>", 
-     ",", "\<\"A comparison of normalization methods for high density \
-oligonucleotide array data based on variance and bias.\"\>", 
-     ",", "\<\"RAxML-VI-HPC: maximum likelihood-based phylogenetic analyses \
-with thousands of taxa and mixed models.\"\>", 
-     ",", "\<\"The Psychophysics Toolbox.\"\>", 
-     ",", "\<\"A film detection method for tritium-labelled proteins and \
-nucleic acids in polyacrylamide gels.\"\>", 
-     ",", "\<\"Targeted gene expression as a means of altering cell fates and \
-generating dominant phenotypes.\"\>", 
-     ",", "\<\"A more accurate method to estimate glomerular filtration rate \
-from serum creatinine: a new prediction equation. Modification of Diet in \
-Renal Disease Study Group.\"\>", 
-     ",", "\<\"Continuous cultures of fused cells secreting antibody of \
-predefined specificity.\"\>", 
-     ",", "\<\"SWISS-MODEL and the Swiss-PdbViewer: an environment for \
-comparative protein modeling.\"\>", 
-     ",", "\<\"Velvet: algorithms for de novo short read assembly using de \
-Bruijn graphs.\"\>", 
-     ",", "\<\"Chromatin modifications and their function.\"\>", 
-     ",", "\<\"Predicting transmembrane protein topology with a hidden Markov \
-model: application to complete genomes.\"\>", 
-     ",", "\<\"All-atom empirical potential for molecular modeling and \
-dynamics studies of proteins.\"\>", 
-     ",", "\<\"Tricine-sodium dodecyl sulfate-polyacrylamide gel \
-electrophoresis for the separation of proteins in the range from 1 to 100 \
-kDa.\"\>", 
-     ",", "\<\"The amyloid hypothesis of Alzheimer's disease: progress and \
-problems on the road to therapeutics.\"\>", 
-     ",", "\<\"The 1982 revised criteria for the classification of systemic \
-lupus erythematosus.\"\>", 
-     ",", "\<\"The Mini-International Neuropsychiatric Interview (M.I.N.I.): \
-the development and validation of a structured diagnostic psychiatric \
-interview for DSM-IV and ICD-10.\"\>", 
-     ",", "\<\"Assessing the quality of reports of randomized clinical \
-trials: is blinding necessary?\"\>", 
-     ",", "\<\"WebLogo: a sequence logo generator.\"\>", 
-     ",", "\<\"Scalable molecular dynamics with NAMD.\"\>", 
-     ",", "\<\"Automated anatomical labeling of activations in SPM using a \
-macroscopic anatomical parcellation of the MNI MRI single-subject brain.\"\>",
-      ",", "\<\"Prevalence of overweight and obesity in the United States, \
-1999-2004.\"\>", ",", "\<\"BLAT--the BLAST-like alignment tool.\"\>", 
-     ",", "\<\"Genome sequencing in microfabricated high-density picolitre \
-reactors.\"\>", ",", "\<\"Inflammation and cancer.\"\>", 
-     ",", "\<\"Analysis of the genome sequence of the flowering plant \
-Arabidopsis thaliana.\"\>", 
-     ",", "\<\"Construction and characterization of new cloning vehicles. II. \
-A multipurpose cloning system.\"\>", 
-     ",", "\<\"AFNI: software for analysis and visualization of functional \
-magnetic resonance neuroimages.\"\>", 
-     ",", "\<\"Prospective identification of tumorigenic breast cancer cells.\
-\"\>", ",", "\<\"A default mode of brain function.\"\>", 
-     ",", "\<\"A 12-Item Short-Form Health Survey: construction of scales and \
-preliminary tests of reliability and validity.\"\>", 
-     ",", "\<\"Seventh report of the Joint National Committee on Prevention, \
-Detection, Evaluation, and Treatment of High Blood Pressure.\"\>", 
-     ",", "\<\"TopHat: discovering splice junctions with RNA-Seq.\"\>", 
-     ",", "\<\"NIH Image to ImageJ: 25 years of image analysis.\"\>", 
-     ",", "\<\"The C. elegans heterochronic gene lin-4 encodes small RNAs \
-with antisense complementarity to lin-14.\"\>", 
-     ",", "\<\"Translating the histone code.\"\>", 
-     ",", "\<\"Gene Expression Omnibus: NCBI gene expression and \
-hybridization array data repository.\"\>", 
-     ",", "\<\"Gene expression patterns of breast carcinomas distinguish \
-tumor subclasses with clinical implications.\"\>", 
-     ",", "\<\"Global prevalence of diabetes: estimates for the year 2000 and \
-projections for 2030.\"\>", 
-     ",", "\<\"Statistical method for testing the neutral mutation hypothesis \
-by DNA polymorphism.\"\>", 
-     ",", "\<\"MicroRNA expression profiles classify human cancers.\"\>", 
-     ",", "\<\"Assay for lipid peroxides in animal tissues by thiobarbituric \
-acid reaction.\"\>", ",", "\<\"The sequence of the human genome.\"\>", 
-     ",", "\<\"BEAST: Bayesian evolutionary analysis by sampling trees.\"\>", 
-     ",", "\<\"Purification of biologically active globin messenger RNA by \
-chromatography on oligothymidylic acid-cellulose.\"\>", 
-     ",", "\<\"Phosphorus assay in column chromatography.\"\>", 
-     ",", "\<\"Selective extraction of polyoma DNA from infected mouse cell \
-cultures.\"\>", 
-     ",", "\<\"APACHE II: a severity of disease classification system.\"\>", 
-     ",", "\<\"Use of avidin-biotin-peroxidase complex (ABC) in \
-immunoperoxidase techniques: a comparison between ABC and unlabeled antibody \
-(PAP) procedures.\"\>", ",", "\<\"Tissue sulfhydryl groups.\"\>", 
-     ",", "\<\"XDS.\"\>", 
-     ",", "\<\"Efficient in vitro synthesis of biologically active RNA and \
-RNA hybridization probes from plasmids containing a bacteriophage SP6 \
-promoter.\"\>", 
-     ",", "\<\"Neuropathological stageing of Alzheimer-related changes.\"\>", 
-     ",", "\<\"Advances in functional and structural MR image analysis and \
-implementation as FSL.\"\>", 
-     ",", "\<\"The functions of animal microRNAs.\"\>", 
-     ",", "\<\"Cancer statistics, 2014.\"\>", 
-     ",", "\<\"New M13 vectors for cloning.\"\>", 
-     ",", "\<\"Site-directed mutagenesis by overlap extension using the \
-polymerase chain reaction.\"\>", 
-     ",", "\<\"Isolation of mononuclear cells and granulocytes from human \
-blood. Isolation of monuclear cells by one centrifugation, and of \
-granulocytes by combining centrifugation and sedimentation at 1 g.\"\>", 
-     ",", "\<\"\\\"A technique for radiolabeling DNA restriction endonuclease \
-fragments to high specific activity\\\". Addendum.\"\>", 
-     ",", "\<\"K/DOQI clinical practice guidelines for chronic kidney \
-disease: evaluation, classification, and stratification.\"\>", 
-     ",", "\<\"Lifetime prevalence and age-of-onset distributions of DSM-IV \
-disorders in the National Comorbidity Survey Replication.\"\>", 
-     ",", "\<\"Improved prediction of signal peptides: SignalP 3.0.\"\>", 
-     ",", "\<\"The PHQ-9: validity of a brief depression severity \
-measure.\"\>", 
-     ",", "\<\"Activating mutations in the epidermal growth factor receptor \
-underlying responsiveness of non-small-cell lung cancer to gefitinib.\"\>", 
-     ",", "\<\"An integrated encyclopedia of DNA elements in the human \
-genome.\"\>", 
-     ",", "\<\"Risks and benefits of estrogen plus progestin in healthy \
-postmenopausal women: principal results From the Women's Health Initiative \
-randomized controlled trial.\"\>", 
-     ",", "\<\"Prediction of creatinine clearance from serum creatinine.\"\>",
-      ",", "\<\"The Fagerstr\[CapitalATilde]\[Paragraph]m Test for Nicotine \
-Dependence: a revision of the Fagerstr\[CapitalATilde]\[Paragraph]m Tolerance \
-Questionnaire.\"\>", 
-     ",", "\<\"TreeView: an application to display phylogenetic trees on \
-personal computers.\"\>", 
-     ",", "\<\"Bioinformatics enrichment tools: paths toward the \
-comprehensive functional analysis of large gene lists.\"\>", 
-     ",", "\<\"A method and server for predicting damaging missense \
-mutations.\"\>", 
-     ",", "\<\"Immunochemical quantitation of antigens by single radial \
-immunodiffusion.\"\>", 
-     ",", "\<\"Development of the Colle-Salvetti correlation-energy formula \
-into a functional of the electron density.\"\>", 
-     ",", "\<\"High-resolution profiling of histone methylations in the human \
-genome.\"\>", 
-     ",", "\<\"The RAST Server: rapid annotations using subsystems \
-technology.\"\>", 
-     ",", "\<\"Relationship between the inhibition constant (K1) and the \
-concentration of inhibitor which causes 50 per cent inhibition (I50) of an \
-enzymatic reaction.\"\>", 
-     ",", "\<\"The Pittsburgh Sleep Quality Index: a new instrument for \
-psychiatric practice and research.\"\>", 
-     ",", "\<\"The positive and negative syndrome scale (PANSS) for \
-schizophrenia.\"\>", 
-     ",", "\<\"Development and validation of brief measures of positive and \
-negative affect: the PANAS scales.\"\>", 
-     ",", "\<\"PAML 4: phylogenetic analysis by maximum likelihood.\"\>", 
-     ",", "\<\"Transcript assembly and quantification by RNA-Seq reveals \
-unannotated transcripts and isoform switching during cell \
-differentiation.\"\>", 
-     ",", "\<\"A low-viscosity epoxy resin embedding medium for electron \
-microscopy.\"\>", 
-     ",", "\<\"Intraclass correlations: uses in assessing rater \
-reliability.\"\>", ",", "\<\"The human genome browser at UCSC.\"\>", 
-     ",", "\<\"Arlequin (version 3.0): an integrated software package for \
-population genetics data analysis.\"\>", ",", "\<\"Vitamin D deficiency.\"\>",
-      ",", "\<\"Additional modules for versatile and economical PCR-based \
-gene deletion and modification in Saccharomyces cerevisiae.\"\>", 
-     ",", "\<\"Base-calling of automated sequencer traces using phred. I. \
-Accuracy assessment.\"\>", 
-     ",", "\<\"Gene expression profiling predicts clinical outcome of breast \
-cancer.\"\>", 
-     ",", "\<\"EMBOSS: the European Molecular Biology Open Software \
-Suite.\"\>", 
-     ",", "\<\"Rapid and efficient site-specific mutagenesis without \
-phenotypic selection.\"\>", ",", "\<\"Cancer statistics, 2007.\"\>", 
-     ",", "\<\"MolProbity: all-atom structure validation for macromolecular \
-crystallography.\"\>", 
-     ",", "\<\"Differential expression analysis for sequence count data.\"\>",
-      ",", "\<\"Nitric oxide: physiology, pathophysiology, and \
-pharmacology.\"\>", 
-     ",", "\<\"\\\"Western blotting\\\": electrophoretic transfer of proteins \
-from sodium dodecyl sulfate--polyacrylamide gels to unmodified nitrocellulose \
-and radiographic detection with antibody and radioiodinated protein A.\"\>", 
-     ",", "\<\"Stem cells, cancer, and cancer stem cells.\"\>", 
-     ",", "\<\"Duplexes of 21-nucleotide RNAs mediate RNA interference in \
-cultured mammalian cells.\"\>", 
-     ",", "\<\"Initial sequencing and comparative analysis of the mouse \
-genome.\"\>", 
-     ",", "\<\"Interpreting chromosomal DNA restriction patterns produced by \
-pulsed-field gel electrophoresis: criteria for bacterial strain typing.\"\>", 
-     ",", "\<\"Pathogen recognition and innate immunity.\"\>", 
-     ",", "\<\"The complete genome sequence of Escherichia coli K-12.\"\>", ",",
-      "\<\"Human breast cancer: correlation of relapse and survival with \
-amplification of the HER-2/neu oncogene.\"\>", 
-     ",", "\<\"The 2007 WHO classification of tumours of the central nervous \
-system.\"\>", 
-     ",", "\<\"RNA-Seq: a revolutionary tool for transcriptomics.\"\>", 
-     ",", "\<\"Bevacizumab plus irinotecan, fluorouracil, and leucovorin for \
-metastatic colorectal cancer.\"\>", 
-     ",", "\<\"Rapid and efficient site-specific mutagenesis without \
-phenotypic selection.\"\>", 
-     ",", "\<\"Overview of the CCP4 suite and current developments.\"\>", 
-     ",", "\<\"Establishing a standard definition for child overweight and \
-obesity worldwide: international survey.\"\>", 
-     ",", "\<\"The meaning and use of the area under a receiver operating \
-characteristic (ROC) curve.\"\>", 
-     ",", "\<\"Use of T7 RNA polymerase to direct expression of cloned genes.\
-\"\>", ",", "\<\"A haplotype map of the human genome.\"\>", 
-     ",", "\<\"Comprehensive genomic characterization defines human \
-glioblastoma genes and core pathways.\"\>", 
-     ",", "\<\"On the origin of cancer cells.\"\>", 
-     ",", "\<\"Deciphering the biology of Mycobacterium tuberculosis from the \
-complete genome sequence.\"\>", 
-     ",", "\<\"EuroQol--a new facility for the measurement of health-related \
-quality of life.\"\>", 
-     ",", "\<\"A genetic model for colorectal tumorigenesis.\"\>", 
-     ",", "\<\"A new and rapid colorimetric determination of \
-acetylcholinesterase activity.\"\>", 
-     ",", "\<\"A synaptic model of memory: long-term potentiation in the \
-hippocampus.\"\>", 
-     ",", "\<\"Finding the missing heritability of complex diseases.\"\>", 
-     ",", "\<\"Autism Diagnostic Interview-Revised: a revised version of a \
-diagnostic interview for caregivers of individuals with possible pervasive \
-developmental disorders.\"\>", 
-     ",", "\<\"Construction and characterization of amplifiable multicopy DNA \
-cloning vehicles derived from the P15A cryptic miniplasmid.\"\>", 
-     ",", "\<\"An integrative theory of prefrontal cortex function.\"\>", 
-     ",", "\<\"Base-calling of automated sequencer traces using phred. II. \
-Error probabilities.\"\>", 
-     ",", "\<\"The epithelial-mesenchymal transition generates cells with \
-properties of stem cells.\"\>", 
-     ",", "\<\"Generalized lacZ expression with the ROSA26 Cre reporter \
-strain.\"\>", 
-     ",", "\<\"Crystal structure of the nucleosome core particle at 2.8 A \
-resolution.\"\>", ",", "\<\"A global measure of perceived stress.\"\>", 
-     ",", "\<\"A power primer.\"\>", 
-     ",", "\<\"Introducing mothur: open-source, platform-independent, \
-community-supported software for describing and comparing microbial \
-communities.\"\>", 
-     ",", "\<\"The Genome Analysis Toolkit: a MapReduce framework for \
-analyzing next-generation DNA sequencing data.\"\>", 
-     ",", "\<\"Stages of embryonic development of the zebrafish.\"\>", 
-     ",", "\<\"Functional rafts in cell membranes.\"\>", 
-     ",", "\<\"Improved survival with ipilimumab in patients with metastatic \
-melanoma.\"\>", 
-     ",", "\<\"The language of covalent histone modifications.\"\>", 
-     ",", "\<\"EGFR mutations in lung cancer: correlation with clinical \
-response to gefitinib therapy.\"\>", 
-     ",", "\<\"Mutations of the BRAF gene in human cancer.\"\>", 
-     ",", "\<\"Blast2GO: a universal tool for annotation, visualization and \
-analysis in functional genomics research.\"\>", 
-     ",", "\<\"The ubiquitin system.\"\>", 
-     ",", "\<\"Operating characteristics of a rank correlation test for \
-publication bias.\"\>", 
-     ",", "\<\"Mass spectrometric sequencing of proteins silver-stained \
-polyacrylamide gels.\"\>", 
-     ",", "\<\"Collective dynamics of 'small-world' networks.\"\>", 
-     ",", "\<\"New response evaluation criteria in solid tumours: revised \
-RECIST guideline (version 1.1).\"\>", 
-     ",", "\<\"QIIME allows analysis of high-throughput community sequencing \
-data.\"\>", 
-     ",", "\<\"Inference of macromolecular assemblies from crystalline state.\
-\"\>", ",", "\<\"Integrins: bidirectional, allosteric signaling \
-machines.\"\>", 
-     ",", "\<\"Positional cloning of the mouse obese gene and its human \
-homologue.\"\>", 
-     ",", "\<\"Control of goal-directed and stimulus-driven attention in the \
-brain.\"\>", 
-     ",", "\<\"MEGA6: Molecular Evolutionary Genetics Analysis version 6.0.\"\
-\>", ",", "\<\"MOLMOL: a program for display and analysis of macromolecular \
-structures.\"\>", 
-     ",", "\<\"Screening lambdagt recombinant clones by hybridization to \
-single plaques in situ.\"\>", 
-     ",", "\<\"Functional connectivity in the motor cortex of resting human \
-brain using echo-planar MRI.\"\>", 
-     ",", "\<\"MAPMAKER: an interactive computer package for constructing \
-primary genetic linkage maps of experimental and natural populations.\"\>", 
-     ",", "\<\"Acetylornithinase of Escherichia coli:  partial purification \
-and some properties.\"\>", 
-     ",", "\<\"Apoptosis: a basic biological phenomenon with wide-ranging \
-implications in tissue kinetics.\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"\<\"Cleavage of structural proteins during the assembly of the \
-head of bacteriophage T4.\"\>", 
-     ",", "\<\"Protein measurement with the Folin phenol reagent.\"\>", 
-     ",", "\<\"Analysis of relative gene expression data using real-time \
-quantitative PCR and the 2(-Delta Delta C(T)) Method.\"\>", 
-     ",", "\<\"A rapid and sensitive method for the quantitation of microgram \
-quantities of protein utilizing the principle of protein-dye binding.\"\>", 
-     ",", "\<\"A short history of SHELX.\"\>", 
-     ",", "\<\"Basic local alignment search tool.\"\>", 
-     ",", "\<\"Gapped BLAST and PSI-BLAST: a new generation of protein \
-database search programs.\"\>", 
-     ",", "\<\"DNA sequencing with chain-terminating inhibitors.\"\>", 
-     ",", "\<\"Hallmarks of cancer: the next generation.\"\>", 
-     ",", "\<\"\\\"Mini-mental state\\\". A practical method for grading the \
-cognitive state of patients for the clinician.\"\>", 
-     ",", "\<\"CLUSTAL W: improving the sensitivity of progressive multiple \
-sequence alignment through sequence weighting, position-specific gap \
-penalties and weight matrix choice.\"\>", 
-     ",", "\<\"The Sequence Alignment/Map format and SAMtools.\"\>", 
-     ",", "\<\"Systematic and integrative analysis of large gene lists using \
-DAVID bioinformatics resources.\"\>", 
-     ",", "\<\"Global cancer statistics.\"\>", 
-     ",", "\<\"Fast and accurate short read alignment with Burrows-Wheeler \
-transform.\"\>", 
-     ",", "\<\"Electrophoretic transfer of proteins from polyacrylamide gels \
-to nitrocellulose sheets: procedure and some applications.\"\>", 
-     ",", "\<\"Measuring inconsistency in meta-analyses.\"\>", 
-     ",", "\<\"MicroRNAs: genomics, biogenesis, mechanism, and function.\"\>",
-      ",", "\<\"Coot: model-building tools for molecular graphics.\"\>", 
-     ",", "\<\"Gene ontology: tool for the unification of biology. The Gene \
-Ontology Consortium.\"\>", 
-     ",", "\<\"Gene set enrichment analysis: a knowledge-based approach for \
-interpreting genome-wide expression profiles.\"\>", 
-     ",", "\<\"Single-step method of RNA isolation by acid guanidinium \
-thiocyanate-phenol-chloroform extraction.\"\>", 
-     ",", "\<\"MUSCLE: multiple sequence alignment with high accuracy and \
-high throughput.\"\>", 
-     ",", "\<\"MEGA5: molecular evolutionary genetics analysis using maximum \
-likelihood, evolutionary distance, and maximum parsimony methods.\"\>", 
-     ",", "\<\"Global cancer statistics 2018: GLOBOCAN estimates of incidence \
-and mortality worldwide for 36 cancers in 185 countries.\"\>", 
-     ",", "\<\"Fast gapped-read alignment with Bowtie 2.\"\>", 
-     ",", "\<\"The neighbor-joining method: a new method for reconstructing \
-phylogenetic trees.\"\>", 
-     ",", "\<\"Bias in meta-analysis detected by a simple, graphical \
-test.\"\>", 
-     ",", "\<\"Detection of specific sequences among DNA fragments separated \
-by gel electrophoresis.\"\>", 
-     ",", "\<\"Processing of X-ray diffraction data collected in oscillation \
-mode.\"\>", 
-     ",", "\<\"Moderated estimation of fold change and  dispersion for \
-RNA-seq data with DESeq2.\"\>", 
-     ",", "\<\"MEGA6: Molecular Evolutionary Genetics Analysis version 6.0.\"\
-\>", ",", "\<\"UCSF Chimera--a visualization system for exploratory research \
-and analysis.\"\>", 
-     ",", "\<\"PLINK: a tool set for whole-genome association and \
-population-based linkage analyses.\"\>", 
-     ",", "\<\"Global cancer statistics, 2012.\"\>", 
-     ",", "\<\"NIH Image to ImageJ: 25 years of image analysis.\"\>", 
-     ",", "\<\"The measurement of observer agreement for categorical \
-data.\"\>", 
-     ",", "\<\"A new method of classifying prognostic comorbidity in \
-longitudinal studies: development and validation.\"\>", 
-     ",", "\<\"Preferred reporting items for systematic reviews and \
-meta-analyses: the PRISMA statement.\"\>", 
-     ",", "\<\"Fiji: an open-source platform for biological-image analysis.\"\
-\>", ",", "\<\"Meta-analysis in clinical trials.\"\>", 
-     ",", "\<\"A new mathematical model for relative quantification in \
-real-time RT-PCR.\"\>", 
-     ",", "\<\"Trimmomatic: a flexible trimmer for Illumina sequence \
-data.\"\>", 
-     ",", "\<\"A simple method for the isolation and purification of total \
-lipides from animal tissues.\"\>", 
-     ",", "\<\"Cytoscape: a software environment for integrated models of \
-biomolecular interaction networks.\"\>", 
-     ",", "\<\"edgeR: a Bioconductor package for differential expression \
-analysis of digital gene expression data.\"\>", 
-     ",", "\<\"PHENIX: a comprehensive Python-based system for macromolecular \
-structure solution.\"\>", 
-     ",", "\<\"QIIME allows analysis of high-throughput community sequencing \
-data.\"\>", ",", "\<\"Clustal W and Clustal X version 2.0.\"\>", 
-     ",", "\<\"Statistical methods for assessing agreement between two \
-methods of clinical measurement.\"\>", 
-     ",", "\<\"Cancer incidence and mortality worldwide: sources, methods and \
-major patterns in GLOBOCAN 2012.\"\>", 
-     ",", "\<\"VMD: visual molecular dynamics.\"\>", 
-     ",", "\<\"Ultrafast and memory-efficient alignment of short DNA \
-sequences to the human genome.\"\>", 
-     ",", "\<\"Features and development of Coot.\"\>", 
-     ",", "\<\"The assessment and analysis of handedness: the Edinburgh \
-inventory.\"\>", ",", "\<\"Phaser crystallographic software.\"\>", 
-     ",", "\<\"A rapid method of total lipid extraction and \
-purification.\"\>", 
-     ",", "\<\"The CLUSTAL_X windows interface: flexible strategies for \
-multiple sequence alignment aided by quality analysis tools.\"\>", 
-     ",", "\<\"The Protein Data Bank.\"\>", 
-     ",", "\<\"MEGA7: Molecular Evolutionary Genetics Analysis Version 7.0 \
-for Bigger Datasets.\"\>", 
-     ",", "\<\"The MOS 36-item short-form health survey (SF-36). I. \
-Conceptual framework and item selection.\"\>", 
-     ",", "\<\"MEGA4: Molecular Evolutionary Genetics Analysis (MEGA) \
-software version 4.0.\"\>", 
-     ",", "\<\"Clinical features of patients infected with 2019 novel \
-coronavirus in Wuhan, China.\"\>", 
-     ",", "\<\"The hospital anxiety and depression scale.\"\>", 
-     ",", "\<\"Induction of pluripotent stem cells from mouse embryonic and \
-adult fibroblast cultures by defined factors.\"\>", 
-     ",", "\<\"MicroRNAs: target recognition and regulatory functions.\"\>", 
-     ",", "\<\"Rapid colorimetric assay for cellular growth and survival: \
-application to proliferation and cytotoxicity assays.\"\>", 
-     ",", "\<\"Homeostasis model assessment: insulin resistance and beta-cell \
-function from fasting plasma glucose and insulin concentrations in man.\"\>", 
-     ",", "\<\"STAR: ultrafast universal RNA-seq aligner.\"\>", 
-     ",", "\<\"The hallmarks of cancer.\"\>", 
-     ",", "\<\"Floral dip: a simplified method for Agrobacterium-mediated \
-transformation of Arabidopsis thaliana.\"\>", 
-     ",", "\<\"The CCP4 suite: programs for protein crystallography.\"\>", 
-     ",", "\<\"The Genome Analysis Toolkit: a MapReduce framework for \
-analyzing next-generation DNA sequencing data.\"\>", 
-     ",", "\<\"Inference of population structure using multilocus genotype \
-data.\"\>", ",", "\<\"Structure validation in chemical crystallography.\"\>", 
-     ",", "\<\"Research electronic data capture (REDCap)--a metadata-driven \
-methodology and workflow process for providing translational research \
-informatics support.\"\>", 
-     ",", "\<\"KEGG: kyoto encyclopedia of genes and genomes.\"\>", 
-     ",", "\<\"Quantifying heterogeneity in a meta-analysis.\"\>", 
-     ",", "\<\"Analyzing real-time PCR data by the comparative C(T) method.\"\
-\>", ",", "\<\"A technique for radiolabeling DNA restriction endonuclease \
-fragments to high specific activity.\"\>", 
-     ",", "\<\"Refinement of macromolecular structures by the \
-maximum-likelihood method.\"\>", 
-     ",", "\<\"MAFFT multiple sequence alignment software version 7: \
-improvements in performance and usability.\"\>", 
-     ",", "\<\"Cancer statistics, 2016.\"\>", 
-     ",", "\<\"New response evaluation criteria in solid tumours: revised \
-RECIST guideline (version 1.1).\"\>", 
-     ",", "\<\"The PHQ-9: validity of a brief depression severity \
-measure.\"\>", 
-     ",", "\<\"Initial sequencing and analysis of the human genome.\"\>", 
-     ",", "\<\"Induction of pluripotent stem cells from adult human \
-fibroblasts by defined factors.\"\>", 
-     ",", "\<\"MrBayes 3: Bayesian phylogenetic inference under mixed models.\
-\"\>", ",", "\<\"Radiotherapy plus concomitant and adjuvant temozolomide for \
-glioblastoma.\"\>", 
-     ",", "\<\"Crystallography &amp; NMR system: A new software suite for \
-macromolecular structure determination.\"\>", 
-     ",", "\<\"Clinical diagnosis of Alzheimer's disease: report of the \
-NINCDS-ADRDA Work Group under the auspices of Department of Health and Human \
-Services Task Force on Alzheimer's Disease.\"\>", 
-     ",", "\<\"Improved M13 phage cloning vectors and host strains: \
-nucleotide sequences of the M13mp18 and pUC19 vectors.\"\>", 
-     ",", "\<\"An integrated encyclopedia of DNA elements in the human \
-genome.\"\>", 
-     ",", "\<\"Sequencing end-labeled DNA with base-specific chemical \
-cleavages.\"\>", 
-     ",", "\<\"RAxML version 8: a tool for phylogenetic analysis and \
-post-analysis of large phylogenies.\"\>", 
-     ",", "\<\"Accurate normalization of real-time quantitative RT-PCR data \
-by geometric averaging of multiple internal control genes.\"\>", 
-     ",", "\<\"Cancer Statistics, 2017.\"\>", 
-     ",", "\<\"Estimates of worldwide burden of cancer in 2008: GLOBOCAN \
-2008.\"\>", 
-     ",", "\<\"CONFIDENCE LIMITS ON PHYLOGENIES: AN APPROACH USING THE \
-BOOTSTRAP.\"\>", 
-     ",", "\<\"The moderator-mediator variable distinction in social \
-psychological research: conceptual, strategic, and statistical \
-considerations.\"\>", 
-     ",", "\<\"Executive Summary of The Third Report of The National \
-Cholesterol Education Program (NCEP) Expert Panel on Detection, Evaluation, \
-And Treatment of High Blood Cholesterol In Adults (Adult Treatment Panel \
-III).\"\>", 
-     ",", "\<\"G*Power 3: a flexible statistical power analysis program for \
-the social, behavioral, and biomedical sciences.\"\>", 
-     ",", "\<\"BEDTools: a flexible suite of utilities for comparing genomic \
-features.\"\>", 
-     ",", "\<\"One-step inactivation of chromosomal genes in Escherichia coli \
-K-12 using PCR products.\"\>", 
-     ",", "\<\"Estimation of the concentration of low-density lipoprotein \
-cholesterol in plasma, without use of the preparative ultracentrifuge.\"\>", 
-     ",", "\<\"A simple method for displaying the hydropathic character of a \
-protein.\"\>", 
-     ",", "\<\"Haploview: analysis and visualization of LD and haplotype \
-maps.\"\>", ",", "\<\"Global cancer statistics, 2002.\"\>", 
-     ",", "\<\"Differential expression analysis for sequence count data.\"\>",
-      ",", "\<\"Transcript assembly and quantification by RNA-Seq reveals \
-unannotated transcripts and isoform switching during cell \
-differentiation.\"\>", 
-     ",", "\<\"SPAdes: a new genome assembly algorithm and its applications \
-to single-cell sequencing.\"\>", ",", "\<\"XDS.\"\>", 
-     ",", "\<\"A new equation to estimate glomerular filtration rate.\"\>", 
-     ",", "\<\"Improved patch-clamp techniques for high-resolution current \
-recording from cells and cell-free membrane patches.\"\>", 
-     ",", "\<\"TopHat: discovering splice junctions with RNA-Seq.\"\>", 
-     ",", "\<\"Bioconductor: open software development for computational \
-biology and bioinformatics.\"\>", 
-     ",", "\<\"Cancer statistics in China, 2015.\"\>", 
-     ",", "\<\"The use of lead citrate at high pH as an electron-opaque stain \
-in electron microscopy.\"\>", 
-     ",", "\<\"Search and clustering orders of magnitude faster than BLAST.\"\
-\>", ",", "\<\"Generalized Gradient Approximation Made Simple.\"\>", 
-     ",", "\<\"A rating scale for depression.\"\>", 
-     ",", "\<\"Bioinformatics enrichment tools: paths toward the \
-comprehensive functional analysis of large gene lists.\"\>", 
-     ",", "\<\"Mapping and quantifying mammalian transcriptomes by RNA-Seq.\"\
-\>", ",", "\<\"NMRPipe: a multidimensional spectral processing system based \
-on UNIX pipes.\"\>", ",", "\<\"The genetics of Caenorhabditis elegans.\"\>", 
-     ",", "\<\"Cancer statistics, 2013.\"\>", 
-     ",", "\<\"Cancer statistics, 2015.\"\>", 
-     ",", "\<\"limma powers differential expression analyses for \
-RNA-sequencing and microarray studies.\"\>", 
-     ",", "\<\"Cancer statistics, 2010.\"\>", 
-     ",", "\<\"Cancer statistics, 2018.\"\>", 
-     ",", "\<\"Isolation of biologically active ribonucleic acid from sources \
-enriched in ribonuclease.\"\>", 
-     ",", "\<\"Classification of surgical complications: a new proposal with \
-evaluation in a cohort of 6336 patients and results of a survey.\"\>", 
-     ",", "\<\"An inventory for measuring depression.\"\>", 
-     ",", "\<\"Introducing mothur: open-source, platform-independent, \
-community-supported software for describing and comparing microbial \
-communities.\"\>", 
-     ",", "\<\"Linear models and empirical bayes methods for assessing \
-differential expression in microarray experiments.\"\>", 
-     ",", "\<\"HTSeq--a Python framework to work with high-throughput \
-sequencing data.\"\>", 
-     ",", "\<\"Full-length transcriptome assembly from RNA-Seq data without a \
-reference genome.\"\>", 
-     ",", "\<\"The Pittsburgh Sleep Quality Index: a new instrument for \
-psychiatric practice and research.\"\>", 
-     ",", "\<\"The Mini-International Neuropsychiatric Interview (M.I.N.I.): \
-the development and validation of a structured diagnostic psychiatric \
-interview for DSM-IV and ICD-10.\"\>", 
-     ",", "\<\"Clinical Characteristics of Coronavirus Disease 2019 in China.\
-\"\>", ",", "\<\"Cancer statistics, 2014.\"\>", 
-     ",", "\<\"MolProbity: all-atom structure validation for macromolecular \
-crystallography.\"\>", 
-     ",", "\<\"The American Rheumatism Association 1987 revised criteria for \
-the classification of rheumatoid arthritis.\"\>", 
-     ",", "\<\"Multilineage potential of adult human mesenchymal stem \
-cells.\"\>", 
-     ",", "\<\"A rapid alkaline extraction procedure for screening \
-recombinant plasmid DNA.\"\>", 
-     ",", "\<\"The Cochrane Collaboration's tool for assessing risk of bias \
-in randomised trials.\"\>", ",", "\<\"The Psychophysics Toolbox.\"\>", 
-     ",", "\<\"Primer3 on the WWW for general users and for biologist \
-programmers.\"\>", 
-     ",", "\<\"Obesity: preventing and managing the global epidemic. Report \
-of a WHO consultation.\"\>", 
-     ",", "\<\"A simple, fast, and accurate algorithm to estimate large \
-phylogenies by maximum likelihood.\"\>", 
-     ",", "\<\"TopHat2: accurate alignment of transcriptomes in the presence \
-of insertions, deletions and gene fusions.\"\>", 
-     ",", "\<\"A comprehensive set of sequence analysis programs for the VAX.\
-\"\>", ",", "\<\"Cluster analysis and display of genome-wide expression \
-patterns.\"\>", 
-     ",", "\<\"The Seventh Report of the Joint National Committee on \
-Prevention, Detection, Evaluation, and Treatment of High Blood Pressure: the \
-JNC 7 report.\"\>", 
-     ",", "\<\"Conserved seed pairing, often flanked by adenosines, indicates \
-that thousands of human genes are microRNA targets.\"\>", 
-     ",", "\<\"Automated anatomical labeling of activations in SPM using a \
-macroscopic anatomical parcellation of the MNI MRI single-subject brain.\"\>",
-      ",", "\<\"Cancer statistics, 2012.\"\>", 
-     ",", "\<\"New guidelines to evaluate the response to treatment in solid \
-tumors. European Organization for Research and Treatment of Cancer, National \
-Cancer Institute of the United States, National Cancer Institute of Canada.\"\
-\>", ",", "\<\"Preferred reporting items for systematic reviews and \
-meta-analyses: the PRISMA statement.\"\>", 
-     ",", "\<\"Exploration, normalization, and summaries of high density \
-oligonucleotide array probe level data.\"\>", 
-     ",", "\<\"A method and server for predicting damaging missense \
-mutations.\"\>", 
-     ",", "\<\"Differential gene and transcript expression analysis of \
-RNA-seq experiments with TopHat and Cufflinks.\"\>", 
-     ",", "\<\"A new generation of Ca2+ indicators with greatly improved \
-fluorescence properties.\"\>", 
-     ",", "\<\"Significance analysis of microarrays applied to the ionizing \
-radiation response.\"\>", 
-     ",", "\<\"Overview of the CCP4 suite and current developments.\"\>", 
-     ",", "\<\"Model-based analysis of ChIP-Seq (MACS).\"\>", 
-     ",", "\<\"A power primer.\"\>", 
-     ",", "\<\"Clinical Characteristics of 138 Hospitalized Patients With \
-2019 Novel Coronavirus-Infected Pneumonia in Wuhan, China.\"\>", 
-     ",", "\<\"New algorithms and methods to estimate maximum-likelihood \
-phylogenies: assessing the performance of PhyML 3.0.\"\>", 
-     ",", "\<\"Mfold web server for nucleic acid folding and hybridization \
-prediction.\"\>", 
-     ",", "\<\"Clinical course and risk factors for mortality of adult \
-inpatients with COVID-19 in Wuhan, China: a retrospective cohort study.\"\>", 
-     ",", "\<\"The RAST Server: rapid annotations using subsystems \
-technology.\"\>", 
-     ",", "\<\"Naive Bayesian classifier for rapid assignment of rRNA \
-sequences into the new bacterial taxonomy.\"\>", 
-     ",", "\<\"Scalable molecular dynamics with NAMD.\"\>", 
-     ",", "\<\"Improved survival with ipilimumab in patients with metastatic \
-melanoma.\"\>", ",", "\<\"A global measure of perceived stress.\"\>", 
-     ",", "\<\"The effect of intensive treatment of diabetes on the \
-development and progression of long-term complications in insulin-dependent \
-diabetes mellitus.\"\>", 
-     ",", "\<\"Molecular portraits of human breast tumours.\"\>", 
-     ",", "\<\"Multiplex genome engineering using CRISPR/Cas systems.\"\>", 
-     ",", "\<\"Gene Expression Omnibus: NCBI gene expression and \
-hybridization array data repository.\"\>", 
-     ",", "\<\"tRNAscan-SE: a program for improved detection of transfer RNA \
-genes in genomic sequence.\"\>", 
-     ",", "\<\"Meta-analysis of observational studies in epidemiology: a \
-proposal for reporting. Meta-analysis Of Observational Studies in \
-Epidemiology (MOOSE) group.\"\>", 
-     ",", "\<\"Labeling deoxyribonucleic acid to high specific activity in \
-vitro by nick translation with DNA polymerase I.\"\>", 
-     ",", "\<\"Understanding the Warburg effect: the metabolic requirements \
-of cell proliferation.\"\>", 
-     ",", "\<\"A simple method for estimating evolutionary rates of base \
-substitutions through comparative studies of nucleotide sequences.\"\>", 
-     ",", "\<\"RAxML-VI-HPC: maximum likelihood-based phylogenetic analyses \
-with thousands of taxa and mixed models.\"\>", 
-     ",", "\<\"The cBio cancer genomics portal: an open platform for \
-exploring multidimensional cancer genomics data.\"\>", 
-     ",", "\<\"Reduction in the incidence of type 2 diabetes with lifestyle \
-intervention or metformin.\"\>", 
-     ",", "\<\"Minimal criteria for defining multipotent mesenchymal stromal \
-cells. The International Society for Cellular Therapy position \
-statement.\"\>", 
-     ",", "\<\"MRBAYES: Bayesian inference of phylogenetic trees.\"\>", 
-     ",", "\<\"WebLogo: a sequence logo generator.\"\>", 
-     ",", "\<\"Velvet: algorithms for de novo short read assembly using de \
-Bruijn graphs.\"\>", 
-     ",", "\<\"Advances in functional and structural MR image analysis and \
-implementation as FSL.\"\>", 
-     ",", "\<\"RSEM: accurate transcript quantification from RNA-Seq data \
-with or without a reference genome.\"\>", 
-     ",", "\<\"Development and validation of brief measures of positive and \
-negative affect: the PANAS scales.\"\>", 
-     ",", "\<\"A 12-Item Short-Form Health Survey: construction of scales and \
-preliminary tests of reliability and validity.\"\>", 
-     ",", "\<\"Comparing the areas under two or more correlated receiver \
-operating characteristic curves: a nonparametric approach.\"\>", 
-     ",", "\<\"Operating characteristics of a rank correlation test for \
-publication bias.\"\>", 
-     ",", "\<\"Principal components analysis corrects for stratification in \
-genome-wide association studies.\"\>", 
-     ",", "\<\"Predicting transmembrane protein topology with a hidden Markov \
-model: application to complete genomes.\"\>", 
-     ",", "\<\"A Novel Coronavirus from Patients with Pneumonia in China, \
-2019.\"\>", 
-     ",", "\<\"Comprehensive molecular portraits of human breast \
-tumours.\"\>", ",", "\<\"Inflammation and cancer.\"\>", 
-     ",", "\<\"Development of the Colle-Salvetti correlation-energy formula \
-into a functional of the electron density.\"\>", 
-     ",", "\<\"Third Report of the National Cholesterol Education Program \
-(NCEP) Expert Panel on Detection, Evaluation, and Treatment of High Blood \
-Cholesterol in Adults (Adult Treatment Panel III) final report.\"\>", 
-     ",", "\<\"Comparative protein modelling by satisfaction of spatial \
-restraints.\"\>", 
-     ",", "\<\"Blast2GO: a universal tool for annotation, visualization and \
-analysis in functional genomics research.\"\>", 
-     ",", "\<\"Geneious Basic: an integrated and extendable desktop software \
-platform for the organization and analysis of sequence data.\"\>", 
-     ",", "\<\"A system of shuttle vectors and yeast host strains designed \
-for efficient manipulation of DNA in Saccharomyces cerevisiae.\"\>", 
-     ",", "\<\"Cancer statistics, 2019.\"\>", 
-     ",", "\<\"Safety, activity, and immune correlates of anti-PD-1 antibody \
-in cancer.\"\>", 
-     ",", "\<\"Intensive blood-glucose control with sulphonylureas or insulin \
-compared with conventional treatment and risk of complications in patients \
-with type 2 diabetes (UKPDS 33). UK Prospective Diabetes Study (UKPDS) Group.\
-\"\>", ",", "\<\"MaxQuant enables high peptide identification rates, \
-individualized p.p.b.-range mass accuracies and proteome-wide protein \
-quantification.\"\>", 
-     ",", "\<\"A simple salting out procedure for extracting DNA from human \
-nucleated cells.\"\>", 
-     ",", "\<\"Fast, scalable generation of high-quality protein multiple \
-sequence alignments using Clustal Omega.\"\>", 
-     ",", "\<\"PAML 4: phylogenetic analysis by maximum likelihood.\"\>", 
-     ",", "\<\"Lifetime prevalence and age-of-onset distributions of DSM-IV \
-disorders in the National Comorbidity Survey Replication.\"\>", 
-     ",", "\<\"Detecting the number of clusters of individuals using the \
-software STRUCTURE: a simulation study.\"\>", 
-     ",", "\<\"Three approaches to qualitative content analysis.\"\>", 
-     ",", "\<\"Atherosclerosis--an inflammatory disease.\"\>", 
-     ",", "\<\"Integrative analysis of complex cancer genomics and clinical \
-profiles using the cBioPortal.\"\>", 
-     ",", "\<\"The functions of animal microRNAs.\"\>", 
-     ",", "\<\"Standards and guidelines for the interpretation of sequence \
-variants: a joint consensus recommendation of the American College of Medical \
-Genetics and Genomics and the Association for Molecular Pathology.\"\>", 
-     ",", "\<\"A framework for variation discovery and genotyping using \
-next-generation DNA sequencing data.\"\>", 
-     ",", "\<\"EEGLAB: an open source toolbox for analysis of single-trial \
-EEG dynamics including independent component analysis.\"\>", 
-     ",", "\<\"Frailty in older adults: evidence for a phenotype.\"\>", 
-     ",", "\<\"Neuropathological stageing of Alzheimer-related changes.\"\>", 
-     ",", "\<\"AFNI: software for analysis and visualization of functional \
-magnetic resonance neuroimages.\"\>", 
-     ",", "\<\"Global and regional mortality from 235 causes of death for 20 \
-age groups in 1990 and 2010: a systematic analysis for the Global Burden of \
-Disease Study 2010.\"\>", 
-     ",", "\<\"EuroQol--a new facility for the measurement of health-related \
-quality of life.\"\>", 
-     ",", "\<\"Primer-directed enzymatic amplification of DNA with a \
-thermostable DNA polymerase.\"\>", 
-     ",", "\<\"MrBayes 3.2: efficient Bayesian phylogenetic inference and \
-model choice across a large model space.\"\>", 
-     ",", "\<\"Cancer statistics, 2009.\"\>", 
-     ",", "\<\"DAVID: Database for Annotation, Visualization, and Integrated \
-Discovery.\"\>", 
-     ",", "\<\"Epidemiological and clinical characteristics of 99 cases of \
-2019 novel coronavirus pneumonia in Wuhan, China: a descriptive study.\"\>", 
-     ",", "\<\"High resolution two-dimensional electrophoresis of proteins.\"\
-\>", ",", "\<\"Assessing the quality of reports of randomized clinical \
-trials: is blinding necessary?\"\>", 
-     ",", "\<\"The positive and negative syndrome scale (PANSS) for \
-schizophrenia.\"\>", 
-     ",", "\<\"A more accurate method to estimate glomerular filtration rate \
-from serum creatinine: a new prediction equation. Modification of Diet in \
-Renal Disease Study Group.\"\>", 
-     ",", "\<\"Accurate transcription initiation by RNA polymerase II in a \
-soluble extract from isolated mammalian nuclei.\"\>", 
-     ",", "\<\"On the origin of cancer cells.\"\>", 
-     ",", "\<\"BLAST+: architecture and applications.\"\>", 
-     ",", "\<\"Preferred reporting items for systematic reviews and \
-meta-analyses: the PRISMA statement.\"\>", 
-     ",", "\<\"Cancer statistics, 2008.\"\>", 
-     ",", "\<\"Genome-wide association study of 14,000 cases of seven common \
-diseases and 3,000 shared controls.\"\>", 
-     ",", "\<\"A quantitative description of membrane current and its \
-application to conduction and excitation in nerve.\"\>", 
-     ",", "\<\"Statistical significance for genomewide studies.\"\>", 
-     ",", "\<\"DnaSP v5: a software for comprehensive analysis of DNA \
-polymorphism data.\"\>", 
-     ",", "\<\"The amyloid hypothesis of Alzheimer's disease: progress and \
-problems on the road to therapeutics.\"\>", 
-     ",", "\<\"Embryonic stem cell lines derived from human blastocysts.\"\>",
-      ",", "\<\"Assay for lipid peroxides in animal tissues by thiobarbituric \
-acid reaction.\"\>", 
-     ",", "\<\"Studies on transformation of Escherichia coli with plasmids.\"\
-\>", ",", "\<\"The SILVA ribosomal RNA gene database project: improved data \
-processing and web-based tools.\"\>", 
-     ",", "\<\"The human genome browser at UCSC.\"\>", 
-     ",", "\<\"RNA-Seq: a revolutionary tool for transcriptomics.\"\>", 
-     ",", "\<\"Intraclass correlations: uses in assessing rater \
-reliability.\"\>", 
-     ",", "\<\"International physical activity questionnaire: 12-country \
-reliability and validity.\"\>", 
-     ",", "\<\"The 2007 WHO classification of tumours of the central nervous \
-system.\"\>", ",", "\<\"A default mode of brain function.\"\>", 
-     ",", "\<\"Epithelial-mesenchymal transitions in development and disease.\
-\"\>", ",", "\<\"Exosome-mediated transfer of mRNAs and microRNAs is a novel \
-mechanism of genetic exchange between cells.\"\>", 
-     ",", "\<\"The C. elegans heterochronic gene lin-4 encodes small RNAs \
-with antisense complementarity to lin-14.\"\>", 
-     ",", "\<\"Measurement of protein using bicinchoninic acid.\"\>", 
-     ",", "\<\"Statistical aspects of the analysis of data from retrospective \
-studies of disease.\"\>", 
-     ",", "\<\"Improved methods for building protein models in electron \
-density maps and the location of errors in these models.\"\>", 
-     ",", "\<\"Chromatin modifications and their function.\"\>", 
-     ",", "\<\"A map of human genome variation from population-scale \
-sequencing.\"\>", ",", "\<\"Integrative genomics viewer.\"\>", 
-     ",", "\<\"Improved optimization for the robust and accurate linear \
-registration and motion correction of brain images.\"\>", 
-     ",", "\<\"Sorafenib in advanced hepatocellular carcinoma.\"\>", 
-     ",", "\<\"ANNOVAR: functional annotation of genetic variants from \
-high-throughput sequencing data.\"\>", 
-     ",", "\<\"WGCNA: an R package for weighted correlation network analysis.\
-\"\>", ",", "\<\"The MIQE guidelines: minimum information for publication of \
-quantitative real-time PCR experiments.\"\>", 
-     ",", "\<\"Standardisation of spirometry.\"\>", 
-     ",", "\<\"Prospective identification of tumorigenic breast cancer cells.\
-\"\>", ",", "\<\"World Medical Association Declaration of Helsinki: ethical \
-principles for medical research involving human subjects.\"\>", 
-     ",", "\<\"Vitamin D deficiency.\"\>", 
-     ",", "\<\"Induced pluripotent stem cell lines derived from human somatic \
-cells.\"\>", 
-     ",", "\<\"Analysis of protein-coding genetic variation in 60,706 humans.\
-\"\>", ",", "\<\"An integrated map of genetic variation from 1,092 human \
-genomes.\"\>", 
-     ",", "\<\"Dictionary of protein secondary structure: pattern recognition \
-of hydrogen-bonded and geometrical features.\"\>", 
-     ",", "\<\"Potent and specific genetic interference by double-stranded \
-RNA in Caenorhabditis elegans.\"\>", 
-     ",", "\<\"UCHIME improves sensitivity and speed of chimera \
-detection.\"\>", 
-     ",", "\<\"A programmable dual-RNA-guided DNA endonuclease in adaptive \
-bacterial immunity.\"\>", 
-     ",", "\<\"Inference of macromolecular assemblies from crystalline state.\
-\"\>", ",", "\<\"A comparison of normalization methods for high density \
-oligonucleotide array data based on variance and bias.\"\>", 
-     ",", "\<\"BLAT--the BLAST-like alignment tool.\"\>", 
-     ",", "\<\"All-atom empirical potential for molecular modeling and \
-dynamics studies of proteins.\"\>", 
-     ",", "\<\"The Fagerstr\[CapitalATilde]\[Paragraph]m Test for Nicotine \
-Dependence: a revision of the Fagerstr\[CapitalATilde]\[Paragraph]m Tolerance \
-Questionnaire.\"\>", 
-     ",", "\<\"AutoDock Vina: improving the speed and accuracy of docking \
-with a new scoring function, efficient optimization, and multithreading.\"\>",
-      ",", "\<\"Gene expression patterns of breast carcinomas distinguish \
-tumor subclasses with clinical implications.\"\>", 
-     ",", "\<\"The epithelial-mesenchymal transition generates cells with \
-properties of stem cells.\"\>", 
-     ",", "\<\"SignalP 4.0: discriminating signal peptides from transmembrane \
-regions.\"\>", 
-     ",", "\<\"The Montreal Cognitive Assessment, MoCA: a brief screening \
-tool for mild cognitive impairment.\"\>", 
-     ",", "\<\"MicroRNA expression profiles classify human cancers.\"\>", 
-     ",", "\<\"Statistical method for testing the neutral mutation hypothesis \
-by DNA polymorphism.\"\>", 
-     ",", "\<\"APACHE II: a severity of disease classification system.\"\>", 
-     ",", "\<\"The basics of epithelial-mesenchymal transition.\"\>", 
-     ",", "\<\"The blockade of immune checkpoints in cancer \
-immunotherapy.\"\>", 
-     ",", "\<\"Fast and accurate long-read alignment with Burrows-Wheeler \
-transform.\"\>", ",", "\<\"Fast robust automated brain extraction.\"\>", 
-     ",", "\<\"A global reference for human genetic variation.\"\>", 
-     ",", "\<\"Global prevalence of diabetes: estimates for the year 2000 and \
-projections for 2030.\"\>", 
-     ",", "\<\"Collective dynamics of 'small-world' networks.\"\>", 
-     ",", "\<\"BEAST: Bayesian evolutionary analysis by sampling trees.\"\>", 
-     ",", "\<\"Matrix elasticity directs stem cell lineage \
-specification.\"\>", 
-     ",", "\<\"Greengenes, a chimera-checked 16S rRNA gene database and \
-workbench compatible with ARB.\"\>", 
-     ",", "\<\"COPPER ENZYMES IN ISOLATED CHLOROPLASTS. POLYPHENOLOXIDASE IN \
-BETA VULGARIS.\"\>", 
-     ",", "\<\"Targeted gene expression as a means of altering cell fates and \
-generating dominant phenotypes.\"\>", 
-     ",", "\<\"Dendritic cells and the control of immunity.\"\>", 
-     ",", "\<\"GenAlEx 6.5: genetic analysis in Excel. Population genetic \
-software for teaching and research--an update.\"\>", 
-     ",", "\<\"MODELTEST: testing the model of DNA substitution.\"\>", 
-     ",", "\<\"Cancer-related inflammation.\"\>", 
-     ",", "\<\"EMBOSS: the European Molecular Biology Open Software \
-Suite.\"\>", ",", "\<\"Tissue sulfhydryl groups.\"\>", 
-     ",", "\<\"The meaning and use of the area under a receiver operating \
-characteristic (ROC) curve.\"\>", 
-     ",", "\<\"Functional connectivity in the motor cortex of resting human \
-brain using echo-planar MRI.\"\>", 
-     ",", "\<\"Harmonizing the metabolic syndrome: a joint interim statement \
-of the International Diabetes Federation Task Force on Epidemiology and \
-Prevention; National Heart, Lung, and Blood Institute; American Heart \
-Association; World Heart Federation; International Atherosclerosis Society; \
-and International Association for the Study of Obesity.\"\>", 
-     ",", "\<\"K/DOQI clinical practice guidelines for chronic kidney \
-disease: evaluation, classification, and stratification.\"\>", 
-     ",", "\<\"Seventh report of the Joint National Committee on Prevention, \
-Detection, Evaluation, and Treatment of High Blood Pressure.\"\>", 
-     ",", "\<\"GUS fusions: beta-glucuronidase as a sensitive and versatile \
-gene fusion marker in higher plants.\"\>", 
-     ",", "\<\"Activating mutations in the epidermal growth factor receptor \
-underlying responsiveness of non-small-cell lung cancer to gefitinib.\"\>", 
-     ",", "\<\"Cortical surface-based analysis. I. Segmentation and surface \
-reconstruction.\"\>", 
-     ",", "\<\"Consolidated criteria for reporting qualitative research \
-(COREQ): a 32-item checklist for interviews and focus groups.\"\>", 
-     ",", "\<\"Simple combinations of lineage-determining transcription \
-factors prime cis-regulatory elements required for macrophage and B cell \
-identities.\"\>", 
-     ",", "\<\"The Third International Consensus Definitions for Sepsis and \
-Septic Shock (Sepsis-3).\"\>", 
-     ",", "\<\"The reliability of molecular weight determinations by dodecyl \
-sulfate-polyacrylamide gel electrophoresis.\"\>", 
-     ",", "\<\"Preferred reporting items for systematic review and \
-meta-analysis protocols (PRISMA-P) 2015 statement.\"\>", 
-     ",", "\<\"A new technique for the assay of infectivity of human \
-adenovirus 5 DNA.\"\>", 
-     ",", "\<\"A new method for measuring daytime sleepiness: the Epworth \
-sleepiness scale.\"\>", 
-     ",", "\<\"Pathogen recognition and innate immunity.\"\>", 
-     ",", "\<\"Stages of embryonic development of the zebrafish.\"\>", 
-     ",", "\<\"Comprehensive genomic characterization defines human \
-glioblastoma genes and core pathways.\"\>", 
-     ",", "\<\"Crystal structure refinement with SHELXL.\"\>", 
-     ",", "\<\"Stem cells, cancer, and cancer stem cells.\"\>", 
-     ",", "\<\"An obesity-associated gut microbiome with increased capacity \
-for energy harvest.\"\>"}], "}"}]}], "}"}]], "Output",
- CellChangeTimes->{{3.960930101799416*^9, 3.960930222114427*^9}, 
-   3.9609302792554283`*^9},
- CellLabel->"Out[35]=",ExpressionUUID->"b9fd5f4d-f7a1-4369-9756-6daf8edb3559"]
-}, Open  ]],
+  3.960930270251017*^9, 3.960930276443968*^9}, {3.9617889030359077`*^9, 
+  3.961788930637409*^9}},
+ CellLabel->
+  "In[283]:=",ExpressionUUID->"b2fc754b-72bd-4fd3-8a4b-2b1c5e27f640"],
 
 Cell[BoxData[
  RowBox[{"(*", 
@@ -4202,9 +2078,23 @@ Cell[BoxData[
      "<>", "\"\<top1pctitle.save\>\""}], ",", "top1pctitle"}], "]"}], 
   "*)"}]], "Input",
  CellChangeTimes->{{3.960929647911903*^9, 3.960929689188724*^9}, {
-  3.960930309160397*^9, 
-  3.960930340897887*^9}},ExpressionUUID->"54e2f9fd-0824-484b-bb95-\
-55541a313903"]
+  3.960930309160397*^9, 3.960930340897887*^9}, {3.961788978244554*^9, 
+  3.96178899190819*^9}},ExpressionUUID->"54e2f9fd-0824-484b-bb95-\
+55541a313903"],
+
+Cell[CellGroupData[{
+
+Cell["\:4ee3\:8868\:30ea\:30b9\:30c8", "Subsection",
+ CellChangeTimes->{{3.959739965181733*^9, 3.959739979412065*^9}, {
+  3.959740587651339*^9, 3.959740590806313*^9}, {3.961789013597825*^9, 
+  3.961789019495791*^9}},ExpressionUUID->"2c7cd6e9-2b43-4342-9137-\
+72b25231e516"],
+
+Cell["\:8003\:3048\:4e2d", "Text",
+ CellChangeTimes->{{3.96178902775762*^9, 
+  3.961789041650404*^9}},ExpressionUUID->"a0bac819-2726-43ac-b267-\
+fd6e70ac4dca"]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
@@ -4232,108 +2122,115 @@ Cell[CellGroupData[{
 Cell[812, 30, 288, 4, 66, "Section",ExpressionUUID->"ff4ab109-9abc-4c89-812f-769fb73968bb"],
 Cell[1103, 36, 191, 3, 33, "Text",ExpressionUUID->"02be00cf-b43e-4800-9622-bce06ea49085"],
 Cell[CellGroupData[{
-Cell[1319, 43, 495, 9, 49, "Input",ExpressionUUID->"f13a9059-ab8d-4d43-b655-a51051b17b40"],
-Cell[1817, 54, 503, 9, 53, "Output",ExpressionUUID->"6150a0be-2cde-4b07-96b8-65cb6a0016bf"]
+Cell[1319, 43, 500, 10, 49, "Input",ExpressionUUID->"f13a9059-ab8d-4d43-b655-a51051b17b40"],
+Cell[1822, 55, 532, 10, 53, "Output",ExpressionUUID->"7f2659e9-d081-488e-bdef-978de11ea0ce"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2369, 69, 390, 6, 66, "Section",ExpressionUUID->"c3f35bc8-835c-4f0b-ba40-f379520c1c25"],
+Cell[2403, 71, 390, 6, 66, "Section",ExpressionUUID->"c3f35bc8-835c-4f0b-ba40-f379520c1c25"],
 Cell[CellGroupData[{
-Cell[2784, 79, 528, 12, 98, "Input",ExpressionUUID->"e37a57e2-269a-439e-8f04-f08ad985ea53"],
-Cell[3315, 93, 2022, 34, 625, "Output",ExpressionUUID->"5d8936d3-5916-4fea-b692-6b276985d2c6"]
+Cell[2818, 81, 533, 13, 98, "Input",ExpressionUUID->"e37a57e2-269a-439e-8f04-f08ad985ea53"],
+Cell[3354, 96, 2053, 36, 625, "Output",ExpressionUUID->"4562dd0b-5a64-46f8-8f88-ebd1f891a767"]
 }, Open  ]],
-Cell[5352, 130, 255, 5, 42, "Input",ExpressionUUID->"44cbc6fb-a1b9-4471-b956-bc1de33bab2d"],
+Cell[5422, 135, 260, 6, 42, "Input",ExpressionUUID->"44cbc6fb-a1b9-4471-b956-bc1de33bab2d"],
 Cell[CellGroupData[{
-Cell[5632, 139, 195, 3, 53, "Subsection",ExpressionUUID->"21a4d85a-b2f0-41e3-a9ac-c41788f455d8"],
-Cell[5830, 144, 198, 3, 33, "Text",ExpressionUUID->"b3135bd1-db09-47bd-af54-a9492c90ee7b"],
-Cell[6031, 149, 1031, 26, 133, "Input",ExpressionUUID->"402b8b86-b634-4254-97e2-580d6aa2fc43"],
-Cell[7065, 177, 309, 5, 33, "Text",ExpressionUUID->"b3cef364-977f-4412-a3bf-cb2989cf03be"],
+Cell[5707, 145, 195, 3, 53, "Subsection",ExpressionUUID->"21a4d85a-b2f0-41e3-a9ac-c41788f455d8"],
+Cell[5905, 150, 253, 4, 33, "Text",ExpressionUUID->"b3135bd1-db09-47bd-af54-a9492c90ee7b"],
 Cell[CellGroupData[{
-Cell[7399, 186, 562, 9, 42, "Input",ExpressionUUID->"bbebf064-787d-4c9d-8670-34eef54dbc5f"],
-Cell[7964, 197, 496, 9, 33, "Output",ExpressionUUID->"41fe9c42-488a-402d-ae99-dd1759c869f9"]
+Cell[6183, 158, 1142, 29, 169, "Input",ExpressionUUID->"402b8b86-b634-4254-97e2-580d6aa2fc43"],
+Cell[7328, 189, 156, 3, 33, "Output",ExpressionUUID->"3b1b29b3-2d80-4ac2-9b70-90f226e13d60"]
 }, Open  ]],
-Cell[8475, 209, 434, 7, 33, "Text",ExpressionUUID->"20a152dd-34f0-4a50-9b32-6062ca6c9033"],
+Cell[7499, 195, 309, 5, 33, "Text",ExpressionUUID->"b3cef364-977f-4412-a3bf-cb2989cf03be"],
 Cell[CellGroupData[{
-Cell[8934, 220, 363, 8, 42, "Input",ExpressionUUID->"fb11ccf5-d30c-4805-a4fb-4a9fb93df8e4"],
-Cell[9300, 230, 792, 14, 74, "Output",ExpressionUUID->"d3d2eb1e-6073-499a-a5e1-0919a895110f"]
+Cell[7833, 204, 567, 10, 42, "Input",ExpressionUUID->"bbebf064-787d-4c9d-8670-34eef54dbc5f"],
+Cell[8403, 216, 523, 10, 33, "Output",ExpressionUUID->"8e1631f4-8125-4f17-965f-f9a57ed95715"]
+}, Open  ]],
+Cell[8941, 229, 434, 7, 33, "Text",ExpressionUUID->"20a152dd-34f0-4a50-9b32-6062ca6c9033"],
+Cell[CellGroupData[{
+Cell[9400, 240, 367, 9, 42, "Input",ExpressionUUID->"fb11ccf5-d30c-4805-a4fb-4a9fb93df8e4"],
+Cell[9770, 251, 818, 15, 74, "Output",ExpressionUUID->"ee20acd4-2891-4280-be52-4ef95a4bd9c6"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[10141, 250, 233, 4, 53, "Subsection",ExpressionUUID->"614e77bd-0a50-496f-85bd-fd9dcbd68e8b"],
-Cell[10377, 256, 687, 16, 42, "Input",ExpressionUUID->"4ed62660-c6ba-48bd-a2e1-39c01088aded"],
-Cell[11067, 274, 337, 5, 33, "Text",ExpressionUUID->"44a660f4-885d-4f40-bb10-f301cbad25d8"],
+Cell[10637, 272, 233, 4, 53, "Subsection",ExpressionUUID->"614e77bd-0a50-496f-85bd-fd9dcbd68e8b"],
+Cell[10873, 278, 692, 17, 42, "Input",ExpressionUUID->"4ed62660-c6ba-48bd-a2e1-39c01088aded"],
+Cell[11568, 297, 337, 5, 33, "Text",ExpressionUUID->"44a660f4-885d-4f40-bb10-f301cbad25d8"],
 Cell[CellGroupData[{
-Cell[11429, 283, 1273, 31, 113, "Input",ExpressionUUID->"ee6aa304-6ce8-4059-87d1-e9bac3e0e495"],
-Cell[12705, 316, 15604, 267, 1422, "Output",ExpressionUUID->"a0ff4af8-2348-47ff-bb4c-4e2f5b33469b"]
+Cell[11930, 306, 1278, 32, 113, "Input",ExpressionUUID->"ee6aa304-6ce8-4059-87d1-e9bac3e0e495"],
+Cell[13211, 340, 15631, 268, 1422, "Output",ExpressionUUID->"f24654bf-1d87-475e-967f-5fa7766edab6"]
 }, Open  ]],
-Cell[28324, 586, 409, 7, 33, "Text",ExpressionUUID->"002b603f-eb9e-4fd0-90bc-df517ac574a4"],
+Cell[28857, 611, 409, 7, 33, "Text",ExpressionUUID->"002b603f-eb9e-4fd0-90bc-df517ac574a4"],
 Cell[CellGroupData[{
-Cell[28758, 597, 336, 6, 42, "Input",ExpressionUUID->"dc3376b5-48ce-4100-827b-5b05904fdf4c"],
-Cell[29097, 605, 441, 8, 33, "Output",ExpressionUUID->"3250803e-1b8e-4906-ab1f-719b1f5e9930"]
+Cell[29291, 622, 341, 7, 42, "Input",ExpressionUUID->"dc3376b5-48ce-4100-827b-5b05904fdf4c"],
+Cell[29635, 631, 471, 10, 33, "Output",ExpressionUUID->"722442fd-3998-4bb3-9ef3-64d346e4985a"]
 }, Open  ]],
-Cell[29553, 616, 578, 9, 33, "Text",ExpressionUUID->"79134c74-2e63-4318-bbad-81f345b7a00c"],
+Cell[30121, 644, 578, 9, 33, "Text",ExpressionUUID->"79134c74-2e63-4318-bbad-81f345b7a00c"],
 Cell[CellGroupData[{
-Cell[30156, 629, 375, 8, 42, "Input",ExpressionUUID->"0a0b780d-ccac-434d-94a1-85717e5eba9e"],
-Cell[30534, 639, 648, 11, 53, "Output",ExpressionUUID->"9ccce2a6-7efa-4f06-8495-fd1981024c5c"]
+Cell[30724, 657, 379, 9, 42, "Input",ExpressionUUID->"0a0b780d-ccac-434d-94a1-85717e5eba9e"],
+Cell[31106, 668, 677, 13, 53, "Output",ExpressionUUID->"b4384b7e-ab7c-4281-8abb-0432e46c7671"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[31231, 656, 251, 4, 53, "Subsection",ExpressionUUID->"26783cb4-a9d3-47c0-bf57-5b578c6b2651"],
+Cell[31832, 687, 251, 4, 53, "Subsection",ExpressionUUID->"26783cb4-a9d3-47c0-bf57-5b578c6b2651"],
 Cell[CellGroupData[{
-Cell[31507, 664, 277, 5, 42, "Input",ExpressionUUID->"26ba4fc5-0a71-4fb4-8d9b-d39af1a9c68f"],
-Cell[31787, 671, 380, 7, 33, "Output",ExpressionUUID->"23a356fd-31b9-4762-bb35-8d4cfbc38180"]
+Cell[32108, 695, 281, 6, 42, "Input",ExpressionUUID->"26ba4fc5-0a71-4fb4-8d9b-d39af1a9c68f"],
+Cell[32392, 703, 405, 8, 33, "Output",ExpressionUUID->"a2ffe8ef-534f-42f5-84a7-283686eeca79"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[32204, 683, 919, 21, 117, "Input",ExpressionUUID->"146c5387-a6a6-40eb-9bd0-5d98af45d44e"],
-Cell[33126, 706, 11470, 267, 281, "Output",ExpressionUUID->"f95bd31c-1571-41bd-8fcb-f18dc83ccbff"]
+Cell[32834, 716, 923, 22, 117, "Input",ExpressionUUID->"146c5387-a6a6-40eb-9bd0-5d98af45d44e"],
+Cell[33760, 740, 11496, 268, 281, "Output",ExpressionUUID->"c0bbb6fb-7892-4762-8804-4447e51ed156"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[44633, 978, 888, 19, 81, "Input",ExpressionUUID->"df356942-c1e5-465d-9548-949546ac9300"],
-Cell[45524, 999, 12467, 273, 298, "Output",ExpressionUUID->"87df8890-89f5-43fb-ab24-90fd228d909c"]
+Cell[45293, 1013, 892, 20, 81, "Input",ExpressionUUID->"df356942-c1e5-465d-9548-949546ac9300"],
+Cell[46188, 1035, 12495, 274, 298, "Output",ExpressionUUID->"01414cf1-363f-49dc-9cc9-1edd980e8fc2"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[58028, 1277, 852, 18, 81, "Input",ExpressionUUID->"98590867-b3bc-481c-9094-33e29c24e446"],
-Cell[58883, 1297, 12932, 282, 290, "Output",ExpressionUUID->"b5f44628-0eae-415f-af16-46f5adfc7469"]
+Cell[58720, 1314, 856, 19, 81, "Input",ExpressionUUID->"98590867-b3bc-481c-9094-33e29c24e446"],
+Cell[59579, 1335, 12960, 283, 290, "Output",ExpressionUUID->"a56d0ae6-9679-41b9-a4f8-f3e88b2b9054"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[71876, 1586, 242, 4, 66, "Section",ExpressionUUID->"71264b11-80d5-4ae9-9591-6d9aea8dae4a"],
-Cell[72121, 1592, 240, 5, 42, "Text",ExpressionUUID->"95f42ead-3d8b-4d77-b211-f2553e57d8bd"],
-Cell[72364, 1599, 418, 9, 64, "Input",ExpressionUUID->"cc178136-e398-4de1-bb54-e633f838a0e0"],
-Cell[72785, 1610, 393, 10, 42, "Input",ExpressionUUID->"247611b4-571c-4beb-a5c0-d4c0a143d469"],
-Cell[73181, 1622, 542, 13, 42, "Input",ExpressionUUID->"95601c5d-ac1d-47f7-aa8b-19f22283399e"],
-Cell[73726, 1637, 602, 15, 42, "Input",ExpressionUUID->"8cf63542-2908-4dd0-a8ff-b2baafd643b4"],
-Cell[74331, 1654, 601, 16, 62, "Input",ExpressionUUID->"a5a174e4-1933-4464-9bc8-1365441f5829"],
+Cell[72600, 1625, 242, 4, 66, "Section",ExpressionUUID->"71264b11-80d5-4ae9-9591-6d9aea8dae4a"],
+Cell[72845, 1631, 214, 4, 33, "Text",ExpressionUUID->"072f0246-71dd-40ee-ac20-04d5df100862"],
+Cell[73062, 1637, 240, 5, 42, "Text",ExpressionUUID->"95f42ead-3d8b-4d77-b211-f2553e57d8bd"],
+Cell[73305, 1644, 422, 10, 64, "Input",ExpressionUUID->"cc178136-e398-4de1-bb54-e633f838a0e0"],
+Cell[73730, 1656, 397, 11, 42, "Input",ExpressionUUID->"247611b4-571c-4beb-a5c0-d4c0a143d469"],
+Cell[74130, 1669, 546, 14, 42, "Input",ExpressionUUID->"95601c5d-ac1d-47f7-aa8b-19f22283399e"],
+Cell[74679, 1685, 606, 16, 42, "Input",ExpressionUUID->"8cf63542-2908-4dd0-a8ff-b2baafd643b4"],
+Cell[75288, 1703, 605, 17, 62, "Input",ExpressionUUID->"a5a174e4-1933-4464-9bc8-1365441f5829"],
 Cell[CellGroupData[{
-Cell[74957, 1674, 550, 11, 42, "Input",ExpressionUUID->"22851e36-2fb1-479c-b2d6-0870446bd6d3"],
-Cell[75510, 1687, 396, 5, 33, "Output",ExpressionUUID->"afb052f6-4cbc-475a-9515-e9b312436183"]
+Cell[75918, 1724, 554, 12, 42, "Input",ExpressionUUID->"22851e36-2fb1-479c-b2d6-0870446bd6d3"],
+Cell[76475, 1738, 426, 7, 33, "Output",ExpressionUUID->"fecd5547-96d9-48f8-8ef3-8a7cdfd1bf7f"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[75943, 1697, 619, 17, 42, "Input",ExpressionUUID->"2a783ead-2ea2-44d5-85bf-1f4db67f5dd5"],
-Cell[76565, 1716, 2262, 55, 172, "Output",ExpressionUUID->"cfa4a83d-716a-48d3-8d03-700075b4ee7e"]
+Cell[76938, 1750, 623, 18, 42, "Input",ExpressionUUID->"2a783ead-2ea2-44d5-85bf-1f4db67f5dd5"],
+Cell[77564, 1770, 2293, 57, 172, "Output",ExpressionUUID->"c5435503-177b-48e0-8bac-24655558e27a"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[78864, 1776, 574, 13, 42, "Input",ExpressionUUID->"c1d9279f-c954-4686-b40d-55cd0604a1e5"],
-Cell[79441, 1791, 1679, 35, 157, "Output",ExpressionUUID->"2e47bdac-aee5-4cab-b940-96a30861cfd4"]
+Cell[79894, 1832, 578, 14, 42, "Input",ExpressionUUID->"c1d9279f-c954-4686-b40d-55cd0604a1e5"],
+Cell[80475, 1848, 1710, 37, 157, "Output",ExpressionUUID->"46a1e0f9-4e9a-4f83-a575-bb076eee166a"]
 }, Open  ]],
-Cell[81135, 1829, 2702, 71, 353, "Input",ExpressionUUID->"1d3cc300-4da4-44cc-8e4f-2c3da0f4022e"],
-Cell[83840, 1902, 249, 5, 42, "Text",ExpressionUUID->"91b459d1-5184-407a-8248-e20cc771c883"],
+Cell[82200, 1888, 2706, 72, 353, "Input",ExpressionUUID->"1d3cc300-4da4-44cc-8e4f-2c3da0f4022e"],
+Cell[84909, 1962, 249, 5, 42, "Text",ExpressionUUID->"91b459d1-5184-407a-8248-e20cc771c883"],
 Cell[CellGroupData[{
-Cell[84114, 1911, 371, 9, 42, "Input",ExpressionUUID->"686be26d-a6ef-43e0-939d-ad784edf9c3a"],
-Cell[84488, 1922, 204, 3, 33, "Output",ExpressionUUID->"22353897-854e-4171-a0b4-128419039533"]
+Cell[85183, 1971, 375, 10, 42, "Input",ExpressionUUID->"686be26d-a6ef-43e0-939d-ad784edf9c3a"],
+Cell[85561, 1983, 229, 4, 33, "Output",ExpressionUUID->"d110e2b0-c042-4ebb-b4d5-8f592538adb6"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[84729, 1930, 520, 13, 42, "Input",ExpressionUUID->"78267f86-e560-480f-a7cb-fca4bc2f698a"],
-Cell[85252, 1945, 1294, 26, 142, "Output",ExpressionUUID->"a907bbf5-4a34-4940-9eac-113fb00bb56d"]
+Cell[85827, 1992, 604, 15, 49, "Input",ExpressionUUID->"78267f86-e560-480f-a7cb-fca4bc2f698a"],
+Cell[86434, 2009, 207, 4, 33, "Output",ExpressionUUID->"870feba9-4aca-494f-8086-37d11de8ecd7"]
 }, Open  ]],
-Cell[86561, 1974, 409, 10, 49, "Input",ExpressionUUID->"49ef3717-26a8-4cce-9226-5088e96c03c7"],
-Cell[86973, 1986, 318, 6, 42, "Text",ExpressionUUID->"0e814e85-045a-4970-8ce6-b12439e8bc0b"],
+Cell[86656, 2016, 409, 10, 49, "Input",ExpressionUUID->"49ef3717-26a8-4cce-9226-5088e96c03c7"],
+Cell[87068, 2028, 318, 6, 42, "Text",ExpressionUUID->"0e814e85-045a-4970-8ce6-b12439e8bc0b"],
+Cell[87389, 2036, 286, 4, 33, "Text",ExpressionUUID->"3b6b5105-d0cf-400e-bc95-0f4dad600849"],
+Cell[87678, 2042, 336, 7, 42, "Input",ExpressionUUID->"fe4ef26b-0c1b-4f73-b861-a1486a165809"],
+Cell[88017, 2051, 691, 19, 42, "Input",ExpressionUUID->"b2fc754b-72bd-4fd3-8a4b-2b1c5e27f640"],
+Cell[88711, 2072, 454, 10, 49, "Input",ExpressionUUID->"54e2f9fd-0824-484b-bb95-55541a313903"],
 Cell[CellGroupData[{
-Cell[87316, 1996, 485, 12, 42, "Input",ExpressionUUID->"b2fc754b-72bd-4fd3-8a4b-2b1c5e27f640"],
-Cell[87804, 2010, 131206, 2183, 33910, "Output",ExpressionUUID->"b9fd5f4d-f7a1-4369-9756-6daf8edb3559"]
-}, Open  ]],
-Cell[219025, 4196, 409, 10, 49, "Input",ExpressionUUID->"54e2f9fd-0824-484b-bb95-55541a313903"]
+Cell[89190, 2086, 273, 4, 53, "Subsection",ExpressionUUID->"2c7cd6e9-2b43-4342-9137-72b25231e516"],
+Cell[89466, 2092, 159, 3, 33, "Text",ExpressionUUID->"a0bac819-2726-43ac-b267-fd6e70ac4dca"]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }
