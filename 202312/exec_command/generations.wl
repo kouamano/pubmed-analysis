@@ -1,0 +1,6 @@
+period = Table[ToString[n], {n, 1950, 2020, 5}]
+periodticks = MapIndexed[Flatten[{#2, #1}] &, period]
+gen = Table["1946" <> "-" <> ToString[n], {n, 1950, 2020, 5}]
+genR = Map[Rotate[#, Pi/2.1] &, gen]
+genticks = MapIndexed[Flatten[{#2, #1}] &, genR]
+genEnd = Table[n, {n, 1950, 2020, 5}]
