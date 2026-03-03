@@ -1,0 +1,110 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[      4132,        102]
+NotebookOptionsPosition[      3196,         80]
+NotebookOutlinePosition[      3598,         96]
+CellTagsIndexPosition[      3555,         93]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Mis41", "Title",
+ CellChangeTimes->{{3.9808958221449757`*^9, 
+  3.980895833033265*^9}},ExpressionUUID->"25808c90-5792-4767-a2d1-\
+22bfcb50585e"],
+
+Cell["\:95a2\:9023\:30c9\:30ad\:30e5\:30e1\:30f3\:30c8", "Item",
+ CellChangeTimes->{{3.980895868475608*^9, 3.9808958892392817`*^9}, {
+  3.981486403253894*^9, 
+  3.9814864104951887`*^9}},ExpressionUUID->"d443b3d9-4713-41fd-aa9c-\
+1bec2a69c57c"],
+
+Cell["/Users/kouamano/TEXT/mis41/", "Text",
+ CellChangeTimes->{{3.981486427874016*^9, 
+  3.981486430436472*^9}},ExpressionUUID->"ec827ea5-1682-457d-a393-\
+7c22bf7882e8"],
+
+Cell["\:767a\:8868\:7533\:3057\:8fbc\:307f\:5185\:5bb9", "Item",
+ CellChangeTimes->{{3.980895868475608*^9, 3.9808958892392817`*^9}, {
+  3.9814865403380213`*^9, 
+  3.981486549117262*^9}},ExpressionUUID->"7d941ec3-7967-4ba9-8b62-\
+abca6a05c279"],
+
+Cell["\<\
+\:533b\:5b66\:751f\:7269\:5b66\:5206\:91ce\:306b\:304a\:3051\:308b\:9ad8\:88ab\
+\:5f15\:7528\:8ad6\:6587\:306e\:30aa\:30d6\:30bd\:30ec\:30c3\:30bb\:30f3\:30b9\
+
+\:9e7f\:5150\:5cf6\:5927\:5b66\:3000\:5929\:91ce\:6643
+\:8ad6\:6587\:ff08\:96c6\:5408\:ff09\:306b\:304a\:3051\:308b\:30aa\:30d6\:30bd\
+\:30ec\:30c3\:30bb\:30f3\:30b9\:306e\:6349\:3048\:65b9\:306f\:3055\:307e\:3056\
+\:307e\:3067\:3042\:308b\:304c\:3001\:ff08\:88ab\:ff09\:5f15\:7528\:534a\:6e1b\
+\:671f\:3084Immediacy Index / Impact Factor\:6bd4\:306a\:3069\:306e\:6307\
+\:6a19\:304c\:7528\:3044\:3089\:308c\:308b\:3053\:3068\:304c\:591a\:3044\:3002\
+ \:4e00\:65b9\:3001\:672c\:7814\:7a76\:306f\:3053\:306e\:3088\:3046\:306a\
+\:6307\:6a19\:306e\:307f\:304b\:3089\:3067\:306f\:898b\:3048\:306b\:304f\:3044\
+\:88ab\:5f15\:7528\:6570\:306e\:5909\:52d5\:3084\:3053\:308c\:306b\:3088\:308b\
+\:9806\:4f4d\:306e\:5909\:52d5\:306e\:3088\:3046\:306a\:30c0\:30a4\:30ca\:30df\
+\:30af\:30b9\:306b\:7740\:76ee\:3059\:308b\:3002 PubMed\:306e\:30c7\:30fc\
+\:30bf\:3092\:5229\:7528\:3059\:308b\:3053\:3068\:306b\:3088\:308a\:304b\:306a\
+\:308a\:9577\:671f\:306b\:308f\:305f\:308b\:89b3\:5bdf\:304c\:53ef\:80fd\:306b\
+\:306a\:308b\:3068\:8003\:3048\:308b\:3002\
+\>", "Text",
+ CellChangeTimes->{
+  3.98148656579535*^9},ExpressionUUID->"387e201d-8364-44fa-8c64-48732199e5ac"],
+
+Cell["Q1 - Q4\:307e\:3067\:306e\:30b5\:30f3\:30d7\:30ea\:30f3\:30b0", "Item",
+ CellChangeTimes->{{3.980895868475608*^9, 
+  3.9808958892392817`*^9}},ExpressionUUID->"da3b1619-4eec-4c06-a80d-\
+8976326cdb9c"],
+
+Cell["\<\
+/Volumes/elecom/BANK/pubmed/202312/exec_command/element/reference/edgestat-\
+selection_1946-2020.nb\
+\>", "Text",
+ CellChangeTimes->{{3.9808959632033367`*^9, 
+  3.98089598680223*^9}},ExpressionUUID->"a4d105f3-2c36-4893-800d-\
+7b8d85fc885f"]
+}, Open  ]]
+},
+WindowSize->{808, 911},
+WindowMargins->{{6, Automatic}, {Automatic, 0}},
+FrontEndVersion->"14.3 for Mac OS X ARM (64-bit) (2025\:5e747\:67088\:65e5)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"18e0c3f4-315a-4ad8-8002-b3562b9b1a5b"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[576, 22, 150, 3, 96, "Title",ExpressionUUID->"25808c90-5792-4767-a2d1-22bfcb50585e"],
+Cell[729, 27, 243, 4, 30, "Item",ExpressionUUID->"d443b3d9-4713-41fd-aa9c-1bec2a69c57c"],
+Cell[975, 33, 169, 3, 33, "Text",ExpressionUUID->"ec827ea5-1682-457d-a393-7c22bf7882e8"],
+Cell[1147, 38, 243, 4, 30, "Item",ExpressionUUID->"7d941ec3-7967-4ba9-8b62-abca6a05c279"],
+Cell[1393, 44, 1326, 20, 143, "Text",ExpressionUUID->"387e201d-8364-44fa-8c64-48732199e5ac"],
+Cell[2722, 66, 205, 3, 30, "Item",ExpressionUUID->"da3b1619-4eec-4c06-a80d-8976326cdb9c"],
+Cell[2930, 71, 250, 6, 55, "Text",ExpressionUUID->"a4d105f3-2c36-4893-800d-7b8d85fc885f"]
+}, Open  ]]
+}
+]
+*)
+
