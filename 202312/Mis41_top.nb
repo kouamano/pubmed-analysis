@@ -79,7 +79,7 @@ selection_1946-2020.nb\
 }, Open  ]]
 },
 WindowSize->{808, 911},
-WindowMargins->{{6, Automatic}, {Automatic, 0}},
+WindowMargins->{{3, Automatic}, {Automatic, 0}},
 FrontEndVersion->"14.3 for Mac OS X ARM (64-bit) (2025\:5e747\:67088\:65e5)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"18e0c3f4-315a-4ad8-8002-b3562b9b1a5b"
