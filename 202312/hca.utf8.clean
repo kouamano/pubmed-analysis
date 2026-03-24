@@ -1,0 +1,6 @@
+#!/bin/bash
+rm hca.utf8.aux
+rm hca.utf8.dvi
+rm hca.utf8.log
+rm hca.utf8.bbl
+rm hca.utf8.blg
