@@ -1,0 +1,6 @@
+#!/bin/bash
+platex hca.utf8.tex
+pbibtex hca.utf8
+platex hca.utf8
+platex hca.utf8
+dvipdfmx hca.utf8.dvi
