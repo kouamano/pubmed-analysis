@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[   1742804,      33747]
-NotebookOptionsPosition[   1724114,      33501]
-NotebookOutlinePosition[   1724925,      33531]
-CellTagsIndexPosition[   1724882,      33528]
+NotebookDataLength[   1743269,      33754]
+NotebookOptionsPosition[   1724577,      33508]
+NotebookOutlinePosition[   1725389,      33538]
+CellTagsIndexPosition[   1725346,      33535]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -33401,30 +33401,34 @@ Scientometrics. 2002, Vol. 53, No. 1, p. 131-159.\
 0f61ba7e54ce"],
 
 Cell["\<\
-[Le4] Leydesdorf L. Can scientific journals be classified in terms of \
+[Le4] Leydesdorf, L. Can scientific journals be classified in terms of \
 aggregated journal- journal citation relations using the Journal Citation \
-Reports? Journal of the American Society for Information Science and Tech- \
-nology. 2006, Vol. 57, No. 5, p. 601-613.\
+Reports?. Journal of the American Society for Information Science and \
+Technology. 2006, Vol. 57, No. 5, p. 601-613.\
 \>", "Item",
  CellChangeTimes->{{3.931658137203068*^9, 3.931658216961535*^9}, {
    3.932369286697356*^9, 3.932369286698185*^9}, {3.9323693243097973`*^9, 
    3.932369334403619*^9}, {3.932369472102895*^9, 3.932369472103592*^9}, {
    3.979613773557418*^9, 3.979613774621296*^9}, 3.979950550367028*^9, {
    3.9815905999169064`*^9, 3.981590600515008*^9}, {3.9815914468822517`*^9, 
-   3.981591446886245*^9}},ExpressionUUID->"6b8b2577-a958-4bd0-9861-\
+   3.981591446886245*^9}, {3.98399902667554*^9, 3.983999041027727*^9}, 
+   3.984000043624433*^9},ExpressionUUID->"6b8b2577-a958-4bd0-9861-\
 818b01a77287"],
 
 Cell["\<\
 [Li1] Xin Li, Xuli Tang. How biomedical papers accumulated their clinical \
-citations: a large-scale retrospective analysis based on PubMed. 2024. Vol \
-129, p. 3315\[Dash]3339.\
+citations: a large-scale retrospective analysis based on PubMed. arXiv. 2024. \
+
+https://doi.org/10.48550/arXiv.2404.01072\
 \>", "Item",
  CellChangeTimes->{{3.931658137203068*^9, 3.931658216961535*^9}, {
    3.932369286697356*^9, 3.932369286698185*^9}, {3.9323693243097973`*^9, 
    3.932369334403619*^9}, {3.932369472102895*^9, 3.932369472103592*^9}, {
    3.979613773557418*^9, 3.979613774621296*^9}, 3.979950550367028*^9, {
    3.9815905999169064`*^9, 3.981590600515008*^9}, {3.981591448352384*^9, 
-   3.981591463114861*^9}},ExpressionUUID->"3a87ea54-3b0a-489a-856e-\
+   3.981591463114861*^9}, {3.9839970578248577`*^9, 3.9839970824123297`*^9}, {
+   3.983997511833057*^9, 3.9839975472559557`*^9}, {3.983997589108382*^9, 
+   3.983997596380145*^9}},ExpressionUUID->"3a87ea54-3b0a-489a-856e-\
 93495a976d70"],
 
 Cell["\<\
@@ -33443,15 +33447,17 @@ https://doi.org/10.48550/arXiv.2509.04190\
 6b4570ea2cfc"],
 
 Cell["\<\
-[Par1] P.D.B. Parolo, et.al. Attention decay in science. Journal of \
-Informatics. 2015. Vol.9, p.734-745. \
+[Par1] Pietro Della Briotta Parolo and Raj Kumar Pan and Rumi Ghosh and  \
+Bernardo A. Huberman  and Kimmo Kaski and Santo Fortunato. Attention decay in \
+science. Journal of Informatics. 2015. Vol.9, p.734-745. \
 \>", "Item",
  CellChangeTimes->{{3.931658137203068*^9, 3.931658216961535*^9}, {
    3.932369286697356*^9, 3.932369286698185*^9}, {3.9323693243097973`*^9, 
    3.932369334403619*^9}, {3.932369472102895*^9, 3.932369472103592*^9}, {
    3.979613773557418*^9, 3.979613774621296*^9}, 3.979950550367028*^9, {
    3.9815905999169064`*^9, 3.981590600515008*^9}, {3.981591503868959*^9, 
-   3.9815915080253572`*^9}},ExpressionUUID->"f01995ca-78fd-4011-8784-\
+   3.9815915080253572`*^9}, {3.984003226600374*^9, 
+   3.984003242088833*^9}},ExpressionUUID->"f01995ca-78fd-4011-8784-\
 54267215b06e"],
 
 Cell["\<\
@@ -33489,19 +33495,20 @@ Psychology. 2006, Vol. 6 No. 28. https://doi.org/10.1007/s44202-025-00557-8\
 Cell["\<\
 [Wan1] Dashun Wang, Chaoming Song, Albert-L\[AAcute]szl\[OAcute] Barab\
 \[AAcute]si. Quantifying Long-Term Scientific Impact. Science. 2013. Vol. \
-342, No. 127. DOI: 10.1126/science.1237825\
+342, No. 6154. p. 127-132. DOI: 10.1126/science.1237825\
 \>", "Item",
  CellChangeTimes->{{3.979616092827183*^9, 3.979616185751696*^9}, {
   3.979851279512154*^9, 3.979851279515677*^9}, {3.979950683222554*^9, 
-  3.979950683313066*^9}, {3.981590647734662*^9, 
-  3.981590651710322*^9}},ExpressionUUID->"755036fa-7482-4c02-8817-\
+  3.979950683313066*^9}, {3.981590647734662*^9, 3.981590651710322*^9}, {
+  3.984003643464427*^9, 
+  3.9840036691897297`*^9}},ExpressionUUID->"755036fa-7482-4c02-8817-\
 77e0bc906796"]
 }, Open  ]]
 }, Open  ]]
 },
 RulerUnits->"Millimeters",
 WindowSize->{1164, 1370},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowMargins->{{11, Automatic}, {Automatic, 0}},
 LightDark->"Light",
 PrintingCopies->1,
 PrintingPageRange->{1, Automatic},
@@ -33740,13 +33747,13 @@ Cell[1716652, 33352, 953, 15, 50, "Item",ExpressionUUID->"796821c6-1317-486c-b89
 Cell[1717608, 33369, 437, 8, 30, "Item",ExpressionUUID->"d799d6ce-942e-4342-abc4-2182897f2a79"],
 Cell[1718048, 33379, 550, 10, 50, "Item",ExpressionUUID->"e79ab6dc-7c9c-4f13-a729-36b7b242a1c8"],
 Cell[1718601, 33391, 517, 9, 50, "Item",ExpressionUUID->"6941bba4-093b-4667-9cc9-0f61ba7e54ce"],
-Cell[1719121, 33402, 737, 12, 50, "Item",ExpressionUUID->"6b8b2577-a958-4bd0-9861-818b01a77287"],
-Cell[1719861, 33416, 646, 11, 30, "Item",ExpressionUUID->"3a87ea54-3b0a-489a-856e-93495a976d70"],
-Cell[1720510, 33429, 729, 13, 50, "Item",ExpressionUUID->"6958893a-4561-4123-806a-6b4570ea2cfc"],
-Cell[1721242, 33444, 578, 10, 30, "Item",ExpressionUUID->"f01995ca-78fd-4011-8784-54267215b06e"],
-Cell[1721823, 33456, 586, 10, 30, "Item",ExpressionUUID->"8f140135-34ee-4392-a8c2-b034ba813704"],
-Cell[1722412, 33468, 1187, 18, 54, "Item",ExpressionUUID->"5a506d92-40e8-4b96-b5a3-1e4e5f49a0e1"],
-Cell[1723602, 33488, 484, 9, 50, "Item",ExpressionUUID->"755036fa-7482-4c02-8817-77e0bc906796"]
+Cell[1719121, 33402, 808, 13, 50, "Item",ExpressionUUID->"6b8b2577-a958-4bd0-9861-818b01a77287"],
+Cell[1719932, 33417, 819, 14, 50, "Item",ExpressionUUID->"3a87ea54-3b0a-489a-856e-93495a976d70"],
+Cell[1720754, 33433, 729, 13, 50, "Item",ExpressionUUID->"6958893a-4561-4123-806a-6b4570ea2cfc"],
+Cell[1721486, 33448, 733, 12, 50, "Item",ExpressionUUID->"f01995ca-78fd-4011-8784-54267215b06e"],
+Cell[1722222, 33462, 586, 10, 30, "Item",ExpressionUUID->"8f140135-34ee-4392-a8c2-b034ba813704"],
+Cell[1722811, 33474, 1187, 18, 54, "Item",ExpressionUUID->"5a506d92-40e8-4b96-b5a3-1e4e5f49a0e1"],
+Cell[1724001, 33494, 548, 10, 50, "Item",ExpressionUUID->"755036fa-7482-4c02-8817-77e0bc906796"]
 }, Open  ]]
 }, Open  ]]
 }
