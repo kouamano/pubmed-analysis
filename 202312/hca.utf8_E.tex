@@ -1,0 +1,142 @@
+%\documentclass[12pt,a4paper,twocolumn,twoside]{ujsik}
+\documentclass[12pt,a4paper,twocolumn,twoside]{ujsikpb}
+\usepackage{color}
+\usepackage{balance}
+
+\setcounter{topnumber}{5}
+\setcounter{totalnumber}{6}
+\renewcommand{\topfraction}{1.0}
+\renewcommand{\bottomfraction}{1.0}
+\renewcommand{\textfraction}{0.0}
+\renewcommand{\floatpagefraction}{1.0}
+\renewcommand{\dbltopfraction}{1.0}
+\renewcommand{\dblfloatpagefraction}{1.0}
+
+\begin{document}
+\pagestyle{empty}
+
+\thispagestyle{empty}
+\articletype{研究論文}
+\jtitle{医学生物学分野における高被引用論文の構造的特徴と長期的影響}
+\etitle{Characteristics and long-term impact of highly cited papers in biomedical field}
+\jauthor{天野晃$^{1*}$, 角田裕之$^{2}$, 孫媛$^{3}$, 西澤正己$^{3}$, 劉筱敏$^{4}$}
+\eauthor{Kou AMANO, Hiroyuki TSUNODA, Yuan SUN, Masaki NISHIZAWA, Xiaomin LIU}
+\affiliation{
+$^{1}$ 鹿児島大学 \\
+Kagoshima University \\
+〒890-8980 鹿児島県鹿児島市郡元1丁目21-24 \\
+$^{2}$ 東京大学 \\
+University of Tokyo \\
+$^{3}$ 国立情報学研究所 \\
+National Institute of Informatics \\
+〒101-8430 東京都千代田区一ツ橋2-1-2 \\
+$^{4}$ 中国科学院文献情報中心 \\
+$*$ EMail: k7085637@kadai.jp \\
+}
+
+\input{abst.tex}
+\input{kw.tex}
+
+\maketitle
+
+\section{背景と目的}
+\input{haikei-to-mokuteki.tex}
+
+\section{関連研究}
+\input{kanrenkenkyu.tex}
+
+\section{マテリアル}
+\input{material.tex}
+\subsection{データ}
+\input{data.tex}
+\input{fig-gr1.tex}
+
+\subsection{累積世代モデル}
+\input{ruisekisedai-model.tex}
+\input{fig-gr2.tex}
+
+\subsection{高被引用論文・高被引用論文掲載誌・高被引用テーマ}
+\input{tab-def.tex}
+\input{highlycited-art-jour-theme.tex}
+
+\subsection{比較グループ}
+\input{group.tex}
+
+\section{高被引用論文と経年的な引用の効果}
+\subsection{高被引用論文の出現}
+\input{highlycitedpapers-no-syutugen.tex}
+\input{fig-gr3.tex}
+\input{fig-gr4.tex}
+\input{fig-gr5.tex}
+
+\subsection{最多被引用論文の変遷}
+\input{ARRAYhctitlesA.utf8.tex}
+\input{mostcitedpapers.tex}
+
+\subsection{高被引用論文への長期的な引用の効果}
+\input{fig-gr6.tex}
+\input{fig-parray1.tex}
+\input{citation-to-highlycitedpapers-1.tex}
+\input{fig-gr7.tex}
+\input{fig-gr8.tex}
+\input{citation-to-highlycitedpapers-2.tex}
+\input{citation-to-highlycitedpapers-3.tex}
+\input{ARRAYmcpapers.utf8.tex}
+\input{fig-nonobscitedplot.tex}
+
+\section{高被引用論文掲載誌}
+\input{journalwithhcpapers.tex}
+\subsection{高被引用論文掲載誌の出現}
+\input{journalwithhcp-no-syutugen.txt}
+\input{fig-gr9.tex}
+\input{fig-gr10.tex}
+\input{fig-gr11.tex}
+
+\subsection{高被引用論文掲載誌の変遷}
+\input{journalwithhcp-no-hensen.tex}
+\input{G1journalexportTBL.utf8.tex}
+\input{G2journalexportTBL.utf8.tex}
+\input{G3journalexportTBL.utf8.tex}
+\input{G4journalexportTBL.utf8.tex}
+\input{fig-gr12.tex}
+
+\section{高被引用テーマ}
+\input{highlycitedtheme.tex}
+\subsection{高被引用テーマの出現}
+\input{highlycitedtheme-no-syutugen.tex}
+\input{fig-gr13.tex}
+\input{fig-gr14.tex}
+
+\subsection{高被引用テーマの変遷}
+\input{highlycitedtheme-no-hensen-1.tex}
+\input{highlycitedtheme-no-hensen-2.tex}
+\input{highlycitedtheme-no-hensen-3.tex}
+\input{TABtopmeshJ.utf8.tex}
+\input{fig-parray2.tex}
+\input{fig-meshpivot.tex}
+\input{fig-gr15.tex}
+
+%\balance
+\section{まとめ}
+\input{matome.tex}
+
+
+%\section*{\LaTeX テスト}
+%\input{tyoubun-test}
+%\input{fig-test.tex}
+
+%\balance
+\bibliographystyle{ujsik}
+\bibliography{ama.utf8}
+%\begin{thebibliography}{0}
+%\bibitem{aaa} あいうえお
+%\end{thebibliography}
+%\begin{thebibliography}{1}
+%\bibitem{ex1}
+% 藤原譲: 「情報知識学試論」, 情報知識学会誌, Vol.~1, No.~1, pp. 3--10, 1990.
+%\bibitem{ex2}
+% 原正一郎; 安永尚志: 「国文学研究支援のためのSGML/XMLデータシステム」,
+%  情報知識学会誌, Vol.~11, No.~4, pp. 17--35, 2002.
+%\end{thebibliography}
+
+\end{document}
