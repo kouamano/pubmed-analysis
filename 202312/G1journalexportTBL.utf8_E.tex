@@ -1,0 +1,219 @@
+Thinking...
+We need to translate the Japanese text to English, keeping TeX code unchanged. Provide the entire block with translation outside but preserve LaTeX commands. The Japanese text includes caption, label, column headers, and notes like "上記と同じ", "当該誌の高被引用論文数", etc. Should translate these within the TeX code.
+
+Thus we need to output the same LaTeX environment but with English strings.
+
+Let's translate:
+
+Caption: "高被引用論文掲載誌のうち最大の論文数を持つもの" => "Journals with the highest number of highly cited papers"
+
+Column headers:
+
+- "累積世代" => "Cumulative Generation"
+- "雑誌タイトル" => "Journal Title"
+- "当該誌の高被引用論文数" => "Number of Highly Cited Papers in the Journal"
+- "当該誌の高被引用論文が当該累積世代の高被引用論文全体に占める割合（\%）" => "Proportion of the Journal's Highly Cited Papers among All Highly Cited Papers in the Cumulative Generation (%)"
+- "IF/発表年" => "Impact Factor / Publication Year"
+
+Rows have Japanese placeholders:
+
+- "上記と同じ" => "Same as above"
+- "上記と同じ" again.
+
+Also "上記と同じ" for IF/発表年 column.
+
+Now the rows:
+
+First row: {1946-1950} with journals The Journal of clinical investigation and The Biochemical journal. Numbers 3,3 (counts). Then column 3? Actually they have 30? That's proportion? It appears "30" maybe percent? Should translate as "30". Keep numeric.
+
+Third column (IF/発表年) values listed. Keep them.
+
+Second row: {1946-1955} "上記と同じ" for journal title (same as above). Number column: 13 (maybe total across both?). Proportion 43. IF same as above.
+
+Third row: {1946-1960} same journal titles, number 11, proportion 24.
+
+... etc.
+
+Later row for {1946-1975} journal title The Journal of biological chemistry; count 7; proportion 21; IF list.
+
+Later {1946-2000} journals: Journal of molecular biology, Proceedings of the National Academy of Sciences of the United States of America. counts 4,4. proportion 12. IF list.
+
+Then {1946-2005} same Proceedings ... count 8 proportion 12 etc.
+
+Later rows with Nature etc.
+
+Now need to translate Japanese in those rows: "上記と同じ" => "Same as above". Also "上記と同じ" in IF column.
+
+Also for the header row: keep formatting.
+
+Thus produce the LaTeX code with English strings.
+
+We should keep the tiny environment and math array.
+
+Let's rewrite:
+
+\begin{table*}[h]
+\begin{center}
+\caption{Journals with the highest number of highly cited papers}
+\label{tab:G1topj}
+{\tiny
+\[
+\begin{array}{ccccc}
+\text{Cumulative Generation} &
+\begin{array}{p{20mm}}\text{Journal Title}\\\end{array} &
+\begin{array}{p{14mm}}\text{Number of Highly Cited Papers in the Journal}\\\end{array} &
+\begin{array}{p{14mm}}\text{Proportion of the Journal's Highly Cited Papers among All Highly Cited Papers in the Cumulative Generation (\%)}\\\end{array} &
+\begin{array}{c}\text{Impact Factor / Publication Year}\\\end{array} \\
+{1946-1950} &
+\begin{array}{p{20mm}}
+{The Journal of Clinical Investigation}\\
+{The Biochemical Journal}\\
+\end{array} &
+\begin{array}{c}3\\3\\\end{array} & 30 &
+\begin{array}{c}
+{12.015/2000}; {15.053/2005}; {14.152/2010}; {12.575/2015}; {14.808/2020}\\
+{4.28/2000}; {4.224/2005}; {5.016/2010}; {3.562/2015}; {3.857/2020}\\
+\end{array} \\
+{1946-1955} &
+\begin{array}{p{20mm}}{Same as above}\\\end{array} &
+\begin{array}{c}13\\\end{array} & 43 &
+\begin{array}{c}{Same as above}\\\end{array} \\
+... etc.
+
+We need to continue for all rows.
+
+Let's write all rows fully.
+
+Make sure to keep \begin{array}{p{20mm}}... \end{array} etc.
+
+Proceed.
+
+...done thinking.
+
+\begin{table*}[h]
+\begin{center}
+\caption{Journals with the highest number of highly cited papers}
+\label{tab:G1topj}
+{\tiny
+\[
+\begin{array}{ccccc}
+\text{Cumulative Generation} &
+\begin{array}{p{20mm}}\text{Journal Title}\\\end{array} &
+\begin{array}{p{14mm}}\text{Number of Highly Cited Papers in the Journal}\\\end{array} &
+\begin{array}{p{14mm}}\text{Proportion of the Journal's Highly Cited Papers among All Highly Cited Papers in the Cumulative Generation (\%)}\\\end{array} &
+\begin{array}{c}\text{Impact Factor / Publication Year}\\\end{array} \\[2mm]
+
+{1946-1950} &
+\begin{array}{p{20mm}}
+{The Journal of Clinical Investigation}\\
+{The Biochemical Journal}\\
+\end{array} &
+\begin{array}{c}3\\3\\\end{array} & 30 &
+\begin{array}{c}
+{12.015/2000}; {15.053/2005}; {14.152/2010}; {12.575/2015}; {14.808/2020}\\
+{4.28/2000}; {4.224/2005}; {5.016/2010}; {3.562/2015}; {3.857/2020}\\
+\end{array} \\[2mm]
+
+{1946-1955} &
+\begin{array}{p{20mm}}{Same as above}\\\end{array} &
+\begin{array}{c}13\\\end{array} & 43 &
+\begin{array}{c}{Same as above}\\\end{array} \\[2mm]
+
+{1946-1960} &
+\begin{array}{p{20mm}}{Same as above}\\\end{array} &
+\begin{array}{c}11\\\end{array} & 24 &
+\begin{array}{c}{Same as above}\\\end{array} \\[2mm]
+
+{1946-1965} &
+\begin{array}{p{20mm}}{Same as above}\\\end{array} &
+\begin{array}{c}13\\\end{array} & 26 &
+\begin{array}{c}{Same as above}\\\end{array} \\[2mm]
+
+{1946-1970} &
+\begin{array}{p{20mm}}{Same as above}\\\end{array} &
+\begin{array}{c}9\\\end{array} & 24 &
+\begin{array}{c}{Same as above}\\\end{array} \\[2mm]
+
+{1946-1975} &
+\begin{array}{p{20mm}}
+{The Journal of Biological Chemistry}\\
+\end{array} &
+\begin{array}{c}7\\\end{array} & 21 &
+\begin{array}{c}
+{7.368/2000}; {5.854/2005}; {5.328/2010}; {4.258/2015}; {5.157/2020}\\
+\end{array} \\[2mm]
+
+{1946-1980} &
+\begin{array}{p{20mm}}{Same as above}\\\end{array} &
+\begin{array}{c}7\\\end{array} & 22 &
+\begin{array}{c}{Same as above}\\\end{array} \\[2mm]
+
+{1946-1985} &
+\begin{array}{p{20mm}}{Same as above}\\\end{array} &
+\begin{array}{c}5\\\end{array} & 19 &
+\begin{array}{c}{Same as above}\\\end{array} \\[2mm]
+
+{1946-1990} &
+\begin{array}{p{20mm}}{Same as above}\\\end{array} &
+\begin{array}{c}4\\\end{array} & 21 &
+\begin{array}{c}{Same as above}\\\end{array} \\[2mm]
+
+{1946-1995} &
+\begin{array}{p{20mm}}{Same as above}\\\end{array} &
+\begin{array}{c}4\\\end{array} & 18 &
+\begin{array}{c}{Same as above}\\\end{array} \\[2mm]
+
+{1946-2000} &
+\begin{array}{p{20mm}}
+{Journal of Molecular Biology}\\
+{Proceedings of the National Academy of Sciences of the United States of America}\\
+\end{array} &
+\begin{array}{c}4\\4\\\end{array} & 12 &
+\begin{array}{c}
+{5.388/2000}; {5.229/2005}; {4.008/2010}; {4.517/2015}; {5.469/2020}\\
+{10.789/2000}; {10.231/2005}; {9.771/2010}; {9.423/2015}; {11.205/2020}\\
+\end{array} \\[2mm]
+
+{1946-2005} &
+\begin{array}{p{20mm}}
+{Proceedings of the National Academy of Sciences of the United States of America}\\
+\end{array} &
+\begin{array}{c}8\\\end{array} & 12 &
+\begin{array}{c}
+{10.789/2000}; {10.231/2005}; {9.771/2010}; {9.423/2015}; {11.205/2020}\\
+\end{array} \\[2mm]
+
+{1946-2010} &
+\begin{array}{p{20mm}}
+{Proceedings of the National Academy of Sciences of the United States of America}\\
+{Nature}\\
+\end{array} &
+\begin{array}{c}14\\14\\\end{array} & 7 &
+\begin{array}{c}
+{10.789/2000}; {10.231/2005}; {9.771/2010}; {9.423/2015}; {11.205/2020}\\
+{25.814/2000}; {29.273/2005}; {36.104/2010}; {38.138/2015}; {49.962/2020}\\
+\end{array} \\[2mm]
+
+{1946-2015} &
+\begin{array}{p{20mm}}
+{Nature}\\
+\end{array} &
+\begin{array}{c}20\\\end{array} & 6 &
+\begin{array}{c}
+{25.814/2000}; {29.273/2005}; {36.104/2010}; {38.138/2015}; {49.962/2020}\\
+\end{array} \\[2mm]
+
+{1946-2020} &
+\begin{array}{p{20mm}}
+{Bioinformatics (Oxford, England)}\\
+\end{array} &
+\begin{array}{c}17\\\end{array} & 5 &
+\begin{array}{c}
+{3.409/2000}; {6.019/2005}; {4.877/2010}; {5.766/2015}; {6.937/2020}\\
+\end{array} \\
+\end{array}
+\]
+}
+\end{center}
+\end{table*}
+

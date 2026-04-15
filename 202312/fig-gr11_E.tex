@@ -1,0 +1,38 @@
+Thinking...
+We need to translate the Japanese sentence to English, preserving TeX code unchanged. The Japanese text is:
+
+以下のの日本語文を英訳してください。ただしTeXのコードが挿入されているのでその部分はそのまま出力してください： \begin{figure}[h] \begin{center} \includegraphics[width=76mm]{gr11.eps} \caption{新規出現高被引用論文掲載誌の高被引用論文掲載誌に占める割合（\%）} \label{fig:gr11} \end{center} \end{figure}
+
+We need to translate the Japanese sentence(s) into English, but keep TeX code unchanged. The Japanese text includes the request and the figure environment. The only Japanese to translate is the caption: "新規出現高被引用論文掲載誌の高被引用論文掲載誌に占める割合（\%）". So translate that caption to English, but keep the rest unchanged.
+
+Caption translation: "Proportion (%) of high-citation journals among the journals that newly appear as high-citation journals." Something like that.
+
+Better: "Percentage of high‑citation journals that are newly emerging high‑citation journals (%)."
+
+We need to keep \% as is.
+
+Thus output the same TeX code with caption replaced with English translation.
+
+Thus final answer: the same figure environment with English caption.
+
+Let's produce:
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=76mm]{gr11.eps}
+\caption{Proportion of high‑citation journals that are newly emerging high‑citation journals (\%)} 
+\label{fig:gr11}
+\end{center}
+\end{figure}
+
+Make sure not to translate the rest.
+...done thinking.
+
+\begin{figure}[h] 
+\begin{center} 
+\includegraphics[width=76mm]{gr11.eps} 
+\caption{Proportion of high‑citation journals that are newly emerging high‑citation journals (\%)} 
+\label{fig:gr11} 
+\end{center} 
+\end{figure}
+

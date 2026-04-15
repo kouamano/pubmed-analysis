@@ -1,0 +1,61 @@
+Thinking...
+We need to translate the Japanese text to English, keeping TeX code unchanged. So we output the whole block with English translations of the Japanese parts, but TeX code unchanged. The caption, column headers, etc. need translation.
+
+Original Japanese:
+
+\caption{最多被引用論文タイトル}
+label etc.
+
+Columns:
+{累積世代}
+{高被引用論文タイトル}
+{高被引用論文\\掲載誌\\タイトル}
+{高被引用テーマ}
+{被引用数}
+{当該累積世代\\の高被引用\\論文数}
+
+Rows: years ranges, titles, etc. Some rows have Japanese "上記と同じ" meaning "same as above". Should translate to "Same as above". Also "上記と同じ" for other columns.
+
+Also "高被引用テーマ" list items.
+
+Thus we output same TeX but with English translation for caption and column headers and "Same as above". Keep other content unchanged.
+
+Let's produce.
+
+...done thinking.
+
+\begin{table*}[t]
+\begin{center}
+\caption{Most Frequently Cited Paper Titles}
+\label{tab:mostcitedA}
+{\small
+\[
+\begin{array}{cp{36mm}p{20mm}p{28mm}rr}
+\text{Cumulative Generation} &
+\begin{tabular}{c}\text{Highly Cited Paper Title}\end{tabular} &
+\begin{tabular}{c}\text{Journal}\\\text{Title}\\\text{(Paper)}\end{tabular} &
+\text{Highly Cited Themes} &
+\text{Citation Count} &
+\begin{tabular}{c}\text{Number of Highly}\\\text{Cited Papers}\\\text{in This Generation}\end{tabular} \\
+\hline
+{1946-1950} & {Qualitative analysis of proteins: a partition chromatographic method using paper} & {The Biochemical journal} & - & 74 & 10 \\
+{1946-1955} & {Same as above} & {Same as above} & {Same as above} & 154 & 30 \\
+{1946-1960} & {Protein measurement with the Folin phenol reagent} & {The Journal of biological chemistry} & {Molybdenum} / {Phenols} / {Plant Extracts} / {Proteins} / {Tungsten Compounds} & 300 & 46 \\
+{1946-1965} & {Same as above} & {Same as above} & {Same as above} & 1190 & 50 \\
+{1946-1970} & {Same as above} & {Same as above} & {Same as above} & 3876 & 38 \\
+{1946-1975} & {Same as above} & {Same as above} & {Same as above} & 9632 & 33 \\
+{1946-1980} & {Same as above} & {Same as above} & {Same as above} & 17763 & 32 \\
+{1946-1985} & {Same as above} & {Same as above} & {Same as above} & 25451 & 26 \\
+{1946-1990} & {Same as above} & {Same as above} & {Same as above} & 32371 & 19 \\
+{1946-1995} & {Same as above} & {Same as above} & {Same as above} & 37576 & 22 \\
+{1946-2000} & {Same as above} & {Same as above} & {Same as above} & 40229 & 33 \\
+{1946-2005} & {Same as above} & {Same as above} & {Same as above} & 42101 & 66 \\
+{1946-2010} & {Same as above} & {Same as above} & {Same as above} & 44884 & 192 \\
+{1946-2015} & {Cleavage of structural proteins during the assembly of the head of bacteriophage T4} & {Nature} & {Autoradiography} / {Carbon Isotopes} / {Coliphages} / {Electrophoresis, Disc} / {Genes} / {Genetics, Microbial} / {Kinetics} / {Viral Proteins} & 49961 & 315 \\
+{1946-2020} & {Same as above} & {Same as above} & {Same as above} & 54249 & 336 \\
+\end{array}
+\]
+}
+\end{center}
+\end{table*}
+

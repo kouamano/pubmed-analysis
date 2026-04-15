@@ -1,0 +1,71 @@
+Thinking...
+We need to translate the Japanese text to English, preserving TeX code unchanged. So we output English translation, but keep the TeX environment as is. So replace Japanese definitions with English equivalents. Keep the TeX formatting.
+
+We need to translate column headers "用語" "定義" to "Term" "Definition". Translate each term:
+
+高被引用論文 – Highly cited paper (top 1% of citations)
+Definition: Papers that constitute the top 1% of total citations.
+
+Better: "Highly cited papers: papers whose citation count places them in the top 1% of all citations."
+
+But keep concise.
+
+高被引用論文掲載誌 – Journal publishing highly cited papers: "Journals that publish highly cited papers"
+
+高被引用テーマ – Highly cited theme: "MeSH descriptors assigned to highly cited papers"
+
+高被引用論文引用テーマ – Highly cited paper citing theme? Actually "highly cited paper citation theme": "MeSH descriptors assigned to papers that cite highly cited papers"
+
+Research theme – "Research theme: MeSH descriptor assigned to a paper"
+
+被引用テーマ – Cited theme: "MeSH descriptor assigned to the cited paper" maybe "MeSH descriptor of the referenced paper"
+
+引用テーマ – Citing theme: "MeSH descriptor assigned to the citing paper"
+
+We need to produce final output with same TeX code, just translate inside.
+
+Thus:
+
+\begin{table}[h]
+\begin{center}
+\caption{Definitions of Terms Used in This Study}
+\label{tab:def}
+{\small
+\begin{tabular}{lp{32mm}}
+Term & Definition \\
+\hline
+Highly cited paper & Papers that belong to the top 1% of citation counts overall \\
+Journal publishing highly cited papers & Journals that have published highly cited papers \\
+Highly cited theme & MeSH descriptors assigned to highly cited papers \\
+Highly cited paper citation theme & MeSH descriptors assigned to papers that cite highly cited papers \\
+Research theme & MeSH descriptor assigned to a paper \\
+Cited theme & MeSH descriptor assigned to a referenced paper \\
+Citing theme & MeSH descriptor assigned to a paper that cites another paper \\
+\end{tabular}
+}
+\end{center}
+\end{table}
+
+Make sure to preserve original formatting (line breaks). Provide only the translation with code unchanged.
+...done thinking.
+
+\begin{table}[h] 
+\begin{center} 
+\caption{Definitions of Terms Used in This Study} 
+\label{tab:def} 
+{\small 
+\begin{tabular}{lp{32mm}} 
+Term & Definition \\ 
+\hline 
+Highly cited paper & Papers that belong to the top 1 % of citation counts overall \\ 
+Journal publishing highly cited papers & Journals that have published highly cited papers \\ 
+Highly cited theme & MeSH descriptors assigned to highly cited papers \\ 
+Highly cited paper citation theme & MeSH descriptors assigned to papers that cite highly cited papers \\ 
+Research theme & MeSH descriptor assigned to a paper \\ 
+Cited theme & MeSH descriptor assigned to a referenced paper \\ 
+Citing theme & MeSH descriptor assigned to a paper that cites another paper \\ 
+\end{tabular} 
+} 
+\end{center} 
+\end{table}
+

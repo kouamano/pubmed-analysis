@@ -1,0 +1,26 @@
+Thinking...
+The user asks: "以下のの日本語文を英訳してください。ただしTeXのコードが挿入されているのでその部分はそのまま出力してください。" They then provide a LaTeX figure environment with Japanese caption. Need to translate Japanese text to English while preserving TeX code unchanged. So we need to output the same LaTeX block but with caption translated.
+
+Original caption: "論文グループごとの累積世代間の被引用テーマの転換の程度". Let's translate: "Degree of shift in cited themes across cumulative generations for each paper group". Might be: "Degree of transition of cited themes between cumulative generations for each paper group". That seems natural. Provide translation.
+
+Thus output:
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=76mm]{gr15.eps}
+\caption{Degree of transition of cited themes between cumulative generations for each paper group}
+\label{fig:gr15}
+\end{center}
+\end{figure}
+
+Make sure to keep code exactly, only replace caption text.
+...done thinking.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=76mm]{gr15.eps}
+\caption{Degree of transition of cited themes between cumulative generations for each paper group}
+\label{fig:gr15}
+\end{center}
+\end{figure}
+

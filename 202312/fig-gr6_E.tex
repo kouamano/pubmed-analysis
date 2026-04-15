@@ -1,0 +1,26 @@
+Thinking...
+We need to translate Japanese sentence to English, preserving TeX code unchanged. The Japanese text includes a figure environment with caption in Japanese. The instruction: "以下のの日本語文を英訳してください。ただしTeXのコードが挿入されているのでその部分はそのまま出力してください：" So we translate the Japanese part (the caption). The rest is TeX code unchanged.
+
+Thus output should be the same TeX block but with caption translated: "Obsolescence model, indicator definition, and selection criteria" maybe. Original Japanese: "オブソレッセンスモデル、指標値定義および選択条件". So translation: "Obsolescence model, definition of indicator values, and selection criteria". Or "Obsolescence model, indicator value definition, and selection conditions". Choose natural English: "Obsolescence model, definition of indicator values, and selection criteria". We'll keep the rest unchanged.
+
+Thus output:
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=76mm]{obsmodel.eps}
+\caption{Obsolescence model, definition of indicator values, and selection criteria}
+\label{fig:gr6}
+\end{center}
+\end{figure}
+
+Make sure to keep line breaks as original.
+...done thinking.
+
+\begin{figure}[h] 
+\begin{center} 
+\includegraphics[width=76mm]{obsmodel.eps} 
+\caption{Obsolescence model, definition of indicator values, and selection criteria} 
+\label{fig:gr6} 
+\end{center} 
+\end{figure}
+

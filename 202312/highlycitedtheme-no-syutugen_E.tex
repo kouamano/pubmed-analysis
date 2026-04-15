@@ -1,0 +1,23 @@
+Thinking...
+We need to translate Japanese text to English, preserving TeX code parts unchanged. The text contains references \ref{fig:gr13} and \ref{fig:gr14}. Must keep those as is. Also percentages like "数\%から十数\%" need to keep \% as is. Provide English translation.
+
+Let's translate:
+
+"高被引用テーマのユニーク出現数を図\ref{fig:gr13}に示す。" => "Figure \ref{fig:gr13} shows the number of unique occurrences of highly cited topics."
+
+"2023年MeSHディスクリプターの総数はおよそ30000であるが、各累積世代における高被引用テーマの出現数は最大でも3000を超える程度であり高被引用テーマには集中が見られる。" => "The total number of MeSH descriptors in 2023 is approximately 30,000, but the number of occurrences of highly cited topics in each cumulative cohort is at most just over 3,000, indicating a concentration of highly cited topics."
+
+"高被引用テーマの入れ替わりを確認するため、新規出現高被引用テーマの高被引用テーマ全体に占める割合を図\ref{fig:gr14}に示す。" => "To examine the turnover of highly cited topics, Figure \ref{fig:gr14} presents the proportion of newly appearing highly cited topics relative to the total set of highly cited topics."
+
+"経時的に一定の傾向は観察されず、数\%から十数\%の範囲での入れ替わりが観察される。" => "No consistent temporal trend is observed; turnover occurs in the range of a few \% to several tens of \%."
+
+"なお、1946-1955年の累積世代に高い値が見られる理由は、前累積世代ではMeSHディスクリプターの付与がほとんどなかったためである。" => "Note that the high values observed for the cumulative cohort of 1946–1955 are due to the fact that, in the preceding cumulative cohorts, MeSH descriptors were scarcely assigned."
+
+Need to preserve \% and TeX references unchanged.
+
+Let's output as a single paragraph or multiple sentences. Provide translation.
+
+...done thinking.
+
+Figure \ref{fig:gr13} shows the number of unique occurrences of highly cited topics. The total number of MeSH descriptors in 2023 is about 30,000, but the number of occurrences of highly cited topics in each cumulative cohort never exceeds roughly 3,000, indicating a concentration of such topics. To examine the turnover of highly cited topics, the proportion of newly appearing highly cited topics relative to the entire set of highly cited topics is shown in Figure \ref{fig:gr14}. No consistent temporal trend is observed; turnover is seen in the range of a few \% to several tens of \%. Note that the high values for the cumulative cohort of 1946–1955 arise because MeSH descriptors were scarcely assigned in the preceding cumulative cohorts.
+

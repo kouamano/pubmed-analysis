@@ -1,0 +1,26 @@
+Thinking...
+The user asks: "以下のの日本語文を英訳してください。ただしTeXのコードが挿入されているのでその部分はそのまま出力してください：" and then provides TeX code:
+
+\begin{figure}[h] \begin{center} \includegraphics[width=76mm]{meshpivotatGen.eps} \caption{累積世代、論文グループごとの被引用テーマに対する引用テーマの転換の程度} \label{fig:meshpivot} \end{center} \end{figure}
+
+We need to translate the Japanese sentence within the caption, but keep the TeX code unchanged. The caption text is "累積世代、論文グループごとの被引用テーマに対する引用テーマの転換の程度". So we translate that. Let's parse: "累積世代、論文グループごとの被引用テーマに対する引用テーマの転換の程度". Might be: "Degree of transformation of citing themes relative to cited themes across cumulative generations and per paper group". Could be: "The extent of shift from cited themes to citing themes by cumulative generation and by paper group". The phrase "累積世代、論文グループごとの" modifies "被引用テーマに対する引用テーマの転換の程度". So maybe: "Degree of transformation of citing themes relative to cited themes for each cumulative generation and paper group". We'll produce a natural English.
+
+Thus output should be the same TeX block, with caption replaced with English translation.
+
+We need to keep the TeX code unchanged except for translation of Japanese text inside caption. So:
+
+\caption{Degree of transformation of citing themes with respect to cited themes across cumulative generations and paper groups}
+
+Better.
+
+Thus final answer: the TeX block with translation.
+...done thinking.
+
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=76mm]{meshpivotatGen.eps}
+    \caption{Degree of transformation of citing themes with respect to cited themes across cumulative generations and paper groups}
+    \label{fig:meshpivot}
+  \end{center}
+\end{figure}
+
