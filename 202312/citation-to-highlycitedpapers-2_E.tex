@@ -1,32 +1,18 @@
-Thinking...
-We need to translate Japanese to English, preserving TeX code as is. The text includes \ref{fig:gr8}. Also mentions a., a-1 etc. Need to keep them.
-
-We must output English translation, with TeX code unchanged. Provide full translation.
-
-Let's craft translation:
-
-"Next, for the highly cited papers that were judged to be in an obsolescence state, we performed hierarchical clustering to check whether there are characteristic differences within that group. The features used for clustering are: a. indicators related to elapsed years: a-1: the period from publication to the peak, a-2: the period from the peak until a sufficient decay in citations is observed; b. indicators related to citation contribution: b-1: the number of citations in the peak year, b-2: the total number of citations up to the decay year; c. indicators related to citation stability: c-1: the variance of yearly citation counts, c-2: the variance of yearly citation rates, c-3: the variance of yearly citation acceleration (a total of seven indicators). Euclidean distance was used as the distance metric, and each feature value was normalized. For the calculation of variances, a 5‑year moving average with zero‑padding at the beginning was used. The result is shown in Figure \ref{fig:gr8}. In the clustering, a region where nodes are densely concentrated and several peripheral regions where nodes appear sparsely are observed, but no clear partition structure was confirmed."
-
-Make sure TeX code \ref{fig:gr8} unchanged. Also keep Japanese terms like "オブソレッセンス状態" maybe translate as "obsolescence state". Keep as is. Provide translation.
-
-Let's output.
-...done thinking.
-
 Next, for the highly cited papers that were judged to be in an obsolescence state, we performed hierarchical clustering to check whether there are characteristic differences within that group. The features used for clustering are  
 
-a. indicators concerning elapsed years:  
- a‑1: the period from publication to the peak,  
- a‑2: the period from the peak until a sufficient decay in citations is observed;  
+(a) indicators concerning elapsed years:
+(a1) the period from publication to the peak,
+(a2) the period from the peak until a sufficient decay in citations is observed;
 
-b. indicators concerning citation contribution:  
- b‑1: the number of citations in the peak year,  
- b‑2: the total number of citations up to the decay year;  
+(b) indicators concerning citation contribution:
+(b1) the number of citations in the peak year,
+(b2) the total number of citations up to the decay year;
 
-c. indicators concerning citation stability:  
- c‑1: the variance of yearly citation counts,  
- c‑2: the variance of yearly citation rates,  
- c‑3: the variance of yearly citation acceleration  
- (altogether, seven indicators).  
+(c) indicators concerning citation stability:
+(c1) the variance of yearly citation counts,
+(c2) the variance of yearly citation rates,
+(c3) the variance of yearly citation acceleration;
 
-Euclidean distance was used as the distance metric, and each feature value was normalized. For the variance calculations, a 5‑year moving average with zero‑padding at the beginning was employed. The result is shown in Figure \ref{fig:gr8}. In the clustering, a region where nodes are densely concentrated and several peripheral regions where nodes appear sparsely are observed, but no clear partition structure was confirmed.
+altogether, seven indicators.  
 
+Euclidean distance was used as the distance metric, and each feature value was normalized. For the variance calculations, a 5year moving average with zeropadding at the beginning was employed. The result is shown in Figure \ref{fig:gr8}. In the clustering, a region where nodes are densely concentrated and several peripheral regions where nodes appear sparsely are observed, but no clear partition structure was confirmed.
