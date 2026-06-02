@@ -1,6 +1,6 @@
 #!/bin/bash
-platex hcaE.utf8.tex
-pbibtex hcaE.utf8
-platex hcaE.utf8
-platex hcaE.utf8
-dvipdfmx hcaE.utf8.dvi
+platex hcaE2.utf8.tex
+pbibtex hcaE2.utf8
+platex hcaE2.utf8
+platex hcaE2.utf8
+dvipdfmx hcaE2.utf8.dvi
