@@ -4,10 +4,13 @@
   \captionsetup[subfigure]{labelformat=simple}
   \renewcommand\thesubfigure{(\alph{subfigure})}
 \usepackage{color}
+\usepackage{placeins}
 \usepackage{balance}
 
-\setcounter{topnumber}{5}
-\setcounter{totalnumber}{6}
+\setcounter{topnumber}{10}
+\setcounter{dbltopnumber}{10}
+\setcounter{bottomnumber}{10}
+\setcounter{totalnumber}{10}
 \renewcommand{\topfraction}{1.0}
 \renewcommand{\bottomfraction}{1.0}
 \renewcommand{\textfraction}{0.0}
@@ -68,36 +71,36 @@ $*$ EMail: k7085637@kadai.jp \\
 
 \section{高被引用論文}
 \subsection{高被引用論文の出現}
-\input{highlycitedpapers-no-syutugen_E.tex}
 \input{fig-array1.tex}
+\input{highlycitedpapers-no-syutugen_E.tex}
 
-\subsection{最多被引用論文の変遷}
 \input{tabarray-hctitlesA.utf8.tex}
+\subsection{最多被引用論文の変遷}
 \input{mostcitedpapers_E.tex}
 
 \subsection{高被引用論文への経年的な引用の変化}
-\input{citation-to-highlycitedpapers-1-1_E.tex}
 \input{fig-gr6.tex}
+\input{fig-gr7.tex}
 \input{fig-nonobscitedplot.tex}
 \input{fig-parray1.tex}
-\input{fig-gr7.tex}
 \input{tabarray-mcpapers.utf8.tex}
+\input{citation-to-highlycitedpapers-1-1_E.tex}
 \input{citation-to-highlycitedpapers-1-2_E.tex}
 \input{citation-to-highlycitedpapers-3_E.tex}
 
 \section{高被引用論文掲載誌}
-\input{journalwithhcpapers_E.tex}
+\input{journalwithhcpapers_e.tex}
 \subsection{高被引用論文掲載誌の出現}
 \input{journalwithhcp-no-syutugen_E.tex}
 \input{fig-array2.tex}
 
+\input{fig-gr12.tex}
 \subsection{高被引用論文掲載誌の変遷}
 \input{journalwithhcp-no-hensen_E.tex}
 \input{G1journalexportTBL.utf8.tex}
 \input{G2journalexportTBL.utf8.tex}
 \input{G3journalexportTBL.utf8.tex}
 \input{G4journalexportTBL.utf8.tex}
-\input{fig-gr12.tex}
 
 \section{高被引用テーマ}
 \input{highlycitedtheme_E.tex}
@@ -107,8 +110,8 @@ $*$ EMail: k7085637@kadai.jp \\
 
 \subsection{高被引用テーマの変遷}
 \input{highlycitedtheme-no-hensen-1_E.tex}
-\input{tab-topmeshJ.utf8.tex}
 \input{highlycitedtheme-no-hensen-2_E.tex}
+\input{tab-topmeshJ.utf8.tex}
 \input{highlycitedtheme-no-hensen-3_E.tex}
 \input{fig-parray2.tex}
 \input{fig-meshpivot.tex}
@@ -117,6 +120,8 @@ $*$ EMail: k7085637@kadai.jp \\
 \section{まとめ}
 \input{matome_E.tex}
 
+%\FloatBarrier
+%\balance
 \bibliographystyle{ujsik}
 \bibliography{ama.utf8}
 %\begin{thebibliography}{0}
