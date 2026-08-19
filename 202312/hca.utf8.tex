@@ -3,11 +3,14 @@
 \usepackage{subcaption}
   \captionsetup[subfigure]{labelformat=simple}
   \renewcommand\thesubfigure{(\alph{subfigure})}
-\usepackage{color}
+\usepackage{float}
+\usepackage{placeins}
 \usepackage{balance}
 
-\setcounter{topnumber}{5}
-\setcounter{totalnumber}{6}
+\setcounter{topnumber}{10}
+\setcounter{dbltopnumber}{10}
+\setcounter{bottomnumber}{10}
+\setcounter{totalnumber}{10}
 \renewcommand{\topfraction}{1.0}
 \renewcommand{\bottomfraction}{1.0}
 \renewcommand{\textfraction}{0.0}
@@ -53,15 +56,14 @@ $*$ EMail: k7085637@kadai.jp \\
 \input{material.tex}
 \subsection{データ}
 \input{data.tex}
-%\input{fig-gr1.tex}
 
 \subsection{累積世代モデル}
 \input{ruisekisedai-model.tex}
 \input{fig-gr2.tex}
 
 \subsection{高被引用論文・高被引用論文掲載誌・高被引用テーマ}
-\input{tab-def.tex}
 \input{highlycited-art-jour-theme.tex}
+\input{tab-def.tex}
 
 \subsection{比較グループ}
 \input{group.tex}
@@ -71,35 +73,37 @@ $*$ EMail: k7085637@kadai.jp \\
 \input{fig-array1.tex}
 \input{highlycitedpapers-no-syutugen.tex}
 
-\subsection{最多被引用論文の変遷}
-\input{tabarray-hctitlesA.utf8.tex}
+\subsection{高被引用論文の変遷}
+\input{article-no-hensen.tex}
 \input{mostcitedpapers.tex}
+\input{fig-gr101.tex}
+\input{fig-gr102.tex}
+%\subsection{最多被引用論文の変遷}
+\input{tabarray-hctitlesA.utf8.tex}
 
-\subsection{高被引用論文への経年的な引用の変化}
+\subsection{高被引用論文のオブソレッセンス}
+\input{fig-gr6.tex}
+\input{fig-gr7.tex}
+\input{fig-nonobscitedplot.tex}
+\input{fig-parray1.tex}
+\input{tabarray-mcpapers.utf8.tex}
 \input{citation-to-highlycitedpapers-1-1.tex}
 \input{citation-to-highlycitedpapers-1-2.tex}
-\input{fig-gr6.tex}
-\input{fig-parray1.tex}
-\input{fig-gr7.tex}
-\input{fig-gr8.tex}
-\input{citation-to-highlycitedpapers-2.tex}
 \input{citation-to-highlycitedpapers-3.tex}
-\input{tabarray-mcpapers.utf8.tex}
-\input{fig-nonobscitedplot.tex}
 
 \section{高被引用論文掲載誌}
 \input{journalwithhcpapers.tex}
 \subsection{高被引用論文掲載誌の出現}
-\input{journalwithhcp-no-syutugen}
+\input{journalwithhcp-no-syutugen.tex}
 \input{fig-array2.tex}
 
 \subsection{高被引用論文掲載誌の変遷}
 \input{journalwithhcp-no-hensen.tex}
+\input{fig-gr12.tex}
 \input{G1journalexportTBL.utf8.tex}
 \input{G2journalexportTBL.utf8.tex}
 \input{G3journalexportTBL.utf8.tex}
 \input{G4journalexportTBL.utf8.tex}
-\input{fig-gr12.tex}
 
 \section{高被引用テーマ}
 \input{highlycitedtheme.tex}
@@ -119,6 +123,8 @@ $*$ EMail: k7085637@kadai.jp \\
 \section{まとめ}
 \input{matome.tex}
 
+%\FloatBarrier
+%\balance
 \bibliographystyle{ujsik}
 \bibliography{ama.utf8}
 %\begin{thebibliography}{0}
