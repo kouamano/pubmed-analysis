@@ -4,4 +4,4 @@
 ## 変更
 - 累積世代ごとのreferenceを再集計した。(edgestat_YYYY-YYYY*nb)
 ## 作業メモ
-4.3 を全面的に書き直す。SunらのScientometrics 107:745-757の指標をもとに分析する。
+4.3 を全面的に書き直す。SunらのScientometrics 107:745-757の指標をもとに分析する。 -> ブランチは"hcp"。
