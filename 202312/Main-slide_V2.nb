@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[    171536,       2893]
+NotebookDataLength[    171538,       2893]
 NotebookOptionsPosition[    153109,       2626]
-NotebookOutlinePosition[    154442,       2665]
-CellTagsIndexPosition[    154362,       2660]
+NotebookOutlinePosition[    154444,       2665]
+CellTagsIndexPosition[    154364,       2660]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -2626,7 +2626,7 @@ fc10495e133f"]
 },
 ScreenStyleEnvironment->"Slideshow Working",
 WindowSize->{1064, 999},
-WindowMargins->{{56, Automatic}, {Automatic, 18}},
+WindowMargins->{{435, Automatic}, {Automatic, 172}},
 TaggingRules->{
  "PresenterSettings" -> {
    "ShowNavigationBar" -> False, 
@@ -2659,7 +2659,7 @@ CellTagsIndex->{
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"SlideShowHeader", 154053, 2652}
+ {"SlideShowHeader", 154055, 2652}
  }
 *)
 (*NotebookFileOutline
@@ -2861,28 +2861,28 @@ Cell[130311, 2239, 1646, 23, 32, "Subitem",ExpressionUUID->"b3275e09-6dcf-4030-9
 Cell[131960, 2264, 1650, 23, 32, "Subitem",ExpressionUUID->"6c0aa3ae-328e-4c13-8805-f0268da913b2"],
 Cell[133613, 2289, 1636, 22, 32, "Subitem",ExpressionUUID->"f41d6382-1dea-4f1d-9855-5f6822384ba2"],
 Cell[135252, 2313, 1630, 23, 32, "Subitem",ExpressionUUID->"8f37319a-9c43-491f-8221-0791c4e8ced1"],
-Cell[136885, 2338, 1993, 30, 32, "Subitem",ExpressionUUID->"2a6896c3-58c6-4e0d-a1c4-3bca7cbd2277"],
+Cell[136885, 2338, 1993, 30, 70, "Subitem",ExpressionUUID->"2a6896c3-58c6-4e0d-a1c4-3bca7cbd2277"],
 Cell[CellGroupData[{
-Cell[138903, 2372, 1566, 22, 27, "Subitem",ExpressionUUID->"8053cd49-f02a-442d-9945-97e4a9fe8649"],
-Cell[140472, 2396, 1616, 22, 29, "Subsubitem",ExpressionUUID->"cd04f488-92dc-49d2-a340-39d8a9ac9f68"],
-Cell[142091, 2420, 1662, 23, 29, "Subsubitem",ExpressionUUID->"5c9ebbca-011b-4bca-bd93-5c522485c9ad"],
-Cell[143756, 2445, 1681, 24, 29, "Subsubitem",ExpressionUUID->"b7bb514d-e3e6-45af-948f-4b3adbbc7b46"]
+Cell[138903, 2372, 1566, 22, 70, "Subitem",ExpressionUUID->"8053cd49-f02a-442d-9945-97e4a9fe8649"],
+Cell[140472, 2396, 1616, 22, 70, "Subsubitem",ExpressionUUID->"cd04f488-92dc-49d2-a340-39d8a9ac9f68"],
+Cell[142091, 2420, 1662, 23, 70, "Subsubitem",ExpressionUUID->"5c9ebbca-011b-4bca-bd93-5c522485c9ad"],
+Cell[143756, 2445, 1681, 24, 70, "Subsubitem",ExpressionUUID->"b7bb514d-e3e6-45af-948f-4b3adbbc7b46"]
 }, Open  ]],
-Cell[145452, 2472, 1746, 24, 32, "Subitem",ExpressionUUID->"e233248d-3080-4edb-891d-3e91bbeaeafc"]
+Cell[145452, 2472, 1746, 24, 70, "Subitem",ExpressionUUID->"e233248d-3080-4edb-891d-3e91bbeaeafc"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[147247, 2502, 354, 4, 50, "Subsection",ExpressionUUID->"97f5287f-7e98-4f0b-bd2a-f6d2053921a8"],
+Cell[147247, 2502, 354, 4, 70, "Subsection",ExpressionUUID->"97f5287f-7e98-4f0b-bd2a-f6d2053921a8"],
 Cell[CellGroupData[{
-Cell[147626, 2510, 279, 5, 34, "Item",ExpressionUUID->"ab3cfb71-bc28-48f8-8a39-da73972f8a24"],
-Cell[147908, 2517, 354, 6, 27, "Subitem",ExpressionUUID->"aaae51c9-e70f-4b88-99db-30b3c0fd25a8"]
+Cell[147626, 2510, 279, 5, 70, "Item",ExpressionUUID->"ab3cfb71-bc28-48f8-8a39-da73972f8a24"],
+Cell[147908, 2517, 354, 6, 70, "Subitem",ExpressionUUID->"aaae51c9-e70f-4b88-99db-30b3c0fd25a8"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[148299, 2528, 378, 6, 34, "Item",ExpressionUUID->"b4d3a683-cbd1-4db6-b4e2-84d5b9db962a"],
-Cell[148680, 2536, 469, 7, 27, "Subitem",ExpressionUUID->"42bf9aff-7d11-456e-8a5b-ca7de671dbb1"],
-Cell[149152, 2545, 584, 9, 27, "Subitem",ExpressionUUID->"4df98af0-8415-443c-823c-dfb7deb809a6"]
+Cell[148299, 2528, 378, 6, 70, "Item",ExpressionUUID->"b4d3a683-cbd1-4db6-b4e2-84d5b9db962a"],
+Cell[148680, 2536, 469, 7, 70, "Subitem",ExpressionUUID->"42bf9aff-7d11-456e-8a5b-ca7de671dbb1"],
+Cell[149152, 2545, 584, 9, 70, "Subitem",ExpressionUUID->"4df98af0-8415-443c-823c-dfb7deb809a6"]
 }, Open  ]],
-Cell[149751, 2557, 245, 3, 34, "Item",ExpressionUUID->"5d19d2f9-ebaa-47e2-b64f-04a633ea20e6"],
+Cell[149751, 2557, 245, 3, 70, "Item",ExpressionUUID->"5d19d2f9-ebaa-47e2-b64f-04a633ea20e6"],
 Cell[CellGroupData[{
 Cell[150021, 2564, 483, 7, 70, "Item",ExpressionUUID->"2c8c92ec-c72c-4917-8105-68fabc53e19c"],
 Cell[150507, 2573, 579, 8, 70, "Subitem",ExpressionUUID->"0775eee3-8671-49e2-8409-61b396f2091d"]
